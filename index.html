@@ -3,27 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>專業火舞道具製作 - 首頁</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <title>FPS 道具部 - 多品項線上估價系統</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #e67e22; --dark: #1a1a1a; --light: #f9f9f9; --accent: #27ae60; }
+        body { font-family: 'Noto Sans TC', sans-serif; background: var(--light); margin: 0; padding: 10px; color: #333; }
+        .wrapper { max-width: 1100px; margin: 20px auto; display: grid; grid-template-columns: 1fr 380px; gap: 20px; }
+        @media (max-width: 850px) { .wrapper { grid-template-columns: 1fr; } }
+
+        /* 左側配置區 */
+        .config-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h2 { font-size: 1.2rem; border-left: 4px solid var(--primary); padding-left: 10px; margin: 0 0 20px 0; }
+        .field-group { margin-bottom: 15px; }
+        label { display: block; font-size: 0.9rem; font-weight: bold; margin-bottom: 5px; color: #666; }
+        select, input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; box-sizing: border-box; }
+        
+        /* 按鈕樣式 */
+        .btn-add { width: 100%; background: var(--primary); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1.1rem; margin-top: 10px; transition: 0.2s; }
+        .btn-add:hover { background: #d35400; transform: translateY(-2px); }
+
+        /* 右側清單區 */
+        .cart-card { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid var(--dark); height: fit-content; position: sticky; top: 20px; }
+        .cart-items { max-height: 400px; overflow-y: auto; margin-bottom: 20px; border-bottom: 1px solid #eee; }
+        .cart-item { font-size: 0.85rem; padding: 10px 0; border-bottom: 1px dashed #eee; position: relative; }
+        .cart-item b { color: var(--primary); }
+        .btn-remove { position: absolute; right: 0; top: 10px; color: #e74c3c; cursor: pointer; font-size: 0.7rem; border: 1px solid #e74c3c; padding: 2px 5px; border-radius: 4px; }
+        
+        .total-box { text-align: center; margin: 15px 0; }
+        .total-label { font-size: 0.9rem; color: #888; }
+        .total-price { font-size: 2rem; font-weight: bold; color: var(--dark); }
+        
+        .btn-copy { width: 100%; background: var(--dark); color: white; border: none; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .btn-copy:hover { background: #333; }
+        
+        .empty-msg { text-align: center; color: #999; padding: 30px 0; font-size: 0.9rem; }
+    </style>
+</head>
 <body>
 
-<nav>
-    <div class="nav-container">
-        <a href="index.html" class="logo">火舞道具職人</a>
-        <div class="links">
-            <a href="index.html">首頁</a>
-            <a href="calc.html">線上估價</a>
+<div class="wrapper">
+    <div class="config-card">
+        <h2>1. 選擇道具類別</h2>
+        <div class="field-group">
+            <select id="mainCategory" onchange="loadSubCategory()">
+                <option value="fire_staff">🔥 火具 - 棍類 (Staff)</option>
+                <option value="fire_poi">☄️ 火具 - 球類/流星 (Poi/Meteor)</option>
+                <option value="practice_staff">🔘 練習道具 - 棍類</option>
+                <option value="practice_poi">🔘 練習道具 - 球類/流星</option>
+                <option value="other_fire">✨ 其他火具 (太極/小火棒/龍棍)</option>
+                <option value="parts">🛠️ 維修/材料/配件</option>
+            </select>
         </div>
-    </div>
-</nav>
 
-<header class="hero">
-    <div class="hero-content">
-        <h1>為極致火光而生的專業道具</h1>
-        <p>手工打造、精準配重，陪伴你每一次完美的演出。</p>
-        <a href="calc.html" class="cta-button">立即試算估價</a>
+        <div id="dynamicFields">
+            </div>
+
+        <div class="field-group">
+            <label>數量</label>
+            <input type="number" id="itemQty" value="1" min="1">
+        </div>
+
+        <button class="btn-add" onclick="addToCart()">＋ 加入我的清單</button>
     </div>
-</header>
+
+    <div class="cart-card">
+        <h2>我的估價清單</h2>
+        <div id="cartList" class="cart-items">
+            <div class="empty-msg">清單目前是空的<br>請從左側選取道具</div>
+        </div>
+        
+        <div class="total-box">
+            <div class="total-label">預估總額</div>
+            <div class="total-price">NT$ <span id="grandTotal">0</span></div>
+        </div>
+
+        <button class="btn-copy" onclick="copyOrder()">
+            📋 複製訂單明細私訊下單
+        </button>
+    </div>
+</div>
+
+<script>
+    // 完整的資料庫數據 (依據您的 CSV 彙整)
+    const db = {
+        fire_staff: {
+            items: {
+                "單長棍-一體式": 1900,
+                "單長棍-組合式": 2500,
+                "短棍-一體式": 900,
+                "漂浮棍-5cm圓柱": 1200,
+                "漂浮棍-6cmTwista": 1350
+            },
+            specs: {
+                "火頭": { "圓柱10cm": 0, "Twista10cm": 800, "12cm加長火頭": 400 },
+                "握把": { "標準薄款": 0, "輪胎紋加厚": 50 }
+            }
+        },
+        fire_poi: {
+            items: {
+                "無鍊火頭(2顆)": 1000,
+                "火Poi套組": 1300,
+                "火流星套組": 1600
+            },
+            specs: {
+                "款式": { "豆干6cm": 0, "Twista6cm": 300, "猴子球8cm": 1000 },
+                "繩鍊": { "鐵鍊組": 0, "Technora繩款": 500, "克維拉繩款": 500 }
+            }
+        },
+        practice_staff: {
+            items: {
+                "練習長棍-一體式": 800,
+                "練習長棍-組合式": 1400,
+                "練習短棍-標準": 450,
+                "練習短棍-輕量7075": 500
+            },
+            specs: {
+                "樣式": { "圓柱樣式": 0, "Twista樣式": 200 },
+                "握把": { "標準薄款": 0, "輪胎紋加厚": 50 }
+            }
+        },
+        practice_poi: {
+            items: {
+                "練習Poi-一體式": 800,
+                "練習流星-一體式": 1000,
+                "練習Poi組-可拆式": 600
+            },
+            specs: {
+                "規格": { "標準規格": 0, "加強長度/重量": 100 }
+            }
+        },
+        other_fire: {
+            items: {
+                "小火棒 2.5cm": 100,
+                "太極火 5cm": 300,
+                "龍棍套組": 5500
+            },
+            specs: {
+                "火頭": { "標準圓柱": 0, "Twista升級": 100 }
+            }
+        },
+        parts: {
+            items: {
+                "換火頭(一組)": 600,
+                "薄款握把布": 20,
+                "厚款握把布": 50,
+                "防火布(1公尺)": 100
+            },
+            specs: {
+                "類型": { "一般零件": 0, "加工代工": 50 }
+            }
+        }
+    };
+
+    let cart = [];
+
+    function loadSubCategory() {
+        const main = document.getElementById('mainCategory').value;
+        const data = db[main];
+        const container = document.getElementById('dynamicFields');
+        
+        let html = `
+            <div class="field-group">
+                <label>選擇品項</label>
+                <select id="subItem">
+                    ${Object.entries(data.items).map(([k,v]) => `<option value="${v}">${k} (NT$${v}起)</option>`).join('')}
+                </select>
+            </div>
+        `;
+
+        Object.entries(data.specs).forEach(([specName, options]) => {
+            html += `
+                <div class="field-group">
+                    <label>${specName}</label>
+                    <select class="spec-select" data-name="${specName}">
+                        ${Object.entries(options).map(([k,v]) => `<option value="${v}">${k} (+$${v})</option>`).join('')}
+                    </select>
+                </div>
+            `;
+        });
+
+        container.innerHTML = html;
+    }
+
+    function addToCart() {
+        const mainSelect = document.getElementById('mainCategory');
+        const itemSelect = document.getElementById('subItem');
+        const qty = parseInt(document.getElementById('itemQty').value);
+        const specSelects = document.querySelectorAll('.spec-select');
+
+        let basePrice = parseInt(itemSelect.value);
+        let specDetails = [];
+        let extraTotal = 0;
+
+        specSelects.forEach(s => {
+            const price = parseInt(s.value);
+            const text = s.options[s.selectedIndex].text.split(' (')[0];
+            extraTotal += price;
+            specDetails.push(`${s.dataset.name}:${text}`);
+        });
+
+        const unitPrice = basePrice + extraTotal;
+        const itemName = itemSelect.options[itemSelect.selectedIndex].text.split(' (')[0];
+
+        cart.push({
+            name: itemName,
+            specs: specDetails.join(' / '),
+            price: unitPrice,
+            qty: qty,
+            id: Date.now()
+        });
+
+        renderCart();
+    }
+
+    function renderCart() {
+        const list = document.getElementById('cartList');
+        const grandTotalSpan = document.getElementById('grandTotal');
+        
+        if (cart.length === 0) {
+            list.innerHTML = '<div class="empty-msg">清單目前是空的<br>請從左側選取道具</div>';
+            grandTotalSpan.innerText = "0";
+            return;
+        }
+
+        let html = '';
+        let total = 0;
+        cart.forEach((item, index) => {
+            const subtotal = item.price * item.qty;
+            total += subtotal;
+            html += `
+                <div class="cart-item">
+                    <b>${item.name}</b> x ${item.qty}<br>
+                    <small>${item.specs}</small><br>
+                    小計: NT$ ${subtotal.toLocaleString()}
+                    <span class="btn-remove" onclick="removeFromCart(${item.id})">移除</span>
+                </div>
+            `;
+        });
+
+        list.innerHTML = html;
+        grandTotalSpan.innerText = total.toLocaleString();
+    }
+
+    function removeFromCart(id) {
+        cart = cart.filter(i => i.id !== id);
+        renderCart();
+    }
+
+    function copyOrder() {
+        if (cart.length === 0) return alert("清單是空的喔！");
+        
+        let total = 0;
+        let text = "【FPS 道具部 - 預計訂購清單】\n";
+        text += "--------------------------------\n";
+        
+        cart.forEach(item => {
+            const subtotal = item.price * item.qty;
+            total += subtotal;
+            text += `● ${item.name} x ${item.qty}\n`;
+            text += `  規格：${item.specs}\n`;
+            text += `  小計：NT$ ${subtotal.toLocaleString()}\n\n`;
+        });
+        
+        text += "--------------------------------\n";
+        text += `預估總金額：NT$ ${total.toLocaleString()}\n`;
+        text += "※ 此清單為線上試算，實際價格與運費以私訊確認為準。";
+
+        navigator.clipboard.writeText(text).then(() => {
+            alert("訂單明細已複製！\n請直接貼給 FPS 道具部粉專私訊下單即可。");
+        });
+    }
+
+    // 初始化
+    loadSubCategory();
+</script>
 
 </body>
 </html>
