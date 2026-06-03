@@ -101,71 +101,73 @@
         }
         .category-btn.active span { color: #000; font-weight: 700; }
 
-        /* 💡 新增：客製化規格方塊按鈕組（帶圖片） */
-        .spec-group-title {
-            font-size: 0.88rem;
-            font-weight: 700;
-            color: #444;
-            margin: 20px 0 8px 0;
-        }
-
-        .option-grid {
+        /* 💡 規格選項視覺化方塊按鈕 */
+        .spec-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
             gap: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
-        .option-card {
+        .spec-btn {
             background: #fff;
             border: 1px solid var(--border-color);
             border-radius: 6px;
-            padding: 8px;
+            padding: 10px;
             cursor: pointer;
+            font-size: 0.88rem;
             text-align: center;
-            box-sizing: border-box;
             transition: all 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .option-card img {
-            width: 100%;
-            height: 90px;
-            object-fit: contain;
-            background: #fcfcfc;
-            border-radius: 4px;
-            margin-bottom: 6px;
-        }
-
-        /* 當某規格被選中時 */
-        .option-card.selected {
-            border-color: var(--primary);
-            background: #fffaf5;
-            box-shadow: 0 0 0 1px var(--primary);
-        }
-
-        .option-card .opt-name {
-            font-size: 0.8rem;
+            color: #444;
             font-weight: 500;
+        }
+
+        .spec-btn:hover {
+            border-color: #888;
+        }
+
+        .spec-btn.active {
+            border-color: #000000;
+            box-shadow: 0 0 0 1px #000000;
+            background: #fafafa;
+            color: #000;
+            font-weight: 700;
+        }
+
+        .field-group { margin-bottom: 22px; }
+        .field-group label {
+            font-size: 0.85rem;
             color: #222;
+            margin-bottom: 8px;
+            display: block;
+            font-weight: 700;
         }
 
-        .option-card .opt-price {
-            font-size: 0.75rem;
-            color: var(--primary);
+        input[type="number"] { 
+            width: 100%; 
+            padding: 12px; 
+            border: 1px solid var(--border-color); 
+            border-radius: 5px; 
+            font-size: 0.95rem; 
+            background: #fff;
+            box-sizing: border-box;
+        }
+
+        .btn-add {
+            background: #111111;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 16px;
+            border-radius: 5px;
             font-weight: bold;
-            margin-top: 2px;
+            cursor: pointer;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            transition: background 0.2s;
+            margin-top: 15px;
         }
-
-        /* 數量輸入與基礎排版 */
-        .field-group { margin-bottom: 18px; }
-        label { font-size: 0.82rem; color: #666; margin-bottom: 6px; display: block; font-weight: 500; }
-        input[type="number"], select.normal-select { 
-            width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 5px; font-size: 0.95rem; box-sizing: border-box; 
-        }
+        .btn-add:hover { background: var(--primary); }
 
         /* 右側：Shopify 結帳欄 */
         .cart-section { 
@@ -173,25 +175,43 @@
             padding: 40px 10% 40px 8%; 
             border-left: 1px solid #e1e1e1;
             box-sizing: border-box;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
+
+        /* 💡 移到右側頂部的即時大預覽圖 */
+        .main-preview-box {
+            background: white;
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .main-preview-box img { width: 100%; max-height: 220px; object-fit: contain; border-radius: 4px; }
+        .preview-caption { font-size: 0.75rem; color: var(--primary); margin-top: 6px; font-weight: bold; display: block; }
 
         .free-ship-container {
             background: white;
             padding: 15px;
             border-radius: 6px;
             border: 1px solid #e1e1e1;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         .free-ship-bar { background: #e1e1e1; height: 6px; border-radius: 3px; overflow: hidden; margin-bottom: 8px; }
         .free-ship-fill { background: var(--accent-green); height: 100%; width: 0%; transition: width 0.4s ease; }
         .free-ship-msg { font-size: 0.85rem; color: #444; font-weight: 500; }
 
-        .cart-list { max-height: 350px; overflow-y: auto; margin-bottom: 20px; }
+        .cart-list { flex: 1; overflow-y: auto; margin-bottom: 20px; }
         .cart-item {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            padding: 15px 0;
+            padding: 12px 0;
             border-bottom: 1px solid #e1e1e1;
             position: relative;
         }
@@ -199,38 +219,15 @@
         .cart-item-name { font-weight: 500; font-size: 0.95rem; color: #111; }
         .cart-item-spec { font-size: 0.8rem; color: #737373; display: block; margin-top: 4px; line-height: 1.4; }
         .cart-item-price { font-weight: 600; font-size: 0.95rem; color: #111; margin-top: 5px; }
-        .btn-remove {
-            position: absolute;
-            right: 0;
-            top: 15px;
-            color: #ff4d4d;
-            cursor: pointer;
-            font-size: 0.75rem;
-            text-decoration: underline;
-        }
+        .btn-remove { position: absolute; right: 0; top: 12px; color: #ff4d4d; cursor: pointer; font-size: 0.75rem; text-decoration: underline; }
 
-        .summary-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9rem; color: #555; }
-        .ship-desc { font-size: 0.75rem; color: #888; text-align: right; margin-top: -5px; margin-bottom: 10px; }
-        .grand-total { 
-            border-top: 1px solid #e1e1e1; 
-            padding-top: 20px; 
-            margin-top: 20px; 
-            display: flex; 
-            justify-content: space-between; 
-            font-size: 1.4rem; 
-            font-weight: 700; 
-            color: #111; 
-        }
+        .summary-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; color: #555; }
+        .ship-desc { font-size: 0.75rem; color: #888; text-align: right; margin-top: -3px; margin-bottom: 8px; }
+        .grand-total { border-top: 1px solid #e1e1e1; padding-top: 15px; margin-top: 15px; display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: 700; color: #111; }
 
-        .btn-add {
-            background: #111111; color: white; border: none; width: 100%; padding: 16px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem; letter-spacing: 1px; transition: background 0.2s; margin-top: 25px;
-        }
-        .btn-add:hover { background: var(--primary); }
-        .btn-copy {
-            background: var(--primary); color: white; border: none; width: 100%; padding: 16px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem; margin-top: 25px; transition: background 0.2s;
-        }
+        .btn-copy { background: var(--primary); color: white; border: none; width: 100%; padding: 16px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem; margin-top: 15px; }
         .btn-copy:hover { background: #d35400; }
-        .hint-text { font-size: 0.75rem; color: #999; text-align: center; margin-top: 10px; }
+        .hint-text { font-size: 0.72rem; color: #999; text-align: center; margin-top: 8px; }
     </style>
 </head>
 <body>
@@ -258,19 +255,19 @@
                 <span>火短棍<br>Twista火頭</span>
             </div>
             <div class="category-btn" onclick="switchCategory('fire_poi_det_1', this)">
-                <img src="https://via.placeholder.com/150x90?text=Poi+Det+1" alt="火Poi-可拆單顆">
+                <img src="https://via.placeholder.com/150x90?text=Poi+Det+1" alt="火Poi-單顆">
                 <span>火Poi-可拆式<br>(單顆)</span>
             </div>
             <div class="category-btn" onclick="switchCategory('fire_poi_det_2', this)">
-                <img src="https://via.placeholder.com/150x90?text=Poi+Det+2" alt="火Poi-可拆一組">
+                <img src="https://via.placeholder.com/150x90?text=Poi+Det+2" alt="火Poi-一組">
                 <span>火Poi-可拆式<br>(一組2顆)</span>
             </div>
             <div class="category-btn" onclick="switchCategory('fire_meteor_det', this)">
-                <img src="https://via.placeholder.com/150x90?text=Meteor+Det" alt="火流星-可拆">
+                <img src="https://via.placeholder.com/150x90?text=Meteor+Det" alt="火流星">
                 <span>火流星<br>可拆式(2顆)</span>
             </div>
             <div class="category-btn" onclick="switchCategory('fire_poi_one', this)">
-                <img src="https://via.placeholder.com/150x90?text=Poi+Solid" alt="火Poi-一體式">
+                <img src="https://via.placeholder.com/150x90?text=Poi+Solid" alt="火Poi-一體">
                 <span>火Poi<br>一體式</span>
             </div>
             <div class="category-btn" onclick="switchCategory('fire_other', this)">
@@ -291,10 +288,10 @@
             </div>
         </div>
 
-        <h2>2. 客製化規格配置 (規格自帶獨立預覽圖)</h2>
-        <div id="dynamicFieldsArea"></div>
+        <h2>2. 客製化規格配置</h2>
+        <div id="dynamicFields"></div>
 
-        <div class="field-group" style="margin-top: 25px;">
+        <div class="field-group">
             <label>數量</label>
             <input type="number" id="qty" value="1" min="1" onchange="updateLivePrice()">
         </div>
@@ -303,15 +300,18 @@
     </div>
 
     <div class="cart-section">
+        <div class="main-preview-box">
+            <img id="mainPreviewImg" src="https://via.placeholder.com/400x220?text=FPS+PROPS+PREVIEW" alt="FPS預覽大圖">
+            <span class="preview-caption" id="previewCaption">商品基礎外觀</span>
+        </div>
+
         <div class="free-ship-container">
             <div class="free-ship-bar"><div id="shipFill" class="free-ship-fill"></div></div>
             <div id="shipMsg" class="free-ship-msg">正在計算免運進度...</div>
         </div>
-
-        <div class="brand-title" style="font-size:1.1rem; border:none; margin-bottom:15px; padding:0;">明細回報清單</div>
         
         <div id="cartList" class="cart-list">
-            <p style="color:#999; text-align:center; padding: 40px 0;">清單內尚無道具，請從左側配置加入。</p>
+            <p style="color:#999; text-align:center; padding: 20px 0;">清單內尚無道具，請從左側配置加入。</p>
         </div>
 
         <div class="summary-row"><span>商品小計</span><span id="subTotal">NT$ 0</span></div>
@@ -326,319 +326,364 @@
 </div>
 
 <script>
-// --- 全規格常駐預覽圖資料庫 ---
-// 你可以在各個項目的 img 欄位中直接塞入你拍好的真實零件特寫網址！
+// --- 完整視覺化資料庫 ---
+// 提示：無論大項、規格選項、火頭，通通都可以在 img 中塞入對應的圖片網址。
 const db = {
     fire_staff_cyl: {
         sub: {
-            "火長棍-圓柱火頭 (10cm)": { price: 1900, ship: 'long', img: "https://via.placeholder.com/150x90?text=Cyl+10cm" },
-            "火長棍-圓柱火頭 (15cm)": { price: 2300, ship: 'long', img: "https://via.placeholder.com/150x90?text=Cyl+15cm" }
+            "火長棍-圓柱火頭 (10cm)": { price: 1900, ship: 'long', img: "https://via.placeholder.com/400x220?text=Staff+Cyl+10cm+Main" },
+            "火長棍-圓柱火頭 (15cm)": { price: 2300, ship: 'long', img: "https://via.placeholder.com/400x220?text=Staff+Cyl+15cm+Main" }
         },
         specs: {
             "火頭加大": { 
-                "不需額外加大": { plus: 0, img: "https://via.placeholder.com/150x90?text=Default+Head" }, 
-                "加厚一層": { plus: 400, img: "https://via.placeholder.com/150x90?text=Extra+Layer" } 
+                "不需額外加大": { plus: 0, img: "" }, 
+                "加厚一層": { plus: 400, img: "https://via.placeholder.com/400x220?text=Cyl+Thicker+Head" } 
             },
             "棍身種類": { 
-                "一體式棍身": { plus: 0, ship_override: 'long', img: "https://via.placeholder.com/150x90?text=Solid+Body" }, 
-                "組合式棍身": { plus: 600, ship_override: 'medium', img: "https://via.placeholder.com/150x90?text=Modular+Body" } 
+                "一體式棍身": { plus: 0, ship_override: 'long', img: "" }, 
+                "組合式棍身": { plus: 600, ship_override: 'medium', img: "https://via.placeholder.com/400x220?text=Modular+Joint" } 
             },
             "握把規格": { 
-                "標準薄款": { plus: 0, img: "https://via.placeholder.com/150x90?text=Standard+Grip" }, 
-                "加厚款": { plus: 50, img: "https://via.placeholder.com/150x90?text=Thick+Grip" } 
+                "標準薄款": { plus: 0, img: "https://via.placeholder.com/400x220?text=Standard+Grip+Detail" }, 
+                "加厚款": { plus: 50, img: "https://via.placeholder.com/400x220?text=Thick+Grip+Detail" } 
             },
-            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} }
+            "總長度": { "120cm": {plus:0}, "125cm": {plus:0}, "130cm": {plus:0}, "135cm": {plus:0}, "140cm": {plus:0}, "145cm": {plus:0}, "150cm": {plus:0} }
         }
     },
     fire_staff_twi: {
         sub: {
-            "火長棍-Twista火頭 (12cm 標準)": { price: 2700, ship: 'long', img: "https://via.placeholder.com/150x90?text=Twi+12cm+Std" },
-            "火長棍-Twista火頭 (12cm 細)": { price: 2500, ship: 'long', img: "https://via.placeholder.com/150x90?text=Twi+12cm+Thin" }
+            "火長棍-Twista火頭 (12cm 標準)": { price: 2700, ship: 'long', img: "https://via.placeholder.com/400x220?text=Twista+Standard+Main" },
+            "火長棍-Twista火頭 (12cm 細)": { price: 2500, ship: 'long', img: "https://via.placeholder.com/400x220?text=Twista+Slim+Main" }
         },
         specs: {
-            "火頭加大": { "不需額外加大": { plus: 0, img: "https://via.placeholder.com/150x90?text=Default+Head" }, "加長2cm": { plus: 300, img: "https://via.placeholder.com/150x90?text=Twi+Plus+2cm" } },
-            "棍身種類": { "一體式棍身": { plus: 0, ship_override: 'long', img: "https://via.placeholder.com/150x90?text=Solid+Body" }, "組合式棍身": { plus: 600, ship_override: 'medium', img: "https://via.placeholder.com/150x90?text=Modular+Body" } },
-            "握把規格": { "標準": { plus: 0, img: "https://via.placeholder.com/150x90?text=Standard+Grip" }, "加厚": { plus: 50, img: "https://via.placeholder.com/150x90?text=Thick+Grip" } },
-            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} }
+            "火頭加大": { "不需額外加大": { plus: 0, img: "" }, "加長2cm": { plus: 300, img: "" } },
+            "棍身種類": { "一體式棍身": { plus: 0, ship_override: 'long', img: "" }, "組合式棍身": { plus: 600, ship_override: 'medium', img: "" } },
+            "握把規格": { 
+                "標準": { plus: 0, img: "" }, 
+                "加厚": { plus: 50, img: "" } 
+            },
+            "總長度": { "120cm": {plus:0}, "125cm": {plus:0}, "130cm": {plus:0}, "135cm": {plus:0}, "140cm": {plus:0}, "145cm": {plus:0}, "150cm": {plus:0} }
         }
     },
     fire_short_cyl: {
         sub: {
-            "火短棍-圓柱火頭 (5cm)": { price: 950, ship: 'medium', img: "https://via.placeholder.com/150x90?text=Short+Cyl+5cm" },
-            "火短棍-圓柱火頭 (10cm)": { price: 1150, ship: 'medium', img: "https://via.placeholder.com/150x90?text=Short+Cyl+10cm" }
+            "火短棍-圓柱火頭 (5cm)": { price: 950, ship: 'medium', img: "" },
+            "火短棍-圓柱火頭 (10cm)": { price: 1150, ship: 'medium', img: "" }
         },
         specs: {
-            "火頭加大": { "不需額外加大": { plus: 0, img: "https://via.placeholder.com/150x90?text=Default+Head" }, "加厚一層": { plus: 200, img: "https://via.placeholder.com/150x90?text=Extra+Layer" } },
-            "握把規格": { "標準": { plus: 0, img: "https://via.placeholder.com/150x90?text=Standard+Grip" }, "加厚": { plus: 50, img: "https://via.placeholder.com/150x90?text=Thick+Grip" } },
-            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
+            "火頭加大": { "不需額外加大": { plus: 0, img: "" }, "加厚一層": { plus: 200, img: "" } },
+            "握把規格": { "標準": { plus: 0, img: "" }, "加厚": { plus: 50, img: "" } },
+            "總長度": { "80cm": {plus:0}, "85cm": {plus:0}, "90cm": {plus:0}, "95cm": {plus:0}, "100cm": {plus:0} }
         }
     },
     fire_short_twi: {
         sub: {
-            "火短棍-Twista火頭 (6cm標準)": { price: 1100, ship: 'medium', img: "https://via.placeholder.com/150x90?text=Short+Twi+6cm" },
-            "火短棍-Twista火頭 (7cm細)": { price: 1100, ship: 'medium', img: "https://via.placeholder.com/150x90?text=Short+Twi+7cm" }
+            "火短棍-Twista火頭 (6cm標準)": { price: 1100, ship: 'medium', img: "" },
+            "火短棍-Twista火頭 (7cm細)": { price: 1100, ship: 'medium', img: "" }
         },
         specs: {
-            "火頭加大": { "不需額外加大": { plus: 0, img: "https://via.placeholder.com/150x90?text=Default+Head" }, "加長2cm": { plus: 200, img: "https://via.placeholder.com/150x90?text=Twi+Plus+2cm" } },
-            "握把規格": { "標準": { plus: 0, img: "https://via.placeholder.com/150x90?text=Standard+Grip" }, "加厚": { plus: 50, img: "https://via.placeholder.com/150x90?text=Thick+Grip" } },
-            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
+            "火頭加大": { "不需額外加大": { plus: 0, img: "" }, "加長2cm": { plus: 200, img: "" } },
+            "握把規格": { "標準": { plus: 0, img: "" }, "加厚": { plus: 50, img: "" } },
+            "總長度": { "80cm": {plus:0}, "85cm": {plus:0}, "90cm": {plus:0}, "95cm": {plus:0}, "100cm": {plus:0} }
         }
     },
+    // 💡 點進此大項，自動發動精簡效果，不要其他規格
     fire_poi_det_1: {
+        hideExtraSpecs: true, // 核心智慧標籤：開啟後隱藏繩鍊、握把、長度
         sub: {
-            "火Poi-可拆式 (6cm豆干/單顆)": { price: 500, ship: 'small', img: "" }, "火Poi-可拆式 (8cm豆干/單顆)": { price: 600, ship: 'small', img: "" },
-            "火Poi-可拆式 (6cm Twista/單顆)": { price: 650, ship: 'small', img: "" }, "火Poi-可拆式 (8cm Twista/單顆)": { price: 800, ship: 'small', img: "" },
-            "火Poi-可拆式 (6cm 圓球/單顆)": { price: 700, ship: 'small', img: "" }, "火Poi-可拆式 (8cm 圓球/單顆)": { price: 900, ship: 'small', img: "" },
-            "火Poi-可拆式 (6cm 猴子球/單顆)": { price: 750, ship: 'small', img: "" }, "火Poi-可拆式 (8cm 猴子球/單顆)": { price: 1000, ship: 'small', img: "" }
+            "火Poi-可拆式 (6cm豆干/單顆)": { price: 500, ship: 'small', img: "https://via.placeholder.com/400x220?text=Poi+6cm+Det" },
+            "火Poi-可拆式 (8cm豆干/單顆)": { price: 600, ship: 'small', img: "" },
+            "火Poi-可拆式 (6cm Twista/單顆)": { price: 650, ship: 'small', img: "" },
+            "火Poi-可拆式 (8cm Twista/單顆)": { price: 800, ship: 'small', img: "" },
+            "火Poi-可拆式 (6cm 圓球/單顆)": { price: 700, ship: 'small', img: "" },
+            "火Poi-可拆式 (8cm 圓球/單顆)": { price: 900, ship: 'small', img: "" },
+            "火Poi-可拆式 (6cm 猴子球/單顆)": { price: 750, ship: 'small', img: "" },
+            "火Poi-可拆式 (8cm 猴子球/單顆)": { price: 1000, ship: 'small', img: "" }
         },
-        specs: {
-            "繩練規格": { "鐵鍊（有培林）": { plus: 300, img: "" }, "克維拉編織繩": { plus: 500, img: "" }, "Technora編織繩": { plus: 700, img: "" } },
-            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 200, img: "" } },
-            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} }
-        }
+        specs: {}
     },
     fire_poi_det_2: {
         sub: {
-            "火Poi-可拆式 (6cm豆干/2顆)": { price: 1000, ship: 'small', img: "" }, "火Poi-可拆式 (8cm豆干/2顆)": { price: 1200, ship: 'small', img: "" },
-            "火Poi-可拆式 (6cm Twista/2顆)": { price: 1300, ship: 'small', img: "" }, "火Poi-可拆式 (8cm Twista/2顆)": { price: 1600, ship: 'small', img: "" },
-            "火Poi-可拆式 (6cm 圓球/2顆)": { price: 1400, ship: 'small', img: "" }, "火Poi-可拆式 (8cm 圓球/2顆)": { price: 1800, ship: 'small', img: "" },
-            "火Poi-可拆式 (6cm 猴子球/2顆)": { price: 1500, ship: 'small', img: "" }, "火Poi-可拆式 (8cm 猴子球/2顆)": { price: 2000, ship: 'small', img: "" }
+            "火Poi-可拆式 (6cm豆干/2顆)": { price: 1000, ship: 'small' },
+            "火Poi-可拆式 (8cm豆干/2顆)": { price: 1200, ship: 'small' },
+            "火Poi-可拆式 (6cm Twista/2顆)": { price: 1300, ship: 'small' },
+            "火Poi-可拆式 (8cm Twista/2顆)": { price: 1600, ship: 'small' },
+            "火Poi-可拆式 (6cm 圓球/2顆)": { price: 1400, ship: 'small' },
+            "火Poi-可拆式 (8cm 圓球/2顆)": { price: 1800, ship: 'small' },
+            "火Poi-可拆式 (6cm 猴子球/2顆)": { price: 1500, ship: 'small' },
+            "火Poi-可拆式 (8cm 猴子球/2顆)": { price: 2000, ship: 'small' }
         },
         specs: {
             "繩練規格": { "鐵鍊（有培林）": { plus: 300, img: "" }, "克維拉編織繩": { plus: 500, img: "" }, "Technora編織繩": { plus: 700, img: "" } },
             "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 200, img: "" } },
-            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} }
+            "總長度": { "45cm": {plus:0}, "50cm": {plus:0}, "55cm": {plus:0}, "60cm": {plus:0} }
         }
     },
     fire_meteor_det: {
         sub: {
-            "火流星-可拆式 (6cm豆干/2顆)": { price: 1000, ship: 'small', img: "" }, "火流星-可拆式 (8cm豆干/2顆)": { price: 1200, ship: 'small', img: "" },
-            "火流星-可拆式 (6cm Twista/2顆)": { price: 1300, ship: 'small', img: "" }, "火流星-可拆式 (8cm Twista/2顆)": { price: 1600, ship: 'small', img: "" },
-            "火流星-可拆式 (6cm 圓球/2顆)": { price: 1400, ship: 'small', img: "" }, "火流星-可拆式 (8cm 圓球/2顆)": { price: 1800, ship: 'small', img: "" },
-            "火流星-可拆式 (6cm 猴子球/2顆)": { price: 1500, ship: 'small', img: "" }, "火流星-可拆式 (8cm 猴子球/2顆)": { price: 2000, ship: 'small', img: "" }
+            "火流星-可拆式 (6cm豆干/2顆)": { price: 1000, ship: 'small' },
+            "火流星-可拆式 (8cm豆干/2顆)": { price: 1200, ship: 'small' },
+            "火流星-可拆式 (6cm Twista/2顆)": { price: 1300, ship: 'small' },
+            "火流星-可拆式 (8cm Twista/2顆)": { price: 1600, ship: 'small' },
+            "火流星-可拆式 (6cm 圓球/2顆)": { price: 1400, ship: 'small' },
+            "火流星-可拆式 (8cm 圓球/2顆)": { price: 1800, ship: 'small' },
+            "火流星-可拆式 (6cm 猴子球/2顆)": { price: 1500, ship: 'small' },
+            "火流星-可拆式 (8cm 猴子球/2顆)": { price: 2000, ship: 'small' }
         },
         specs: {
             "繩練規格": { "鐵鍊+連接繩": { plus: 300, img: "" }, "克維拉粗繩": { plus: 500, img: "" } },
-            "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} }
+            "總長度": { "140cm": {plus:0}, "150cm": {plus:0}, "160cm": {plus:0}, "170cm": {plus:0}, "180cm": {plus:0} }
         }
     },
     fire_poi_one: {
-        sub: { "火Poi-一體式 (8cm 圓球)": { price: 1100, ship: 'small', img: "" }, "火Poi-一體式 (8cm 猴子球)": { price: 1200, ship: 'small', img: "" } },
+        sub: {
+            "火Poi-一體式 (8cm 圓球)": { price: 1100, ship: 'small' },
+            "火Poi-一體式 (8cm 猴子球)": { price: 1200, ship: 'small' }
+        },
         specs: {
-            "繩練規格": { "預設高規格繩鍊": { plus: 0, img: "" } }, "握把規格": { "大握把": { plus: 0, img: "" } },
-            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} }
+            "繩練規格": { "預設高規格繩鍊": { plus: 0 } },
+            "握把規格": { "大握把": { plus: 0 } },
+            "總長度": { "45cm": {plus:0}, "50cm": {plus:0}, "55cm": {plus:0}, "60cm": {plus:0} }
         }
     },
     fire_other: {
         sub: {
-            "小火棒 (2.5cm 圓柱火頭)": { price: 100, ship: 'small', img: "" }, "小火棒 (5cm 圓柱火頭)": { price: 200, ship: 'small', img: "" }, "小火棒 (3cm Twista火頭)": { price: 350, ship: 'small', img: "" },
-            "太極火 (5cm 圓柱火頭)": { price: 300, ship: 'medium', img: "" }, "太極火 (3cm Twista火頭)": { price: 400, ship: 'medium', img: "" },
-            "龍棍套組 (接盤*2 + 小火頭*8)": { price: 5500, ship: 'medium', img: "" }, "龍棍全配-一體式 (10cm大火頭)": { price: 8000, ship: 'long', img: "" }
+            "小火棒 (2.5cm 圓柱火頭)": { price: 100, ship: 'small' },
+            "小火棒 (5cm 圓柱火頭)": { price: 200, ship: 'small' },
+            "小火棒 (3cm Twista火頭)": { price: 350, ship: 'small' },
+            "太極火 (5cm 圓柱火頭)": { price: 300, ship: 'medium' },
+            "太極火 (3cm Twista火頭)": { price: 400, ship: 'medium' },
+            "龍棍套組 (接盤*2 + 5cm火頭*8)": { price: 5500, ship: 'medium' },
+            "龍棍全配-一體式 (10cm大火頭)": { price: 8000, ship: 'long' }
         },
-        specs: { "規格確認": { "標準廠規出貨": { plus: 0, img: "" } } }
+        specs: { "規格確認": { "標準廠規出貨": { plus: 0 } } }
     },
     prac_staff_long: {
         sub: {
-            "練習長棍-一體式 (圓柱/NT$800)": { price: 800, ship: 'long', img: "" }, "練習長棍-一體式 (Twista/NT$1000)": { price: 1000, ship: 'long', img: "" },
-            "練習長棍-組合式 (圓柱/NT$1400)": { price: 1400, ship: 'medium', img: "" }, "練習長棍-組合式 (Twista/NT$1600)": { price: 1600, ship: 'medium', img: "" }
+            "練習長棍-一體式 (10cm圓柱)": { price: 800, ship: 'long' },
+            "練習長棍-一體式 (10cmTwista)": { price: 1000, ship: 'long' },
+            "練習長棍-組合式 (10cm圓柱)": { price: 1400, ship: 'medium' },
+            "練習長棍-組合式 (10cmTwista)": { price: 1600, ship: 'medium' }
         },
         specs: {
-            "火頭尺寸規格": { "標準 10cm": { plus: 0, img: "" }, "火頭厚度增 1cm": { plus: 50, img: "" }, "長度多 5cm": { plus: 100, img: "" } },
-            "握把規格": { "一般薄款-黑色": { plus: 0, img: "" }, "薄款-其他顏色": { plus: 0, img: "" }, "輪胎紋加厚款": { plus: 50, img: "" } },
-            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} }
+            "火頭尺寸規格": { "標準 10cm": { plus: 0 }, "火頭厚度增 1cm": { plus: 50 }, "長度多 5cm": { plus: 100 } },
+            "握把規格": { "一般薄款-黑色": { plus: 0 }, "薄款-其他顏色": { plus: 0 }, "輪胎紋加厚款": { plus: 50 } },
+            "總長度": { "120cm": {plus:0}, "125cm": {plus:0}, "130cm": {plus:0}, "135cm": {plus:0}, "140cm": {plus:0}, "145cm": {plus:0}, "150cm": {plus:0} }
         }
     },
     prac_staff_short: {
-        sub: { "練習短棍-一體式 (5cm圓柱)": { price: 450, ship: 'medium', img: "" }, "練習短棍-一體式 (10cm圓柱)": { price: 550, ship: 'medium', img: "" }, "練習短棍-一體式 (6cmTwista)": { price: 500, ship: 'medium', img: "" } },
+        sub: {
+            "練習短棍-一體式 (5cm圓柱)": { price: 450, ship: 'medium' },
+            "練習短棍-一體式 (10cm圓柱)": { price: 550, ship: 'medium' },
+            "練習短棍-一體式 (6cmTwista)": { price: 500, ship: 'medium' }
+        },
         specs: {
-            "火頭加厚規格": { "標準尺寸": { plus: 0, img: "" }, "火頭厚度增 1cm": { plus: 30, img: "" } },
-            "握把規格": { "一般薄款-黑色": { plus: 0, img: "" }, "輪胎紋加厚款": { plus: 30, img: "" } },
-            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
+            "火頭加厚規格": { "標準尺寸": { plus: 0 }, "火頭厚度增 1cm": { plus: 30 } },
+            "握把規格": { "一般薄款-黑色": { plus: 0 }, "輪胎紋加厚款": { plus: 30 } },
+            "總長度": { "80cm": {plus:0}, "85cm": {plus:0}, "90cm": {plus:0}, "95cm": {plus:0}, "100cm": {plus:0} }
         }
     },
     prac_poi_meteor: {
         sub: {
-            "練習Poi (小握把/有培林)": { price: 800, ship: 'small', img: "" }, "練習流星 (8cm猴子球)": { price: 1000, ship: 'small', img: "" },
-            "練習Poi組-6mm繩款 (可拆)": { price: 600, ship: 'small', img: "" }, "練習Poi組-10mm繩款 (可拆)": { price: 650, ship: 'small', img: "" }, "練習Poi組-鐵鍊款 (可拆)": { price: 700, ship: 'small', img: "" },
-            "練習流星-10mm繩款 (一體)": { price: 600, ship: 'small', img: "" }, "練習流星-鐵鍊款 (可拆)": { price: 800, ship: 'small', img: "" }
+            "練習Poi (小握把/有培林)": { price: 800, ship: 'small' },
+            "練習流星 (8cm猴子球)": { price: 1000, ship: 'small' },
+            "練習Poi組-6mm繩款 (可拆)": { price: 600, ship: 'small' },
+            "練習Poi組-10mm繩款 (可拆)": { price: 650, ship: 'small' },
+            "練習Poi組-鐵鍊款 (可拆)": { price: 700, ship: 'small' },
+            "練習流星-10mm繩款 (一體)": { price: 600, ship: 'small' },
+            "練習流星-鐵鍊款 (可拆)": { price: 800, ship: 'small' }
         },
         specs: {
-            "火頭與球體加值": { "標準版": { plus: 0, img: "" }, "改大握把": { plus: 300, img: "" }, "接觸版 (80mm)": { plus: 100, img: "" }, "接觸版 (90mm)": { plus: 100, img: "" } },
-            "培林升級": { "原廠預設規格": { plus: 0, img: "" }, "不加裝培林": { plus: -100, img: "" } },
-            "總長度規格": { "預設標準總長": { plus: 0 } }
+            "火頭與球體加值": { "標準版": { plus: 0 }, "改大握把": { plus: 300 }, "接觸版 (80mm)": { plus: 100 }, "接觸版 (90mm)": { plus: 100 } },
+            "培林升級": { "原廠預設規格": { plus: 0 }, "不加裝培林": { plus: -100 } }
         }
     }
 };
 
 let currentCategory = 'fire_staff_cyl';
-// 儲存當前各規格被選中的 Key 值的暫存器
-let selectedSelections = {}; 
 
 function switchCategory(catKey, element) {
     currentCategory = catKey;
     document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
     element.classList.add('active');
-    selectedSelections = {}; // 清空前一個項目的選擇快取
     renderSubFields();
 }
 
-// 💡 核心大改版：把下拉選單轉換為帶有圖片的常駐視覺方塊
+// 💡 規格完全方塊化、按鈕化的核心渲染器
 function renderSubFields() {
     const data = db[currentCategory];
-    const container = document.getElementById('dynamicFieldsArea');
-    let html = "";
+    const container = document.getElementById('dynamicFields');
+    container.innerHTML = ""; // 清空舊畫面
 
-    // 1. 生成子品項結構方塊
-    html += `<div class="spec-group-title">結構品項選擇</div>`;
-    html += `<div class="option-grid" id="grid-subItem">`;
-    let firstSubKey = Object.keys(data.sub)[0];
-    if(!selectedSelections['subItem']) selectedSelections['subItem'] = firstSubKey;
+    // 1. 建立基礎子品項的按鈕網格
+    let subGroup = document.createElement('div');
+    subGroup.className = 'field-group';
+    subGroup.innerHTML = `<label>結構品項與規格</label>`;
+    let subGrid = document.createElement('div');
+    subGrid.className = 'spec-grid';
 
+    let isFirst = true;
     for(let k in data.sub) {
-        let activeClass = (selectedSelections['subItem'] === k) ? 'selected' : '';
-        let imgTag = data.sub[k].img ? `<img src="${data.sub[k].img}">` : `<img src="https://via.placeholder.com/150x90?text=${encodeURIComponent(k)}">`;
-        html += `
-            <div class="option-card ${activeClass}" onclick="selectCardOption('subItem', '${k}', ${data.sub[k].price}, '${data.sub[k].ship}', this)">
-                ${imgTag}
-                <span class="opt-name">${k}</span>
-                <span class="opt-price">$${data.sub[k].price}</span>
-            </div>
-        `;
+        let btn = document.createElement('div');
+        btn.className = `spec-btn ${isFirst ? 'active' : ''}`;
+        btn.innerText = `${k} ($${data.sub[k].price})`;
+        // 將核心數據藏在按鈕屬性中
+        btn.setAttribute('data-value', data.sub[k].price);
+        btn.setAttribute('data-ship', data.sub[k].ship);
+        btn.setAttribute('data-img', data.sub[k].img || '');
+        btn.setAttribute('data-name', k);
+        btn.onclick = function() {
+            subGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            triggerImageAndPriceEngine();
+        };
+        subGrid.appendChild(btn);
+        isFirst = false;
     }
-    html += `</div>`;
+    subGroup.appendChild(subGrid);
+    container.appendChild(subGroup);
 
-    // 2. 循環生成各客製化規格方塊
+    // 💡 智慧精簡核心：如果設定了 hideExtraSpecs，則不渲染後續的任何追加規格選單
+    if(data.hideExtraSpecs) {
+        triggerImageAndPriceEngine();
+        return;
+    }
+
+    // 2. 循環建立選配變體的按鈕網格
     for(let specName in data.specs) {
-        html += `<div class="spec-group-title">${specName}</div>`;
-        
-        // 💡 針對「總長度」這種不需看圖的規格，使用一般簡潔下拉選單，避免畫面過長
-        if(specName === "總長度" || specName === "總長度規格") {
-            let firstOptKey = Object.keys(data.specs[specName])[0];
-            if(!selectedSelections[specName]) selectedSelections[specName] = firstOptKey;
+        let specGroup = document.createElement('div');
+        specGroup.className = 'field-group';
+        specGroup.innerHTML = `<label>${specName}</label>`;
+        let specGrid = document.createElement('div');
+        specGrid.className = 'spec-grid';
+
+        let isOptFirst = true;
+        for(let opt in data.specs[specName]) {
+            let val = data.specs[specName][opt];
+            let btn = document.createElement('div');
+            btn.className = `spec-btn ${isOptFirst ? 'active' : ''}`;
             
-            html += `<div class="field-group"><select class="normal-select spec-dropdown" data-specname="${specName}" onchange="selectDropdownOption('${specName}', this)">`;
-            for(let opt in data.specs[specName]) {
-                let selectedAttr = (selectedSelections[specName] === opt) ? 'selected' : '';
-                let val = data.specs[specName][opt];
-                let plusText = val.plus > 0 ? ` (+$${val.plus})` : (val.plus < 0 ? ` (-$${Math.abs(val.plus)})` : '');
-                html += `<option value="${val.plus || 0}" ${selectedAttr}>${opt}${plusText}</option>`;
-            }
-            html += `</select></div>`;
-        } else {
-            // 其餘需要視覺對比的規格（火頭、握把、繩鍊）一律改造成視覺方塊按鈕
-            html += `<div class="option-grid" id="grid-${specName}">`;
-            let firstOptKey = Object.keys(data.specs[specName])[0];
-            if(!selectedSelections[specName]) selectedSelections[specName] = firstOptKey;
+            let plusText = val.plus > 0 ? ` (+$${val.plus})` : (val.plus < 0 ? ` (-$${Math.abs(val.plus)})` : '');
+            btn.innerText = `${opt}${plusText}`;
+            
+            btn.setAttribute('data-plus', val.plus || 0);
+            btn.setAttribute('data-img', val.img || '');
+            btn.setAttribute('data-specname', specName);
+            btn.setAttribute('data-optname', opt);
+            if(val.ship_override) btn.setAttribute('data-shipoverride', val.ship_override);
 
-            for(let opt in data.specs[specName]) {
-                let val = data.specs[specName][opt];
-                let activeClass = (selectedSelections[specName] === opt) ? 'selected' : '';
-                let imgTag = val.img ? `<img src="${val.img}">` : `<img src="https://via.placeholder.com/150x90?text=${encodeURIComponent(opt)}">`;
-                let plusText = val.plus > 0 ? `+$${val.plus}` : (val.plus < 0 ? `-$${Math.abs(val.plus)}` : '預設規格');
-                let overrideAttr = val.ship_override ? `data-shipoverride="${val.ship_override}"` : '';
-
-                html += `
-                    <div class="option-card ${activeClass}" ${overrideAttr} data-plus="${val.plus || 0}" onclick="selectCardOption('${specName}', '${opt}', ${val.plus || 0}, null, this)">
-                        ${imgTag}
-                        <span class="opt-name">${opt}</span>
-                        <span class="opt-price">${plusText}</span>
-                    </div>
-                `;
-            }
-            html += `</div>`;
+            btn.onclick = function() {
+                specGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                triggerImageAndPriceEngine();
+            };
+            specGrid.appendChild(btn);
+            isOptFirst = false;
         }
+        specGroup.appendChild(specGrid);
+        container.appendChild(specGroup);
     }
     
-    container.innerHTML = html;
-    updateLivePrice();
+    triggerImageAndPriceEngine();
 }
 
-// 處理方塊點擊切換
-function selectCardOption(specName, optKey, priceOrPlus, shipType, element) {
-    selectedSelections[specName] = optKey;
-    
-    // 讓同一個群組底下的其他方塊熄滅，當前點擊的亮起
-    const parent = element.parentElement;
-    parent.querySelectorAll('.option-card').forEach(card => card.classList.remove('selected'));
-    element.classList.add('selected');
+// 💡 雙重連動預覽圖＋計價黑科技引擎
+function triggerImageAndPriceEngine() {
+    const mainImgEl = document.getElementById('mainPreviewImg');
+    const captionEl = document.getElementById('previewCaption');
 
-    updateLivePrice();
-}
+    let activeImg = "";
+    let activeLabel = "商品基礎外觀";
 
-// 處理下拉長度選單切換
-function selectDropdownOption(specName, el) {
-    selectedSelections[specName] = el.value;
-    updateLivePrice();
-}
-
-// 即時金額試算
-function updateLivePrice() {
-    let base = 0;
-    let extra = 0;
-    const qty = parseInt(document.getElementById('qty').value);
-
-    // 找到被選取的基礎品項金額
-    const subGrid = document.getElementById('grid-subItem');
-    if(subGrid) {
-        const selectedSub = subGrid.querySelector('.option-card.selected');
-        if(selectedSub) {
-            // 從數據庫抓取
-            let name = selectedSelections['subItem'];
-            base = db[currentCategory].sub[name].price;
+    // 1. 抓取目前點選的基礎品項按鈕
+    const activeSubBtn = document.querySelector('#dynamicFields .spec-grid .spec-btn.active');
+    if (activeSubBtn) {
+        let subImg = activeSubBtn.getAttribute('data-img');
+        if (subImg && subImg.trim() !== "") {
+            activeImg = subImg;
+            activeLabel = activeSubBtn.getAttribute('data-name');
         }
     }
 
-    // 加總方塊按鈕的加價
-    document.querySelectorAll('.option-grid').forEach(grid => {
-        if(grid.id !== 'grid-subItem') {
-            const selectedOpt = grid.querySelector('.option-card.selected');
-            if(selectedOpt) {
-                extra += parseInt(selectedOpt.getAttribute('data-plus') || 0);
+    // 2. 核心覆蓋：如果客製化按鈕（如：加厚握把）有獨立圖片，將強制更新預覽圖！
+    document.querySelectorAll('#dynamicFields .field-group .spec-grid').forEach((grid, idx) => {
+        if(idx > 0) { // 跳過第一個基礎品項網格
+            let activeOptBtn = grid.querySelector('.spec-btn.active');
+            if(activeOptBtn) {
+                let optImg = activeOptBtn.getAttribute('data-img');
+                if(optImg && optImg.trim() !== "") {
+                    activeImg = optImg;
+                    activeLabel = `${activeOptBtn.getAttribute('data-specname')}: ${activeOptBtn.getAttribute('data-optname')}`;
+                }
             }
         }
     });
 
-    // 加總下拉長度選單的加價
-    document.querySelectorAll('.spec-dropdown').forEach(dropdown => {
-        extra += parseInt(dropdown.value || 0);
+    // 3. 渲染預覽大圖
+    if (activeImg && activeImg.trim() !== "") {
+        mainImgEl.src = activeImg;
+        captionEl.innerText = `🔍 客製化細節：${activeLabel}`;
+    } else {
+        // 如果目前沒上傳對應規格圖，就帶入預設圖防破圖
+        mainImgEl.src = "https://via.placeholder.com/400x220?text=FPS+FIRE+PROPS";
+        captionEl.innerText = "FPS 專業手工道具製作";
+    }
+
+    updateLivePrice();
+}
+
+function updateLivePrice() {
+    const activeSubBtn = document.querySelector('#dynamicFields .field-group:first-child .spec-btn.active');
+    if(!activeSubBtn) return;
+
+    const base = parseInt(activeSubBtn.getAttribute('data-value'));
+    const qty = parseInt(document.getElementById('qty').value);
+    
+    let extra = 0;
+    // 累加其他所有亮起狀態的客製化方塊加價金額
+    document.querySelectorAll('#dynamicFields .field-group').forEach((group, idx) => {
+        if(idx > 0) {
+            let activeOpt = group.querySelector('.spec-btn.active');
+            if(activeOpt) extra += parseInt(activeOpt.getAttribute('data-plus') || 0);
+        }
     });
 
     document.getElementById('targetPrice').innerText = `NT$ ${((base + extra) * qty).toLocaleString()}`;
 }
 
-// --- 購物車與高級計費引擎 ---
-let cart = [];
-
+// --- 購物車與計費階梯 ---
 function addToCart() {
-    const subName = selectedSelections['subItem'];
-    const subData = db[currentCategory].sub[subName];
+    const activeSubBtn = document.querySelector('#dynamicFields .field-group:first-child .spec-btn.active');
+    if(!activeSubBtn) return;
+
+    const itemName = activeSubBtn.getAttribute('data-name');
+    let itemShip = activeSubBtn.getAttribute('data-ship');
     const qty = parseInt(document.getElementById('qty').value);
+    const base = parseInt(activeSubBtn.getAttribute('data-value'));
     
-    let basePrice = subData.price;
-    let finalShip = subData.ship; 
     let specs = [];
     let extra = 0;
 
-    // 讀取方塊加價項與運費覆蓋
-    for(let specName in db[currentCategory].specs) {
-        let chosenOpt = selectedSelections[specName];
-        let optData = db[currentCategory].specs[specName][chosenOpt];
-        
-        extra += (optData.plus || 0);
-        specs.push(`${specName}: ${chosenOpt}`);
-        
-        if(optData.ship_override) {
-            finalShip = optData.ship_override;
+    document.querySelectorAll('#dynamicFields .field-group').forEach((group, idx) => {
+        if(idx > 0) {
+            let activeOpt = group.querySelector('.spec-btn.active');
+            if(activeOpt) {
+                extra += parseInt(activeOpt.getAttribute('data-plus') || 0);
+                specs.push(`${activeOpt.getAttribute('data-specname')}: ${activeOpt.getAttribute('data-optname')}`);
+                
+                let override = activeOpt.getAttribute('data-shipoverride');
+                if (override) itemShip = override;
+            }
         }
-    }
+    });
 
     cart.push({
         id: Date.now(),
-        name: subName,
-        specs: specs.join(' / '),
-        price: basePrice + extra,
+        name: itemName,
+        specs: specs.length > 0 ? specs.join(' / ') : "標準原廠配備",
+        price: base + extra,
         qty: qty,
-        ship: finalShip
+        ship: itemShip
     });
     renderCart();
 }
@@ -653,7 +698,7 @@ function renderCart() {
     let subTotal = 0;
     
     if(cart.length === 0) {
-        list.innerHTML = `<p style="color:#999; text-align:center; padding: 40px 0;">清單內尚無道具，請從左側配置加入。</p>`;
+        list.innerHTML = `<p style="color:#999; text-align:center; padding: 20px 0;">清單內尚無道具，請從左側配置加入。</p>`;
         updatePrices(0, 0, "");
         return;
     }
@@ -674,42 +719,24 @@ function renderCart() {
     updatePrices(subTotal, shipInfo.fee, shipInfo.desc);
 }
 
-// 💡 終極運費引擎：一體式長棍滿額免運豁免規則
 function calcShippingEngine(items, total) {
+    if(total >= 5000) return { fee: 0, desc: "🎉 達 NT$5,000 免運門檻！" };
+
     const longQty = items.filter(i => i.ship === 'long').reduce((s, i) => s + i.qty, 0);
     const medQty = items.filter(i => i.ship === 'medium').reduce((s, i) => s + i.qty, 0);
-    const smallQty = items.filter(i => i.ship === 'small').reduce((s, i) => s + i.qty, 0);
 
     let fee = 0;
     let desc = [];
 
-    // 計算常規運費基礎
     if(longQty > 0) { fee += (longQty * 100); desc.push(`長棍獨立包裹 × ${longQty}支`); }
     if(medQty > 0) { let boxes = Math.ceil(medQty / 6); fee += (boxes * 100); desc.push(`中型道具包裹 × ${boxes}箱`); }
-    if(smallQty > 0) { fee += 60; desc.push(`小型包裹`); }
+    if(items.filter(i => i.ship === 'small').reduce((s, i) => s + i.qty, 0) > 0) { fee += 60; desc.push(`小型包裹`); }
 
-    // 💡 執行「一體式長棍免運特赦令」規則判定
-    if (longQty > 0) {
-        // 如果購物車內含一體式長棍，不論金額多高，長棍必須【滿 3 支（含）以上】才能豁免運費
-        if (longQty >= 3) {
-            return { fee: 0, desc: "🎉 達一體長棍滿 3 支免運優惠！" };
-        } else {
-            // 未滿 3 支一體長棍，就算總額滿 5000 依然要收費
-            return { fee: fee, desc: `⚠️ 一體長棍未滿3支不適用滿額免運。${desc.join(' + ')}` };
-        }
-    } else {
-        // 如果購物車內【完全沒有】一體式長棍，則維持原本的「滿 5000 直接免運」
-        if (total >= 5000) {
-            return { fee: 0, desc: "🎉 達 NT$5,000 商店免運門檻！" };
-        }
-    }
-
-    // 大宗大榮貨運安全閥封頂
     if(longQty >= 5 || fee >= 300) {
         return { fee: 300, desc: "🚛 訂單大宗：自動優化改走大榮貨運 (大箱收費)" };
     }
 
-    return { fee: fee, desc: `物流計費：${desc.join(' + ')}` };
+    return { fee: fee, desc: `優化物流組合：${desc.join(' + ')}` };
 }
 
 function updatePrices(sub, ship, desc) {
@@ -718,25 +745,9 @@ function updatePrices(sub, ship, desc) {
     document.getElementById('shipDesc').innerText = desc;
     document.getElementById('grandTotal').innerText = `NT$ ${(sub + ship).toLocaleString()}`;
     
-    // 免運進度條動態提示
     const percent = Math.min((sub / 5000) * 100, 100);
     document.getElementById('shipFill').style.width = percent + '%';
-    
-    // 檢查車內是否有長棍來動態更換提示字眼
-    const hasLong = cart.some(i => i.ship === 'long');
-    const longCount = cart.filter(i => i.ship === 'long').reduce((s, i) => s + i.qty, 0);
-
-    if (hasLong) {
-        if (longCount >= 3) {
-            document.getElementById('shipMsg').innerText = "🎉 已符合一體長棍 3 支免運資格！";
-            document.getElementById('shipFill').style.width = '100%';
-        } else {
-            document.getElementById('shipMsg').innerText = `💡 一體長棍目前 ${longCount} 支，還差 ${3 - longCount} 支方可享有免運！`;
-            document.getElementById('shipFill').style.width = '50%';
-        }
-    } else {
-        document.getElementById('shipMsg').innerText = sub >= 5000 ? "🎉 已享受免運費優惠！" : `還差 NT$ ${(5000 - sub).toLocaleString()} 即可享有免運優惠`;
-    }
+    document.getElementById('shipMsg').innerText = sub >= 5000 ? "🎉 已享受免運費優惠！" : `還差 NT$ ${(5000 - sub).toLocaleString()} 即可享有免運優惠`;
 }
 
 function copyOrder() {
@@ -757,7 +768,7 @@ function copyOrder() {
     });
 }
 
-// 首次加載初始化
+// 首次載入初始化
 renderSubFields();
 </script>
 
