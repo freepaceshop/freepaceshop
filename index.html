@@ -177,7 +177,7 @@
         <div id="dynamicFields"></div>
 
         <div class="field-group">
-            <label>套數 (此為總套數，單一套的球數請於上方組合選項選擇)</label>
+            <label>套數 (此為總套數，單一套的數量請於上方組合選項選擇)</label>
             <input type="number" id="qty" value="1" min="1" onchange="updateLivePrice()">
         </div>
 
@@ -211,8 +211,9 @@
 </div>
 
 <script>
-// --- 最新全面優化資料庫 (含倍率引擎與細節修復) ---
+// --- 完全對齊《新價目表》與全品項倍率引擎 ---
 const db = {
+    // 🔥 火長棍系列
     fire_staff_cyl: {
         sub: {
             "火長棍-10cm圓柱火頭": { price: 1900, ship: 'long', img: "" },
@@ -222,7 +223,8 @@ const db = {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 400, img: "" } },
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "" }, "加厚款": { plus: 50, img: "" } },
-            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} }
+            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
+            "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
         }
     },
     fire_staff_twi: {
@@ -234,9 +236,12 @@ const db = {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 300, img: "" } },
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "" }, "加厚款": { plus: 50, img: "" } },
-            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} }
+            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
+            "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
         }
     },
+    
+    // 🔥 火短棍系列
     fire_short_cyl: {
         sub: {
             "火短棍-5cm圓柱火頭": { price: 950, ship: 'medium', img: "" },
@@ -245,7 +250,8 @@ const db = {
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 200, img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "" }, "加厚款": { plus: 50, img: "" } },
-            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
+            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
+            "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
         }
     },
     fire_short_twi: {
@@ -256,11 +262,14 @@ const db = {
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 200, img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "" }, "加厚款": { plus: 50, img: "" } },
-            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
+            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
+            "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
         }
     },
-    // 💡 Poi 類別新增「套組數量」的隱藏折扣引擎 (mult)
+
+    // 💡 Poi 類別
     fire_poi_single: {
+        hideExtraSpecs: true,
         sub: {
             "火Poi單顆-6cm豆干": { price: 500, ship: 'small', img: "" },
             "火Poi單顆-8cm豆干": { price: 600, ship: 'small', img: "" },
@@ -271,13 +280,7 @@ const db = {
             "火Poi單顆-6cm 猴子球": { price: 750, ship: 'small', img: "" },
             "火Poi單顆-8cm 猴子球": { price: 1000, ship: 'small', img: "" }
         },
-        specs: {
-            "組合數量": { 
-                "單球組": { mult: 1, img: "" }, 
-                "雙球組": { mult: 1.96, img: "" }, 
-                "三球組": { mult: 2.85, img: "" } 
-            }
-        } 
+        specs: {} 
     },
     fire_poi_det_1: {
         sub: {
@@ -294,11 +297,7 @@ const db = {
             "繩練規格": { "鐵鍊(有培林)": { plus: 300, img: "" }, "克維拉編織繩": { plus: 500, img: "" }, "Technora編織繩": { plus: 700, img: "" } },
             "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 200, img: "" } },
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
-            "組合數量": { 
-                "單球組": { mult: 1, img: "" }, 
-                "雙球組": { mult: 1.96, img: "" }, 
-                "三球組": { mult: 2.85, img: "" } 
-            }
+            "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
     },
     fire_poi_one: {
@@ -309,11 +308,7 @@ const db = {
         specs: {
             "握把規格": { "預設大握把": { plus: 0, img: "" } },
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
-            "組合數量": { 
-                "單球組": { mult: 1, img: "" }, 
-                "雙球組": { mult: 1.96, img: "" }, 
-                "三球組": { mult: 2.85, img: "" } 
-            }
+            "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
     },
     fire_meteor_det: {
@@ -342,13 +337,16 @@ const db = {
         },
         specs: {}
     },
+
+    // 💡 練習長棍系列
     prac_staff_std: {
         sub: { "練習長棍-標準版": { price: 1200, ship: 'long', img: "" } },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 200, img: "" } },
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "" } },
             "握把規格": { "標準": { plus: 0, img: "" }, "加厚": { plus: 50, img: "" } },
-            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} }
+            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
+            "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
         }
     },
     prac_staff_contact: {
@@ -356,15 +354,19 @@ const db = {
         specs: {
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "" } },
             "握把規格": { "標準": { plus: 0, img: "" }, "加厚": { plus: 50, img: "" } },
-            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} }
+            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
+            "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
         }
     },
+
+    // 💡 練習短棍系列
     prac_staff_short_std: {
         sub: { "練習短棍-標準版": { price: 600, ship: 'medium', img: "" } },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 100, img: "" } },
             "握把規格": { "標準": { plus: 0, img: "" }, "加厚": { plus: 50, img: "" } },
-            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
+            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
+            "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
         }
     },
     prac_staff_short_light: {
@@ -372,31 +374,26 @@ const db = {
         specs: {
             "火頭規格": { "TPU (僅白色)": { plus: 0, img: "" }, "織帶 (藍/綠/黃/紅/紫/黑/金/銀)": { plus: 0, img: "" } },
             "握把規格": { "標準": { plus: 0, img: "" }, "全熱縮套 (加色)": { plus: 50, img: "" } },
-            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
+            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
+            "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
         }
     },
+
+    // 💡 練習Poi與其他類別
     prac_poi_std: {
         sub: { "練習Poi-標準版": { price: 1000, ship: 'small', img: "" } },
         specs: {
             "培林規格": { "不加裝培林": { plus: 0, img: "" }, "加裝培林": { plus: 100, img: "" } },
             "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 200, img: "" } },
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
-            "組合數量": { 
-                "單球組": { mult: 1, img: "" }, 
-                "雙球組": { mult: 1.96, img: "" }, 
-                "三球組": { mult: 2.85, img: "" } 
-            }
+            "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
     },
     prac_poi_contact: {
         sub: { "練習Poi-接觸版 (90mm)": { price: 1500, ship: 'small', img: "" } },
         specs: {
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
-            "組合數量": { 
-                "單球組": { mult: 1, img: "" }, 
-                "雙球組": { mult: 1.96, img: "" }, 
-                "三球組": { mult: 2.85, img: "" } 
-            }
+            "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
     },
     prac_meteor: {
@@ -472,6 +469,12 @@ function renderSubFields() {
     subGroup.appendChild(subGrid);
     container.appendChild(subGroup);
 
+    // 如果類別設定隱藏後續客製化選項（如：火Poi-單顆基礎火頭）
+    if(data.hideExtraSpecs) {
+        triggerImageAndPriceEngine();
+        return;
+    }
+
     // 2. 循環建立客製化變體
     let specIndex = 2;
     for(let specName in data.specs) {
@@ -487,7 +490,7 @@ function renderSubFields() {
             let btn = document.createElement('div');
             btn.className = `spec-btn ${isOptFirst ? 'active' : ''}`;
             
-            // 💡 關鍵修改：如果是倍率(mult)，就不會在按鈕上顯示任何加價文字！
+            // 💡 關鍵：如果是倍率(mult)，就不會在按鈕上顯示任何加價文字
             let plusText = "";
             if (val.plus > 0) plusText = `\n(+$${val.plus})`;
             else if (val.plus < 0) plusText = `\n(-$${Math.abs(val.plus)})`;
@@ -590,7 +593,7 @@ function updateLivePrice() {
     document.getElementById('targetPrice').innerText = `NT$ ${(finalPrice * qty).toLocaleString()}`;
 }
 
-// --- 🐛 徹底穩定的 addToCart 核心 ---
+// 🐛 徹底穩定的 addToCart 核心
 let cart = [];
 
 function addToCart() {
