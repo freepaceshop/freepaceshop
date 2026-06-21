@@ -172,13 +172,17 @@
                 <span>練習流星<br>標準版</span>
             </div>
             
+                <div class="category-btn" onclick="switchCategory('set', this)">
+                <img src="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-big.jpg" alt="配件區">
+                <span>套組</span>
+            </div>
             <div class="category-btn" onclick="switchCategory('accessories', this)">
                 <img src="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-quicklink.jpg" alt="配件區">
-                <span>配件區</span>
+                <span>配件</span>
             </div>
             <div class="category-btn" onclick="switchCategory('materials', this)">
                 <img src="https://via.placeholder.com/150x90?text=Materials" alt="材料區">
-                <span>材料區<br>(鋁棍/防火布)</span>
+                <span>材料<br>(鋁棍/防火布)</span>
             </div>
         </div>
 
@@ -224,7 +228,7 @@ const db = {
         },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 400, img: "" } },
-            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "" } },
+            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
             "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
@@ -237,7 +241,7 @@ const db = {
         },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 300, img: "" } },
-            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "" } },
+            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
             "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
@@ -365,7 +369,7 @@ const db = {
         sub: { "練習長棍-標準版": { price: 1200, ship: 'long', img: "" } },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 200, img: "" } },
-            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "" } },
+            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
             "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
@@ -374,7 +378,7 @@ const db = {
     prac_staff_contact: {
         sub: { "練習長棍-接觸版": { price: 1500, ship: 'long', img: "" } },
         specs: {
-            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "" } },
+            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
             "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
@@ -394,8 +398,8 @@ const db = {
     prac_staff_short_light: {
         sub: { "練習短棍-輕量版": { price: 500, ship: 'medium', img: "" } },
         specs: {
-            "火頭規格": { "TPU (僅白色)": { plus: 0, img: "" }, "織帶 (藍/綠/黃/紅/紫/黑/金/銀)": { plus: 0, img: "" } },
-            "握把規格": { "標準": { plus: 0, img: "" }, "全熱縮套 (加色)": { plus: 50, img: "" } },
+            "火頭規格": { "TPU (僅白色)": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-option-light-tpu.jpg" }, "織帶 (藍/綠/黃/紅/紫/黑/金/銀)": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-option-light-color.jpg" } },
+            "握把規格": { "標準": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-tpunormal.jpg" }, "全熱縮套 (藍/綠/黃/紅/紫/黑/金/銀)": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-fullcolor.jpg" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
             "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
         }
@@ -406,7 +410,7 @@ const db = {
         sub: { "練習Poi-標準版": { price: 550, ship: 'small', img: "" } },
         specs: {
             "培林規格": { "不加裝培林": { plus: 0, img: "" }, "加裝培林": { plus: 100, img: "" } },
-            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 200, img: "" } },
+            "握把規格": { "小握把": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-small.jpg" }, "大握把": { plus: 200, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-big.jpg" } },
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
@@ -422,16 +426,27 @@ const db = {
         sub: { "練習流星-標準版": { price: 1000, ship: 'small', img: "" } },
         specs: { "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} } }
     },
+    set: {
+        sub: {
+            "培林小握把(僅白色)": { price: 180, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-small.jpg" },
+            "培林大握把(顏色以現貨為主)": { price: 300, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-big.jpg" },
+            "克維拉編織繩": { price: 500, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-blackkevlar.jpg" },
+            "Technora編織繩": { price: 700, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-technora.jpg" },
+            "流星克維拉繩": { price: 700, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-kevlar.jpg" },
+            "流星鐵鍊連接繩": { price: 100, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-nochain.jpg" },
+            "鐵鍊組": { price: 130, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-chain.jpg" }
+        },
+        specs: {}
+    },
     accessories: {
         sub: {
-            "握把布 (普通款)": { price: 20, ship: 'small', img: "" },
-            "握把布 (厚款)": { price: 60, ship: 'small', img: "" },
-            "握把球-小 (橢圓形)": { price: 100, ship: 'small', img: "" },
-            "握把球-大 (圓球形)": { price: 200, ship: 'small', img: "" },
-            "鐵鍊 (35cm)": { price: 70, ship: 'small', img: "" },
-            "快接環 (M3)": { price: 35, ship: 'small', img: "" },
-            "培林 (#7 拉力約250kg)": { price: 20, ship: 'small', img: "" },
-            "Poi吊飾 (可選1~2色)": { price: 50, ship: 'small', img: "" }
+            "握把布 (普通款)": { price: 20, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-grip-normal.jpg" },
+            "握把布 (厚款)": { price: 60, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-grip-thick.jpg" },
+            "握把球-小": { price: 100, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-knob-small.jpg" },
+            "握把球-大（顏色以現貨為主）": { price: 200, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-knob-big.jpg" },
+            "鐵鍊 (35cm)": { price: 70, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-chain.jpg" },
+            "快接環 (M3)": { price: 35, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-quicklink.jpg" },
+            "培林 (#7 拉力約250kg)": { price: 20, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-bearings.jpg" }
         },
         specs: {}
     },
