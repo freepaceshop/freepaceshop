@@ -407,7 +407,7 @@ const db = {
         sub: { "練習短棍-輕量版": { price: 500, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-tpunormal.jpg" } },
         specs: {
             "火頭規格": { "TPU (僅白色)": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-option-light-tpu.jpg" }, "織帶 (藍/綠/黃/紅/紫/黑/金/銀)": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-option-light-color.jpg" } },
-            "握把規格": { "標準": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-tpunormal.jpg" }, "全熱縮套 (加色)": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-fullcolor.jpg" } },
+            "握把規格": { "標準": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-tpunormal.jpg" }, "熱縮套 (藍/綠/黃/紅/紫/黑/金/銀)": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-fullcolor.jpg" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
             "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
         }
@@ -580,7 +580,7 @@ function triggerImageAndPriceEngine() {
             mainImgEl.style.opacity = '0.5';
             setTimeout(() => {
                 mainImgEl.src = catImg;
-                captionEl.innerText = `🔍 當前大項：${catText}`;
+                captionEl.innerText = `🔍 當前項目：${catText}`;
                 mainImgEl.style.opacity = '1';
             }, 120);
         }
