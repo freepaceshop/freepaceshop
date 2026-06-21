@@ -42,12 +42,15 @@
         .category-btn.active { border-color: #000; box-shadow: 0 0 0 1.5px #000; background: #fafafa; }
         .category-btn.active span { color: #000; font-weight: 700; }
 
-        /* 規格選項視覺化方塊按鈕 */
-        .spec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-bottom: 15px; }
+        /* 💡 升級版：規格選項圖文方塊按鈕 */
+        .spec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin-bottom: 15px; }
         .spec-btn {
             background: #fff; border: 1px solid var(--border-color); border-radius: 6px; padding: 10px;
-            cursor: pointer; font-size: 0.88rem; text-align: center; transition: all 0.2s ease; color: #444; font-weight: 500;
+            cursor: pointer; font-size: 0.85rem; text-align: center; transition: all 0.2s ease; color: #444; font-weight: 500;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; /* 讓圖文置中對齊 */
         }
+        .spec-btn img { width: 100%; height: 65px; object-fit: contain; margin-bottom: 6px; border-radius: 4px; display: block; }
+        .spec-btn span { line-height: 1.3; }
         .spec-btn:hover { border-color: #888; }
         .spec-btn.active { border-color: #000; box-shadow: 0 0 0 1px #000; background: #fafafa; color: #000; font-weight: 700; }
 
@@ -65,7 +68,7 @@
         /* 即時大預覽圖 */
         .main-preview-box { background: white; border: 1px solid #e1e1e1; border-radius: 8px; padding: 10px; margin-bottom: 20px; text-align: center; }
         .main-preview-box img { width: 100%; max-height: 220px; object-fit: contain; border-radius: 4px; transition: opacity 0.3s ease; }
-        .preview-caption { font-size: 0.75rem; color: var(--primary); margin-top: 6px; font-weight: bold; display: block; }
+        .preview-caption { font-size: 0.8rem; color: var(--primary); margin-top: 6px; font-weight: bold; display: block; }
 
         .free-ship-container { background: white; padding: 15px; border-radius: 6px; border: 1px solid #e1e1e1; margin-bottom: 20px; }
         .free-ship-bar { background: #e1e1e1; height: 6px; border-radius: 3px; overflow: hidden; margin-bottom: 8px; }
@@ -118,7 +121,7 @@
                 <span>火漂浮棍<br></span>
             </div>
             <div class="category-btn" onclick="switchCategory('fire_staff_shuriken', this)">
-                <img src="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-shuriken.jpg" alt="火漂浮棍">
+                <img src="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-shuriken.jpg" alt="火手裡劍">
                 <span>火手裡劍<br></span>
             </div>
             <div class="category-btn" onclick="switchCategory('fire_poi_single', this)">
@@ -219,7 +222,6 @@
 </div>
 
 <script>
-// --- 完全對齊《新價目表》與全品項倍率引擎 ---
 const db = {
     // 🔥 火長棍系列
     fire_staff_cyl: {
@@ -469,7 +471,7 @@ function renderSubFields() {
     const container = document.getElementById('dynamicFields');
     container.innerHTML = ""; 
 
-    // 1. 建立基礎子品項的按鈕網格
+    // 1. 建立基礎子品項的圖文按鈕網格
     let subGroup = document.createElement('div');
     subGroup.className = 'field-group';
     subGroup.innerHTML = `<label>1. 選擇品項與規格</label>`;
@@ -478,12 +480,17 @@ function renderSubFields() {
 
     let isFirst = true;
     for(let k in data.sub) {
+        let val = data.sub[k];
         let btn = document.createElement('div');
         btn.className = `spec-btn ${isFirst ? 'active' : ''}`;
-        btn.innerText = `${k}\n($${data.sub[k].price})`; 
-        btn.setAttribute('data-value', data.sub[k].price);
-        btn.setAttribute('data-ship', data.sub[k].ship);
-        btn.setAttribute('data-img', data.sub[k].img || '');
+        
+        // 判斷是否有圖片，有就放入 img 標籤
+        let imgHTML = (val.img && val.img.trim() !== "") ? `<img src="${val.img}" alt="${k}">` : "";
+        btn.innerHTML = `${imgHTML}<span>${k}<br>($${val.price})</span>`; 
+        
+        btn.setAttribute('data-value', val.price);
+        btn.setAttribute('data-ship', val.ship);
+        btn.setAttribute('data-img', val.img || '');
         btn.setAttribute('data-name', k);
         btn.onclick = function() {
             subGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active'));
@@ -496,13 +503,12 @@ function renderSubFields() {
     subGroup.appendChild(subGrid);
     container.appendChild(subGroup);
 
-    // 如果類別設定隱藏後續客製化選項（如：火Poi-單顆基礎火頭）
     if(data.hideExtraSpecs) {
         triggerImageAndPriceEngine();
         return;
     }
 
-    // 2. 循環建立客製化變體
+    // 2. 循環建立客製化變體的圖文按鈕
     let specIndex = 2;
     for(let specName in data.specs) {
         let specGroup = document.createElement('div');
@@ -517,15 +523,15 @@ function renderSubFields() {
             let btn = document.createElement('div');
             btn.className = `spec-btn ${isOptFirst ? 'active' : ''}`;
             
-            // 💡 關鍵：如果是倍率(mult)，就不會在按鈕上顯示任何加價文字
             let plusText = "";
-            if (val.plus > 0) plusText = `\n(+$${val.plus})`;
-            else if (val.plus < 0) plusText = `\n(-$${Math.abs(val.plus)})`;
+            if (val.plus > 0) plusText = `<br>(+$${val.plus})`;
+            else if (val.plus < 0) plusText = `<br>(-$${Math.abs(val.plus)})`;
 
-            btn.innerText = `${opt}${plusText}`;
+            let imgHTML = (val.img && val.img.trim() !== "") ? `<img src="${val.img}" alt="${opt}">` : "";
+            btn.innerHTML = `${imgHTML}<span>${opt}${plusText}</span>`;
             
             btn.setAttribute('data-plus', val.plus || 0);
-            btn.setAttribute('data-mult', val.mult || 1); // 寫入倍率
+            btn.setAttribute('data-mult', val.mult || 1); 
             btn.setAttribute('data-img', val.img || '');
             btn.setAttribute('data-specname', specName);
             btn.setAttribute('data-optname', opt);
@@ -534,7 +540,7 @@ function renderSubFields() {
             btn.onclick = function() {
                 specGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
-                triggerImageAndPriceEngine();
+                updateLivePrice(); // 這裡不再呼叫 triggerImageAndPriceEngine，因為右側大圖不需跟隨小選項改變
             };
             specGrid.appendChild(btn);
             isOptFirst = false;
@@ -554,6 +560,7 @@ function triggerImageAndPriceEngine() {
     let activeImg = "";
     let activeLabel = "商品基礎外觀";
 
+    // 💡 邏輯更新：右側大圖「只抓取」第一大項（主品項）的圖片
     const activeSubBtn = document.querySelector('#dynamicFields .field-group:first-child .spec-btn.active');
     if (activeSubBtn) {
         let subImg = activeSubBtn.getAttribute('data-img');
@@ -562,27 +569,25 @@ function triggerImageAndPriceEngine() {
             activeLabel = activeSubBtn.getAttribute('data-name');
         }
     }
-
-    document.querySelectorAll('#dynamicFields .field-group').forEach((group, idx) => {
-        if(idx > 0) { 
-            let activeOptBtn = group.querySelector('.spec-btn.active');
-            if(activeOptBtn) {
-                let optImg = activeOptBtn.getAttribute('data-img');
-                if(optImg && optImg.trim() !== "") {
-                    activeImg = optImg;
-                    activeLabel = `${activeOptBtn.getAttribute('data-specname')} - ${activeOptBtn.getAttribute('data-optname')}`;
-                }
-            }
+    
+    // 如果主品項也沒有設圖片，則去抓取左側最外層大分類的圖
+    if (!activeImg || activeImg.trim() === "") {
+        const activeCatBtn = document.querySelector('.category-btn.active img');
+        if(activeCatBtn) {
+            activeImg = activeCatBtn.src;
+            activeLabel = document.querySelector('.category-btn.active span').innerText.replace('\n', ' - ');
         }
-    });
+    }
 
     if (activeImg && activeImg.trim() !== "") {
-        mainImgEl.style.opacity = '0.5';
-        setTimeout(() => {
-            mainImgEl.src = activeImg;
-            captionEl.innerText = `🔍 當前顯示：${activeLabel}`;
-            mainImgEl.style.opacity = '1';
-        }, 150);
+        if(mainImgEl.src !== activeImg) { // 防止重複讀取閃爍
+            mainImgEl.style.opacity = '0.5';
+            setTimeout(() => {
+                mainImgEl.src = activeImg;
+                captionEl.innerText = `📦 主商品：${activeLabel}`;
+                mainImgEl.style.opacity = '1';
+            }, 150);
+        }
     } else {
         mainImgEl.src = "https://via.placeholder.com/400x220?text=FPS+PROPS+MAKER";
         captionEl.innerText = "FPS 專業手工道具製作";
@@ -591,7 +596,6 @@ function triggerImageAndPriceEngine() {
     updateLivePrice();
 }
 
-// 💡 強化版的價格計算引擎 (支援動態倍率相乘)
 function updateLivePrice() {
     const activeSubBtn = document.querySelector('#dynamicFields .field-group:first-child .spec-btn.active');
     if(!activeSubBtn) return;
@@ -608,19 +612,17 @@ function updateLivePrice() {
             if(activeOpt) {
                 extra += parseInt(activeOpt.getAttribute('data-plus') || 0);
                 
-                // 讀取隱藏倍率，若不是 1，則將總倍率乘上去
                 let m = parseFloat(activeOpt.getAttribute('data-mult'));
                 if (!isNaN(m) && m !== 1) mult *= m;
             }
         }
     });
 
-    // 計算總價： (基礎價 + 配件加價) * 組合折扣倍率 * 客戶輸入的組數，並四捨五入到整數
     let finalPrice = Math.round((base + extra) * mult);
     document.getElementById('targetPrice').innerText = `NT$ ${(finalPrice * qty).toLocaleString()}`;
 }
 
-// 🐛 徹底穩定的 addToCart 核心
+// 🐛 購物車核心維持不變
 let cart = [];
 
 function addToCart() {
@@ -639,7 +641,6 @@ function addToCart() {
     let extra = 0;
     let mult = 1;
 
-    // 遍歷所有客製化選單
     document.querySelectorAll('#dynamicFields .field-group').forEach((group, idx) => {
         if(idx > 0) {
             let activeOpt = group.querySelector('.spec-btn.active');
@@ -651,7 +652,6 @@ function addToCart() {
 
                 specs.push(`${activeOpt.getAttribute('data-specname')}: ${activeOpt.getAttribute('data-optname')}`);
                 
-                // 覆寫運費標籤 (如組合棍)
                 let override = activeOpt.getAttribute('data-shipoverride');
                 if (override) itemShip = override;
             }
@@ -664,7 +664,7 @@ function addToCart() {
         id: Date.now(),
         name: itemName,
         specs: specs.length > 0 ? specs.join(' / ') : "依原廠標準規格出貨",
-        price: finalPrice, // 將打折後的金額推入購物車
+        price: finalPrice, 
         qty: qty,
         ship: itemShip
     });
