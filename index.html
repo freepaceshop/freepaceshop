@@ -75,7 +75,7 @@
         .cart-list { flex: 1; overflow-y: auto; margin-bottom: 20px; }
         .cart-item { display: flex; justify-content: space-between; align-items: flex-start; padding: 12px 0; border-bottom: 1px dashed #ccc; position: relative; }
         .cart-item-info { padding-right: 60px; }
-        .cart-item-name { font-weight: 500; font-size: 0.95rem; color: #111; word-break: break-all; }
+        .cart-item-name { font-weight: 500; font-size: 0.95rem; color: #111; }
         .cart-item-spec { font-size: 0.8rem; color: #737373; display: block; margin-top: 4px; line-height: 1.4; }
         .cart-item-price { font-weight: 600; font-size: 0.95rem; color: #111; margin-top: 5px; }
         .btn-remove { position: absolute; right: 0; top: 12px; color: #ff4d4d; cursor: pointer; font-size: 0.75rem; text-decoration: underline; }
@@ -129,9 +129,9 @@
                 <img src="https://via.placeholder.com/150x90?text=Poi+Solid" alt="火Poi-一體">
                 <span>火Poi-一體式<br>(1顆)</span>
             </div>
-            <div class="category-btn" onclick="switchCategory('fire_other', this)">
-                <img src="https://via.placeholder.com/150x90?text=Fire+Other" alt="其他火具">
-                <span>小火棒<br>與 龍棍系列</span>
+            <div class="category-btn" onclick="switchCategory('fire_mini', this)">
+                <img src="https://via.placeholder.com/150x90?text=Fire+Mini" alt="小火棒">
+                <span>小火棒<br>龍棍</span>
             </div>
 
             <div class="category-btn" onclick="switchCategory('prac_staff_std', this)">
@@ -142,9 +142,13 @@
                 <img src="https://via.placeholder.com/150x90?text=Staff+Contact" alt="練習長棍-接觸">
                 <span>練習長棍<br>接觸版</span>
             </div>
-            <div class="category-btn" onclick="switchCategory('prac_staff_short', this)">
-                <img src="https://via.placeholder.com/150x90?text=Prac+Staff+Short" alt="練習短棍">
-                <span>練習短棍<br>一體式</span>
+            <div class="category-btn" onclick="switchCategory('prac_staff_short_std', this)">
+                <img src="https://via.placeholder.com/150x90?text=Prac+Short+Std" alt="練習短棍-標準">
+                <span>練習短棍<br>標準版</span>
+            </div>
+            <div class="category-btn" onclick="switchCategory('prac_staff_short_light', this)">
+                <img src="https://via.placeholder.com/150x90?text=Prac+Short+Light" alt="練習短棍-輕量">
+                <span>練習短棍<br>輕量版</span>
             </div>
             <div class="category-btn" onclick="switchCategory('prac_poi_std', this)">
                 <img src="https://via.placeholder.com/150x90?text=Poi+Std" alt="練習Poi-標準">
@@ -201,13 +205,13 @@
         
         <div class="grand-total"><span>總計</span><span id="grandTotal">NT$ 0</span></div>
         
-        <button class="btn-copy" onclick="copyOrder()">複製清單明細 (私訊下單用)</button>
+        <button class="btn-copy" onclick="copyOrder()">📋 複製清單明細 (私訊下單用)</button>
         <div class="hint-text">點擊複製後，請直接貼給 FPS 道具部粉專私訊即可！</div>
     </div>
 </div>
 
 <script>
-// --- 完整、零遺漏的最終資料庫 ---
+// --- 完全對齊《新價目表》與客製化分離要求的資料庫 ---
 const db = {
     fire_staff_cyl: {
         sub: {
@@ -267,7 +271,7 @@ const db = {
             "火Poi單顆-6cm 猴子球": { price: 750, ship: 'small', img: "" },
             "火Poi單顆-8cm 猴子球": { price: 1000, ship: 'small', img: "" }
         },
-        specs: {}
+        specs: {} 
     },
     fire_poi_det_1: {
         sub: {
@@ -312,7 +316,7 @@ const db = {
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} }
         }
     },
-    fire_other: {
+    fire_mini: {
         sub: {
             "小火棒-2.5cm圓柱": { price: 100, ship: 'small', img: "" },
             "小火棒-5cm圓柱": { price: 200, ship: 'small', img: "" },
@@ -320,9 +324,7 @@ const db = {
             "龍棍套組 (接盤*2 + 5cm火頭*8)": { price: 5500, ship: 'medium', img: "" },
             "龍棍全配-一體式 (10cm大火頭)": { price: 8000, ship: 'long', img: "" }
         },
-        specs: {
-            "總長度": { "依原廠標準規格出貨": { plus: 0, img: "" } }
-        }
+        specs: {}
     },
     prac_staff_std: {
         sub: { "練習長棍-標準版": { price: 1200, ship: 'long', img: "" } },
@@ -341,14 +343,19 @@ const db = {
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} }
         }
     },
-    prac_staff_short: {
-        sub: {
-            "練習短棍-輕量版": { price: 500, ship: 'medium', img: "" },
-            "練習短棍-標準版": { price: 600, ship: 'medium', img: "" }
-        },
+    prac_staff_short_std: {
+        sub: { "練習短棍-標準版": { price: 600, ship: 'medium', img: "" } },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 100, img: "" } },
             "握把規格": { "標準": { plus: 0, img: "" }, "加厚": { plus: 50, img: "" } },
+            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
+        }
+    },
+    prac_staff_short_light: {
+        sub: { "練習短棍-輕量版": { price: 500, ship: 'medium', img: "" } },
+        specs: {
+            "火頭規格": { "TPU (僅白色)": { plus: 0, img: "" }, "織帶 (藍/綠/黃/紅/紫/黑/金/銀)": { plus: 0, img: "" } },
+            "握把規格": { "標準": { plus: 0, img: "" }, "全熱縮套 (藍/綠/黃/紅/紫/黑/金/銀)": { plus: 50, img: "" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
         }
     },
@@ -374,8 +381,8 @@ const db = {
         sub: {
             "握把布 (普通款)": { price: 20, ship: 'small', img: "" },
             "握把布 (厚款)": { price: 60, ship: 'small', img: "" },
-            "握把球-小 (白/橢圓形)": { price: 100, ship: 'small', img: "" },
-            "握把球-大 (自選色/圓球形)": { price: 200, ship: 'small', img: "" },
+            "握把球-小 (橢圓形)": { price: 100, ship: 'small', img: "" },
+            "握把球-大 (圓球形)": { price: 200, ship: 'small', img: "" },
             "鐵鍊 (35cm)": { price: 70, ship: 'small', img: "" },
             "快接環 (M3)": { price: 35, ship: 'small', img: "" },
             "培林 (#7 拉力約250kg)": { price: 20, ship: 'small', img: "" },
@@ -412,7 +419,6 @@ function renderSubFields() {
     const container = document.getElementById('dynamicFields');
     container.innerHTML = ""; 
 
-    // 1. 建立基礎子品項的按鈕網格
     let subGroup = document.createElement('div');
     subGroup.className = 'field-group';
     subGroup.innerHTML = `<label>1. 選擇品項與規格</label>`;
@@ -439,13 +445,11 @@ function renderSubFields() {
     subGroup.appendChild(subGrid);
     container.appendChild(subGroup);
 
-    // 智慧隱藏不需要的附加規格
     if(data.hideExtraSpecs) {
         triggerImageAndPriceEngine();
         return;
     }
 
-    // 2. 循環建立選配變體的按鈕網格
     let specIndex = 2;
     for(let specName in data.specs) {
         let specGroup = document.createElement('div');
@@ -533,7 +537,7 @@ function updateLivePrice() {
     const activeSubBtn = document.querySelector('#dynamicFields .field-group:first-child .spec-btn.active');
     if(!activeSubBtn) return;
 
-    const base = parseInt(activeSubBtn.getAttribute('data-value')) || 0;
+    const base = parseInt(activeSubBtn.getAttribute('data-value'));
     const qty = parseInt(document.getElementById('qty').value) || 1;
     
     let extra = 0;
@@ -547,28 +551,25 @@ function updateLivePrice() {
     document.getElementById('targetPrice').innerText = `NT$ ${((base + extra) * qty).toLocaleString()}`;
 }
 
-// --- 🐛 完全修復的購物車計費引擎 ---
+// 🐛 修復與強化的 addToCart 核心
 let cart = [];
 
 function addToCart() {
-    // 1. 抓取主要選中的商品
     const activeSubBtn = document.querySelector('#dynamicFields .field-group:first-child .spec-btn.active');
     if(!activeSubBtn) {
-        alert("請先選擇基礎品項與規格！");
+        alert("請先選擇基礎品項！");
         return;
     }
 
-    // 2. 抓取資料
     const itemName = activeSubBtn.getAttribute('data-name');
     let itemShip = activeSubBtn.getAttribute('data-ship') || 'small';
-    let qtyInput = document.getElementById('qty');
-    const qty = parseInt(qtyInput.value) || 1;
-    const base = parseInt(activeSubBtn.getAttribute('data-value')) || 0;
+    const qty = parseInt(document.getElementById('qty').value) || 1;
+    const basePrice = parseInt(activeSubBtn.getAttribute('data-value')) || 0;
     
     let specs = [];
     let extra = 0;
 
-    // 3. 抓取所有客製化選項
+    // 遍歷所有客製化選單
     document.querySelectorAll('#dynamicFields .field-group').forEach((group, idx) => {
         if(idx > 0) {
             let activeOpt = group.querySelector('.spec-btn.active');
@@ -576,27 +577,23 @@ function addToCart() {
                 extra += parseInt(activeOpt.getAttribute('data-plus') || 0);
                 specs.push(`${activeOpt.getAttribute('data-specname')}: ${activeOpt.getAttribute('data-optname')}`);
                 
-                // 若選了組合棍，覆蓋包裹尺寸屬性
+                // 若選取如「組合式」會改變包裹體積，則覆寫運費標籤
                 let override = activeOpt.getAttribute('data-shipoverride');
                 if (override) itemShip = override;
             }
         }
     });
 
-    // 4. 寫入購物車陣列
     cart.push({
-        id: Date.now() + Math.random(), // 產生唯一識別碼以便移除
+        id: Date.now(),
         name: itemName,
-        specs: specs.length > 0 ? specs.join(' / ') : "依原廠標準規格",
-        price: base + extra,
+        specs: specs.length > 0 ? specs.join(' / ') : "依原廠標準規格出貨",
+        price: basePrice + extra,
         qty: qty,
         ship: itemShip
     });
     
-    // 5. 加入後自動將數量重置為 1，並重新渲染畫面
-    qtyInput.value = 1;
     renderCart();
-    updateLivePrice();
 }
 
 function removeFromCart(id) {
@@ -635,17 +632,17 @@ function calcShippingEngine(items, total) {
 
     const longQty = items.filter(i => i.ship === 'long').reduce((s, i) => s + i.qty, 0);
     const medQty = items.filter(i => i.ship === 'medium').reduce((s, i) => s + i.qty, 0);
-    const smallQty = items.filter(i => i.ship === 'small').reduce((s, i) => s + i.qty, 0); 
+    const smallQty = items.filter(i => i.ship === 'small').reduce((s, i) => s + i.qty, 0);
 
     let fee = 0;
     let desc = [];
 
-    if(longQty > 0) { fee += (longQty * 100); desc.push(`長棍包裹 × ${longQty}支`); }
-    if(medQty > 0) { let boxes = Math.ceil(medQty / 6); fee += (boxes * 100); desc.push(`中型包裹 × ${boxes}箱`); }
+    if(longQty > 0) { fee += (longQty * 100); desc.push(`長棍獨立包裹 × ${longQty}支`); }
+    if(medQty > 0) { let boxes = Math.ceil(medQty / 6); fee += (boxes * 100); desc.push(`中型道具包裹 × ${boxes}箱`); }
     if(smallQty > 0) { fee += 60; desc.push(`小型包裹`); }
 
     if(longQty >= 5 || fee >= 300) {
-        return { fee: 300, desc: "🚛 大宗訂單：優化改走大榮貨運 (大箱收費)" };
+        return { fee: 300, desc: "🚛 訂單大宗：自動優化改走大榮貨運 (大箱收費)" };
     }
 
     return { fee: fee, desc: `優化物流組合：${desc.join(' + ')}` };
