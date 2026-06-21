@@ -119,19 +119,19 @@
             </div>
             <div class="category-btn" onclick="switchCategory('fire_poi_det_1', this)">
                 <img src="https://via.placeholder.com/150x90?text=Poi+Det+1" alt="火Poi-可拆1顆">
-                <span>火Poi-可拆式<br>(1顆含繩)</span>
+                <span>火Poi-可拆式<br>(含繩與配件)</span>
+            </div>
+            <div class="category-btn" onclick="switchCategory('fire_poi_one', this)">
+                <img src="https://via.placeholder.com/150x90?text=Poi+Solid" alt="火Poi-一體">
+                <span>火Poi-一體式<br>(含繩與配件)</span>
             </div>
             <div class="category-btn" onclick="switchCategory('fire_meteor_det', this)">
                 <img src="https://via.placeholder.com/150x90?text=Meteor+Det" alt="火流星">
                 <span>火流星-可拆式<br>(1組2顆)</span>
             </div>
-            <div class="category-btn" onclick="switchCategory('fire_poi_one', this)">
-                <img src="https://via.placeholder.com/150x90?text=Poi+Solid" alt="火Poi-一體">
-                <span>火Poi-一體式<br>(1顆)</span>
-            </div>
             <div class="category-btn" onclick="switchCategory('fire_mini', this)">
                 <img src="https://via.placeholder.com/150x90?text=Fire+Mini" alt="小火棒">
-                <span>小火棒<br>龍棍</span>
+                <span>小火棒<br>龍棍套裝</span>
             </div>
 
             <div class="category-btn" onclick="switchCategory('prac_staff_std', this)">
@@ -177,7 +177,7 @@
         <div id="dynamicFields"></div>
 
         <div class="field-group">
-            <label>數量</label>
+            <label>套數 (此為總套數，單一套的球數請於上方組合選項選擇)</label>
             <input type="number" id="qty" value="1" min="1" onchange="updateLivePrice()">
         </div>
 
@@ -211,7 +211,7 @@
 </div>
 
 <script>
-// --- 完全對齊《新價目表》與客製化分離要求的資料庫 ---
+// --- 最新全面優化資料庫 (含倍率引擎與細節修復) ---
 const db = {
     fire_staff_cyl: {
         sub: {
@@ -259,8 +259,8 @@ const db = {
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
         }
     },
+    // 💡 Poi 類別新增「套組數量」的隱藏折扣引擎 (mult)
     fire_poi_single: {
-        hideExtraSpecs: true,
         sub: {
             "火Poi單顆-6cm豆干": { price: 500, ship: 'small', img: "" },
             "火Poi單顆-8cm豆干": { price: 600, ship: 'small', img: "" },
@@ -271,23 +271,49 @@ const db = {
             "火Poi單顆-6cm 猴子球": { price: 750, ship: 'small', img: "" },
             "火Poi單顆-8cm 猴子球": { price: 1000, ship: 'small', img: "" }
         },
-        specs: {} 
+        specs: {
+            "組合數量": { 
+                "單球組": { mult: 1, img: "" }, 
+                "雙球組": { mult: 1.96, img: "" }, 
+                "三球組": { mult: 2.85, img: "" } 
+            }
+        } 
     },
     fire_poi_det_1: {
         sub: {
-            "火Poi可拆式(1顆)-6cm豆干": { price: 500, ship: 'small', img: "" },
-            "火Poi可拆式(1顆)-8cm豆干": { price: 600, ship: 'small', img: "" },
-            "火Poi可拆式(1顆)-6cm Twista": { price: 650, ship: 'small', img: "" },
-            "火Poi可拆式(1顆)-8cm Twista": { price: 800, ship: 'small', img: "" },
-            "火Poi可拆式(1顆)-6cm 圓球": { price: 700, ship: 'small', img: "" },
-            "火Poi可拆式(1顆)-8cm 圓球": { price: 900, ship: 'small', img: "" },
-            "火Poi可拆式(1顆)-6cm 猴子球": { price: 750, ship: 'small', img: "" },
-            "火Poi可拆式(1顆)-8cm 猴子球": { price: 1000, ship: 'small', img: "" }
+            "火Poi可拆式-6cm豆干": { price: 500, ship: 'small', img: "" },
+            "火Poi可拆式-8cm豆干": { price: 600, ship: 'small', img: "" },
+            "火Poi可拆式-6cm Twista": { price: 650, ship: 'small', img: "" },
+            "火Poi可拆式-8cm Twista": { price: 800, ship: 'small', img: "" },
+            "火Poi可拆式-6cm 圓球": { price: 700, ship: 'small', img: "" },
+            "火Poi可拆式-8cm 圓球": { price: 900, ship: 'small', img: "" },
+            "火Poi可拆式-6cm 猴子球": { price: 750, ship: 'small', img: "" },
+            "火Poi可拆式-8cm 猴子球": { price: 1000, ship: 'small', img: "" }
         },
         specs: {
             "繩練規格": { "鐵鍊(有培林)": { plus: 300, img: "" }, "克維拉編織繩": { plus: 500, img: "" }, "Technora編織繩": { plus: 700, img: "" } },
             "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 200, img: "" } },
-            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} }
+            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
+            "組合數量": { 
+                "單球組": { mult: 1, img: "" }, 
+                "雙球組": { mult: 1.96, img: "" }, 
+                "三球組": { mult: 2.85, img: "" } 
+            }
+        }
+    },
+    fire_poi_one: {
+        sub: {
+            "火Poi一體式-8cm 圓球": { price: 1100, ship: 'small', img: "" },
+            "火Poi一體式-8cm 猴子球": { price: 1200, ship: 'small', img: "" }
+        },
+        specs: {
+            "握把規格": { "預設大握把": { plus: 0, img: "" } },
+            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
+            "組合數量": { 
+                "單球組": { mult: 1, img: "" }, 
+                "雙球組": { mult: 1.96, img: "" }, 
+                "三球組": { mult: 2.85, img: "" } 
+            }
         }
     },
     fire_meteor_det: {
@@ -304,16 +330,6 @@ const db = {
         specs: {
             "繩練規格": { "鐵鍊+連接繩": { plus: 300, img: "" }, "克維拉粗繩": { plus: 500, img: "" } },
             "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} }
-        }
-    },
-    fire_poi_one: {
-        sub: {
-            "火Poi一體式(1顆)-8cm 圓球": { price: 1100, ship: 'small', img: "" },
-            "火Poi一體式(1顆)-8cm 猴子球": { price: 1200, ship: 'small', img: "" }
-        },
-        specs: {
-            "握把規格": { "預設大握把": { plus: 0, img: "" } },
-            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} }
         }
     },
     fire_mini: {
@@ -346,7 +362,7 @@ const db = {
     prac_staff_short_std: {
         sub: { "練習短棍-標準版": { price: 600, ship: 'medium', img: "" } },
         specs: {
-            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 50, img: "" } },
+            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 100, img: "" } },
             "握把規格": { "標準": { plus: 0, img: "" }, "加厚": { plus: 50, img: "" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
         }
@@ -355,7 +371,7 @@ const db = {
         sub: { "練習短棍-輕量版": { price: 500, ship: 'medium', img: "" } },
         specs: {
             "火頭規格": { "TPU (僅白色)": { plus: 0, img: "" }, "織帶 (藍/綠/黃/紅/紫/黑/金/銀)": { plus: 0, img: "" } },
-            "握把規格": { "標準": { plus: 0, img: "" }, "全熱縮套 (藍/綠/黃/紅/紫/黑/金/銀)": { plus: 50, img: "" } },
+            "握把規格": { "標準": { plus: 0, img: "" }, "全熱縮套 (加色)": { plus: 50, img: "" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
         }
     },
@@ -364,13 +380,23 @@ const db = {
         specs: {
             "培林規格": { "不加裝培林": { plus: 0, img: "" }, "加裝培林": { plus: 100, img: "" } },
             "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 200, img: "" } },
-            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} }
+            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
+            "組合數量": { 
+                "單球組": { mult: 1, img: "" }, 
+                "雙球組": { mult: 1.96, img: "" }, 
+                "三球組": { mult: 2.85, img: "" } 
+            }
         }
     },
     prac_poi_contact: {
         sub: { "練習Poi-接觸版 (90mm)": { price: 1500, ship: 'small', img: "" } },
         specs: {
-            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} }
+            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
+            "組合數量": { 
+                "單球組": { mult: 1, img: "" }, 
+                "雙球組": { mult: 1.96, img: "" }, 
+                "三球組": { mult: 2.85, img: "" } 
+            }
         }
     },
     prac_meteor: {
@@ -419,6 +445,7 @@ function renderSubFields() {
     const container = document.getElementById('dynamicFields');
     container.innerHTML = ""; 
 
+    // 1. 建立基礎子品項的按鈕網格
     let subGroup = document.createElement('div');
     subGroup.className = 'field-group';
     subGroup.innerHTML = `<label>1. 選擇品項與規格</label>`;
@@ -445,11 +472,7 @@ function renderSubFields() {
     subGroup.appendChild(subGrid);
     container.appendChild(subGroup);
 
-    if(data.hideExtraSpecs) {
-        triggerImageAndPriceEngine();
-        return;
-    }
-
+    // 2. 循環建立客製化變體
     let specIndex = 2;
     for(let specName in data.specs) {
         let specGroup = document.createElement('div');
@@ -464,10 +487,15 @@ function renderSubFields() {
             let btn = document.createElement('div');
             btn.className = `spec-btn ${isOptFirst ? 'active' : ''}`;
             
-            let plusText = val.plus > 0 ? `\n(+$${val.plus})` : (val.plus < 0 ? `\n(-$${Math.abs(val.plus)})` : '');
+            // 💡 關鍵修改：如果是倍率(mult)，就不會在按鈕上顯示任何加價文字！
+            let plusText = "";
+            if (val.plus > 0) plusText = `\n(+$${val.plus})`;
+            else if (val.plus < 0) plusText = `\n(-$${Math.abs(val.plus)})`;
+
             btn.innerText = `${opt}${plusText}`;
             
             btn.setAttribute('data-plus', val.plus || 0);
+            btn.setAttribute('data-mult', val.mult || 1); // 寫入倍率
             btn.setAttribute('data-img', val.img || '');
             btn.setAttribute('data-specname', specName);
             btn.setAttribute('data-optname', opt);
@@ -533,6 +561,7 @@ function triggerImageAndPriceEngine() {
     updateLivePrice();
 }
 
+// 💡 強化版的價格計算引擎 (支援動態倍率相乘)
 function updateLivePrice() {
     const activeSubBtn = document.querySelector('#dynamicFields .field-group:first-child .spec-btn.active');
     if(!activeSubBtn) return;
@@ -541,17 +570,27 @@ function updateLivePrice() {
     const qty = parseInt(document.getElementById('qty').value) || 1;
     
     let extra = 0;
+    let mult = 1;
+
     document.querySelectorAll('#dynamicFields .field-group').forEach((group, idx) => {
         if(idx > 0) {
             let activeOpt = group.querySelector('.spec-btn.active');
-            if(activeOpt) extra += parseInt(activeOpt.getAttribute('data-plus') || 0);
+            if(activeOpt) {
+                extra += parseInt(activeOpt.getAttribute('data-plus') || 0);
+                
+                // 讀取隱藏倍率，若不是 1，則將總倍率乘上去
+                let m = parseFloat(activeOpt.getAttribute('data-mult'));
+                if (!isNaN(m) && m !== 1) mult *= m;
+            }
         }
     });
 
-    document.getElementById('targetPrice').innerText = `NT$ ${((base + extra) * qty).toLocaleString()}`;
+    // 計算總價： (基礎價 + 配件加價) * 組合折扣倍率 * 客戶輸入的組數，並四捨五入到整數
+    let finalPrice = Math.round((base + extra) * mult);
+    document.getElementById('targetPrice').innerText = `NT$ ${(finalPrice * qty).toLocaleString()}`;
 }
 
-// 🐛 修復與強化的 addToCart 核心
+// --- 🐛 徹底穩定的 addToCart 核心 ---
 let cart = [];
 
 function addToCart() {
@@ -568,6 +607,7 @@ function addToCart() {
     
     let specs = [];
     let extra = 0;
+    let mult = 1;
 
     // 遍歷所有客製化選單
     document.querySelectorAll('#dynamicFields .field-group').forEach((group, idx) => {
@@ -575,20 +615,26 @@ function addToCart() {
             let activeOpt = group.querySelector('.spec-btn.active');
             if(activeOpt) {
                 extra += parseInt(activeOpt.getAttribute('data-plus') || 0);
+                
+                let m = parseFloat(activeOpt.getAttribute('data-mult'));
+                if (!isNaN(m) && m !== 1) mult *= m;
+
                 specs.push(`${activeOpt.getAttribute('data-specname')}: ${activeOpt.getAttribute('data-optname')}`);
                 
-                // 若選取如「組合式」會改變包裹體積，則覆寫運費標籤
+                // 覆寫運費標籤 (如組合棍)
                 let override = activeOpt.getAttribute('data-shipoverride');
                 if (override) itemShip = override;
             }
         }
     });
 
+    let finalPrice = Math.round((basePrice + extra) * mult);
+
     cart.push({
         id: Date.now(),
         name: itemName,
         specs: specs.length > 0 ? specs.join(' / ') : "依原廠標準規格出貨",
-        price: basePrice + extra,
+        price: finalPrice, // 將打折後的金額推入購物車
         qty: qty,
         ship: itemShip
     });
