@@ -22,40 +22,40 @@
             color: var(--text-dark);
         }
 
-        .wrapper { display: grid; grid-template-columns: 55% 45%; min-height: 100vh; }
+        /* 💡 版面比例修改為 2:1 (66% : 34%) */
+        .wrapper { display: grid; grid-template-columns: 66% 34%; min-height: 100vh; }
         @media (max-width: 900px) { .wrapper { grid-template-columns: 1fr; } }
 
         /* 左側：配置填寫區 */
-        .config-section { padding: 40px 6%; box-sizing: border-box; }
+        .config-section { padding: 40px 5%; box-sizing: border-box; }
         .brand-title { font-size: 1.6rem; font-weight: 700; color: #111; margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
         h2 { font-size: 1.1rem; font-weight: 500; color: var(--primary); margin: 30px 0 15px 0; }
 
-        /* 圖片網格大項按鈕 */
-        .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; margin-bottom: 25px; }
+        /* 圖片網格大項按鈕 - 💡 圖片放大與寬度調整 */
+        .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; margin-bottom: 25px; }
         .category-btn {
-            background: #fff; border: 1px solid var(--border-color); border-radius: 8px; padding: 10px; 
+            background: #fff; border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; 
             cursor: pointer; text-align: center; transition: all 0.2s ease; box-sizing: border-box;
             display: flex; flex-direction: column; align-items: center; justify-content: space-between;
         }
-        .category-btn img { width: 100%; height: 80px; object-fit: contain; margin-bottom: 8px; border-radius: 4px; background: #fdfdfd; }
-        .category-btn span { font-size: 0.82rem; font-weight: 500; color: #444; line-height: 1.3; }
+        .category-btn img { width: 100%; height: 110px; object-fit: contain; margin-bottom: 10px; border-radius: 4px; background: #fdfdfd; }
+        .category-btn span { font-size: 0.88rem; font-weight: 500; color: #444; line-height: 1.3; }
         .category-btn.active { border-color: #000; box-shadow: 0 0 0 1.5px #000; background: #fafafa; }
         .category-btn.active span { color: #000; font-weight: 700; }
 
-        /* 💡 規格選項視覺化方塊按鈕 (加強支援內嵌小縮圖) */
-        .spec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-bottom: 15px; }
+        /* 規格選項視覺化方塊按鈕 - 💡 圖片放大與寬度調整 */
+        .spec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin-bottom: 15px; }
         .spec-btn {
-            background: #fff; border: 1px solid var(--border-color); border-radius: 6px; padding: 10px;
-            cursor: pointer; font-size: 0.85rem; text-align: center; transition: all 0.2s ease; color: #444; font-weight: 500;
+            background: #fff; border: 1px solid var(--border-color); border-radius: 6px; padding: 12px;
+            cursor: pointer; text-align: center; transition: all 0.2s ease; color: #444; font-weight: 500;
             display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;
-            min-height: 50px;
+            min-height: 60px;
         }
         .spec-btn:hover { border-color: #888; }
         .spec-btn.active { border-color: #000; box-shadow: 0 0 0 1px #000; background: #fafafa; color: #000; font-weight: 700; }
         
-        /* 💡 按鈕內嵌附圖的樣式規格 */
-        .spec-btn img { width: 100%; height: 70px; object-fit: contain; margin-bottom: 6px; border-radius: 4px; background: #fdfdfd; }
-        .spec-btn span { line-height: 1.3; font-size: 0.82rem; display: block; width: 100%; }
+        .spec-btn img { width: 100%; height: 95px; object-fit: contain; margin-bottom: 8px; border-radius: 4px; background: #fdfdfd; }
+        .spec-btn span { line-height: 1.3; font-size: 0.85rem; display: block; width: 100%; }
 
         .field-group { margin-bottom: 22px; }
         .field-group label { font-size: 0.85rem; color: #222; margin-bottom: 8px; display: block; font-weight: 700; }
@@ -66,25 +66,20 @@
         .btn-add:hover { background: var(--primary); }
 
         /* 右側：Shopify 結帳欄 */
-        .cart-section { background: var(--shopify-bg); padding: 40px 8%; border-left: 1px solid #e1e1e1; position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; }
-
-        /* 即時大預覽圖 */
-        .main-preview-box { background: white; border: 1px solid #e1e1e1; border-radius: 8px; padding: 10px; margin-bottom: 20px; text-align: center; }
-        .main-preview-box img { width: 100%; max-height: 220px; object-fit: contain; border-radius: 4px; transition: opacity 0.3s ease; }
-        .preview-caption { font-size: 0.75rem; color: var(--primary); margin-top: 6px; font-weight: bold; display: block; }
+        .cart-section { background: var(--shopify-bg); padding: 40px 6%; border-left: 1px solid #e1e1e1; position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; }
 
         .free-ship-container { background: white; padding: 15px; border-radius: 6px; border: 1px solid #e1e1e1; margin-bottom: 20px; }
         .free-ship-bar { background: #e1e1e1; height: 6px; border-radius: 3px; overflow: hidden; margin-bottom: 8px; }
         .free-ship-fill { background: var(--accent-green); height: 100%; width: 0%; transition: width 0.4s ease; }
         .free-ship-msg { font-size: 0.85rem; color: #444; font-weight: 500; }
 
-        .cart-list { flex: 1; overflow-y: auto; margin-bottom: 20px; }
-        .cart-item { display: flex; justify-content: space-between; align-items: flex-start; padding: 12px 0; border-bottom: 1px dashed #ccc; position: relative; }
+        .cart-list { flex: 1; overflow-y: auto; margin-bottom: 20px; padding-right: 5px; }
+        .cart-item { display: flex; justify-content: space-between; align-items: flex-start; padding: 15px 0; border-bottom: 1px dashed #ccc; position: relative; }
         .cart-item-info { padding-right: 60px; }
         .cart-item-name { font-weight: 500; font-size: 0.95rem; color: #111; }
         .cart-item-spec { font-size: 0.8rem; color: #737373; display: block; margin-top: 4px; line-height: 1.4; }
         .cart-item-price { font-weight: 600; font-size: 0.95rem; color: #111; margin-top: 5px; }
-        .btn-remove { position: absolute; right: 0; top: 12px; color: #ff4d4d; cursor: pointer; font-size: 0.75rem; text-decoration: underline; }
+        .btn-remove { position: absolute; right: 0; top: 15px; color: #ff4d4d; cursor: pointer; font-size: 0.75rem; text-decoration: underline; }
 
         .summary-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; color: #555; }
         .ship-desc { font-size: 0.75rem; color: #888; text-align: right; margin-top: -3px; margin-bottom: 8px; }
@@ -98,7 +93,6 @@
 <body>
 
 <div class="wrapper">
-    <!-- 左側：配置區 -->
     <div class="config-section">
         <div class="brand-title">FPS 道具部</div>
         
@@ -178,17 +172,13 @@
                 <span>練習流星<br>標準版</span>
             </div>
             
-                <div class="category-btn" onclick="switchCategory('set', this)">
-                <img src="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-big.jpg" alt="配件區">
-                <span>套組</span>
-            </div>
             <div class="category-btn" onclick="switchCategory('accessories', this)">
                 <img src="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-quicklink.jpg" alt="配件區">
-                <span>配件</span>
+                <span>配件區</span>
             </div>
             <div class="category-btn" onclick="switchCategory('materials', this)">
                 <img src="https://via.placeholder.com/150x90?text=Materials" alt="材料區">
-                <span>材料<br>(鋁棍/防火布)</span>
+                <span>材料區<br>(鋁棍/防火布)</span>
             </div>
         </div>
 
@@ -203,13 +193,7 @@
         <button class="btn-add" onclick="addToCart()">＋ 放入詢價清單 (<span id="targetPrice">NT$ 0</span>)</button>
     </div>
 
-    <!-- 右側：明細欄 + 固定大項預覽圖 -->
     <div class="cart-section">
-        <div class="main-preview-box">
-            <img id="mainPreviewImg" src="https://via.placeholder.com/400x220?text=Loading..." alt="FPS預覽大圖">
-            <span class="preview-caption" id="previewCaption">道具大項外觀</span>
-        </div>
-
         <div class="free-ship-container">
             <div class="free-ship-bar"><div id="shipFill" class="free-ship-fill"></div></div>
             <div id="shipMsg" class="free-ship-msg">正在計算免運進度...</div>
@@ -240,7 +224,7 @@ const db = {
         },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 400, img: "" } },
-            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
+            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
             "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
@@ -253,7 +237,7 @@ const db = {
         },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 300, img: "" } },
-            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
+            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
             "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
@@ -287,18 +271,18 @@ const db = {
     },
     fire_staff_levi: {
         sub: {
-            "火漂浮棍-5cm圓柱火頭": { price: 1000, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-roll5.jpg" }
+            "火漂浮棍-5cm圓柱火頭": { price: 1000, ship: 'medium', img: "" }
         },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 200, img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
-            "控制繩規格": { "短繩-繩圈": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-leviwand-shortring.jpg" }, "短繩-握把": { plus: 250, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-leviwand-shortknob.jpg" },"長繩": { plus: 400, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-leviwand-long.jpg" } },
+            "控制繩規格": { "短繩-繩圈": { plus: 0, img: "" }, "短繩-握把": { plus: 250, img: "" },"長繩": { plus: 400, img: "" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
         }
     },
     fire_staff_shuriken: {
         sub: {
-            "火手裡劍-6cm標準Twista": { price: 1100, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-twistanormal6.jpg" }
+            "火手裡劍-6cm標準Twista": { price: 1100, ship: 'medium', img: "" }
         },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 200, img: "" } },
@@ -311,38 +295,39 @@ const db = {
     fire_poi_single: {
         hideExtraSpecs: true,
         sub: {
-            "火Poi(純火頭)-6cm豆干": { price: 500, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral6.jpg" },
-            "火Poi(純火頭)-8cm豆干": { price: 600, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral8.jpg" },
-            "火Poi(純火頭)-6cm Twista": { price: 650, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista6.jpg" },
-            "火Poi(純火頭)-8cm Twista": { price: 800, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista8.jpg" },
-            "火Poi(純火頭)-6cm 圓球": { price: 700, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball6.jpg" },
-            "火Poi(純火頭)-8cm 圓球": { price: 900, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball8.jpg" },
-            "火Poi(純火頭)-6cm 猴子球": { price: 750, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey6.jpg" },
-            "火Poi(純火頭)-8cm 猴子球": { price: 1000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey8.jpg" }
+            "火Poi(純火頭)-6cm豆干": { price: 500, ship: 'small', img: "" },
+            "火Poi(純火頭)-8cm豆干": { price: 600, ship: 'small', img: "" },
+            "火Poi(純火頭)-6cm Twista": { price: 650, ship: 'small', img: "" },
+            "火Poi(純火頭)-8cm Twista": { price: 800, ship: 'small', img: "" },
+            "火Poi(純火頭)-6cm 圓球": { price: 700, ship: 'small', img: "" },
+            "火Poi(純火頭)-8cm 圓球": { price: 900, ship: 'small', img: "" },
+            "火Poi(純火頭)-6cm 猴子球": { price: 750, ship: 'small', img: "" },
+            "火Poi(純火頭)-8cm 猴子球": { price: 1000, ship: 'small', img: "" }
         },
         specs: {} 
     },
     fire_poi_det_1: {
         sub: {
-            "火Poi可拆式-6cm豆干": { price: 500, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral6.jpg" },
-            "火Poi可拆式-8cm豆干": { price: 600, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral8.jpg" },
-            "火Poi可拆式-6cm Twista": { price: 650, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista6.jpg" },
-            "火Poi可拆式-8cm Twista": { price: 800, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista8.jpg" },
-            "火Poi可拆式-6cm 圓球": { price: 700, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball6.jpg" },
-            "火Poi可拆式-8cm 圓球": { price: 900, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball8.jpg" },
-            "火Poi可拆式-6cm 猴子球": { price: 750, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey6.jpg" },
-            "火Poi可拆式-8cm 猴子球": { price: 1000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey8.jpg" }
+            "火Poi可拆式-6cm豆干": { price: 500, ship: 'small', img: "" },
+            "火Poi可拆式-8cm豆干": { price: 600, ship: 'small', img: "" },
+            "火Poi可拆式-6cm Twista": { price: 650, ship: 'small', img: "" },
+            "火Poi可拆式-8cm Twista": { price: 800, ship: 'small', img: "" },
+            "火Poi可拆式-6cm 圓球": { price: 700, ship: 'small', img: "" },
+            "火Poi可拆式-8cm 圓球": { price: 900, ship: 'small', img: "" },
+            "火Poi可拆式-6cm 猴子球": { price: 750, ship: 'small', img: "" },
+            "火Poi可拆式-8cm 猴子球": { price: 1000, ship: 'small', img: "" }
         },
         specs: {
-            "繩練規格": { "鐵鍊(+培林小握把)": { plus: 300, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-chain.jpg" }, "鐵鍊(+培林大握把)": { plus: 500, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-chain-big.jpg" }, "克維拉編織繩": { plus: 500, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-blackkevlar.jpg" }, "Technora編織繩": { plus: 700, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-technora.jpg" } },
+            "繩練規格": { "鐵鍊(有培林)": { plus: 300, img: "" }, "克維拉編織繩": { plus: 500, img: "" }, "Technora編織繩": { plus: 700, img: "" } },
+            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 200, img: "" } },
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
     },
     fire_poi_one: {
         sub: {
-            "火Poi一體式-8cm 圓球": { price: 1150, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-one-ball.jpg" },
-            "火Poi一體式-8cm 猴子球": { price: 1250, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-one-monkey.jpg" }
+            "火Poi一體式-8cm 圓球": { price: 1150, ship: 'small', img: "" },
+            "火Poi一體式-8cm 猴子球": { price: 1250, ship: 'small', img: "" }
         },
         specs: {
             "握把規格": { "預設大握把": { plus: 0, img: "" } },
@@ -352,44 +337,44 @@ const db = {
     },
     fire_meteor_det: {
         sub: {
-            "火流星組(一組2個)-6cm豆干": { price: 1000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral6.jpg" },
-            "火流星組(一組2個)-8cm豆干": { price: 1200, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral8.jpg" },
-            "火流星組(一組2個)-6cm Twista": { price: 1300, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista6.jpg" },
-            "火流星組(一組2個)-8cm Twista": { price: 1600, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista8.jpg" },
-            "火流星組(一組2個)-6cm 圓球": { price: 1400, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball6.jpg" },
-            "火流星組(一組2個)-8cm 圓球": { price: 1800, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball8.jpg" },
-            "火流星組(一組2個)-6cm 猴子球": { price: 1500, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey6.jpg" },
-            "火流星組(一組2個)-8cm 猴子球": { price: 2000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey8.jpg" }
+            "火流星組-6cm豆干": { price: 1000, ship: 'small', img: "" },
+            "火流星組-8cm豆干": { price: 1200, ship: 'small', img: "" },
+            "火流星組-6cm Twista": { price: 1300, ship: 'small', img: "" },
+            "火流星組-8cm Twista": { price: 1600, ship: 'small', img: "" },
+            "火流星組-6cm 圓球": { price: 1400, ship: 'small', img: "" },
+            "火流星組-8cm 圓球": { price: 1800, ship: 'small', img: "" },
+            "火流星組-6cm 猴子球": { price: 1500, ship: 'small', img: "" },
+            "火流星組-8cm 猴子球": { price: 2000, ship: 'small', img: "" }
         },
         specs: {
-            "繩練規格": { "鐵鍊+連接繩": { plus: 300, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-chain.jpg" }, "克維拉粗繩": { plus: 500, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-kevlar.jpg" } },
+            "繩練規格": { "鐵鍊+連接繩": { plus: 300, img: "" }, "克維拉粗繩": { plus: 500, img: "" } },
             "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} }
         }
     },
     fire_mini: {
         sub: {
-            "小火棒-2.5cm圓柱": { price: 100, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-torch25.jpg" },
-            "小火棒-5cm圓柱": { price: 200, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-torch50.jpg" },
-            "小火棒-3cm Twista": { price: 350, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-torchtwista.jpg" },
+            "小火棒-2.5cm圓柱": { price: 100, ship: 'small', img: "" },
+            "小火棒-5cm圓柱": { price: 200, ship: 'small', img: "" },
+            "小火棒-3cm Twista": { price: 350, ship: 'small', img: "" },
         },
         specs: {}
     },
 
     // 💡 練習長棍系列
     prac_staff_std: {
-        sub: { "練習長棍-標準版": { price: 1200, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-normal.jpg" } },
+        sub: { "練習長棍-標準版": { price: 1200, ship: 'long', img: "" } },
         specs: {
-            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 200, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-option-staff-contact-normal.jpg" } },
-            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
+            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 200, img: "" } },
+            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
             "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
         }
     },
     prac_staff_contact: {
-        sub: { "練習長棍-接觸版": { price: 1500, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-90.jpg" } },
+        sub: { "練習長棍-接觸版": { price: 1500, ship: 'long', img: "" } },
         specs: {
-            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
+            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
             "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
@@ -398,19 +383,19 @@ const db = {
 
     // 💡 練習短棍系列
     prac_staff_short_std: {
-        sub: { "練習短棍-標準版": { price: 600, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-normal.jpg" } },
+        sub: { "練習短棍-標準版": { price: 600, ship: 'medium', img: "" } },
         specs: {
-            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-option-staff-short-normal.jpg" } },
+            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 100, img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
             "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
         }
     },
     prac_staff_short_light: {
-        sub: { "練習短棍-輕量版": { price: 500, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-tpunormal.jpg" } },
+        sub: { "練習短棍-輕量版": { price: 500, ship: 'medium', img: "" } },
         specs: {
-            "火頭規格": { "TPU (僅白色)": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-option-light-tpu.jpg" }, "織帶 (藍/綠/黃/紅/紫/黑/金/銀)": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-option-light-color.jpg" } },
-            "握把規格": { "標準": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-tpunormal.jpg" }, "熱縮套 (藍/綠/黃/紅/紫/黑/金/銀)": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-fullcolor.jpg" } },
+            "火頭規格": { "TPU (僅白色)": { plus: 0, img: "" }, "織帶 (藍/綠/黃/紅/紫/黑/金/銀)": { plus: 0, img: "" } },
+            "握把規格": { "標準": { plus: 0, img: "" }, "全熱縮套 (加色)": { plus: 50, img: "" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
             "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
         }
@@ -418,46 +403,35 @@ const db = {
 
     // 💡 練習Poi與其他類別
     prac_poi_std: {
-        sub: { "練習Poi-標準版": { price: 550, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-poi-normal.jpg" } },
+        sub: { "練習Poi-標準版": { price: 550, ship: 'small', img: "" } },
         specs: {
-            "培林規格": { "不加裝培林": { plus: 0, img: "" }, "加裝培林": { plus: 50, img: "" } },
-            "握把規格": { "小握把": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-small.jpg" }, "大握把": { plus: 200, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-big.jpg" } },
+            "培林規格": { "不加裝培林": { plus: 0, img: "" }, "加裝培林": { plus: 100, img: "" } },
+            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 200, img: "" } },
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
     },
     prac_poi_contact: {
-        sub: { "練習Poi-接觸版 (90mm)": { price: 800, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-poi-contact90.jpg" } },
+        sub: { "練習Poi-接觸版 (90mm)": { price: 800, ship: 'small', img: "" } },
         specs: {
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
     },
     prac_meteor: {
-        sub: { "練習流星-標準版": { price: 1000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-meteor.jpg" } },
+        sub: { "練習流星-標準版": { price: 1000, ship: 'small', img: "" } },
         specs: { "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} } }
-    },
-    set: {
-        sub: {
-            "培林小握把(僅白色)": { price: 180, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-small.jpg" },
-            "培林大握把(顏色以現貨為主)": { price: 300, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-big.jpg" },
-            "克維拉編織繩": { price: 500, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-blackkevlar.jpg" },
-            "Technora編織繩": { price: 700, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-technora.jpg" },
-            "流星克維拉繩": { price: 700, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-kevlar.jpg" },
-            "流星鐵鍊連接繩": { price: 100, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-nochain.jpg" },
-            "鐵鍊組": { price: 130, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-chain.jpg" }
-        },
-        specs: {}
     },
     accessories: {
         sub: {
-            "握把布 (普通款)": { price: 20, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-grip-normal.jpg" },
-            "握把布 (厚款)": { price: 60, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-grip-thick.jpg" },
-            "握把球-小 (橢圓形)": { price: 100, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-knob-small.jpg" },
-            "握把球-大 (圓球形)": { price: 200, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-knob-big.jpg" },
-            "鐵鍊 (35cm)": { price: 70, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-chain.jpg" },
-            "快接環 (M3)": { price: 35, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-quicklink.jpg" },
-            "培林 (#7 拉力約250kg)": { price: 20, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-bearings.jpg" }
+            "握把布 (普通款)": { price: 20, ship: 'small', img: "" },
+            "握把布 (厚款)": { price: 60, ship: 'small', img: "" },
+            "握把球-小 (橢圓形)": { price: 100, ship: 'small', img: "" },
+            "握把球-大 (圓球形)": { price: 200, ship: 'small', img: "" },
+            "鐵鍊 (35cm)": { price: 70, ship: 'small', img: "" },
+            "快接環 (M3)": { price: 35, ship: 'small', img: "" },
+            "培林 (#7 拉力約250kg)": { price: 20, ship: 'small', img: "" },
+            "Poi吊飾 (可選1~2色)": { price: 50, ship: 'small', img: "" }
         },
         specs: {}
     },
@@ -490,7 +464,6 @@ function renderSubFields() {
     const container = document.getElementById('dynamicFields');
     container.innerHTML = ""; 
 
-    // 1. 建立基礎子品項的按鈕網格
     let subGroup = document.createElement('div');
     subGroup.className = 'field-group';
     subGroup.innerHTML = `<label>1. 選擇品項與規格</label>`;
@@ -502,7 +475,6 @@ function renderSubFields() {
         let btn = document.createElement('div');
         btn.className = `spec-btn ${isFirst ? 'active' : ''}`;
         
-        // 💡 修改：在選項按鈕內直接動態嵌入小圖片
         let imgHtml = "";
         if (data.sub[k].img && data.sub[k].img.trim() !== "") {
             imgHtml = `<img src="${data.sub[k].img}" alt="${k}">`;
@@ -511,12 +483,11 @@ function renderSubFields() {
 
         btn.setAttribute('data-value', data.sub[k].price);
         btn.setAttribute('data-ship', data.sub[k].ship);
-        btn.setAttribute('data-img', data.sub[k].img || '');
         btn.setAttribute('data-name', k);
         btn.onclick = function() {
             subGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active'));
             this.classList.add('active');
-            triggerImageAndPriceEngine();
+            updateLivePrice();
         };
         subGrid.appendChild(btn);
         isFirst = false;
@@ -525,11 +496,10 @@ function renderSubFields() {
     container.appendChild(subGroup);
 
     if(data.hideExtraSpecs) {
-        triggerImageAndPriceEngine();
+        updateLivePrice();
         return;
     }
 
-    // 2. 循環建立客製化變體
     let specIndex = 2;
     for(let specName in data.specs) {
         let specGroup = document.createElement('div');
@@ -548,7 +518,6 @@ function renderSubFields() {
             if (val.plus > 0) plusText = `<br>(+$${val.plus})`;
             else if (val.plus < 0) plusText = `<br>(-$${Math.abs(val.plus)})`;
 
-            // 💡 修改：客製化配備按鈕（如：標準款、加厚款握把）若有提供圖片，直接嵌入到按鈕裡
             let imgHtml = "";
             if (val.img && val.img.trim() !== "") {
                 imgHtml = `<img src="${val.img}" alt="${opt}">`;
@@ -557,7 +526,6 @@ function renderSubFields() {
             
             btn.setAttribute('data-plus', val.plus || 0);
             btn.setAttribute('data-mult', val.mult || 1); 
-            btn.setAttribute('data-img', val.img || '');
             btn.setAttribute('data-specname', specName);
             btn.setAttribute('data-optname', opt);
             if(val.ship_override) btn.setAttribute('data-shipoverride', val.ship_override);
@@ -565,7 +533,7 @@ function renderSubFields() {
             btn.onclick = function() {
                 specGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
-                triggerImageAndPriceEngine();
+                updateLivePrice();
             };
             specGrid.appendChild(btn);
             isOptFirst = false;
@@ -575,35 +543,6 @@ function renderSubFields() {
         specIndex++;
     }
     
-    triggerImageAndPriceEngine();
-}
-
-// 💡 核心修改：右側預覽圖不再理會客製化按鈕，永遠維持「道具大項」的圖片
-function triggerImageAndPriceEngine() {
-    const mainImgEl = document.getElementById('mainPreviewImg');
-    const captionEl = document.getElementById('previewCaption');
-
-    // 抓取當前左側被啟用的「道具大項（Category）」按鈕
-    const activeCatBtn = document.querySelector('.category-grid .category-btn.active');
-    
-    if (activeCatBtn) {
-        const catImg = activeCatBtn.querySelector('img').src;
-        // 把內部 <span> 的換行符號拿掉，當作標題
-        const catText = activeCatBtn.querySelector('span').innerText.replace('\n', ' ');
-
-        if (mainImgEl.src !== catImg) {
-            mainImgEl.style.opacity = '0.5';
-            setTimeout(() => {
-                mainImgEl.src = catImg;
-                captionEl.innerText = `🔍 當前項目：${catText}`;
-                mainImgEl.style.opacity = '1';
-            }, 120);
-        }
-    } else {
-        mainImgEl.src = "https://via.placeholder.com/400x220?text=FPS+PROPS+MAKER";
-        captionEl.innerText = "FPS 專業手工道具製作";
-    }
-
     updateLivePrice();
 }
 
