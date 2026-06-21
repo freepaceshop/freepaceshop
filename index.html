@@ -102,7 +102,7 @@
                 <span>火長棍<br>圓柱火頭</span>
             </div>
             <div class="category-btn" onclick="switchCategory('fire_staff_twi', this)">
-                <img src="https://github.com/freepaceshop/freepaceshop/blob/main/images/fire-staff-contact-twista.jpg" alt="火長棍-Twista">
+                <img src="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-contact-twista.jpg" alt="火長棍-Twista">
                 <span>火長棍<br>Twista火頭</span>
             </div>
             <div class="category-btn" onclick="switchCategory('fire_short_cyl', this)">
@@ -112,6 +112,14 @@
             <div class="category-btn" onclick="switchCategory('fire_short_twi', this)">
                 <img src="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-short-twista.jpg" alt="火短棍-Twista">
                 <span>火短棍<br>Twista火頭</span>
+            </div>
+            <div class="category-btn" onclick="switchCategory('fire_staff_levi', this)">
+                <img src="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-leviwand.jpg" alt="火漂浮棍">
+                <span>火漂浮棍<br></span>
+            </div>
+            <div class="category-btn" onclick="switchCategory('fire_staff_shuriken', this)">
+                <img src="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-shuriken.jpg" alt="火漂浮棍">
+                <span>火手裡劍<br></span>
             </div>
             <div class="category-btn" onclick="switchCategory('fire_poi_single', this)">
                 <img src="https://via.placeholder.com/150x90?text=Poi+Single" alt="火Poi-單顆">
@@ -264,6 +272,27 @@ const db = {
             "握把規格": { "標準款": { plus: 0, img: "" }, "加厚款": { plus: 50, img: "" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
             "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
+        }
+    },
+    fire_staff_levi: {
+        sub: {
+            "火短棍-5cm圓柱火頭": { price: 1000, ship: 'medium', img: "" }
+        },
+        specs: {
+            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 200, img: "" } },
+            "握把規格": { "標準款": { plus: 0, img: "" }, "加厚款": { plus: 50, img: "" } },
+            "控制繩規格": { "短繩-繩圈": { plus: 0, img: "" }, "短繩-握把": { plus: 250, img: "" },"長繩": { plus: 400, img: "" } },
+            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
+        }
+    },
+    fire_staff_shuriken: {
+        sub: {
+            "火短棍-6cm標準Twista": { price: 1100, ship: 'medium', img: "" }
+        },
+        specs: {
+            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 200, img: "" } },
+            "握把規格": { "標準款": { plus: 0, img: "" }, "加厚款": { plus: 50, img: "" } },
+            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
         }
     },
 
