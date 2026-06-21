@@ -42,17 +42,20 @@
         .category-btn.active { border-color: #000; box-shadow: 0 0 0 1.5px #000; background: #fafafa; }
         .category-btn.active span { color: #000; font-weight: 700; }
 
-        /* 💡 升級版：規格選項圖文方塊按鈕 */
-        .spec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin-bottom: 15px; }
+        /* 💡 規格選項視覺化方塊按鈕 (加強支援內嵌小縮圖) */
+        .spec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-bottom: 15px; }
         .spec-btn {
             background: #fff; border: 1px solid var(--border-color); border-radius: 6px; padding: 10px;
             cursor: pointer; font-size: 0.85rem; text-align: center; transition: all 0.2s ease; color: #444; font-weight: 500;
-            display: flex; flex-direction: column; align-items: center; justify-content: center; /* 讓圖文置中對齊 */
+            display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;
+            min-height: 50px;
         }
-        .spec-btn img { width: 100%; height: 65px; object-fit: contain; margin-bottom: 6px; border-radius: 4px; display: block; }
-        .spec-btn span { line-height: 1.3; }
         .spec-btn:hover { border-color: #888; }
         .spec-btn.active { border-color: #000; box-shadow: 0 0 0 1px #000; background: #fafafa; color: #000; font-weight: 700; }
+        
+        /* 💡 按鈕內嵌附圖的樣式規格 */
+        .spec-btn img { width: 100%; height: 70px; object-fit: contain; margin-bottom: 6px; border-radius: 4px; background: #fdfdfd; }
+        .spec-btn span { line-height: 1.3; font-size: 0.82rem; display: block; width: 100%; }
 
         .field-group { margin-bottom: 22px; }
         .field-group label { font-size: 0.85rem; color: #222; margin-bottom: 8px; display: block; font-weight: 700; }
@@ -68,7 +71,7 @@
         /* 即時大預覽圖 */
         .main-preview-box { background: white; border: 1px solid #e1e1e1; border-radius: 8px; padding: 10px; margin-bottom: 20px; text-align: center; }
         .main-preview-box img { width: 100%; max-height: 220px; object-fit: contain; border-radius: 4px; transition: opacity 0.3s ease; }
-        .preview-caption { font-size: 0.8rem; color: var(--primary); margin-top: 6px; font-weight: bold; display: block; }
+        .preview-caption { font-size: 0.75rem; color: var(--primary); margin-top: 6px; font-weight: bold; display: block; }
 
         .free-ship-container { background: white; padding: 15px; border-radius: 6px; border: 1px solid #e1e1e1; margin-bottom: 20px; }
         .free-ship-bar { background: #e1e1e1; height: 6px; border-radius: 3px; overflow: hidden; margin-bottom: 8px; }
@@ -95,6 +98,7 @@
 <body>
 
 <div class="wrapper">
+    <!-- 左側：配置區 -->
     <div class="config-section">
         <div class="brand-title">FPS 道具部</div>
         
@@ -118,11 +122,11 @@
             </div>
             <div class="category-btn" onclick="switchCategory('fire_staff_levi', this)">
                 <img src="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-leviwand.jpg" alt="火漂浮棍">
-                <span>火漂浮棍<br></span>
+                <span>火漂浮棍</span>
             </div>
             <div class="category-btn" onclick="switchCategory('fire_staff_shuriken', this)">
                 <img src="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-shuriken.jpg" alt="火手裡劍">
-                <span>火手裡劍<br></span>
+                <span>火手裡劍</span>
             </div>
             <div class="category-btn" onclick="switchCategory('fire_poi_single', this)">
                 <img src="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista6.jpg" alt="火Poi-單顆">
@@ -195,10 +199,11 @@
         <button class="btn-add" onclick="addToCart()">＋ 放入詢價清單 (<span id="targetPrice">NT$ 0</span>)</button>
     </div>
 
+    <!-- 右側：明細欄 + 固定大項預覽圖 -->
     <div class="cart-section">
         <div class="main-preview-box">
             <img id="mainPreviewImg" src="https://via.placeholder.com/400x220?text=Loading..." alt="FPS預覽大圖">
-            <span class="preview-caption" id="previewCaption">商品基礎外觀</span>
+            <span class="preview-caption" id="previewCaption">道具大項外觀</span>
         </div>
 
         <div class="free-ship-container">
@@ -278,7 +283,7 @@ const db = {
     },
     fire_staff_levi: {
         sub: {
-            "火短棍-5cm圓柱火頭": { price: 1000, ship: 'medium', img: "" }
+            "火漂浮棍-5cm圓柱火頭": { price: 1000, ship: 'medium', img: "" }
         },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 200, img: "" } },
@@ -289,7 +294,7 @@ const db = {
     },
     fire_staff_shuriken: {
         sub: {
-            "火短棍-6cm標準Twista": { price: 1100, ship: 'medium', img: "" }
+            "火手裡劍-6cm標準Twista": { price: 1100, ship: 'medium', img: "" }
         },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 200, img: "" } },
@@ -445,8 +450,8 @@ const db = {
     materials: {
         sub: {
             "7075鋁棍 19*17mm (150cm以下)": { price: 500, ship: 'long', img: "" },
-            "7075鋁棍 15*13mm (100cm以下)": { price: 250, ship: 'medium', img: "" },
-            "7075鋁棍 13*11mm (100cm以下)": { price: 250, ship: 'medium', img: "" },
+            "7075鋁棍 15*13mm (100cm College)": { price: 250, ship: 'medium', img: "" },
+            "7075鋁棍 13*11mm (100cm College)": { price: 250, ship: 'medium', img: "" },
             "防火布 13mm (每公尺)": { price: 100, ship: 'small', img: "" },
             "防火布 19mm (每公尺)": { price: 120, ship: 'small', img: "" },
             "防火布 25mm (每公尺)": { price: 140, ship: 'small', img: "" },
@@ -471,7 +476,7 @@ function renderSubFields() {
     const container = document.getElementById('dynamicFields');
     container.innerHTML = ""; 
 
-    // 1. 建立基礎子品項的圖文按鈕網格
+    // 1. 建立基礎子品項的按鈕網格
     let subGroup = document.createElement('div');
     subGroup.className = 'field-group';
     subGroup.innerHTML = `<label>1. 選擇品項與規格</label>`;
@@ -480,17 +485,19 @@ function renderSubFields() {
 
     let isFirst = true;
     for(let k in data.sub) {
-        let val = data.sub[k];
         let btn = document.createElement('div');
         btn.className = `spec-btn ${isFirst ? 'active' : ''}`;
         
-        // 判斷是否有圖片，有就放入 img 標籤
-        let imgHTML = (val.img && val.img.trim() !== "") ? `<img src="${val.img}" alt="${k}">` : "";
-        btn.innerHTML = `${imgHTML}<span>${k}<br>($${val.price})</span>`; 
-        
-        btn.setAttribute('data-value', val.price);
-        btn.setAttribute('data-ship', val.ship);
-        btn.setAttribute('data-img', val.img || '');
+        // 💡 修改：在選項按鈕內直接動態嵌入小圖片
+        let imgHtml = "";
+        if (data.sub[k].img && data.sub[k].img.trim() !== "") {
+            imgHtml = `<img src="${data.sub[k].img}" alt="${k}">`;
+        }
+        btn.innerHTML = `${imgHtml}<span>${k}<br>($${data.sub[k].price})</span>`;
+
+        btn.setAttribute('data-value', data.sub[k].price);
+        btn.setAttribute('data-ship', data.sub[k].ship);
+        btn.setAttribute('data-img', data.sub[k].img || '');
         btn.setAttribute('data-name', k);
         btn.onclick = function() {
             subGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active'));
@@ -508,7 +515,7 @@ function renderSubFields() {
         return;
     }
 
-    // 2. 循環建立客製化變體的圖文按鈕
+    // 2. 循環建立客製化變體
     let specIndex = 2;
     for(let specName in data.specs) {
         let specGroup = document.createElement('div');
@@ -527,8 +534,12 @@ function renderSubFields() {
             if (val.plus > 0) plusText = `<br>(+$${val.plus})`;
             else if (val.plus < 0) plusText = `<br>(-$${Math.abs(val.plus)})`;
 
-            let imgHTML = (val.img && val.img.trim() !== "") ? `<img src="${val.img}" alt="${opt}">` : "";
-            btn.innerHTML = `${imgHTML}<span>${opt}${plusText}</span>`;
+            // 💡 修改：客製化配備按鈕（如：標準款、加厚款握把）若有提供圖片，直接嵌入到按鈕裡
+            let imgHtml = "";
+            if (val.img && val.img.trim() !== "") {
+                imgHtml = `<img src="${val.img}" alt="${opt}">`;
+            }
+            btn.innerHTML = `${imgHtml}<span>${opt}${plusText}</span>`;
             
             btn.setAttribute('data-plus', val.plus || 0);
             btn.setAttribute('data-mult', val.mult || 1); 
@@ -540,7 +551,7 @@ function renderSubFields() {
             btn.onclick = function() {
                 specGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
-                updateLivePrice(); // 這裡不再呼叫 triggerImageAndPriceEngine，因為右側大圖不需跟隨小選項改變
+                triggerImageAndPriceEngine();
             };
             specGrid.appendChild(btn);
             isOptFirst = false;
@@ -553,40 +564,26 @@ function renderSubFields() {
     triggerImageAndPriceEngine();
 }
 
+// 💡 核心修改：右側預覽圖不再理會客製化按鈕，永遠維持「道具大項」的圖片
 function triggerImageAndPriceEngine() {
     const mainImgEl = document.getElementById('mainPreviewImg');
     const captionEl = document.getElementById('previewCaption');
 
-    let activeImg = "";
-    let activeLabel = "商品基礎外觀";
-
-    // 💡 邏輯更新：右側大圖「只抓取」第一大項（主品項）的圖片
-    const activeSubBtn = document.querySelector('#dynamicFields .field-group:first-child .spec-btn.active');
-    if (activeSubBtn) {
-        let subImg = activeSubBtn.getAttribute('data-img');
-        if (subImg && subImg.trim() !== "") {
-            activeImg = subImg;
-            activeLabel = activeSubBtn.getAttribute('data-name');
-        }
-    }
+    // 抓取當前左側被啟用的「道具大項（Category）」按鈕
+    const activeCatBtn = document.querySelector('.category-grid .category-btn.active');
     
-    // 如果主品項也沒有設圖片，則去抓取左側最外層大分類的圖
-    if (!activeImg || activeImg.trim() === "") {
-        const activeCatBtn = document.querySelector('.category-btn.active img');
-        if(activeCatBtn) {
-            activeImg = activeCatBtn.src;
-            activeLabel = document.querySelector('.category-btn.active span').innerText.replace('\n', ' - ');
-        }
-    }
+    if (activeCatBtn) {
+        const catImg = activeCatBtn.querySelector('img').src;
+        // 把內部 <span> 的換行符號拿掉，當作標題
+        const catText = activeCatBtn.querySelector('span').innerText.replace('\n', ' ');
 
-    if (activeImg && activeImg.trim() !== "") {
-        if(mainImgEl.src !== activeImg) { // 防止重複讀取閃爍
+        if (mainImgEl.src !== catImg) {
             mainImgEl.style.opacity = '0.5';
             setTimeout(() => {
-                mainImgEl.src = activeImg;
-                captionEl.innerText = `📦 主商品：${activeLabel}`;
+                mainImgEl.src = catImg;
+                captionEl.innerText = `🔍 當前大項：${catText}`;
                 mainImgEl.style.opacity = '1';
-            }, 150);
+            }, 120);
         }
     } else {
         mainImgEl.src = "https://via.placeholder.com/400x220?text=FPS+PROPS+MAKER";
@@ -611,7 +608,6 @@ function updateLivePrice() {
             let activeOpt = group.querySelector('.spec-btn.active');
             if(activeOpt) {
                 extra += parseInt(activeOpt.getAttribute('data-plus') || 0);
-                
                 let m = parseFloat(activeOpt.getAttribute('data-mult'));
                 if (!isNaN(m) && m !== 1) mult *= m;
             }
@@ -622,7 +618,6 @@ function updateLivePrice() {
     document.getElementById('targetPrice').innerText = `NT$ ${(finalPrice * qty).toLocaleString()}`;
 }
 
-// 🐛 購物車核心維持不變
 let cart = [];
 
 function addToCart() {
@@ -646,12 +641,9 @@ function addToCart() {
             let activeOpt = group.querySelector('.spec-btn.active');
             if(activeOpt) {
                 extra += parseInt(activeOpt.getAttribute('data-plus') || 0);
-                
                 let m = parseFloat(activeOpt.getAttribute('data-mult'));
                 if (!isNaN(m) && m !== 1) mult *= m;
-
                 specs.push(`${activeOpt.getAttribute('data-specname')}: ${activeOpt.getAttribute('data-optname')}`);
-                
                 let override = activeOpt.getAttribute('data-shipoverride');
                 if (override) itemShip = override;
             }
@@ -753,7 +745,6 @@ function copyOrder() {
     });
 }
 
-// 首次載入初始化
 renderSubFields();
 </script>
 
