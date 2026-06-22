@@ -28,7 +28,6 @@
         }
         .nav-logo { font-size: 1.4rem; font-weight: 700; color: #111; text-decoration: none; }
         
-        /* 🛒 右上角懸浮購物車按鈕 */
         .cart-trigger {
             background: #111; color: white; padding: 10px 18px; border-radius: 20px;
             cursor: pointer; font-weight: bold; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;
@@ -37,21 +36,36 @@
         .cart-trigger:hover { background: var(--primary); }
         .cart-count { background: #ff4d4d; color: white; border-radius: 50%; padding: 2px 7px; font-size: 0.75rem; }
 
-        /* 商品詳細佈局 */
-        .item-container { padding: 100px 5% 60px 5%; display: grid; grid-template-columns: 1fr; gap: 40px; max-width: 1200px; margin: 0 auto; }
+        /* 💡 左右雙欄主要佈局 (左側圖文 : 右側按鈕 = 1:1) */
+        .item-container { 
+            padding: 100px 5% 60px 5%; 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 50px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        @media (max-width: 850px) { .item-container { grid-template-columns: 1fr; gap: 30px; } }
         
         .back-link { display: inline-block; color: #666; text-decoration: none; font-size: 0.9rem; margin-bottom: 15px; }
         .back-link:hover { color: var(--primary); }
 
+        /* 💡 左側：商品大圖與規格介紹區 */
+        .product-info-panel { position: sticky; top: 100px; height: fit-content; }
+        .main-product-img { width: 100%; max-height: 400px; object-fit: contain; border-radius: 8px; background: #fafafa; margin-bottom: 20px; border: 1px solid #eee; }
+        .product-details-content { background: #fdfdfd; border: 1px dashed var(--border-color); padding: 20px; border-radius: 8px; font-size: 0.92rem; color: #444; line-height: 1.6; }
+        .product-details-content h4 { margin: 0 0 10px 0; font-size: 1.05rem; color: #111; font-weight: 700; border-left: 3px solid var(--primary); padding-left: 8px; }
+
+        /* 右側：客製化選項區 */
         .spec-hint-text {
             font-size: 0.85rem; color: #555; margin-bottom: 25px; font-weight: 500;
             background: #fff6ee; padding: 12px 16px; border-radius: 6px; border-left: 4px solid var(--primary);
         }
 
-        h2 { font-size: 1.2rem; font-weight: 700; color: #111; margin: 25px 0 12px 0; border-bottom: 1px solid #f0f0f0; padding-bottom: 5px; }
+        h2 { font-size: 1.1rem; font-weight: 700; color: #111; margin: 25px 0 12px 0; border-bottom: 1px solid #f0f0f0; padding-bottom: 5px; }
 
         /* 按鈕視覺網格 */
-        .spec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-bottom: 15px; }
+        .spec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; margin-bottom: 15px; }
         .spec-btn {
             background: #fff; border: 1px solid var(--border-color); border-radius: 6px; padding: 12px;
             cursor: pointer; text-align: center; transition: all 0.2s ease; color: #444; font-weight: 500;
@@ -69,7 +83,7 @@
         .btn-add { background: #111; color: white; border: none; width: 100%; padding: 16px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem; margin-top: 15px; transition: background 0.2s; }
         .btn-add:hover { background: var(--primary); }
 
-        /* 💡 右側滑出式抽屜購物車 (Slide-out Cart) */
+        /* 右側滑出式購物車抽屜 */
         .cart-drawer {
             position: fixed; top: 0; right: -400px; width: 360px; height: 100vh;
             background: var(--shopify-bg); box-shadow: -5px 0 15px rgba(0,0,0,0.1);
@@ -80,7 +94,6 @@
         .cart-drawer-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
         .cart-drawer-title { font-size: 1.2rem; font-weight: 700; }
         .cart-drawer-close { cursor: pointer; font-size: 1.2rem; font-weight: bold; color: #999; }
-        .cart-drawer-close:hover { color: #000; }
 
         .free-ship-container { background: white; padding: 15px; border-radius: 6px; border: 1px solid #e1e1e1; margin-bottom: 20px; }
         .free-ship-bar { background: #e1e1e1; height: 6px; border-radius: 3px; overflow: hidden; margin-bottom: 8px; }
@@ -99,7 +112,6 @@
         .ship-desc { font-size: 0.75rem; color: #888; text-align: right; margin-top: -3px; margin-bottom: 8px; }
         .grand-total { border-top: 1px solid #e1e1e1; padding-top: 15px; margin-top: 15px; display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: 700; color: #111; }
         .btn-copy { background: var(--primary); color: white; border: none; width: 100%; padding: 16px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem; margin-top: 15px; }
-        .btn-copy:hover { background: #d35400; }
 
         /* 彈出視窗 */
         .modal-overlay {
@@ -126,9 +138,16 @@
 </div>
 
 <div class="item-container">
-    <div>
+    <div class="product-info-panel">
         <a href="index.html" class="back-link">← 返回商店首頁</a>
-        
+        <img id="mainProductImg" src="" alt="商品圖片" class="main-product-img">
+        <div class="product-details-content">
+            <h4>📋 道具材質與核心規格</h4>
+            <div id="productDetailText">正在讀取官方規格說明...</div>
+        </div>
+    </div>
+
+    <div>
         <div class="spec-hint-text">
             ℹ️ 更多詳細道具材質、結構說明，請參考：
             <a href="https://www.instagram.com/freepaceshop" target="_blank" style="color: var(--primary); font-weight: 700; text-decoration: underline;">【FPS 官方規格百科指南】</a>
@@ -181,10 +200,12 @@
 </div>
 
 <script>
-// 💡 萬用資料庫保持不變
+// 💡 萬用防呆資料庫：新增了大圖連結 (main_img) 與詳細材質規格說明的文字 (details)
 const db = {
     fire_staff_cyl: {
         title: "火長棍 (圓柱火頭)",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-contact-roll.jpg",
+        details: "● <b>核心材質：</b>採用航太級 7075-T6 加厚高強度鋁合金棍身，防撞抗彎性極佳。<br>● <b>火頭工藝：</b>嚴選頂級 Kevlar 100% 防火布，緊密圓柱層疊捲繞，吸油量飽滿且火焰飽滿持久。<br>● <b>握把配備：</b>標配專業加厚吸汗止滑 EPDM 握把布，提供極致的操作摩擦力，非常適合 Contact 技術磨練。<br>● <b>平衡配重：</b>兩端精密配重塊優化慣性，轉棍感流暢順手。",
         sub: {
             "火長棍-10cm圓柱火頭": { price: 1900, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-contact-roll10.jpg" },
             "火長棍-15cm圓柱火頭": { price: 2300, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-contact-roll15.jpg" }
@@ -199,13 +220,15 @@ const db = {
     },
     fire_staff_twi: {
         title: "火長棍 (Twista火頭)",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-contact-twista.jpg",
+        details: "● <b>核心材質：</b>航太級 7075 高剛性鋁管，極致輕量化與抗撞擊表現。<br>● <b>火頭工藝：</b>獨家 Twista 空心立體編織技法。空心結構可容納更多空氣，燃燒時火焰更具侵略性，視覺震懾力極高！<br>● <b>防護機制：</b>火頭與鋁管交接處採用耐高溫全包覆防護，大幅延長棍身使用壽命。<br>● <b>手感特點：</b>動態風阻配重特殊優化，適合喜愛大火勢與高速迴旋的進階玩家。",
         sub: {
             "火長棍-12cm 標準Twista": { price: 2700, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-contact-twistanormal12.jpg" },
             "火長棍-12cm 細Twista": { price: 2500, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-contact-twistathin12.jpg" }
         },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 300, img: "" } },
-            "棍身種類": { "體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
+            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
             "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
@@ -213,6 +236,8 @@ const db = {
     },
     fire_short_cyl: {
         title: "火短棍 (圓柱火頭)",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-short-roll.jpg",
+        details: "● <b>核心材質：</b>15mm 高硬度輕薄鋁合金管，完美平衡多棍控制的負擔。<br>● <b>火頭設計：</b>緊密捲製圓柱火頭，火勢穩定不炸油。提供 5cm 與 10cm 款式。<br>● <b>適用技巧：</b>專為雙短棍（Double Staff）及三短棍（Manipulation）技巧研發，軸向轉動極度輕靈敏捷。<br>● <b>握把設計：</b>全面包裹防滑吸震熱縮套及專業手感布，長時間揮舞依然舒適。",
         sub: {
             "火短棍-5cm圓柱火頭": { price: 950, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-roll5.jpg" },
             "火短棍-10cm圓柱火頭": { price: 1150, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-roll10.jpg" }
@@ -226,6 +251,8 @@ const db = {
     },
     fire_short_twi: {
         title: "火短棍 (Twista火頭)",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-short-twista.jpg",
+        details: "● <b>核心優勢：</b>短棍尺寸、巨型火勢！融合 Twista 編織的超強蓄油力，打破傳統短棍火勢較小的限制。<br>● <b>結構工藝：</b>高品質克維拉防火織帶經職人純手工經緯立體編織而成，結構不易散落、極度耐燒。<br>● <b>操作性能：</b>轉動慣性分布極佳，完美切合指尖花式（Grip & Finger Tech）與高速拋接動作。<br>● <b>標配握把：</b>FPS 精選握把布，即便沾到微量煤油仍能保持優異防滑效果。",
         sub: {
             "火短棍-6cm標準Twista": { price: 1100, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-twistanormal6.jpg" },
             "火短棍-7cm細Twista": { price: 1100, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-twistathin7.jpg" }
@@ -237,20 +264,12 @@ const db = {
             "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
         }
     }
-    // 💡 其他練習道具與配件資料庫可以依此類推自由補上...
 };
 
-// 💡 核心技術：讀取網址裡面的商品 ID
 const urlParams = new URLSearchParams(window.location.search);
-let productID = urlParams.get('id') || 'fire_staff_cyl'; // 預設讀取火長棍
-let cart = [];
+let productID = urlParams.get('id') || 'fire_staff_cyl'; 
 
-// 💡 側邊欄開關
-function toggleCart(open) {
-    document.getElementById('cartDrawer').classList.toggle('open', open);
-}
-
-// 載入商品規格與按鈕
+// 💡 渲染商品，同時把大圖與規格介紹塞進左側
 function renderProduct() {
     const data = db[productID];
     if(!data) {
@@ -258,11 +277,16 @@ function renderProduct() {
         return;
     }
 
+    // 塞入左側的圖文
+    document.getElementById('mainProductImg').src = data.main_img || "https://via.placeholder.com/400x300?text=FPS+PROPS";
+    document.getElementById('productDetailText').innerHTML = data.details || "暫無詳細材質規格說明，歡迎聯繫粉專洽詢。";
+
+    // 塞入右側標題
     document.getElementById('productTitle').innerText = data.title || "客製化商品";
     const container = document.getElementById('dynamicFields');
     container.innerHTML = ""; 
 
-    // 渲染第 1 區（基礎品項）
+    // 1. 渲染基礎品項
     let subGroup = document.createElement('div');
     subGroup.className = 'field-group';
     subGroup.innerHTML = `<label>1. 選擇品項與規格</label>`;
@@ -289,7 +313,7 @@ function renderProduct() {
     subGroup.appendChild(subGrid);
     container.appendChild(subGroup);
 
-    // 渲染後續客製化選項
+    // 2. 渲染規格選項
     let specIndex = 2;
     for(let specName in data.specs) {
         let specGroup = document.createElement('div');
@@ -349,7 +373,7 @@ function updateLivePrice() {
     document.getElementById('targetPrice').innerText = `NT$ ${(finalPrice * qty).toLocaleString()}`;
 }
 
-// 💡 購物車核心：加入 localStorage
+// 放入購物車
 function addToCart() {
     const activeSubBtn = document.querySelector('#dynamicFields .field-group:first-child .spec-btn.active');
     if(!activeSubBtn) return alert("請先選擇品項！");
@@ -378,96 +402,13 @@ function addToCart() {
     
     saveCart();
     renderCart();
-    toggleCart(true); // 自動滑出購物車
+    toggleCart(true); 
 }
 
-function removeFromCart(id) {
-    cart = cart.filter(i => i.id !== id);
-    saveCart();
-    renderCart();
-}
-
-function saveCart() {
-    localStorage.setItem('fps_cart', JSON.stringify(cart));
-}
-
-function loadCart() {
-    cart = JSON.parse(localStorage.getItem('fps_cart')) || [];
-    renderCart();
-}
-
-function renderCart() {
-    const list = document.getElementById('cartList');
-    let subTotal = 0;
-    document.getElementById('navCartCount').innerText = cart.reduce((sum, i) => sum + i.qty, 0);
-    
-    if(cart.length === 0) {
-        list.innerHTML = `<p style="color:#999; text-align:center; padding: 20px 0;">清單內尚無道具。</p>`;
-        updatePrices(0, 0, "");
-        return;
-    }
-
-    list.innerHTML = cart.map(i => {
-        subTotal += (i.price * i.qty);
-        return `<div class="cart-item">
-            <div class="cart-item-info">
-                <span class="cart-item-name">${i.name} × ${i.qty}</span>
-                <span class="cart-item-spec">${i.specs}</span>
-                <div class="cart-item-price">NT$ ${(i.price * i.qty).toLocaleString()}</div>
-            </div>
-            <span class="btn-remove" onclick="removeFromCart(${i.id})">移除</span>
-        </div>`;
-    }).join('');
-
-    const shipInfo = calcShippingEngine(cart, subTotal);
-    updatePrices(subTotal, shipInfo.fee, shipInfo.desc);
-}
-
-function calcShippingEngine(items, total) {
-    if(total >= 5000) return { fee: 0, desc: "🎉 達 NT$5,000 免運門檻！" };
-    const longQty = items.filter(i => i.ship === 'long').reduce((s, i) => s + i.qty, 0);
-    const medQty = items.filter(i => i.ship === 'medium').reduce((s, i) => s + i.qty, 0);
-    const smallQty = items.filter(i => i.ship === 'small').reduce((s, i) => s + i.qty, 0);
-    let fee = 0, desc = [];
-    if(longQty > 0) { fee += (longQty * 100); desc.push(`長棍獨立包裹 × ${longQty}支`); }
-    if(medQty > 0) { let boxes = Math.ceil(medQty / 6); fee += (boxes * 100); desc.push(`中型道具包裹 × ${boxes}箱`); }
-    if(smallQty > 0) { fee += 60; desc.push(`小型包裹`); }
-    if(longQty >= 5 || fee >= 300) return { fee: 300, desc: "🚛 訂單大宗：優化改走大榮貨運" };
-    return { fee: fee, desc: `物流：${desc.join(' + ')}` };
-}
-
-function updatePrices(sub, ship, desc) {
-    document.getElementById('subTotal').innerText = `NT$ ${sub.toLocaleString()}`;
-    document.getElementById('shipFee').innerText = `NT$ ${ship.toLocaleString()}`;
-    document.getElementById('shipDesc').innerText = desc;
-    document.getElementById('grandTotal').innerText = `NT$ ${(sub + ship).toLocaleString()}`;
-    const percent = Math.min((sub / 5000) * 100, 100);
-    document.getElementById('shipFill').style.width = percent + '%';
-    document.getElementById('shipMsg').innerText = sub >= 5000 ? "🎉 已享受免運優惠！" : `還差 NT$ ${(5000 - sub).toLocaleString()} 免運`;
-}
-
-function copyOrder() {
-    if(cart.length === 0) return;
-    let total = document.getElementById('grandTotal').innerText;
-    let sub = document.getElementById('subTotal').innerText;
-    let ship = document.getElementById('shipFee').innerText;
-    let shipD = document.getElementById('shipDesc').innerText;
-
-    let text = "【FPS 道具部 - 客製化估價清單】\n----------------------------------\n";
-    cart.forEach((i, idx) => { text += `${idx + 1}. ● ${i.name} × ${i.qty}\n   規格明細：${i.specs}\n   小計金額：NT$ ${(i.price * i.qty).toLocaleString()}\n\n`; });
-    text += `----------------------------------\n商品小計：${sub}\n物流運費：${ship} (${shipD})\n預估應付總額：${total}\n\n※ 複製明細後，請私訊粉專下單。`;
-    
-    navigator.clipboard.writeText(text).then(() => {
-        document.getElementById('customModal').style.display = 'flex';
-    });
-}
-
-function closeModal() { document.getElementById('customModal').style.display = 'none'; }
-
-// 啟動
 renderProduct();
-loadCart();
 </script>
+
+<script src="cart.js"></script>
 
 </body>
 </html>
