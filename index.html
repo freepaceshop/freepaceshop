@@ -208,9 +208,10 @@ function toggleCart(open) {
     document.getElementById('cartDrawer').classList.toggle('open', open);
 }
 
-// 💡 根據點選的大分類，動態渲染底下的商品卡片
 function filterCategory(catKey) {
-    document.querySelectorAll('.main-cat-card').forEach(card => card.classList.remove('active'));
+    // 點擊大卡片後，直接跳轉到列表頁，並傳遞分類參數！
+    window.location.href = `products.html?cat=${catKey}`;
+}
     
     let titleText = "火舞具系列商品";
     if(catKey === 'prac') titleText = "練習道具系列商品";
@@ -329,3 +330,4 @@ loadCart();
 
 </body>
 </html>
+<script src="cart.js"></script>
