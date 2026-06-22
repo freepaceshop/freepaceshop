@@ -9,10 +9,10 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
                     <li>棍身採用航太級 7075 高強度鋁棍</li>
-                    <li>火頭為 KEVLAR 防火布製作，完整縫製，無金屬外露</li>
-                    <li>棍身交接處進行防燙處理，保護棍體</li>
+                    <li>火頭為 KEVLAR 防火布製作，完整縫製</li>
+                    <li>棍身以矽膠膠帶進行防燙處理</li>
                     <li>搭配運動用止滑握把布，方便持握</li>
-                    <li>適合新手入門、或是追求速度級玩家</li>
+                    <li>適合新手入門、或是追求輕量速度級玩家</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -55,19 +55,31 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>採用獨家 Twista 空心立體編織技法</li>
-                    <li>燃燒時空氣對流佳，火焰更具侵略性與張力</li>
-                    <li>交接處採耐高溫全包覆防護，大幅延長棍身壽命</li>
-                    <li>動態風阻配重特殊優化，適合大火勢與高速迴旋</li>
+                    <li>棍身採用航太級 7075 高強度鋁棍</li>
+                    <li>火頭為 KEVLAR 防火布製作，完整縫製</li>
+                    <li>棍身以矽膠膠帶進行防燙處理</li>
+                    <li>搭配運動用止滑握把布，方便持握</li>
+                    <li>標準款具高吸油量與大火焰特色，適合經驗者；細身款中和重量與火量，約等於15公分圓柱長棍</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm (航太 7075 鋁合金)</li>
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>12cm 標準 或 細 Twista</li>
+                    <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>12cm Twista（標準款：2.5cm火布編織/細款：2cm火布編織）</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約565g(標準款)、500g(細款)</li>
+                </ul>
+            </div>
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
+            <div>
+                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">⛓️ 組合棍規格</strong>
+                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
+                    <li style="margin-bottom: 4px;">◆ <b>端頭：</b>19mm * 17mm , 45cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>中段：</b>17mm * 15mm , 46~70cm（總長度120~144cm）</li>
+                    <li style="margin-bottom: 4px;">◆ <b>實際握把長度：</b>30~54cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約600g(標準款)</li>
                 </ul>
             </div>
         `,
