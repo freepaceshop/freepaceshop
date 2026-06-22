@@ -20,9 +20,9 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>10cm 或 15cm 圓柱</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>10cm 圓柱、5層</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約440g(火頭10cm)、500g(火頭10cm)</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約440g(火頭10cm)、500g(火頭15cm)</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -67,7 +67,7 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>12cm Twista（標準款：2.5cm火布編織/細款：2cm火布編織）</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>12cm Twista編織（標準款：2.5cm火布／細款：2cm火布）</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
                     <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約565g(標準款)、500g(細款)</li>
                 </ul>
@@ -98,23 +98,25 @@ window.db = {
     fire_short_cyl: {
         title: "火短棍 (圓柱火頭)", cat: "fire",
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-short-roll.jpg"],
-        details: `
+        details:`
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>核心採用 15mm 高硬度輕薄鋁管</li>
-                    <li>完美平衡多棍控制的負擔，重量分佈極佳</li>
-                    <li>專為雙短棍及三短棍（Double/Triple Staff）技巧研發</li>
-                    <li>軸向轉動極度輕靈，操作不費力</li>
+                    <li>棍身採用航太級 7075 高強度鋁棍</li>
+                    <li>火頭為 KEVLAR 防火布製作，完整縫製</li>
+                    <li>棍身以矽膠膠帶進行防燙處理</li>
+                    <li>搭配運動用止滑握把布，方便持握</li>
+                    <li>5cm適合新手入門及大部分使用場合；10cm光軌突出，適合進階經驗者</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm (輕薄高硬度鋁管)</li>
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>5cm 或 10cm 圓柱</li>
+                    <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>圓柱（5cm：5層／10cm：4層）</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約210g(火頭5cm)、255g(火頭10cm)</li>
                 </ul>
             </div>
         `,
@@ -136,18 +138,21 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>短棍的輕靈尺寸，卻能擁有巨型火勢的視覺效果</li>
-                    <li>融合 Twista 火頭超強的蓄油力與空氣對流</li>
-                    <li>轉動慣性分布極佳，切合指尖花式與高速拋接動作</li>
+                    <li>棍身採用航太級 7075 高強度鋁棍</li>
+                    <li>火頭為 KEVLAR 防火布製作，完整縫製</li>
+                    <li>棍身以矽膠膠帶進行防燙處理</li>
+                    <li>搭配運動用止滑握把布，方便持握</li>
+                    <li>標準款具高吸油量與大火焰特色，適合進階經驗者；細身款中和重量與火量，約等於5公分圓柱短棍</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm (輕薄高硬度鋁管)</li>
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>6cm 標準 或 7cm 細 Twista</li>
+                    <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>Twista編織（標準款：2cm火布,長6cm／細款：1.3cm火布,長7cm）</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約250g(標準款)、215g(細款)</li>
                 </ul>
             </div>
         `,
@@ -165,22 +170,26 @@ window.db = {
     fire_staff_levi: {
         title: "火漂浮棍", cat: "fire",
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-leviwand.jpg"],
-        details: `
+        details:  `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>專為漂浮設計的極致隱形控制線</li>
-                    <li>精準的配重與平衡點，操作流暢不翻轉</li>
-                    <li>讓火光如同魔法般在身邊舞動，視覺效果驚艷</li>
+                    <li>棍身採用航太級 7075 高強度鋁棍</li>
+                    <li>火頭為 KEVLAR 防火布製作，完整縫製</li>
+                    <li>棍身以矽膠膠帶進行防燙處理</li>
+                    <li>搭配運動用止滑握把布，方便持握</li>
+                    <li>操縱繩採用200磅克維拉風箏線</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>5cm 圓柱</li>
-                    <li style="margin-bottom: 4px;">◆ <b>控制線：</b>高抗拉隱形線 (含手環/握把配置)</li>
+                    <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>圓柱5cm：5層</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
+                    <li style="margin-bottom: 4px;">◆ <b>操縱繩長度：</b>短繩：45cm（不含線圈/握把）／長繩：300cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約210g</li>
                 </ul>
             </div>
         `,
@@ -188,28 +197,34 @@ window.db = {
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 200, img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "" }, "加厚款": { plus: 50, img: "" } },
-            "控制繩規格": { "短繩-繩圈": { plus: 0, img: "" }, "短繩-握把": { plus: 250, img: "" },"長繩": { plus: 400, img: "" } },
+            "控制繩規格": { "短繩-繩圈": { plus: 0, img: "" }, "短繩-握把": { plus: 200, img: "" },"長繩": { plus: 100, img: "" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
         }
     },
     fire_staff_shuriken: {
         title: "火手裡劍", cat: "fire",
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-shuriken.jpg"],
-        details: `
+        details:  `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>獨特的手裡劍火頭編織造型</li>
-                    <li>旋轉時產生極具張力的立體火光殘影</li>
-                    <li>適合追求特殊視覺效果與攝影藝術的玩家</li>
+                    <li>棍身採用2mm+1.5mm加厚型6063鋁棍嵌套製作</li>
+                    <li>火頭為 KEVLAR 防火布製作，完整縫製</li>
+                    <li>棍身以矽膠膠帶進行防燙處理</li>
+                    <li>搭配運動用止滑握把布，方便持握</li>
+                    <li>9號大培林穩固內嵌</li>
+                    <li>操縱繩採用5mm高張力登山繩</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>6cm 標準 Twista (手裡劍造型)</li>
+                    <li style="margin-bottom: 4px;">◆ <b>棍身：</b>（外）19mm * 16mm、（內）16mm * 12mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>2cm火布 Twista編織</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
+                    <li style="margin-bottom: 4px;">◆ <b>操縱繩長度：</b>135cm（不含握把）</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約450g</li>
                 </ul>
             </div>
         `,
@@ -227,9 +242,9 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>專為老玩家設計的 DIY 替換專區</li>
                     <li>此品項僅販售單顆火頭主體</li>
-                    <li>不包含連接繩、鐵鍊與培林握把</li>
+                    <li>不包含任何繩鍊及握把</li>
+                    <li>適用於替換可拆式 Poi 火頭</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -238,7 +253,6 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>火頭樣式：</b>豆干 / Twista / 圓球 / 猴子球</li>
                     <li style="margin-bottom: 4px;">◆ <b>尺寸選擇：</b>6cm / 8cm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>適用配置：</b>替換已燒耗之可拆式 Poi 火頭</li>
                 </ul>
             </div>
         `,
@@ -260,18 +274,37 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>到手即用的完整套裝，包含火頭、繩索與專業握把</li>
-                    <li>靈活可拆卸設計，使用高強度 M3 快接環連接</li>
-                    <li>未來火頭燒耗可單獨購買替換，節省長遠成本</li>
+                    <li>完整套裝，包含火頭、繩索與專業握把</li>
+                    <li>使用 M3 快接環連接，靈活可拆卸</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
-                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
+                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 鐵鍊組預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>連結五金：</b>不鏽鋼 M3 規格快拆環</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把配置：</b>培林小握把 / 培林大握把</li>
-                    <li style="margin-bottom: 4px;">◆ <b>繩索選項：</b>培林鐵鍊 / 克維拉防火繩 / Technora 繩</li>
+                    <li>白鐵全焊鱔魚目鍊，堅固不壞、永垂不朽</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環 — 鐵鍊 — 快接環 — 培林握把</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>有培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>鐵鍊長度35cm；除非特殊要求，否則一律不裁減</li>
+                </ul>
+            </div>
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
+            <div>
+                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 克維拉編織繩組預設規格</strong>
+                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
+                    <li>含PU塗層、長纖克維拉編織，手感較為硬挺</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環+編織繩+握把</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>無培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm)</li>
+                </ul>
+            </div>
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
+            <div>
+                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 Technora編織繩組預設規格</strong>
+                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
+                    <li>比克維拉更耐磨、更耐熱，手感較為蓬鬆柔軟</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環+編織繩+握把</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>無培林</li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm)</li>
                 </ul>
             </div>
