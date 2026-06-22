@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FPS 道具部 - 官方線上商店</title>
+    <link rel="icon" id="dynamicFavicon" href="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #e67e22; --bg: #f5f5f5; }
-        body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); margin: 0; }
-        .nav-header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 15px 5%; background: #ffffff; border-bottom: 1px solid #eee;
-        }
+        body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); margin: 0; color: #333; }
+        .nav-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: #ffffff; border-bottom: 1px solid #eee; }
         .nav-logo { font-size: 1.4rem; font-weight: 700; color: #111; text-decoration: none; }
         
         .main-container { max-width: 1000px; margin: 50px auto; padding: 0 5%; text-align: center; }
-        .main-container h1 { font-size: 2rem; color: #111; margin-bottom: 40px; }
+        .main-container h1 { font-size: 2rem; color: #111; margin-bottom: 10px; }
+        .main-container p { color: #666; margin-bottom: 40px; }
 
         .big-cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         .big-cat-card {
@@ -26,6 +25,23 @@
         .big-cat-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-color: var(--primary); }
         .cat-icon { font-size: 3rem; display: block; margin-bottom: 15px; }
         .cat-sub { display: block; font-size: 0.9rem; color: #666; font-weight: 400; margin-top: 10px; }
+
+        .sub-cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+        .sub-cat-card { background: #fff; border-radius: 10px; padding: 25px 15px; text-decoration: none; color: #111; font-weight: 700; font-size: 1.1rem; border: 1px solid #eee; transition: all 0.2s; }
+        .sub-cat-card:hover { border-color: #111; background: #fafafa; }
+
+        /* 💡 新增的社群與信任區塊 */
+        .social-section { margin-top: 70px; background: #fff; padding: 50px 20px; border-radius: 12px; border: 1px solid #eee; text-align: center; }
+        .social-section h2 { font-size: 1.6rem; color: #111; margin: 0 0 15px 0; }
+        .social-section p { color: #555; font-size: 1rem; line-height: 1.6; max-width: 600px; margin: 0 auto 30px auto; }
+        .social-btns { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn-social { padding: 14px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; color: white; transition: opacity 0.2s; }
+        .btn-social:hover { opacity: 0.85; }
+        .btn-ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .btn-fb { background: #1877F2; }
+
+        /* 💡 新增的 Footer */
+        footer { margin-top: 60px; padding: 40px 5%; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 0.85rem; line-height: 1.6; }
     </style>
 </head>
 <body>
@@ -36,24 +52,40 @@
 
 <div class="main-container">
     <h1>歡迎來到 FPS 道具部</h1>
+    <p>專業手工火舞道具、日常練習道具、職人客製化系統</p>
+
     <div class="big-cat-grid">
         <a href="products.html?cat=fire" class="big-cat-card">
-            <span class="cat-icon">🔥</span>
-            火舞道具專區
-            <span class="cat-sub">火棍、Poi、流星、火具配件</span>
+            <span class="cat-icon">🔥</span>火舞道具專區
+            <span class="cat-sub">火長棍、Poi、流星、火手裡劍</span>
         </a>
         <a href="products.html?cat=prac" class="big-cat-card">
-            <span class="cat-icon">✨</span>
-            練習道具專區
+            <span class="cat-icon">✨</span>練習道具專區
             <span class="cat-sub">耐摔練習長短棍、練習Poi</span>
         </a>
-        <a href="products.html?cat=material" class="big-cat-card">
-            <span class="cat-icon">🛠️</span>
-            周邊配件與材料
-            <span class="cat-sub">培林握把、鐵鍊、快接、防火布</span>
-        </a>
+    </div>
+
+    <h2 style="margin-top: 50px; font-size: 1.3rem; color: #111;">🛠️ 周邊配件與材料</h2>
+    <div class="sub-cat-grid">
+        <a href="products.html?cat=set" class="sub-cat-card">📦 專業套組 (握把/鐵鍊)</a>
+        <a href="products.html?cat=parts" class="sub-cat-card">⚙️ 耗材配件 (握把布/快接)</a>
+        <a href="products.html?cat=mats" class="sub-cat-card">🛠️ 管材與防火布</a>
+    </div>
+
+    <div class="social-section">
+        <h2>職人手作現場</h2>
+        <p>每一支道具，皆由資深玩家親手調教，只為提供最平衡、最耐用的飛行手感。<br>追蹤我們的社群，查看最新客製化作品與實測影片！</p>
+        <div class="social-btns">
+            <a href="https://ig.me/m/freepaceshop" target="_blank" class="btn-social btn-ig">📸 追蹤 Instagram</a>
+            <a href="https://m.me/freepaceshop" target="_blank" class="btn-social btn-fb">💬 追蹤 Facebook</a>
+        </div>
     </div>
 </div>
+
+<footer>
+    <p><strong>FPS PROPS SHOP</strong> 道具部 © 2026. All Rights Reserved.</p>
+    <p>手工訂製・精準配重・極致火舞體驗<br>訂單確認與出貨時間皆以粉專私訊回覆為準。</p>
+</footer>
 
 </body>
 </html>
