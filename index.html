@@ -89,6 +89,31 @@
         .btn-copy { background: var(--primary); color: white; border: none; width: 100%; padding: 16px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem; margin-top: 15px; }
         .btn-copy:hover { background: #d35400; }
         .hint-text { font-size: 0.72rem; color: #999; text-align: center; margin-top: 8px; }
+
+/* 💡 專屬彈出視窗 (Modal) 樣式 */
+        .modal-overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6); z-index: 1000; align-items: center; justify-content: center;
+            backdrop-filter: blur(3px);
+        }
+        .modal-content {
+            background: #fff; padding: 35px 30px; border-radius: 12px; width: 90%; max-width: 420px;
+            text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .modal-content h3 { margin: 0 0 15px 0; color: #111; font-size: 1.4rem; }
+        .modal-content p { color: #555; margin-bottom: 25px; line-height: 1.5; font-size: 0.95rem; }
+        .modal-buttons { display: flex; flex-direction: column; gap: 12px; }
+        .btn-social {
+            padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; cursor: pointer; border: none; font-size: 1rem; color: white; transition: all 0.2s;
+        }
+        .btn-ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .btn-fb { background: #1877F2; }
+        .btn-close { background: #e0e0e0; color: #333; margin-top: 5px; }
+        .btn-ig:hover { filter: brightness(1.1); }
+        .btn-fb:hover { background: #165eab; }
+        .btn-close:hover { background: #ccc; }
+        
     </style>
 </head>
 <body>
@@ -216,7 +241,7 @@
         <div class="free-ship-container">
             <div class="free-ship-bar"><div id="shipFill" class="free-ship-fill"></div></div>
             <div id="shipMsg" class="free-ship-msg">正在計算免運進度...</div>
-        </div>
+                </div>
         
         <div id="cartList" class="cart-list">
             <p style="color:#999; text-align:center; padding: 20px 0;">清單內尚無道具，請從左側配置加入。</p>
@@ -233,9 +258,24 @@
     </div>
 </div>
 
+<div id="customModal" class="modal-overlay">
+    <div class="modal-content">
+        <h3>🎉 明細已成功複製！</h3>
+        <p>您的專屬客製化清單已複製到剪貼簿。<br>請點擊下方按鈕前往我們的社群，私訊「貼上」傳送給我們，即刻為您處理訂單！</p>
+        <div class="modal-buttons">
+            <a href="https://ig.me/m/freepaceshop" target="_blank" class="btn-social btn-ig">📸 前往 Instagram 私訊下單</a>
+            <a href="https://m.me/freepaceshop" target="_blank" class="btn-social btn-fb">💬 前往 FB 粉專私訊下單</a>
+            <button onclick="closeModal()" class="btn-social btn-close">先關閉</button>
+        </div>
+    </div>
+</div>
+
 <script>
 const db = {
+    favicon: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/favicon.png",
+
     // 🔥 火長棍系列
+
     fire_staff_cyl: {
         sub: {
             "火長棍-10cm圓柱火頭": { price: 1900, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-contact-roll10.jpg" },
@@ -710,6 +750,7 @@ function updatePrices(sub, ship, desc) {
     document.getElementById('shipMsg').innerText = sub >= 5000 ? "🎉 已享受免運費優惠！" : `還差 NT$ ${(5000 - sub).toLocaleString()} 即可享有免運優惠`;
 }
 
+// 💡 乾淨唯一的 copyOrder 功能
 function copyOrder() {
     if(cart.length === 0) return alert("清單是空的，請先加入道具規格！");
     let total = document.getElementById('grandTotal').innerText;
@@ -724,8 +765,19 @@ function copyOrder() {
     text += `----------------------------------\n商品小計：${sub}\n物流運費：${ship} (${shipD})\n預估應付總額：${total}\n\n※ 此明細為線上客製化試算，最終項目確認與出貨時間以粉專私訊溝通為準。`;
     
     navigator.clipboard.writeText(text).then(() => {
-        alert("🎉 明細已成功複製！\n請直接開啟臉書粉專私訊，點擊「貼上」傳送給我們即可下單。");
+        // 成功複製後，開啟自訂彈出視窗
+        document.getElementById('customModal').style.display = 'flex';
+    }).catch(err => {
+        alert("複製失敗，請手動全選明細複製。");
     });
+}
+
+function closeModal() {
+    document.getElementById('customModal').style.display = 'none';
+}
+
+if (db.favicon && db.favicon.trim() !== "") {
+    document.getElementById('dynamicFavicon').href = db.favicon;
 }
 
 renderSubFields();
