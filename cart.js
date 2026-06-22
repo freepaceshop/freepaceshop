@@ -4,7 +4,7 @@ window.db = {
     fire_staff_cyl: {
         title: "火長棍 (圓柱火頭)", cat: "fire",
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-contact-roll.jpg"],
-        details: "● <b>核心材質：</b>航太級 7075-T6 加厚高強度鋁合金棍身，防撞抗彎性極佳。<br>● <b>火頭工藝：</b>嚴選 Kevlar 防火布緊密圓柱層疊捲繞。<br>● <b>握把配備：</b>加厚吸汗止滑 EPDM 握把布，適合 Contact 技術磨練。",
+        details: "● <b>規格：<br>● <b>棍身：</b>棍身規格：7075鋁棍 19mm*17mm <br>● <b>火頭：</b>KEVLAR防火布、以圓柱包覆，無金屬外露。<br>● <b>握把：</b>運動用止滑握把布。",
         sub: {
             "火長棍-10cm圓柱火頭": { price: 1900, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-contact-roll10.jpg" },
             "火長棍-15cm圓柱火頭": { price: 2300, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-contact-roll15.jpg" }
