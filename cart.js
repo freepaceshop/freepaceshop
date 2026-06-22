@@ -274,15 +274,17 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>完整套裝，包含火頭、繩索與專業握把</li>
-                    <li>使用 M3 快接環連接，靈活可拆卸</li>
+                    <li>完整套裝，包含火頭、繩索與握把</li>
+                    <li>使用 M3 快接環連接，可靈活拆卸</li>
+                    <li>鐵鍊組：白鐵全焊鱔魚目鍊，堅固不壞、永垂不朽</li>
+                    <li>克維拉編織繩組：含PU塗層、長纖克維拉編織，手感較為硬挺</li>
+                    <li>Technora編織繩組：比克維拉更耐磨、更耐熱，手感較為柔軟</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 鐵鍊組預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li>白鐵全焊鱔魚目鍊，堅固不壞、永垂不朽</li>
                     <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環 — 鐵鍊 — 快接環 — 培林握把</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把：</b>有培林</li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>鐵鍊長度35cm；除非特殊要求，否則一律不裁減</li>
@@ -290,19 +292,8 @@ window.db = {
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
-                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 克維拉編織繩組預設規格</strong>
+                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 編織繩組預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li>含PU塗層、長纖克維拉編織，手感較為硬挺</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環+編織繩+握把</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>無培林</li>
-                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm)</li>
-                </ul>
-            </div>
-            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
-            <div>
-                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 Technora編織繩組預設規格</strong>
-                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li>比克維拉更耐磨、更耐熱，手感較為蓬鬆柔軟</li>
                     <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環+編織繩+握把</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把：</b>無培林</li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm)</li>
@@ -333,17 +324,17 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>採用無五金結構，繩索與火頭一體成型編織</li>
-                    <li>完全消滅拋接時因金屬零件造成的燙傷風險</li>
-                    <li>無金屬異物感，手感回饋極致平滑軟Ｑ</li>
+                    <li>一體成型編織，採用無五金結構</li>
+                    <li>繩練採用10mm長纖克維拉繩</li>
+                    <li>繩鍊與火頭交接處以寬5cm防火布縫紉強化，降低斷裂風險</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>火頭樣式：</b>8cm 圓球 或 猴子球</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把配置：</b>預設搭配 培林大握把</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>8cm 圓球 或 猴子球</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>無培林</li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm)</li>
                 </ul>
             </div>
@@ -365,18 +356,27 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>包含兩顆優質火頭與一條流星專用長繩</li>
-                    <li>靈活配置，可拆卸設計讓平時也能當作一般 Poi 使用</li>
-                    <li>手感細膩流暢，適合纏繞與大範圍軌跡招式</li>
+                    <li>完整套裝，包含火頭、繩索</li>
+                    <li>使用 M3 快接環連接，可靈活拆卸</li>
+                    <li>鐵鍊組：白鐵全焊鱔魚目鍊</li>
+                    <li>克維拉粗繩組：10mm長纖克維拉繩</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
-                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
+                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 鐵鍊組預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>豆干/Twista/圓球/猴子球 (6cm或8cm)</li>
-                    <li style="margin-bottom: 4px;">◆ <b>長繩選項：</b>鐵鍊+連接繩 / 克維拉加粗防火繩</li>
-                    <li style="margin-bottom: 4px;">◆ <b>客製總長：</b>140cm - 180cm 自由選擇</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環 — 鐵鍊 — 快接環+連接繩+快接環 — 鐵鍊 — 火頭</li>
+                    <li style="margin-bottom: 4px;">◆ <b>連接繩：</b>10mm全白登山繩</li>
+                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>連接繩80cm、鐵鍊長度35cm；除非特殊要求，否則一律不裁減</li>
+                </ul>
+            </div>
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
+            <div>
+                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 編織繩組預設規格</strong>
+                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
+                    <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環+粗繩+快接環 — 火頭</li>
+                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人需求調配 (140 - 180cm)</li>
                 </ul>
             </div>
         `,
@@ -402,16 +402,14 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>輕巧便攜的短小尺寸，隨身點綴效果佳</li>
-                    <li>極度適合食火 (Fire Eating) 或 身體接觸 (Body Tracing)</li>
-                    <li>可做為大型表演或攝影作品的點綴型輔助道具</li>
+                    <li>點綴型輔助道具</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>尺寸：</b>極輕量短桿</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總長度：</b>25cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭款式：</b>2.5cm圓柱 / 5cm圓柱 / 3cm Twista</li>
                 </ul>
             </div>
@@ -419,7 +417,7 @@ window.db = {
         sub: {
             "小火棒-2.5cm圓柱": { price: 100, ship: 'small', img: "" },
             "小火棒-5cm圓柱": { price: 200, ship: 'small', img: "" },
-            "小火棒-3cm Twista": { price: 350, ship: 'small', img: "" },
+            "小火棒-3cm Twista": { price: 300, ship: 'small', img: "" },
         }, specs: {}
     },
 
