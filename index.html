@@ -3,178 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FPS 道具部 - 官方線上客製化商店</title>
-    <link rel="icon" id="dynamicFavicon" href="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/favicon.png" type="image/png">
+    <title>FPS 道具部 - 官方線上商店</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --primary: #e67e22; 
-            --shopify-bg: #f5f5f5; 
-            --text-dark: #333333;
-            --border-color: #d9d9d9;
-            --accent-green: #27ae60;
-        }
-
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 'Noto Sans TC', sans-serif; 
-            background: #ffffff; margin: 0; padding: 0; color: var(--text-dark); overflow-x: hidden;
-        }
-
-        /* 導覽列 */
+        :root { --primary: #e67e22; --bg: #f5f5f5; }
+        body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); margin: 0; }
         .nav-header {
             display: flex; justify-content: space-between; align-items: center;
             padding: 15px 5%; background: #ffffff; border-bottom: 1px solid #eee;
-            position: fixed; top: 0; left: 0; width: 90%; z-index: 900;
         }
         .nav-logo { font-size: 1.4rem; font-weight: 700; color: #111; text-decoration: none; }
         
-        .cart-trigger {
-            background: #111; color: white; padding: 10px 18px; border-radius: 20px;
-            cursor: pointer; font-weight: bold; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;
-            transition: background 0.2s;
+        .main-container { max-width: 1000px; margin: 50px auto; padding: 0 5%; text-align: center; }
+        .main-container h1 { font-size: 2rem; color: #111; margin-bottom: 40px; }
+
+        .big-cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .big-cat-card {
+            background: #fff; border-radius: 12px; padding: 40px 20px; text-decoration: none;
+            color: #111; font-weight: 700; font-size: 1.3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s; border: 2px solid transparent;
         }
-        .cart-trigger:hover { background: var(--primary); }
-        .cart-count { background: #ff4d4d; color: white; border-radius: 50%; padding: 2px 7px; font-size: 0.75rem; }
-
-        /* 主首頁版面 */
-        .main-content { padding: 120px 5% 60px 5%; max-width: 1200px; margin: 0 auto; min-height: 80vh; }
-        
-        .store-intro { text-align: center; margin-bottom: 50px; }
-        .store-intro h1 { font-size: 2.2rem; margin: 0 0 10px 0; color: #111; font-weight: 700; }
-        .store-intro p { color: #666; font-size: 1rem; margin: 0; }
-
-        /* 頂級大分類區塊樣式 */
-        .main-categories {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 50px;
-        }
-        @media (max-width: 768px) { .main-categories { grid-template-columns: 1fr; } }
-        
-        .main-cat-card {
-            background: #fafafa; border: 1px solid var(--border-color); border-radius: 12px;
-            padding: 40px 20px; text-align: center; cursor: pointer; transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-        }
-        .main-cat-card:hover { transform: translateY(-5px); border-color: var(--primary); background: #fff; box-shadow: 0 8px 20px rgba(230, 126, 34, 0.1); }
-        .main-cat-card .icon { font-size: 3rem; margin-bottom: 15px; display: block; }
-        .main-cat-card h3 { margin: 0 0 10px 0; font-size: 1.3rem; font-weight: 700; color: #111; }
-        .main-cat-card p { margin: 0; font-size: 0.9rem; color: #777; line-height: 1.5; }
-
-        /* 右側滑出式購物車抽屜 (所有頁面共用) */
-        .cart-drawer {
-            position: fixed; top: 0; right: -400px; width: 360px; height: 100vh;
-            background: var(--shopify-bg); box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-            z-index: 999; transition: right 0.3s ease; padding: 30px 25px; box-sizing: border-box;
-            display: flex; flex-direction: column;
-        }
-        .cart-drawer.open { right: 0; }
-        .cart-drawer-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
-        .cart-drawer-title { font-size: 1.2rem; font-weight: 700; }
-        .cart-drawer-close { cursor: pointer; font-size: 1.2rem; font-weight: bold; color: #999; }
-        .cart-drawer-close:hover { color: #000; }
-
-        .free-ship-container { background: white; padding: 15px; border-radius: 6px; border: 1px solid #e1e1e1; margin-bottom: 20px; }
-        .free-ship-bar { background: #e1e1e1; height: 6px; border-radius: 3px; overflow: hidden; margin-bottom: 8px; }
-        .free-ship-fill { background: var(--accent-green); height: 100%; width: 0%; transition: width 0.4s ease; }
-        .free-ship-msg { font-size: 0.85rem; color: #444; font-weight: 500; }
-
-        .cart-list { flex: 1; overflow-y: auto; margin-bottom: 20px; padding-right: 5px; }
-        .cart-item { display: flex; justify-content: space-between; align-items: flex-start; padding: 15px 0; border-bottom: 1px dashed #ccc; position: relative; }
-        .cart-item-info { padding-right: 40px; }
-        .cart-item-name { font-weight: 500; font-size: 0.95rem; color: #111; }
-        .cart-item-spec { font-size: 0.8rem; color: #737373; display: block; margin-top: 4px; line-height: 1.4; }
-        .cart-item-price { font-weight: 600; font-size: 0.95rem; color: #111; margin-top: 5px; }
-        .btn-remove { position: absolute; right: 0; top: 15px; color: #ff4d4d; cursor: pointer; font-size: 0.75rem; text-decoration: underline; }
-
-        .summary-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; color: #555; }
-        .ship-desc { font-size: 0.75rem; color: #888; text-align: right; margin-top: -3px; margin-bottom: 8px; }
-        .grand-total { border-top: 1px solid #e1e1e1; padding-top: 15px; margin-top: 15px; display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: 700; color: #111; }
-        .btn-copy { background: var(--primary); color: white; border: none; width: 100%; padding: 16px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem; margin-top: 15px; }
-
-        /* 彈出視窗 */
-        .modal-overlay {
-            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.6); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(3px);
-        }
-        .modal-content {
-            background: #fff; padding: 35px 30px; border-radius: 12px; width: 90%; max-width: 420px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-        .modal-buttons { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
-        .btn-social { padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; text-align: center; font-size: 1rem; color: white; border: none; display: block; }
-        .btn-ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
-        .btn-fb { background: #1877F2; }
-        .btn-close { background: #e0e0e0; color: #333; cursor: pointer; }
+        .big-cat-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-color: var(--primary); }
+        .cat-icon { font-size: 3rem; display: block; margin-bottom: 15px; }
+        .cat-sub { display: block; font-size: 0.9rem; color: #666; font-weight: 400; margin-top: 10px; }
     </style>
 </head>
 <body>
 
 <div class="nav-header">
     <a href="index.html" class="nav-logo">FPS 道具部</a>
-    <div class="cart-trigger" onclick="toggleCart(true)">
-        🛒 詢價清單 <span class="cart-count" id="navCartCount">0</span>
-    </div>
 </div>
 
-<div class="main-content">
-    <div class="store-intro">
-        <h1>FPS PROPS SHOP</h1>
-        <p>專業手工火舞道具、日常練習道具、職人客製化配置系統</p>
-    </div>
-
-    <div class="main-categories">
-        <div class="main-cat-card" onclick="filterCategory('fire')">
-            <span class="icon">🔥</span>
-            <h3>火舞具系列</h3>
-            <p>圓柱棍、Twista、火Poi、流星</p>
-        </div>
-        <div class="main-cat-card" onclick="filterCategory('prac')">
-            <span class="icon">✨</span>
-            <h3>練習道具系列</h3>
-            <p>接觸長棍、標準短棍、TPU輕量短棍</p>
-        </div>
-        <div class="main-cat-card" onclick="filterCategory('material')">
-            <span class="icon">🛠️</span>
-            <h3>周邊配件與材料</h3>
-            <p>培林握把、高強度快接環、鋁管、防火布</p>
-        </div>
+<div class="main-container">
+    <h1>歡迎來到 FPS 道具部</h1>
+    <div class="big-cat-grid">
+        <a href="products.html?cat=fire" class="big-cat-card">
+            <span class="cat-icon">🔥</span>
+            火舞道具專區
+            <span class="cat-sub">火棍、Poi、流星、火具配件</span>
+        </a>
+        <a href="products.html?cat=prac" class="big-cat-card">
+            <span class="cat-icon">✨</span>
+            練習道具專區
+            <span class="cat-sub">耐摔練習長短棍、練習Poi</span>
+        </a>
+        <a href="products.html?cat=material" class="big-cat-card">
+            <span class="cat-icon">🛠️</span>
+            周邊配件與材料
+            <span class="cat-sub">培林握把、鐵鍊、快接、防火布</span>
+        </a>
     </div>
 </div>
-
-<div id="cartDrawer" class="cart-drawer">
-    <div class="cart-drawer-header">
-        <span class="cart-drawer-title">詢價清單</span>
-        <span class="cart-drawer-close" onclick="toggleCart(false)">✕</span>
-    </div>
-    <div class="free-ship-container">
-        <div class="free-ship-bar"><div id="shipFill" class="free-ship-fill"></div></div>
-        <div id="shipMsg" class="free-ship-msg">正在計算...</div>
-    </div>
-    <div id="cartList" class="cart-list"></div>
-    <div class="summary-row"><span>商品小計</span><span id="subTotal">NT$ 0</span></div>
-    <div class="summary-row"><span>預估運費</span><span id="shipFee">NT$ 0</span></div>
-    <div id="shipDesc" class="ship-desc"></div>
-    <div class="grand-total"><span>總計</span><span id="grandTotal">NT$ 0</span></div>
-    <button class="btn-copy" onclick="copyOrder()">📋 複製清單明細 (私訊下單用)</button>
-</div>
-
-<div id="customModal" class="modal-overlay">
-    <div class="modal-content">
-        <h3 style="margin:0 0 10px 0;">🎉 明細已成功複製！</h3>
-        <p style="color:#555; font-size:0.95rem; line-height:1.5;">您的客製化清單已複製到剪貼簿。<br>請點擊下方按鈕前往我們的社群，私訊「貼上」傳送給我們，即刻為您處理訂單！</p>
-        <div class="modal-buttons">
-            <a href="https://ig.me/m/freepaceshop" target="_blank" class="btn-social btn-ig">📸 前往 Instagram 私訊下單</a>
-            <a href="https://m.me/freepaceshop" target="_blank" class="btn-social btn-fb">💬 前往 FB 粉專私訊下單</a>
-            <button onclick="closeModal()" class="btn-social btn-close">先關閉</button>
-        </div>
-    </div>
-</div>
-
-<script src="cart.js"></script>
-
-<script>
-    // 💡 點擊大方塊時，帶上參數跳轉到列表頁
-    function filterCategory(catKey) {
-        window.location.href = `products.html?cat=${catKey}`;
-    }
-</script>
 
 </body>
 </html>
