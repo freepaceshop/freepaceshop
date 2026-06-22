@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPS 道具部 - 官方線上客製化估價系統</title>
+    <link rel="icon" id="dynamicFavicon" href="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #e67e22; 
+            --shopify-bg: #f5f5f5; 
+            --text-dark: #333333;
+            --border-color: #d9d9d9;
+            --accent-green: #27ae60;
+        }
+
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 'Noto Sans TC', sans-serif; 
+            background: #ffffff; margin: 0; padding: 0; color: var(--text-dark); overflow-x: hidden;
+        }
+
+        /* 導覽列 */
+        .nav-header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 5%; background: #ffffff; border-bottom: 1px solid #eee;
+            position: fixed; top: 0; left: 0; width: 90%; z-index: 900;
+        }
+        .nav-logo { font-size: 1.4rem; font-weight: 700; color: #111; text-decoration: none; }
+        
+        /* 🛒 右上角懸浮購物車按鈕 */
+        .cart-trigger {
+            background: #111; color: white; padding: 10px 18px; border-radius: 20px;
+            cursor: pointer; font-weight: bold; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;
+            transition: background 0.2s;
+        }
+        .cart-trigger:hover { background: var(--primary); }
+        .cart-count { background: #ff4d4d; color: white; border-radius: 50%; padding: 2px 7px; font-size: 0.75rem; }
+
+        /* 商品詳細佈局 */
+        .item-container { padding: 100px 5% 60px 5%; display: grid; grid-template-columns: 1fr; gap: 40px; max-width: 1200px; margin: 0 auto; }
+        
+        .back-link { display: inline-block; color: #666; text-decoration: none; font-size: 0.9rem; margin-bottom: 15px; }
+        .back-link:hover { color: var(--primary); }
+
+        .spec-hint-text {
+            font-size: 0.85rem; color: #555; margin-bottom: 25px; font-weight: 500;
+            background: #fff6ee; padding: 12px 16px; border-radius: 6px; border-left: 4px solid var(--primary);
+        }
+
+        h2 { font-size: 1.2rem; font-weight: 700; color: #111; margin: 25px 0 12px 0; border-bottom: 1px solid #f0f0f0; padding-bottom: 5px; }
+
+        /* 按鈕視覺網格 */
+        .spec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-bottom: 15px; }
+        .spec-btn {
+            background: #fff; border: 1px solid var(--border-color); border-radius: 6px; padding: 12px;
+            cursor: pointer; text-align: center; transition: all 0.2s ease; color: #444; font-weight: 500;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box; min-height: 60px;
+        }
+        .spec-btn:hover { border-color: #888; }
+        .spec-btn.active { border-color: #000; box-shadow: 0 0 0 1px #000; background: #fafafa; color: #000; font-weight: 700; }
+        .spec-btn img { width: 100%; height: 95px; object-fit: contain; margin-bottom: 8px; border-radius: 4px; background: #fdfdfd; }
+        .spec-btn span { line-height: 1.3; font-size: 0.85rem; display: block; width: 100%; }
+
+        .field-group { margin-bottom: 22px; }
+        .field-group label { font-size: 0.85rem; color: #222; margin-bottom: 8px; display: block; font-weight: 700; }
+        input[type="number"] { width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 5px; font-size: 0.95rem; box-sizing: border-box; }
+
+        .btn-add { background: #111; color: white; border: none; width: 100%; padding: 16px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem; margin-top: 15px; transition: background 0.2s; }
+        .btn-add:hover { background: var(--primary); }
+
+        /* 💡 右側滑出式抽屜購物車 (Slide-out Cart) */
+        .cart-drawer {
+            position: fixed; top: 0; right: -400px; width: 360px; height: 100vh;
+            background: var(--shopify-bg); box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            z-index: 999; transition: right 0.3s ease; padding: 30px 25px; box-sizing: border-box;
+            display: flex; flex-direction: column;
+        }
+        .cart-drawer.open { right: 0; }
+        .cart-drawer-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+        .cart-drawer-title { font-size: 1.2rem; font-weight: 700; }
+        .cart-drawer-close { cursor: pointer; font-size: 1.2rem; font-weight: bold; color: #999; }
+        .cart-drawer-close:hover { color: #000; }
+
+        .free-ship-container { background: white; padding: 15px; border-radius: 6px; border: 1px solid #e1e1e1; margin-bottom: 20px; }
+        .free-ship-bar { background: #e1e1e1; height: 6px; border-radius: 3px; overflow: hidden; margin-bottom: 8px; }
+        .free-ship-fill { background: var(--accent-green); height: 100%; width: 0%; transition: width 0.4s ease; }
+        .free-ship-msg { font-size: 0.85rem; color: #444; font-weight: 500; }
+
+        .cart-list { flex: 1; overflow-y: auto; margin-bottom: 20px; padding-right: 5px; }
+        .cart-item { display: flex; justify-content: space-between; align-items: flex-start; padding: 15px 0; border-bottom: 1px dashed #ccc; position: relative; }
+        .cart-item-info { padding-right: 40px; }
+        .cart-item-name { font-weight: 500; font-size: 0.95rem; color: #111; }
+        .cart-item-spec { font-size: 0.8rem; color: #737373; display: block; margin-top: 4px; line-height: 1.4; }
+        .cart-item-price { font-weight: 600; font-size: 0.95rem; color: #111; margin-top: 5px; }
+        .btn-remove { position: absolute; right: 0; top: 15px; color: #ff4d4d; cursor: pointer; font-size: 0.75rem; text-decoration: underline; }
+
+        .summary-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; color: #555; }
+        .ship-desc { font-size: 0.75rem; color: #888; text-align: right; margin-top: -3px; margin-bottom: 8px; }
+        .grand-total { border-top: 1px solid #e1e1e1; padding-top: 15px; margin-top: 15px; display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: 700; color: #111; }
+        .btn-copy { background: var(--primary); color: white; border: none; width: 100%; padding: 16px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem; margin-top: 15px; }
+        .btn-copy:hover { background: #d35400; }
+
+        /* 彈出視窗 */
+        .modal-overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(3px);
+        }
+        .modal-content {
+            background: #fff; padding: 35px 30px; border-radius: 12px; width: 90%; max-width: 420px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .modal-buttons { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+        .btn-social { padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; text-align: center; font-size: 1rem; color: white; border: none; display: block; }
+        .btn-ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .btn-fb { background: #1877F2; }
+        .btn-close { background: #e0e0e0; color: #333; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="nav-header">
+    <a href="index.html" class="nav-logo">FPS 道具部</a>
+    <div class="cart-trigger" onclick="toggleCart(true)">
+        🛒 詢價清單 <span class="cart-count" id="navCartCount">0</span>
+    </div>
+</div>
+
+<div class="item-container">
+    <div>
+        <a href="index.html" class="back-link">← 返回商店首頁</a>
+        
+        <div class="spec-hint-text">
+            ℹ️ 更多詳細道具材質、結構說明，請參考：
+            <a href="https://www.instagram.com/freepaceshop" target="_blank" style="color: var(--primary); font-weight: 700; text-decoration: underline;">【FPS 官方規格百科指南】</a>
+        </div>
+
+        <h1 id="productTitle" style="font-size: 1.8rem; margin: 0 0 20px 0; color: #111;">載入中...</h1>
+        
+        <div id="dynamicFields"></div>
+
+        <div class="field-group">
+            <label>套數 (總數量)</label>
+            <input type="number" id="qty" value="1" min="1" onchange="updateLivePrice()">
+        </div>
+
+        <button class="btn-add" onclick="addToCart()">＋ 放入詢價清單 (<span id="targetPrice">NT$ 0</span>)</button>
+    </div>
+</div>
+
+<div id="cartDrawer" class="cart-drawer">
+    <div class="cart-drawer-header">
+        <span class="cart-drawer-title">詢價清單</span>
+        <span class="cart-drawer-close" onclick="toggleCart(false)">✕</span>
+    </div>
+    
+    <div class="free-ship-container">
+        <div class="free-ship-bar"><div id="shipFill" class="free-ship-fill"></div></div>
+        <div id="shipMsg" class="free-ship-msg">正在計算...</div>
+    </div>
+    
+    <div id="cartList" class="cart-list"></div>
+
+    <div class="summary-row"><span>商品小計</span><span id="subTotal">NT$ 0</span></div>
+    <div class="summary-row"><span>預估運費</span><span id="shipFee">NT$ 0</span></div>
+    <div id="shipDesc" class="ship-desc"></div>
+    <div class="grand-total"><span>總計</span><span id="grandTotal">NT$ 0</span></div>
+    
+    <button class="btn-copy" onclick="copyOrder()">📋 複製清單明細 (私訊下單用)</button>
+</div>
+
+<div id="customModal" class="modal-overlay">
+    <div class="modal-content">
+        <h3 style="margin:0 0 10px 0;">🎉 明細已成功複製！</h3>
+        <p style="color:#555; font-size:0.95rem; line-height:1.5;">您的客製化清單已複製到剪貼簿。<br>請點擊下方按鈕前往我們的社群，私訊「貼上」傳送給我們，即刻為您處理訂單！</p>
+        <div class="modal-buttons">
+            <a href="https://ig.me/m/freepaceshop" target="_blank" class="btn-social btn-ig">📸 前往 Instagram 私訊下單</a>
+            <a href="https://m.me/freepaceshop" target="_blank" class="btn-social btn-fb">💬 前往 FB 粉專私訊下單</a>
+            <button onclick="closeModal()" class="btn-social btn-close">先關閉</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// 💡 萬用資料庫保持不變
+const db = {
+    fire_staff_cyl: {
+        title: "火長棍 (圓柱火頭)",
+        sub: {
+            "火長棍-10cm圓柱火頭": { price: 1900, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-contact-roll10.jpg" },
+            "火長棍-15cm圓柱火頭": { price: 2300, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-contact-roll15.jpg" }
+        },
+        specs: {
+            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 400, img: "" } },
+            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
+            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
+            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
+            "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
+        }
+    },
+    fire_staff_twi: {
+        title: "火長棍 (Twista火頭)",
+        sub: {
+            "火長棍-12cm 標準Twista": { price: 2700, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-contact-twistanormal12.jpg" },
+            "火長棍-12cm 細Twista": { price: 2500, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-contact-twistathin12.jpg" }
+        },
+        specs: {
+            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 300, img: "" } },
+            "棍身種類": { "體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
+            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
+            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
+            "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
+        }
+    },
+    fire_short_cyl: {
+        title: "火短棍 (圓柱火頭)",
+        sub: {
+            "火短棍-5cm圓柱火頭": { price: 950, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-roll5.jpg" },
+            "火短棍-10cm圓柱火頭": { price: 1150, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-roll10.jpg" }
+        },
+        specs: {
+            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 200, img: "" } },
+            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
+            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
+            "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
+        }
+    },
+    fire_short_twi: {
+        title: "火短棍 (Twista火頭)",
+        sub: {
+            "火短棍-6cm標準Twista": { price: 1100, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-twistanormal6.jpg" },
+            "火短棍-7cm細Twista": { price: 1100, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-twistathin7.jpg" }
+        },
+        specs: {
+            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 200, img: "" } },
+            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
+            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
+            "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
+        }
+    }
+    // 💡 其他練習道具與配件資料庫可以依此類推自由補上...
+};
+
+// 💡 核心技術：讀取網址裡面的商品 ID
+const urlParams = new URLSearchParams(window.location.search);
+let productID = urlParams.get('id') || 'fire_staff_cyl'; // 預設讀取火長棍
+let cart = [];
+
+// 💡 側邊欄開關
+function toggleCart(open) {
+    document.getElementById('cartDrawer').classList.toggle('open', open);
+}
+
+// 載入商品規格與按鈕
+function renderProduct() {
+    const data = db[productID];
+    if(!data) {
+        document.getElementById('productTitle').innerText = "商品不存在";
+        return;
+    }
+
+    document.getElementById('productTitle').innerText = data.title || "客製化商品";
+    const container = document.getElementById('dynamicFields');
+    container.innerHTML = ""; 
+
+    // 渲染第 1 區（基礎品項）
+    let subGroup = document.createElement('div');
+    subGroup.className = 'field-group';
+    subGroup.innerHTML = `<label>1. 選擇品項與規格</label>`;
+    let subGrid = document.createElement('div');
+    subGrid.className = 'spec-grid';
+
+    let isFirst = true;
+    for(let k in data.sub) {
+        let btn = document.createElement('div');
+        btn.className = `spec-btn ${isFirst ? 'active' : ''}`;
+        let imgHtml = data.sub[k].img ? `<img src="${data.sub[k].img}">` : "";
+        btn.innerHTML = `${imgHtml}<span>${k}<br>($${data.sub[k].price})</span>`;
+        btn.setAttribute('data-value', data.sub[k].price);
+        btn.setAttribute('data-ship', data.sub[k].ship);
+        btn.setAttribute('data-name', k);
+        btn.onclick = function() {
+            subGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            updateLivePrice();
+        };
+        subGrid.appendChild(btn);
+        isFirst = false;
+    }
+    subGroup.appendChild(subGrid);
+    container.appendChild(subGroup);
+
+    // 渲染後續客製化選項
+    let specIndex = 2;
+    for(let specName in data.specs) {
+        let specGroup = document.createElement('div');
+        specGroup.className = 'field-group';
+        specGroup.innerHTML = `<label>${specIndex}. 選擇${specName}</label>`;
+        let specGrid = document.createElement('div');
+        specGrid.className = 'spec-grid';
+
+        let isOptFirst = true;
+        for(let opt in data.specs[specName]) {
+            let val = data.specs[specName][opt];
+            let btn = document.createElement('div');
+            btn.className = `spec-btn ${isOptFirst ? 'active' : ''}`;
+            let plusText = val.plus > 0 ? `<br>(+$${val.plus})` : (val.plus < 0 ? `<br>(-$${Math.abs(val.plus)})` : "");
+            let imgHtml = val.img ? `<img src="${val.img}">` : "";
+            btn.innerHTML = `${imgHtml}<span>${opt}${plusText}</span>`;
+            
+            btn.setAttribute('data-plus', val.plus || 0);
+            btn.setAttribute('data-mult', val.mult || 1); 
+            btn.setAttribute('data-specname', specName);
+            btn.setAttribute('data-optname', opt);
+            if(val.ship_override) btn.setAttribute('data-shipoverride', val.ship_override);
+
+            btn.onclick = function() {
+                specGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                updateLivePrice();
+            };
+            specGrid.appendChild(btn);
+            isOptFirst = false;
+        }
+        specGroup.appendChild(specGrid);
+        container.appendChild(specGroup);
+        specIndex++;
+    }
+    updateLivePrice();
+}
+
+function updateLivePrice() {
+    const activeSubBtn = document.querySelector('#dynamicFields .field-group:first-child .spec-btn.active');
+    if(!activeSubBtn) return;
+    const base = parseInt(activeSubBtn.getAttribute('data-value'));
+    const qty = parseInt(document.getElementById('qty').value) || 1;
+    let extra = 0, mult = 1;
+
+    document.querySelectorAll('#dynamicFields .field-group').forEach((group, idx) => {
+        if(idx > 0) {
+            let activeOpt = group.querySelector('.spec-btn.active');
+            if(activeOpt) {
+                extra += parseInt(activeOpt.getAttribute('data-plus') || 0);
+                let m = parseFloat(activeOpt.getAttribute('data-mult'));
+                if (!isNaN(m) && m !== 1) mult *= m;
+            }
+        }
+    });
+    let finalPrice = Math.round((base + extra) * mult);
+    document.getElementById('targetPrice').innerText = `NT$ ${(finalPrice * qty).toLocaleString()}`;
+}
+
+// 💡 購物車核心：加入 localStorage
+function addToCart() {
+    const activeSubBtn = document.querySelector('#dynamicFields .field-group:first-child .spec-btn.active');
+    if(!activeSubBtn) return alert("請先選擇品項！");
+
+    const itemName = activeSubBtn.getAttribute('data-name');
+    let itemShip = activeSubBtn.getAttribute('data-ship') || 'small';
+    const qty = parseInt(document.getElementById('qty').value) || 1;
+    const basePrice = parseInt(activeSubBtn.getAttribute('data-value')) || 0;
+    
+    let specs = [], extra = 0, mult = 1;
+    document.querySelectorAll('#dynamicFields .field-group').forEach((group, idx) => {
+        if(idx > 0) {
+            let activeOpt = group.querySelector('.spec-btn.active');
+            if(activeOpt) {
+                extra += parseInt(activeOpt.getAttribute('data-plus') || 0);
+                let m = parseFloat(activeOpt.getAttribute('data-mult'));
+                if (!isNaN(m) && m !== 1) mult *= m;
+                specs.push(`${activeOpt.getAttribute('data-specname')}: ${activeOpt.getAttribute('data-optname')}`);
+                if (activeOpt.getAttribute('data-shipoverride')) itemShip = activeOpt.getAttribute('data-shipoverride');
+            }
+        }
+    });
+
+    let finalPrice = Math.round((basePrice + extra) * mult);
+    cart.push({ id: Date.now(), name: itemName, specs: specs.join(' / ') || "標準規格", price: finalPrice, qty: qty, ship: itemShip });
+    
+    saveCart();
+    renderCart();
+    toggleCart(true); // 自動滑出購物車
+}
+
+function removeFromCart(id) {
+    cart = cart.filter(i => i.id !== id);
+    saveCart();
+    renderCart();
+}
+
+function saveCart() {
+    localStorage.setItem('fps_cart', JSON.stringify(cart));
+}
+
+function loadCart() {
+    cart = JSON.parse(localStorage.getItem('fps_cart')) || [];
+    renderCart();
+}
+
+function renderCart() {
+    const list = document.getElementById('cartList');
+    let subTotal = 0;
+    document.getElementById('navCartCount').innerText = cart.reduce((sum, i) => sum + i.qty, 0);
+    
+    if(cart.length === 0) {
+        list.innerHTML = `<p style="color:#999; text-align:center; padding: 20px 0;">清單內尚無道具。</p>`;
+        updatePrices(0, 0, "");
+        return;
+    }
+
+    list.innerHTML = cart.map(i => {
+        subTotal += (i.price * i.qty);
+        return `<div class="cart-item">
+            <div class="cart-item-info">
+                <span class="cart-item-name">${i.name} × ${i.qty}</span>
+                <span class="cart-item-spec">${i.specs}</span>
+                <div class="cart-item-price">NT$ ${(i.price * i.qty).toLocaleString()}</div>
+            </div>
+            <span class="btn-remove" onclick="removeFromCart(${i.id})">移除</span>
+        </div>`;
+    }).join('');
+
+    const shipInfo = calcShippingEngine(cart, subTotal);
+    updatePrices(subTotal, shipInfo.fee, shipInfo.desc);
+}
+
+function calcShippingEngine(items, total) {
+    if(total >= 5000) return { fee: 0, desc: "🎉 達 NT$5,000 免運門檻！" };
+    const longQty = items.filter(i => i.ship === 'long').reduce((s, i) => s + i.qty, 0);
+    const medQty = items.filter(i => i.ship === 'medium').reduce((s, i) => s + i.qty, 0);
+    const smallQty = items.filter(i => i.ship === 'small').reduce((s, i) => s + i.qty, 0);
+    let fee = 0, desc = [];
+    if(longQty > 0) { fee += (longQty * 100); desc.push(`長棍獨立包裹 × ${longQty}支`); }
+    if(medQty > 0) { let boxes = Math.ceil(medQty / 6); fee += (boxes * 100); desc.push(`中型道具包裹 × ${boxes}箱`); }
+    if(smallQty > 0) { fee += 60; desc.push(`小型包裹`); }
+    if(longQty >= 5 || fee >= 300) return { fee: 300, desc: "🚛 訂單大宗：優化改走大榮貨運" };
+    return { fee: fee, desc: `物流：${desc.join(' + ')}` };
+}
+
+function updatePrices(sub, ship, desc) {
+    document.getElementById('subTotal').innerText = `NT$ ${sub.toLocaleString()}`;
+    document.getElementById('shipFee').innerText = `NT$ ${ship.toLocaleString()}`;
+    document.getElementById('shipDesc').innerText = desc;
+    document.getElementById('grandTotal').innerText = `NT$ ${(sub + ship).toLocaleString()}`;
+    const percent = Math.min((sub / 5000) * 100, 100);
+    document.getElementById('shipFill').style.width = percent + '%';
+    document.getElementById('shipMsg').innerText = sub >= 5000 ? "🎉 已享受免運優惠！" : `還差 NT$ ${(5000 - sub).toLocaleString()} 免運`;
+}
+
+function copyOrder() {
+    if(cart.length === 0) return;
+    let total = document.getElementById('grandTotal').innerText;
+    let sub = document.getElementById('subTotal').innerText;
+    let ship = document.getElementById('shipFee').innerText;
+    let shipD = document.getElementById('shipDesc').innerText;
+
+    let text = "【FPS 道具部 - 客製化估價清單】\n----------------------------------\n";
+    cart.forEach((i, idx) => { text += `${idx + 1}. ● ${i.name} × ${i.qty}\n   規格明細：${i.specs}\n   小計金額：NT$ ${(i.price * i.qty).toLocaleString()}\n\n`; });
+    text += `----------------------------------\n商品小計：${sub}\n物流運費：${ship} (${shipD})\n預估應付總額：${total}\n\n※ 複製明細後，請私訊粉專下單。`;
+    
+    navigator.clipboard.writeText(text).then(() => {
+        document.getElementById('customModal').style.display = 'flex';
+    });
+}
+
+function closeModal() { document.getElementById('customModal').style.display = 'none'; }
+
+// 啟動
+renderProduct();
+loadCart();
+</script>
+
+</body>
+</html>
