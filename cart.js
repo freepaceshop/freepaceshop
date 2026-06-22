@@ -22,7 +22,17 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>10cm 或 15cm 圓柱</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[10cm] 約 440g、[15cm] 約 500g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約440g(火頭10cm)、500g(火頭10cm)</li>
+                </ul>
+            </div>
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
+            <div>
+                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">⛓️ 組合棍規格</strong>
+                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
+                    <li style="margin-bottom: 4px;">◆ <b>端頭：</b>19mm * 17mm , 45cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>中段：</b>17mm * 15mm , 46~70cm（總長度120~144cm）</li>
+                    <li style="margin-bottom: 4px;">◆ <b>實際握把長度：</b>30~54cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約440g(火頭10cm)</li>
                 </ul>
             </div>
         `,
