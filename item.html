@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FPS 道具部 - 客製化配置</title>
+    <link rel="icon" id="dynamicFavicon" href="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #e67e22; --shopify-bg: #f5f5f5; --border-color: #d9d9d9; --accent-green: #27ae60; }
@@ -21,20 +22,20 @@
         .back-link:hover { color: var(--primary); text-decoration: underline; }
 
         .product-info-panel { position: sticky; top: 100px; height: fit-content; }
-        .main-product-img { width: 100%; max-height: 400px; object-fit: contain; border-radius: 8px; background: #fafafa; margin-bottom: 20px; border: 1px solid #eee; }
         .product-details-content { background: #fdfdfd; border: 1px dashed var(--border-color); padding: 20px; border-radius: 8px; font-size: 0.92rem; color: #444; line-height: 1.6; }
+
+        /* 💡 新增：多照片輪播圖專用 CSS */
+        .gallery-container { margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px; }
+        .main-product-img { width: 100%; height: 400px; object-fit: contain; border-radius: 8px; background: #fafafa; border: 1px solid #eee; transition: opacity 0.2s; }
+        .thumb-row { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px; scrollbar-width: none; }
+        .thumb-row::-webkit-scrollbar { display: none; }
+        .thumb-img { width: 70px; height: 70px; object-fit: contain; border: 2px solid transparent; border-radius: 6px; cursor: pointer; background: #fafafa; opacity: 0.6; transition: 0.2s; flex-shrink: 0;}
+        .thumb-img.active, .thumb-img:hover { opacity: 1; border-color: #111; }
 
         h1 { font-size: 1.8rem; margin: 0 0 20px 0; color: #111; }
         
         .spec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; margin-bottom: 15px; }
-        
-        /* 💡 修正 1：加入了 justify-content: center 讓文字與圖片完美置中 */
-        .spec-btn { 
-            background: #fff; border: 1px solid var(--border-color); border-radius: 6px; padding: 12px; 
-            cursor: pointer; text-align: center; transition: all 0.2s; 
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            min-height: 60px; box-sizing: border-box; 
-        }
+        .spec-btn { background: #fff; border: 1px solid var(--border-color); border-radius: 6px; padding: 12px; cursor: pointer; text-align: center; transition: all 0.2s; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60px; box-sizing: border-box; }
         .spec-btn.active { border-color: #000; box-shadow: 0 0 0 1px #000; background: #fafafa; font-weight: 700; color: #000; }
         .spec-btn img { width: 100%; height: 95px; object-fit: contain; margin-bottom: 8px; border-radius: 4px; background: #fdfdfd; }
         .spec-btn span { line-height: 1.3; font-size: 0.85rem; width: 100%; }
@@ -46,17 +47,15 @@
         .btn-add { background: #111; color: white; border: none; width: 100%; padding: 16px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem; margin-top: 15px; transition: background 0.2s; }
         .btn-add:hover { background: var(--primary); }
 
-        /* 購物車抽屜樣式 */
+        /* 滑出抽屜與 Modal 維持不變 */
         .cart-drawer { position: fixed; top: 0; right: -400px; width: 360px; height: 100vh; background: var(--shopify-bg); box-shadow: -5px 0 15px rgba(0,0,0,0.1); z-index: 999; transition: right 0.3s ease; padding: 30px 25px; box-sizing: border-box; display: flex; flex-direction: column; }
         .cart-drawer.open { right: 0; }
         .cart-drawer-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px; font-size: 1.2rem; font-weight: 700; }
         .cart-drawer-close { cursor: pointer; color: #999; }
-        
         .free-ship-container { background: white; padding: 15px; border-radius: 6px; border: 1px solid #e1e1e1; margin-bottom: 20px; }
         .free-ship-bar { background: #e1e1e1; height: 6px; border-radius: 3px; overflow: hidden; margin-bottom: 8px; }
         .free-ship-fill { background: var(--accent-green); height: 100%; width: 0%; transition: width 0.4s; }
         .free-ship-msg { font-size: 0.85rem; color: #444; font-weight: 500; }
-        
         .cart-list { flex: 1; overflow-y: auto; margin-bottom: 20px; padding-right: 5px; }
         .cart-item { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px dashed #ccc; position: relative; }
         .cart-item-info { padding-right: 40px; }
@@ -64,20 +63,14 @@
         .cart-item-spec { font-size: 0.8rem; color: #737373; display: block; margin-top: 4px; line-height: 1.4; }
         .cart-item-price { font-weight: 600; font-size: 0.95rem; color: #111; margin-top: 5px; }
         .btn-remove { position: absolute; right: 0; top: 15px; color: #ff4d4d; cursor: pointer; font-size: 0.75rem; text-decoration: underline; }
-
         .summary-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; color: #555; }
         .ship-desc { font-size: 0.75rem; color: #888; text-align: right; margin-top: -3px; margin-bottom: 8px; }
         .grand-total { border-top: 1px solid #e1e1e1; padding-top: 15px; margin-top: 15px; display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: 700; color: #111; }
         .btn-copy { background: var(--primary); color: white; border: none; width: 100%; padding: 16px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem; margin-top: 15px; }
 
-        /* 💡 修正 3：Modal 按鈕調整滿版並置中對齊 */
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(3px); }
         .modal-content { background: #fff; padding: 35px 30px; border-radius: 12px; width: 90%; max-width: 420px; text-align: center; }
-        .btn-social { 
-            padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; 
-            display: block; width: 100%; box-sizing: border-box; text-align: center;
-            margin-top: 10px; color: white; border: none; cursor: pointer; font-size: 1rem; font-family: inherit;
-        }
+        .btn-social { padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; display: block; width: 100%; box-sizing: border-box; text-align: center; margin-top: 10px; color: white; border: none; cursor: pointer; font-size: 1rem; font-family: inherit; }
         .btn-ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
         .btn-close { background: #e0e0e0; color: #333; }
         .btn-close:hover { background: #d0d0d0; }
@@ -93,7 +86,9 @@
 <div class="item-container">
     <div class="product-info-panel">
         <a href="products.html?cat=fire" id="backHomeBtn" class="back-link">← 返回商品列表</a>
-        <img id="mainProductImg" src="" class="main-product-img">
+        
+        <div id="galleryContainer" class="gallery-container"></div>
+        
         <div class="product-details-content">
             <h4 style="margin: 0 0 10px 0; border-left: 3px solid var(--primary); padding-left: 8px;">📋 道具介紹與規格</h4>
             <div id="productDetailText"></div>
@@ -101,7 +96,6 @@
     </div>
 
     <div>
-        <!-- 💡 修正 2：移除了這裡的 ℹ️ 規格百科指南連結 -->
         <h1 id="productTitle">載入中...</h1>
         <div id="dynamicFields"></div>
         <div class="field-group">
@@ -140,15 +134,35 @@ const data = db[productID];
 
 if(data) {
     document.getElementById('backHomeBtn').href = `products.html?cat=${data.cat}`;
-    document.getElementById('mainProductImg').src = data.main_img || "https://via.placeholder.com/400";
     document.getElementById('productDetailText').innerHTML = data.details || "歡迎私訊粉專了解詳情。";
     document.getElementById('productTitle').innerText = data.title;
     
+    // 💡 自動生成照片輪播 Gallery
+    let galleryHtml = `<img id="mainProductImg" src="${data.images[0]}" class="main-product-img">`;
+    if(data.images.length > 1) {
+        galleryHtml += `<div class="thumb-row">`;
+        data.images.forEach((img, idx) => {
+            galleryHtml += `<img src="${img}" class="thumb-img ${idx===0?'active':''}" onclick="changeMainImg(this, '${img}')">`;
+        });
+        galleryHtml += `</div>`;
+    }
+    document.getElementById('galleryContainer').innerHTML = galleryHtml;
+
+    // 💡 切換主圖功能
+    window.changeMainImg = function(el, src) {
+        document.getElementById('mainProductImg').src = src;
+        document.querySelectorAll('.thumb-img').forEach(t => t.classList.remove('active'));
+        el.classList.add('active');
+    };
+
     const container = document.getElementById('dynamicFields');
+    
+    // 渲染：品項與規格 (若 hideSub 為 true 則自動隱藏，但保留 DOM 以便計算價格)
     let subGroup = document.createElement('div'); subGroup.className = 'field-group';
     subGroup.innerHTML = `<label>1. 選擇品項與規格</label>`;
+    if(data.hideSub) subGroup.style.display = 'none'; // 💡 單一配件直接隱藏此區塊
+
     let subGrid = document.createElement('div'); subGrid.className = 'spec-grid';
-    
     let isFirst = true;
     for(let k in data.sub) {
         let btn = document.createElement('div'); btn.className = `spec-btn ${isFirst ? 'active' : ''}`;
@@ -160,8 +174,9 @@ if(data) {
     }
     subGroup.appendChild(subGrid); container.appendChild(subGroup);
 
-    if(!data.hideExtraSpecs) {
-        let specIndex = 2;
+    // 渲染：其他選項
+    if(!data.hideExtraSpecs && data.specs) {
+        let specIndex = data.hideSub ? 1 : 2; // 若隱藏了主選項，附屬選項數字從 1 開始
         for(let specName in data.specs) {
             let specGroup = document.createElement('div'); specGroup.className = 'field-group';
             specGroup.innerHTML = `<label>${specIndex}. 選擇${specName}</label>`;
