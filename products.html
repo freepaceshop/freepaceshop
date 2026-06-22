@@ -41,12 +41,12 @@
     <div class="product-grid" id="productGrid"></div>
 </div>
 
+<!-- 引進核心資料大腦 -->
 <script src="cart.js"></script>
 <script>
     const urlParams = new URLSearchParams(window.location.search);
     const category = urlParams.get('cat') || 'fire';
 
-    // 💡 支援 5 種不同的標題顯示
     const titles = { 
         'fire': '🔥 火舞道具專區', 
         'prac': '✨ 練習道具專區', 
@@ -56,16 +56,24 @@
     };
     document.getElementById('pageTitle').innerText = titles[category] || '所有商品';
 
+    // 💡 取得已全域安全綁定的 window.db 資料庫
+    const targetDb = window.db || {};
     const grid = document.getElementById('productGrid');
-    for(let key in db) {
-        if(db[key].cat === category) {
-            let item = db[key];
+    
+    for(let key in targetDb) {
+        let item = targetDb[key];
+        
+        // 💡 核心安全保護：確保物件內含有 cat 分類標籤，且符合目前網址參數，才進行渲染
+        if(item && item.cat === category) {
             let card = document.createElement('a');
             card.href = `item.html?id=${key}`;
             card.className = 'product-card';
-            // 💡 讀取陣列的第一張圖片作為封面
+            
+            // 💡 預防當機防護：若該品項沒填入圖片，自動提供預設底圖，確保整頁絕對能順暢渲染
+            let firstImg = (item.images && item.images.length > 0) ? item.images[0] : "https://via.placeholder.com/400x300?text=FPS+PROPS";
+            
             card.innerHTML = `
-                <img src="${item.images[0]}" class="product-img" alt="${item.title}">
+                <img src="${firstImg}" class="product-img" alt="${item.title}">
                 <div class="product-info">
                     <p class="product-name">${item.title}</p>
                 </div>
