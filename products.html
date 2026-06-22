@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FPS 道具部 - 商品列表</title>
+    <link rel="icon" id="dynamicFavicon" href="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #e67e22; --bg: #f9f9f9; }
@@ -11,7 +12,7 @@
         .nav-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: #ffffff; border-bottom: 1px solid #eee; }
         .nav-logo { font-size: 1.4rem; font-weight: 700; color: #111; text-decoration: none; }
         
-        .list-container { max-width: 1200px; margin: 40px auto; padding: 0 5%; }
+        .list-container { max-width: 1200px; margin: 40px auto; padding: 0 5%; min-height: 70vh; }
         .back-link { display: inline-block; margin-bottom: 20px; color: #666; text-decoration: none; font-weight: 500; }
         .back-link:hover { color: var(--primary); text-decoration: underline; }
         .page-title { font-size: 1.8rem; margin-bottom: 30px; color: #111; border-bottom: 2px solid #ddd; padding-bottom: 10px; display: inline-block; }
@@ -34,7 +35,8 @@
 </div>
 
 <div class="list-container">
-    <a href="index.html" class="back-link">← 返回商品分類</a>
+    <a href="index.html" class="back-link">← 返回商店分類</a>
+    <br>
     <h1 class="page-title" id="pageTitle">商品列表</h1>
     <div class="product-grid" id="productGrid"></div>
 </div>
@@ -44,7 +46,14 @@
     const urlParams = new URLSearchParams(window.location.search);
     const category = urlParams.get('cat') || 'fire';
 
-    const titles = { 'fire': '🔥 火舞道具專區', 'prac': '✨ 練習道具專區', 'material': '🛠️ 周邊配件與材料' };
+    // 💡 支援 5 種不同的標題顯示
+    const titles = { 
+        'fire': '🔥 火舞道具專區', 
+        'prac': '✨ 練習道具專區', 
+        'set': '📦 專業套組 (握把與鐵鍊)', 
+        'parts': '⚙️ 耗材配件 (握把布/快接環)', 
+        'mats': '🛠️ 管材與防火布' 
+    };
     document.getElementById('pageTitle').innerText = titles[category] || '所有商品';
 
     const grid = document.getElementById('productGrid');
@@ -54,8 +63,9 @@
             let card = document.createElement('a');
             card.href = `item.html?id=${key}`;
             card.className = 'product-card';
+            // 💡 讀取陣列的第一張圖片作為封面
             card.innerHTML = `
-                <img src="${item.main_img}" class="product-img" alt="${item.title}">
+                <img src="${item.images[0]}" class="product-img" alt="${item.title}">
                 <div class="product-info">
                     <p class="product-name">${item.title}</p>
                 </div>
