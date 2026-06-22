@@ -200,10 +200,11 @@
 </div>
 
 <script>
+// 💡 FPS 道具部：全套終極版商品資料庫 (加入了分類屬性 cat 與圖文說明)
 const db = {
+    // 🔥 火舞具系列
     fire_staff_cyl: {
-        title: "火長棍 (圓柱火頭)",
-        cat: "fire", // 💡 加上分類標籤，讓程式知道要回傳到哪裡
+        title: "火長棍 (圓柱火頭)", cat: "fire",
         main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-contact-roll.jpg",
         details: "● <b>核心材質：</b>採用航太級 7075-T6 加厚高強度鋁合金棍身，防撞抗彎性極佳。<br>● <b>火頭工藝：</b>嚴選頂級 Kevlar 100% 防火布，緊密圓柱層疊捲繞，吸油量飽滿且火焰飽滿持久。<br>● <b>握把配備：</b>標配專業加厚吸汗止滑 EPDM 握把布，提供極致的操作摩擦力，非常適合 Contact 技術磨練。<br>● <b>平衡配重：</b>兩端精密配重塊優化慣性，轉棍感流暢順手。",
         sub: {
@@ -219,8 +220,7 @@ const db = {
         }
     },
     fire_staff_twi: {
-        title: "火長棍 (Twista火頭)",
-        cat: "fire",
+        title: "火長棍 (Twista火頭)", cat: "fire",
         main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-contact-twista.jpg",
         details: "● <b>核心材質：</b>航太級 7075 高剛性鋁管，極致輕量化與抗撞擊表現。<br>● <b>火頭工藝：</b>獨家 Twista 空心立體編織技法。空心結構可容納更多空氣，燃燒時火焰更具侵略性，視覺震懾力極高！<br>● <b>防護機制：</b>火頭與鋁管交接處採用耐高溫全包覆防護，大幅延長棍身使用壽命。<br>● <b>手感特點：</b>動態風阻配重特殊優化，適合喜愛大火勢與高速迴旋的進階玩家。",
         sub: {
@@ -236,10 +236,9 @@ const db = {
         }
     },
     fire_short_cyl: {
-        title: "火短棍 (圓柱火頭)",
-        cat: "fire",
+        title: "火短棍 (圓柱火頭)", cat: "fire",
         main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-short-roll.jpg",
-        details: "● <b>核心材質：</b>15mm 高硬度輕薄鋁合金管，完美平衡多棍控制的負擔。<br>● <b>火頭設計：</b>緊密捲製圓柱火頭，火勢穩定不炸油。提供 5cm 與 10cm 款式。<br>● <b>適用技巧：</b>專為雙短棍（Double Staff）及三短棍（Manipulation）技巧研發，軸向轉動極度輕靈敏捷。<br>● <b>握把設計：</b>全面包裹防滑吸震熱縮套及專業手感布，長時間揮舞依然舒適。",
+        details: "● <b>核心材質：</b>15mm 高硬度輕薄鋁合金管，完美平衡多棍控制的負擔。<br>● <b>火頭設計：</b>緊密捲製圓柱火頭，火勢穩定不炸油。提供 5cm 與 10cm 款式。<br>● <b>適用技巧：</b>專為雙短棍（Double Staff）及三短棍（Manipulation）技巧研發，軸向轉動極度輕靈敏捷。",
         sub: {
             "火短棍-5cm圓柱火頭": { price: 950, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-roll5.jpg" },
             "火短棍-10cm圓柱火頭": { price: 1150, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-roll10.jpg" }
@@ -252,10 +251,9 @@ const db = {
         }
     },
     fire_short_twi: {
-        title: "火短棍 (Twista火頭)",
-        cat: "fire",
+        title: "火短棍 (Twista火頭)", cat: "fire",
         main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-short-twista.jpg",
-        details: "● <b>核心優勢：</b>短棍尺寸、巨型火勢！融合 Twista 編織的超強蓄油力，打破傳統短棍火勢較小的限制。<br>● <b>結構工藝：</b>高品質克維拉防火織帶經職人純手工經緯立體編織而成，結構不易散落、極度耐燒。<br>● <b>操作性能：</b>轉動慣性分布極佳，完美切合指尖花式（Grip & Finger Tech）與高速拋接動作。<br>● <b>標配握把：</b>FPS 精選握把布，即便沾到微量煤油仍能保持優異防滑效果。",
+        details: "● <b>核心優勢：</b>短棍尺寸、巨型火勢！融合 Twista 編織的超強蓄油力，打破傳統短棍火勢較小的限制。<br>● <b>操作性能：</b>轉動慣性分布極佳，完美切合指尖花式（Grip & Finger Tech）與高速拋接動作。",
         sub: {
             "火短棍-6cm標準Twista": { price: 1100, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-twistanormal6.jpg" },
             "火短棍-7cm細Twista": { price: 1100, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-twistathin7.jpg" }
@@ -266,6 +264,241 @@ const db = {
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
             "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
         }
+    },
+    fire_staff_levi: {
+        title: "火漂浮棍", cat: "fire",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-leviwand.jpg",
+        details: "● <b>FPS 原廠規格：</b>專業手工製作，極致隱形的控制線與精準的漂浮重心，讓火光如同魔法般在身邊舞動。",
+        sub: {
+            "火漂浮棍-5cm圓柱火頭": { price: 1000, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-roll5.jpg" }
+        },
+        specs: {
+            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 200, img: "" } },
+            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
+            "控制繩規格": { "短繩-繩圈": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-leviwand-shortring.jpg" }, "短繩-握把": { plus: 250, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-leviwand-shortknob.jpg" },"長繩": { plus: 400, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-leviwand-long.jpg" } },
+            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
+        }
+    },
+    fire_staff_shuriken: {
+        title: "火手裡劍", cat: "fire",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-shuriken.jpg",
+        details: "● <b>FPS 原廠規格：</b>獨特的手裡劍火頭編織造型，提供極具張力的旋轉火光殘影。",
+        sub: {
+            "火手裡劍-6cm標準Twista": { price: 1100, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-twistanormal6.jpg" }
+        },
+        specs: {
+            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 200, img: "" } },
+            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
+            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
+        }
+    },
+    fire_poi_single: {
+        title: "火Poi (純火頭單賣)", cat: "fire", hideExtraSpecs: true,
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista6.jpg",
+        details: "● <b>DIY 替換專區：</b>此品項僅販售單顆火頭，不包含連接繩、鐵鍊與培林握把，適合已有配件的玩家自行替換升級。<br>● <b>多樣化火頭：</b>提供傳統豆干、進階空心 Twista、經典圓球與大火量猴子球等多種編織選擇。",
+        sub: {
+            "純火頭-6cm豆干": { price: 500, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral6.jpg" },
+            "純火頭-8cm豆干": { price: 600, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral8.jpg" },
+            "純火頭-6cm Twista": { price: 650, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista6.jpg" },
+            "純火頭-8cm Twista": { price: 800, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista8.jpg" },
+            "純火頭-6cm 圓球": { price: 700, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball6.jpg" },
+            "純火頭-8cm 圓球": { price: 900, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball8.jpg" },
+            "純火頭-6cm 猴子球": { price: 750, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey6.jpg" },
+            "純火頭-8cm 猴子球": { price: 1000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey8.jpg" }
+        },
+        specs: {} 
+    },
+    fire_poi_det_1: {
+        title: "火Poi - 可拆式 (含配件)", cat: "fire",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-thumbnail.jpg",
+        details: "● <b>完整套裝：</b>包含快接環、連接繩/鐵鍊與專業培林握把，收到即可直接使用。<br>● <b>靈活可拆卸：</b>使用高強度 M3 快接環連接，未來若火頭燒耗，可單獨購買火頭替換，大幅節省成本。",
+        sub: {
+            "可拆式-6cm豆干": { price: 500, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral6.jpg" },
+            "可拆式-8cm豆干": { price: 600, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral8.jpg" },
+            "可拆式-6cm Twista": { price: 650, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista6.jpg" },
+            "可拆式-8cm Twista": { price: 800, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista8.jpg" },
+            "可拆式-6cm 圓球": { price: 700, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball6.jpg" },
+            "可拆式-8cm 圓球": { price: 900, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball8.jpg" },
+            "可拆式-6cm 猴子球": { price: 750, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey6.jpg" },
+            "可拆式-8cm 猴子球": { price: 1000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey8.jpg" }
+        },
+        specs: {
+            "繩練規格": { "鐵鍊(+小握把)": { plus: 300, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-chain.jpg" }, "鐵鍊(+大握把)": { plus: 500, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-chain-big.jpg" }, "克維拉繩": { plus: 500, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-blackkevlar.jpg" }, "Technora繩": { plus: 700, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-technora.jpg" } },
+            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
+            "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
+        }
+    },
+    fire_poi_one: {
+        title: "火Poi - 一體式 (含配件)", cat: "fire",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-one-thumbnail.jpg",
+        details: "● <b>無五金結構：</b>繩索與火頭一體成型編織，沒有快接環與金屬件的干擾，完全消滅拋接或打到身體時的金屬異物感與燙傷風險。<br>● <b>流暢拋接：</b>極致順滑的繩體過渡，適合進階的 Toss（拋接）與 Contact（接觸）Poi 玩家。",
+        sub: {
+            "一體式-8cm 圓球": { price: 1150, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-one-ball.jpg" },
+            "一體式-8cm 猴子球": { price: 1250, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-one-monkey.jpg" }
+        },
+        specs: {
+            "握把規格": { "預設大握把": { plus: 0, img: "" } },
+            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
+            "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
+        }
+    },
+    fire_meteor_det: {
+        title: "火流星 - 可拆式", cat: "fire",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-meteor-thumbnail.jpg",
+        details: "● <b>靈活配置：</b>此套組包含兩顆火頭與一條流星專用長繩。<br>● <b>多元玩法：</b>可拆式設計讓您可以隨時更換火頭尺寸，甚至拆下來當作一般 Poi 揮舞，性價比極高。",
+        sub: {
+            "流星組(2個)-6cm豆干": { price: 1000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral6.jpg" },
+            "流星組(2個)-8cm豆干": { price: 1200, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral8.jpg" },
+            "流星組(2個)-6cm Twista": { price: 1300, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista6.jpg" },
+            "流星組(2個)-8cm Twista": { price: 1600, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista8.jpg" },
+            "流星組(2個)-6cm 圓球": { price: 1400, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball6.jpg" },
+            "流星組(2個)-8cm 圓球": { price: 1800, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball8.jpg" },
+            "流星組(2個)-6cm 猴子球": { price: 1500, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey6.jpg" },
+            "流星組(2個)-8cm 猴子球": { price: 2000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey8.jpg" }
+        },
+        specs: {
+            "繩練規格": { "鐵鍊+連接繩": { plus: 300, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-chain.jpg" }, "克維拉粗繩": { plus: 500, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-kevlar.jpg" } },
+            "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} }
+        }
+    },
+    fire_mini: {
+        title: "小火棒", cat: "fire",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-torch25.jpg",
+        details: "● <b>FPS 原廠規格：</b>輕巧便攜，適合食火、身體接觸或做為火焰效果點綴之用。",
+        sub: {
+            "小火棒-2.5cm圓柱": { price: 100, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-torch25.jpg" },
+            "小火棒-5cm圓柱": { price: 200, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-torch50.jpg" },
+            "小火棒-3cm Twista": { price: 350, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-torchtwista.jpg" },
+        },
+        specs: {}
+    },
+
+    // ✨ 練習道具系列
+    prac_staff_std: {
+        title: "練習長棍 (標準版)", cat: "prac",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-normal.jpg",
+        details: "● <b>安全防護：</b>兩端採高品質避震結構包覆，室內外掉落皆不易造成損傷或噪音。<br>● <b>極佳手感：</b>比照真火長棍的重量與平衡點設計，讓肌肉記憶無縫接軌。<br>● <b>外觀客製：</b>可加價升級視覺外觀，讓練習道具也極具舞台魅力。",
+        sub: { "練習長棍-標準版": { price: 1200, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-normal.jpg" } },
+        specs: {
+            "兩端加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 200, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-option-staff-contact-normal.jpg" } },
+            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
+            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
+            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
+            "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
+        }
+    },
+    prac_staff_contact: {
+        title: "練習長棍 (Contact接觸版)", cat: "prac",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-90.jpg",
+        details: "● <b>專為接觸設計：</b>兩側加裝高密度配重塊，大幅提升轉動慣性。<br>● <b>流暢滑行：</b>在頸部、手臂、背部滑行時更加穩定，不易偏移，是 Contact Staff 玩家必備的訓練神器。",
+        sub: { "練習長棍-接觸版": { price: 1500, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-90.jpg" } },
+        specs: {
+            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
+            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
+            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
+            "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
+        }
+    },
+    prac_staff_short_std: {
+        title: "練習短棍 (標準版)", cat: "prac",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-normal.jpg",
+        details: "● <b>堅固耐用：</b>專為多棍拋接（Manipulation）設計，採用高韌性管材，經得起無數次掉落。<br>● <b>吸震防護：</b>兩端加厚軟質緩衝，保護道具同時保護地板與玩家關節。",
+        sub: { "練習短棍-標準版": { price: 600, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-normal.jpg" } },
+        specs: {
+            "兩端加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-option-staff-short-normal.jpg" } },
+            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
+            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
+            "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
+        }
+    },
+    prac_staff_short_light: {
+        title: "練習短棍 (TPU 極致輕量版)", cat: "prac",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-tpunormal.jpg",
+        details: "● <b>超低負擔：</b>極致輕量化設計，專為高轉速指尖花式與長時間連續拋接打造，大幅降低手腕負擔。<br>● <b>多樣視覺：</b>可選擇安全的 TPU 軟管材質，或是包覆炫彩亮眼的高強度織帶。",
+        sub: { "練習短棍-輕量版": { price: 500, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-tpunormal.jpg" } },
+        specs: {
+            "兩端規格": { "TPU (白)": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-option-light-tpu.jpg" }, "織帶 (多色)": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-option-light-color.jpg" } },
+            "握把規格": { "標準": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-tpunormal.jpg" }, "熱縮套": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-fullcolor.jpg" } },
+            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
+            "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
+        }
+    },
+    prac_poi_std: {
+        title: "練習Poi (標準版)", cat: "prac",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-poi-normal.jpg",
+        details: "● <b>最佳手感：</b>柔軟布料包覆配重塊，打到身體不易疼痛，非常適合新手入門或新招式探索。<br>● <b>配件齊全：</b>可依個人喜好客製化小握把、大球把以及培林，讓旋轉更順暢無阻。",
+        sub: { "練習Poi-標準版": { price: 550, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-poi-normal.jpg" } },
+        specs: {
+            "培林規格": { "無培林": { plus: 0, img: "" }, "加裝培林": { plus: 50, img: "" } },
+            "握把規格": { "小握把": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-small.jpg" }, "大握把": { plus: 200, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-big.jpg" } },
+            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
+            "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
+        }
+    },
+    prac_poi_contact: {
+        title: "練習Poi (Contact接觸版)", cat: "prac",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-poi-contact90.jpg",
+        details: "● <b>接觸專用：</b>使用完美的 90mm 接觸球，重心平穩，特別適合身體滾動（Body Roll）與高階拋接。<br>● <b>職人微調：</b>繩索長度精準客製，確保每一次拉扯都能獲得完美的回饋感。",
+        sub: { "練習Poi-接觸版 (90mm)": { price: 800, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-poi-contact90.jpg" } },
+        specs: {
+            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
+            "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
+        }
+    },
+    prac_meteor: {
+        title: "練習流星", cat: "prac",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-meteor.jpg",
+        details: "● <b>FPS 原廠規格：</b>經典軟質配重端，連接柔軟且高強度的編織繩，適合全方位的流星技法演練。",
+        sub: { "練習流星-標準版": { price: 1000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-meteor.jpg" } },
+        specs: { "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} } }
+    },
+
+    // 🛠️ 周邊配件與材料
+    set: {
+        title: "培林握把與高拉力鐵鍊", cat: "material",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-big.jpg",
+        details: "● <b>FPS 道具部專屬研發配件：</b><br>提供 Poi 玩家最需要的高速培林旋轉握把，以及抗拉扯、抗高溫的專業連接繩索與鐵鍊。",
+        sub: {
+            "培林小握把(白)": { price: 180, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-small.jpg" },
+            "培林大握把": { price: 300, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-big.jpg" },
+            "克維拉編織繩": { price: 500, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-blackkevlar.jpg" },
+            "Technora編織繩": { price: 700, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-technora.jpg" },
+            "流星克維拉繩": { price: 700, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-kevlar.jpg" },
+            "流星鐵鍊連接繩": { price: 100, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-nochain.jpg" },
+            "鐵鍊組": { price: 130, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-chain.jpg" }
+        },
+        specs: {}
+    },
+    accessories: {
+        title: "專業耗材配件（握把布/快接環）", cat: "material",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-quicklink.jpg",
+        details: "● <b>日常補給站：</b><br>定期更換高吸汗性的專業握把布，以及確保安全的抗拉力 M3 快接環、#7 不鏽鋼培林，是維持道具壽命的最佳選擇。",
+        sub: {
+            "握把布 (普通款)": { price: 20, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-grip-normal.jpg" },
+            "握把布 (厚款)": { price: 60, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-grip-thick.jpg" },
+            "握把球-小 (橢圓)": { price: 100, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-knob-small.jpg" },
+            "握把球-大 (圓球)": { price: 200, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-knob-big.jpg" },
+            "鐵鍊 (35cm)": { price: 70, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-chain.jpg" },
+            "快接環 (M3)": { price: 35, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-quicklink.jpg" },
+            "培林 (#7)": { price: 20, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-bearings.jpg" }
+        },
+        specs: {}
+    },
+    materials: {
+        title: "管材與防火布", cat: "material",
+        main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-chain.jpg",
+        details: "● <b>職人素材：</b><br>提供極致堅固的 7075 鋁合金管材，以及各尺寸純克維拉 (Kevlar) 耐高溫防火布，讓專業玩家自由打造夢想道具。",
+        sub: {
+            "7075鋁棍 19*17 (150cm)": { price: 500, ship: 'long', img: "" },
+            "7075鋁棍 15*13 (100cm)": { price: 250, ship: 'medium', img: "" },
+            "7075鋁棍 13*11 (100cm)": { price: 250, ship: 'medium', img: "" },
+            "防火布 13mm (每公尺)": { price: 100, ship: 'small', img: "" },
+            "防火布 19mm (每公尺)": { price: 120, ship: 'small', img: "" },
+            "防火布 25mm (每公尺)": { price: 140, ship: 'small', img: "" },
+            "防火布 50mm (每公尺)": { price: 200, ship: 'small', img: "" },
+            "防火布 10mm圓繩 (每公尺)": { price: 150, ship: 'small', img: "" }
+        },
+        specs: {}
     }
 };
 
@@ -274,25 +507,29 @@ let productID = urlParams.get('id') || 'fire_staff_cyl';
 
 function renderProduct() {
     const data = db[productID];
+    
+    // 安全防護機制：如果商品不存在，停止運作
     if(!data) {
         document.getElementById('productTitle').innerText = "商品不存在";
         return;
     }
 
-    // 💡 智慧導航優化：自動將返回連結導向對應的分類列表！
+    // 💡 智慧導航：自動將返回按鈕修正回該商品隸屬的分類列表
     const itemCategory = data.cat || 'fire';
-    document.getElementById('backHomeBtn').href = `products.html?cat=${itemCategory}`;
+    const backBtn = document.getElementById('backHomeBtn');
+    if (backBtn) {
+        backBtn.href = `products.html?cat=${itemCategory}`;
+    }
 
-    // 塞入左側的圖文
+    // 塞入左側的大圖與文字說明
     document.getElementById('mainProductImg').src = data.main_img || "https://via.placeholder.com/400x300?text=FPS+PROPS";
     document.getElementById('productDetailText').innerHTML = data.details || "暫無詳細材質規格說明，歡迎聯繫粉專洽詢。";
 
-    // 塞入右側標題
+    // 塞入右側標題與按鈕
     document.getElementById('productTitle').innerText = data.title || "客製化商品";
     const container = document.getElementById('dynamicFields');
     container.innerHTML = ""; 
 
-    // 1. 渲染基礎品項
     let subGroup = document.createElement('div');
     subGroup.className = 'field-group';
     subGroup.innerHTML = `<label>1. 選擇品項與規格</label>`;
@@ -319,7 +556,6 @@ function renderProduct() {
     subGroup.appendChild(subGrid);
     container.appendChild(subGroup);
 
-    // 2. 渲染規格選項
     let specIndex = 2;
     for(let specName in data.specs) {
         let specGroup = document.createElement('div');
@@ -379,7 +615,7 @@ function updateLivePrice() {
     document.getElementById('targetPrice').innerText = `NT$ ${(finalPrice * qty).toLocaleString()}`;
 }
 
-// 放入詢價購物車
+// 放入詢價清單 (交給大腦 cart.js 記憶)
 function addToCart() {
     const activeSubBtn = document.querySelector('#dynamicFields .field-group:first-child .spec-btn.active');
     if(!activeSubBtn) return alert("請先選擇品項！");
@@ -411,6 +647,7 @@ function addToCart() {
     toggleCart(true); 
 }
 
+// 啟動渲染
 renderProduct();
 </script>
 
