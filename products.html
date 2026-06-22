@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPS 道具部 - 商品列表</title>
+    <link rel="icon" id="dynamicFavicon" href="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #e67e22; 
+            --shopify-bg: #f5f5f5; 
+            --text-dark: #333333;
+            --border-color: #d9d9d9;
+            --accent-green: #27ae60;
+        }
+
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 'Noto Sans TC', sans-serif; 
+            background: #ffffff; margin: 0; padding: 0; color: var(--text-dark); overflow-x: hidden;
+        }
+
+        /* 導覽列 */
+        .nav-header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 5%; background: #ffffff; border-bottom: 1px solid #eee;
+            position: fixed; top: 0; left: 0; width: 90%; z-index: 900;
+        }
+        .nav-logo { font-size: 1.4rem; font-weight: 700; color: #111; text-decoration: none; }
+        
+        .cart-trigger {
+            background: #111; color: white; padding: 10px 18px; border-radius: 20px;
+            cursor: pointer; font-weight: bold; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;
+        }
+        .cart-count { background: #ff4d4d; color: white; border-radius: 50%; padding: 2px 7px; font-size: 0.75rem; }
+
+        /* 列表頁佈局 */
+        .main-content { padding: 100px 5% 60px 5%; max-width: 1200px; margin: 0 auto; }
+        .back-home-link { display: inline-block; color: #666; text-decoration: none; font-size: 0.9rem; margin-bottom: 20px; }
+        .back-home-link:hover { color: var(--primary); }
+
+        .page-title { font-size: 1.6rem; font-weight: 700; color: #111; margin-bottom: 25px; border-bottom: 2px solid #111; padding-bottom: 10px; }
+        
+        /* 商品網格 */
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px; }
+        
+        .product-card {
+            background: #fff; border: 1px solid var(--border-color); border-radius: 10px; padding: 18px;
+            cursor: pointer; display: flex; flex-direction: column; justify-content: space-between;
+            transition: all 0.2s ease;
+        }
+        .product-card:hover { border-color: #111; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .product-card img { width: 100%; height: 180px; object-fit: contain; background: #fdfdfd; border-radius: 6px; margin-bottom: 12px; }
+        .product-card-title { font-size: 1rem; font-weight: 700; color: #111; margin: 0 0 8px 0; line-height: 1.4; }
+        .product-card-desc { font-size: 0.82rem; color: #777; margin: 0 0 15px 0; line-height: 1.4; flex-grow: 1; }
+        .product-card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px dashed #eee; padding-top: 12px; }
+        .product-card-price { font-weight: 700; color: var(--primary); font-size: 1.1rem; }
+        .product-card-btn { background: #111; color: white; border: none; padding: 8px 16px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; }
+
+        /* 購物車抽屜樣式 */
+        .cart-drawer {
+            position: fixed; top: 0; right: -400px; width: 360px; height: 100vh;
+            background: var(--shopify-bg); box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            z-index: 999; transition: right 0.3s ease; padding: 30px 25px; box-sizing: border-box;
+            display: flex; flex-direction: column;
+        }
+        .cart-drawer.open { right: 0; }
+        .cart-drawer-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+        .cart-drawer-title { font-size: 1.2rem; font-weight: 700; }
+        .cart-drawer-close { cursor: pointer; font-size: 1.2rem; font-weight: bold; color: #999; }
+
+        /* 彈出視窗 */
+        .modal-overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(3px);
+        }
+        .modal-content { background: #fff; padding: 35px 30px; border-radius: 12px; width: 90%; max-width: 420px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="nav-header">
+    <a href="index.html" class="nav-logo">FPS 道具部</a>
+    <div class="cart-trigger" onclick="toggleCart(true)">
+        🛒 詢價清單 <span class="cart-count" id="navCartCount">0</span>
+    </div>
+</div>
+
+<div class="main-content">
+    <a href="index.html" class="back-home-link">← 返回商店首頁</a>
+    <div class="page-title" id="listPageTitle">商品列表</div>
+    <div class="products-grid" id="listProductsGrid"></div>
+</div>
+
+<div id="cartDrawer" class="cart-drawer">
+    <div class="cart-drawer-header">
+        <span class="cart-drawer-title">詢價清單</span>
+        <span class="cart-drawer-close" onclick="toggleCart(false)">✕</span>
+    </div>
+    <div class="free-ship-container">
+        <div class="free-ship-bar"><div id="shipFill" class="free-ship-fill"></div></div>
+        <div id="shipMsg" class="free-ship-msg">正在計算...</div>
+    </div>
+    <div id="cartList" class="cart-list"></div>
+    <div class="summary-row"><span>商品小計</span><span id="subTotal">NT$ 0</span></div>
+    <div class="summary-row"><span>預估運費</span><span id="shipFee">NT$ 0</span></div>
+    <div id="shipDesc" class="ship-desc"></div>
+    <div class="grand-total"><span>總計</span><span id="grandTotal">NT$ 0</span></div>
+    <button class="btn-copy" onclick="copyOrder()">📋 複製清單明細 (私訊下單用)</button>
+</div>
+
+<div id="customModal" class="modal-overlay">
+    <div class="modal-content">
+        <h3 style="margin:0 0 10px 0;">🎉 明細已成功複製！</h3>
+        <p style="color:#555; font-size:0.95rem; line-height:1.5;">您的客製化清單已複製到剪貼簿。<br>請私訊傳送給我們下單！</p>
+        <div class="modal-buttons" style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+            <a href="https://ig.me/m/freepaceshop" target="_blank" style="padding:14px; border-radius:8px; text-decoration:none; font-weight:bold; color:white; background:linear-gradient(45deg, #f09433 0%, #bc1888 100%); display:block; text-align:center;">📸 前往 Instagram 私訊</a>
+            <a href="https://m.me/freepaceshop" target="_blank" style="padding:14px; border-radius:8px; text-decoration:none; font-weight:bold; color:white; background:#1877F2; display:block; text-align:center;">💬 前往 FB 粉專私訊</a>
+            <button onclick="closeModal()" style="padding:14px; border-radius:8px; background:#e0e0e0; border:none; cursor:pointer; font-weight:bold;">先關閉</button>
+        </div>
+    </div>
+</div>
+
+<script src="cart.js"></script>
+
+<script>
+// 萬用列表目錄資料
+const globalCatalog = [
+    { id: 'fire_staff_cyl', cat: 'fire', title: '火長棍 (圓柱火頭)', desc: '經典不敗的基礎火棍，手感紮實，提供10cm與15cm多種客製化。', price: 1900, img: 'https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-contact-roll.jpg' },
+    { id: 'fire_staff_twi', cat: 'fire', title: '火長棍 (Twista編織火頭)', desc: '進階視覺系專用，獨特空心Twista編織手法，火勢極大。', price: 2500, img: 'https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-contact-twista.jpg' },
+    { id: 'fire_short_cyl', cat: 'fire', title: '火短棍 (圓柱火頭)', desc: '雙棍玩家必備！輕量化與靈活度完美平衡，火頭可加厚。', price: 950, img: 'https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-short-roll.jpg' },
+    { id: 'fire_short_twi', cat: 'fire', title: '火短棍 (Twista編織火頭)', desc: '極致耀眼的小型道具。兼具輕量手感與空心編織的巨型火勢。', price: 1100, img: 'https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-short-twista.jpg' },
+
+    { id: 'prac_staff_std', cat: 'prac', title: '練習長棍 (標準版)', desc: '全天候練習首選，配置舒適防滑握把布，耐摔且配重完美。', price: 1200, img: 'https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-normal.jpg' },
+    { id: 'prac_staff_contact', cat: 'prac', title: '練習長棍 (Contact接觸版)', desc: '加重兩端配重塊，延長身體轉棍慣性，專為接觸技巧深度研發。', price: 1500, img: 'https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-90.jpg' },
+    { id: 'prac_staff_short_std', cat: 'prac', title: '練習短棍 (標準版)', desc: '高耐磨兩端防護，雙棍、三棍玩家的日常基本功與招式研發首選。', price: 600, img: 'https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-normal.jpg' },
+    { id: 'prac_staff_short_light', cat: 'prac', title: '練習短棍 (TPU極致輕量版)', desc: '超輕量特製中空管，搭配安全TPU或炫彩織帶，特別適合高速技巧。', price: 500, img: 'https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-tpunormal.jpg' },
+
+    { id: 'set', cat: 'material', title: '職人培林握把與高拉力鐵鍊組', desc: 'FPS 道具部專屬開發配件，包含大/小培林握把、高強度 Technora 繩。', price: 70, img: 'https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-big.jpg' },
+    { id: 'accessories', cat: 'material', title: '專業耗材配件（握把布/快接環）', desc: '日常耗材補給區。嚴選高吸汗加厚握把布、安全M3快接環。', price: 20, img: 'https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-quicklink.jpg' }
+];
+
+// 解析網址分類
+const params = new URLSearchParams(window.location.search);
+const currentCat = params.get('cat') || 'fire';
+
+function renderListPage() {
+    let titleText = "🔥 火舞具系列道具";
+    if(currentCat === 'prac') titleText = "✨ 練習道具系列道具";
+    if(currentCat === 'material') titleText = "🛠️ 周邊配件與職人材料";
+    
+    document.getElementById('listPageTitle').innerText = titleText;
+    
+    const grid = document.getElementById('listProductsGrid');
+    const filtered = globalCatalog.filter(p => p.cat === currentCat);
+    
+    grid.innerHTML = filtered.map(p => `
+        <div class="product-card" onclick="location.href='item.html?id=${p.id}'">
+            <div>
+                <img src="${p.img}" alt="${p.title}">
+                <div class="product-card-title">${p.title}</div>
+                <div class="product-card-desc">${p.desc}</div>
+            </div>
+            <div class="product-card-footer">
+                <span class="product-card-price">NT$ ${p.price.toLocaleString()}+</span>
+                <button class="product-card-btn">客製估價</button>
+            </div>
+        </div>
+    `).join('');
+}
+
+renderListPage();
+</script>
+</body>
+</html>
