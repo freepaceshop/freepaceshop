@@ -36,7 +36,7 @@
         .cart-trigger:hover { background: var(--primary); }
         .cart-count { background: #ff4d4d; color: white; border-radius: 50%; padding: 2px 7px; font-size: 0.75rem; }
 
-        /* 💡 左右雙欄主要佈局 (左側圖文 : 右側按鈕 = 1:1) */
+        /* 左右雙欄主要佈局 (左側圖文 : 右側按鈕 = 1:1) */
         .item-container { 
             padding: 100px 5% 60px 5%; 
             display: grid; 
@@ -47,10 +47,10 @@
         }
         @media (max-width: 850px) { .item-container { grid-template-columns: 1fr; gap: 30px; } }
         
-        .back-link { display: inline-block; color: #666; text-decoration: none; font-size: 0.9rem; margin-bottom: 15px; }
-        .back-link:hover { color: var(--primary); }
+        .back-link { display: inline-block; color: #666; text-decoration: none; font-size: 0.9rem; margin-bottom: 15px; font-weight: 500; }
+        .back-link:hover { color: var(--primary); text-decoration: underline; }
 
-        /* 💡 左側：商品大圖與規格介紹區 */
+        /* 左側：商品大圖與規格介紹區 */
         .product-info-panel { position: sticky; top: 100px; height: fit-content; }
         .main-product-img { width: 100%; max-height: 400px; object-fit: contain; border-radius: 8px; background: #fafafa; margin-bottom: 20px; border: 1px solid #eee; }
         .product-details-content { background: #fdfdfd; border: 1px dashed var(--border-color); padding: 20px; border-radius: 8px; font-size: 0.92rem; color: #444; line-height: 1.6; }
@@ -139,7 +139,7 @@
 
 <div class="item-container">
     <div class="product-info-panel">
-        <a href="index.html" class="back-link">← 返回商店首頁</a>
+        <a href="products.html?cat=fire" id="backHomeBtn" class="back-link">← 返回商品列表</a>
         <img id="mainProductImg" src="" alt="商品圖片" class="main-product-img">
         <div class="product-details-content">
             <h4>📋 道具材質與核心規格</h4>
@@ -200,10 +200,10 @@
 </div>
 
 <script>
-// 💡 萬用防呆資料庫：新增了大圖連結 (main_img) 與詳細材質規格說明的文字 (details)
 const db = {
     fire_staff_cyl: {
         title: "火長棍 (圓柱火頭)",
+        cat: "fire", // 💡 加上分類標籤，讓程式知道要回傳到哪裡
         main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-contact-roll.jpg",
         details: "● <b>核心材質：</b>採用航太級 7075-T6 加厚高強度鋁合金棍身，防撞抗彎性極佳。<br>● <b>火頭工藝：</b>嚴選頂級 Kevlar 100% 防火布，緊密圓柱層疊捲繞，吸油量飽滿且火焰飽滿持久。<br>● <b>握把配備：</b>標配專業加厚吸汗止滑 EPDM 握把布，提供極致的操作摩擦力，非常適合 Contact 技術磨練。<br>● <b>平衡配重：</b>兩端精密配重塊優化慣性，轉棍感流暢順手。",
         sub: {
@@ -220,6 +220,7 @@ const db = {
     },
     fire_staff_twi: {
         title: "火長棍 (Twista火頭)",
+        cat: "fire",
         main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-contact-twista.jpg",
         details: "● <b>核心材質：</b>航太級 7075 高剛性鋁管，極致輕量化與抗撞擊表現。<br>● <b>火頭工藝：</b>獨家 Twista 空心立體編織技法。空心結構可容納更多空氣，燃燒時火焰更具侵略性，視覺震懾力極高！<br>● <b>防護機制：</b>火頭與鋁管交接處採用耐高溫全包覆防護，大幅延長棍身使用壽命。<br>● <b>手感特點：</b>動態風阻配重特殊優化，適合喜愛大火勢與高速迴旋的進階玩家。",
         sub: {
@@ -236,6 +237,7 @@ const db = {
     },
     fire_short_cyl: {
         title: "火短棍 (圓柱火頭)",
+        cat: "fire",
         main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-short-roll.jpg",
         details: "● <b>核心材質：</b>15mm 高硬度輕薄鋁合金管，完美平衡多棍控制的負擔。<br>● <b>火頭設計：</b>緊密捲製圓柱火頭，火勢穩定不炸油。提供 5cm 與 10cm 款式。<br>● <b>適用技巧：</b>專為雙短棍（Double Staff）及三短棍（Manipulation）技巧研發，軸向轉動極度輕靈敏捷。<br>● <b>握把設計：</b>全面包裹防滑吸震熱縮套及專業手感布，長時間揮舞依然舒適。",
         sub: {
@@ -251,6 +253,7 @@ const db = {
     },
     fire_short_twi: {
         title: "火短棍 (Twista火頭)",
+        cat: "fire",
         main_img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-staff-short-twista.jpg",
         details: "● <b>核心優勢：</b>短棍尺寸、巨型火勢！融合 Twista 編織的超強蓄油力，打破傳統短棍火勢較小的限制。<br>● <b>結構工藝：</b>高品質克維拉防火織帶經職人純手工經緯立體編織而成，結構不易散落、極度耐燒。<br>● <b>操作性能：</b>轉動慣性分布極佳，完美切合指尖花式（Grip & Finger Tech）與高速拋接動作。<br>● <b>標配握把：</b>FPS 精選握把布，即便沾到微量煤油仍能保持優異防滑效果。",
         sub: {
@@ -269,13 +272,16 @@ const db = {
 const urlParams = new URLSearchParams(window.location.search);
 let productID = urlParams.get('id') || 'fire_staff_cyl'; 
 
-// 💡 渲染商品，同時把大圖與規格介紹塞進左側
 function renderProduct() {
     const data = db[productID];
     if(!data) {
         document.getElementById('productTitle').innerText = "商品不存在";
         return;
     }
+
+    // 💡 智慧導航優化：自動將返回連結導向對應的分類列表！
+    const itemCategory = data.cat || 'fire';
+    document.getElementById('backHomeBtn').href = `products.html?cat=${itemCategory}`;
 
     // 塞入左側的圖文
     document.getElementById('mainProductImg').src = data.main_img || "https://via.placeholder.com/400x300?text=FPS+PROPS";
@@ -373,7 +379,7 @@ function updateLivePrice() {
     document.getElementById('targetPrice').innerText = `NT$ ${(finalPrice * qty).toLocaleString()}`;
 }
 
-// 放入購物車
+// 放入詢價購物車
 function addToCart() {
     const activeSubBtn = document.querySelector('#dynamicFields .field-group:first-child .spec-btn.active');
     if(!activeSubBtn) return alert("請先選擇品項！");
