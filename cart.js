@@ -434,8 +434,8 @@ window.db = {
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
                     <li>頂部完全覆蓋，無金屬外露</li>
                     <li>靈活拆裝配重環，適用多種需求</li>
-                    ※為延長其壽命，建議於使用後使用清水或一般酒精清潔、以乾布擦拭乾淨，並存放於乾燥陰涼處
-                    ※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度
+                    <li style="margin-bottom: 4px;">※ 為延長其壽命，建議於使用後使用清水或一般酒精清潔、以乾布擦拭乾淨，並存放於乾燥陰涼處</li>
+                    <li style="margin-bottom: 4px;">※ 長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
