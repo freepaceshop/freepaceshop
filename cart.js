@@ -21,8 +21,8 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>10cm 圓柱、5層</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約440g(火頭10cm)、500g(火頭15cm) ※厚握把+25g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+25g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約440g(火頭10cm)、500g(火頭15cm)</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -32,7 +32,7 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>端頭：</b>19mm * 17mm , 45cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>中段：</b>17mm * 15mm , 46~70cm（總長度120~144cm）</li>
                     <li style="margin-bottom: 4px;">◆ <b>實際握把長度：</b>30~54cm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約470g(火頭10cm) ※厚握把+25g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約470g(火頭10cm)</li>
                 </ul>
             </div>
         `,
@@ -68,8 +68,8 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>12cm Twista編織（標準款：2.5cm火布／細款：2cm火布）</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約565g(標準款)、500g(細款) ※厚握把+25g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+25g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約565g(標準款)、500g(細款)</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -79,7 +79,7 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>端頭：</b>19mm * 17mm , 45cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>中段：</b>17mm * 15mm , 46~70cm（總長度120~144cm）</li>
                     <li style="margin-bottom: 4px;">◆ <b>實際握把長度：</b>30~54cm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約600g(標準款) ※厚握把+25g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約600g(標準款)</li>
                 </ul>
             </div>
         `,
@@ -115,8 +115,8 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>圓柱（5cm：5層／10cm：4層）</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約210g(火頭5cm)、255g(火頭10cm) ※厚握把+12g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+12g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約210g(火頭5cm)、255g(火頭10cm)</li>
                 </ul>
             </div>
         `,
@@ -151,8 +151,8 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>Twista編織（標準款：2cm火布,長6cm／細款：1.3cm火布,長7cm）</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約250g(標準款)、215g(細款) ※厚握把+12g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+12g/li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約250g(標準款)、215g(細款)</li>
                 </ul>
             </div>
         `,
@@ -187,9 +187,9 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>圓柱5cm：5層</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+12g/li>
                     <li style="margin-bottom: 4px;">◆ <b>操縱繩長度：</b>短繩：45cm（不含線圈/握把）／長繩：300cm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約210g ※厚握把+12g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約210g</li>
                 </ul>
             </div>
         `,
@@ -222,9 +222,9 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>（外）19mm * 16mm、（內）16mm * 12mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>2cm火布 Twista編織</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+12g</li>
                     <li style="margin-bottom: 4px;">◆ <b>操縱繩長度：</b>135cm（不含握把）</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約450g ※厚握把+12g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約450g</li>
                 </ul>
             </div>
         `,
@@ -434,8 +434,8 @@ window.db = {
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
                     <li>頂部完全覆蓋，無金屬外露</li>
                     <li>靈活拆裝配重環，適用多種需求</li>
-                    <li>※為延長其壽命，建議於使用後使用清水或一般酒精清潔、以乾布擦拭乾淨，並存放於乾燥陰涼處</li>
-                    <li>※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
+                    ※為延長其壽命，建議於使用後使用清水或一般酒精清潔、以乾布擦拭乾淨，並存放於乾燥陰涼處
+                    ※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -444,8 +444,8 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；標準款長10cm，配重環長5cm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約440g(標準款)；單邊火頭約100g，單個配重環50g ※厚握把+25g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+25g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約440g(標準款)；單邊火頭約100g，單個配重環50g</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -455,7 +455,7 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>端頭：</b>19mm * 17mm , 45cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>中段：</b>17mm * 15mm , 46~70cm（總長度120~144cm）</li>
                     <li style="margin-bottom: 4px;">◆ <b>實際握把長度：</b>30~54cm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約480g(標準款) ※厚握把+25g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約480g(標準款)</li>
                 </ul>
             </div>
         `,
@@ -480,8 +480,8 @@ window.db = {
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
                     <li>頂部完全覆蓋，無金屬外露</li>
                     <li>球型端頭大幅提升離心力，適用接觸技玩家</li>
-                    <li>※為延長其壽命，建議於使用後使用清水或一般酒精清潔、以乾布擦拭乾淨，並存放於乾燥陰涼處</li>
-                    <li>※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
+                    ※為延長其壽命，建議於使用後使用清水或一般酒精清潔、以乾布擦拭乾淨，並存放於乾燥陰涼處
+                    ※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -490,8 +490,8 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；直徑90mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約600g；單邊火頭約180g ※厚握把+25g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+25g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約600g；單邊火頭約180g</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -501,7 +501,7 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>端頭：</b>19mm * 17mm , 45cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>中段：</b>17mm * 15mm , 46~70cm（總長度120~144cm）</li>
                     <li style="margin-bottom: 4px;">◆ <b>實際握把長度：</b>30~54cm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約630g ※厚握把+25g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約630g</li>
                 </ul>
             </div>
         `,
@@ -525,8 +525,8 @@ window.db = {
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
                     <li>頂部完全覆蓋，無金屬外露</li>
                     <li>靈活拆裝配重環，適用多種需求</li>
-                    <li>※為延長其壽命，建議於使用後使用清水或一般酒精清潔、以乾布擦拭乾淨，並存放於乾燥陰涼處</li>
-                    <li>※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
+                    ※為延長其壽命，建議於使用後使用清水或一般酒精清潔、以乾布擦拭乾淨，並存放於乾燥陰涼處
+                    ※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -535,8 +535,8 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；長5cm，配重環長2.5cm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約205g（標準款）、185g（輕量款）；單個配重環15g ※厚握把+12g、熱縮套+50g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+12g、熱縮套+50g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約205g（標準款）、185g（輕量款）；單個配重環15g</li>
                 </ul>
             </div>
         `,
