@@ -550,7 +550,7 @@ window.db = {
         }
     },
     prac_poi_contact: {
-        title: "練習Poi (接觸版 90mm)", cat: "prac",
+        title: "練習Poi (接觸版)", cat: "prac",
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-poi-contact90.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
@@ -573,14 +573,14 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約120g（本體）、約150g（含繩+握把）</li>
                 </ul>
             </div>
-        ,
+        `,
         sub: { "練習Poi-接觸版 (90mm)": { price: 800, ship: 'small', img: "" } },
         specs: {
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
     },
-    prac_poi_flow: {
+        prac_poi_flow: {
         title: "練習Poi (標準版)", cat: "prac",
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-poi-normal.jpg"],
         details: `
