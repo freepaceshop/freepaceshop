@@ -313,8 +313,8 @@ window.db = {
             "火Poi可拆式-8cm 猴子球": { price: 1000, ship: 'small', img: "" }
         },
         specs: {
-            "繩練規格": { "鐵鍊組": { plus: 300, img: "" }, "克維拉編織繩": { plus: 450, img: "" }, "Technora編織繩": { plus: 650, img: "" } },
-            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 50, img: "" } },
+            "繩練規格": { "鐵鍊組": { plus: 250, img: "" }, "克維拉編織繩": { plus: 450, img: "" }, "Technora編織繩": { plus: 650, img: "" } },
+            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 100, img: "" } },
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
@@ -461,7 +461,7 @@ window.db = {
                 </ul>
             </div>
         `,
-        sub: { "練習長棍-標準版": { price: 1200, ship: 'long', img: "" } },
+        sub: { "練習長棍-標準版": { price: 1000, ship: 'long', img: "" } },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 200, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-contact-weight.jpg" } },
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "" }, "組合式": { plus: 600, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
@@ -611,7 +611,7 @@ window.db = {
         sub: { "練習Poi(標準版)": { price: 500, ship: 'small', img: "" } },
         specs: {
             "繩練規格": { "5mm高張力登山繩": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-5mm.jpg" }, "6mm彈性軟繩": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-6mm.jpg" } },
-            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 200, img: "" } },
+            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 50, img: "" } },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
     },
@@ -718,9 +718,9 @@ window.db = {
                 </ul>
             </div>
         `,
-        sub: { "Poi 鐵鍊組": { price: 275, ship: 'small', img: "" } }, 
+        sub: { "Poi 鐵鍊組": { price: 300, ship: 'small', img: "" } }, 
         specs: {
-            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 50, img: "" } },
+            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 100, img: "" } },
             "鐵鍊長度": { "25cm":{plus:0}, "30cm":{plus:0}, "35cm":{plus:0}, "40m":{plus:50}, "45m":{plus:50}, "50m":{plus:50} },
         }
     },
