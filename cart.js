@@ -258,14 +258,14 @@ window.db = {
             </div>
         `,
         sub: {
-            "火Poi(純火頭)-6cm豆干": { price: 500, ship: 'small', img: "" },
-            "火Poi(純火頭)-8cm豆干": { price: 600, ship: 'small', img: "" },
-            "火Poi(純火頭)-6cm Twista": { price: 650, ship: 'small', img: "" },
-            "火Poi(純火頭)-8cm Twista": { price: 800, ship: 'small', img: "" },
-            "火Poi(純火頭)-6cm 圓球": { price: 700, ship: 'small', img: "" },
-            "火Poi(純火頭)-8cm 圓球": { price: 900, ship: 'small', img: "" },
-            "火Poi(純火頭)-6cm 猴子球": { price: 750, ship: 'small', img: "" },
-            "火Poi(純火頭)-8cm 猴子球": { price: 1000, ship: 'small', img: "" }
+            "火Poi(純火頭)-6cm豆干": { price: 500, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral6.jpg" },
+            "火Poi(純火頭)-8cm豆干": { price: 600, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral8.jpg" },
+            "火Poi(純火頭)-6cm Twista": { price: 650, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista6.jpg" },
+            "火Poi(純火頭)-8cm Twista": { price: 800, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista8.jpgv" },
+            "火Poi(純火頭)-6cm 圓球": { price: 700, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball6.jpg" },
+            "火Poi(純火頭)-8cm 圓球": { price: 900, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball8.jpg" },
+            "火Poi(純火頭)-6cm 猴子球": { price: 750, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey6.jpg" },
+            "火Poi(純火頭)-8cm 猴子球": { price: 1000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey8.jpg" }
         }, specs: {}
     },
     fire_poi_det_1: {
@@ -303,14 +303,14 @@ window.db = {
             </div>
         `,
         sub: {
-            "火Poi可拆式-6cm豆干": { price: 500, ship: 'small', img: "" },
-            "火Poi可拆式-8cm豆干": { price: 600, ship: 'small', img: "" },
-            "火Poi可拆式-6cm Twista": { price: 650, ship: 'small', img: "" },
-            "火Poi可拆式-8cm Twista": { price: 800, ship: 'small', img: "" },
-            "火Poi可拆式-6cm 圓球": { price: 700, ship: 'small', img: "" },
-            "火Poi可拆式-8cm 圓球": { price: 900, ship: 'small', img: "" },
-            "火Poi可拆式-6cm 猴子球": { price: 750, ship: 'small', img: "" },
-            "火Poi可拆式-8cm 猴子球": { price: 1000, ship: 'small', img: "" }
+            "火Poi可拆式-6cm豆干": { price: 500, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral6.jpg" },
+            "火Poi可拆式-8cm豆干": { price: 600, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral8.jpg" },
+            "火Poi可拆式-6cm Twista": { price: 650, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista6.jpg" },
+            "火Poi可拆式-8cm Twista": { price: 800, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista8.jpg" },
+            "火Poi可拆式-6cm 圓球": { price: 700, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball6.jpg" },
+            "火Poi可拆式-8cm 圓球": { price: 900, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball8.jpg" },
+            "火Poi可拆式-6cm 猴子球": { price: 750, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey6.jpg" },
+            "火Poi可拆式-8cm 猴子球": { price: 1000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey8.jpg" }
         },
         specs: {
             "繩練規格": { "鐵鍊組": { plus: 250, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-chain.jpg" }, "克維拉編織繩": { plus: 400, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-blackkevlar.jpg" }, "Technora編織繩": { plus: 600, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-technora.jpg" } },
@@ -321,7 +321,7 @@ window.db = {
     },
     fire_poi_one: {
         title: "火Poi - 一體式 (含配件)", cat: "fire",
-        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-one-thumbnail.jpg"],
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-one-monkey.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
@@ -342,8 +342,8 @@ window.db = {
             </div>
         `,
         sub: {
-            "火Poi一體式-8cm 圓球": { price: 1150, ship: 'small', img: "" },
-            "火Poi一體式-8cm 猴子球": { price: 1250, ship: 'small', img: "" }
+            "火Poi一體式-8cm 圓球": { price: 1150, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-one-ball.jpg" },
+            "火Poi一體式-8cm 猴子球": { price: 1250, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-one-monkey.jpg" }
         },
         specs: {
             "握把規格": { "預設大握把": { plus: 0, img: "" } },
@@ -383,17 +383,17 @@ window.db = {
             </div>
         `,
         sub: {
-            "火流星組-6cm豆干": { price: 1000, ship: 'small', img: "" },
-            "火流星組-8cm豆干": { price: 1200, ship: 'small', img: "" },
-            "火流星組-6cm Twista": { price: 1300, ship: 'small', img: "" },
-            "火流星組-8cm Twista": { price: 1600, ship: 'small', img: "" },
-            "火流星組-6cm 圓球": { price: 1400, ship: 'small', img: "" },
-            "火流星組-8cm 圓球": { price: 1800, ship: 'small', img: "" },
-            "火流星組-6cm 猴子球": { price: 1500, ship: 'small', img: "" },
-            "火流星組-8cm 猴子球": { price: 2000, ship: 'small', img: "" }
+            "火流星組-6cm豆干": { price: 1000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral6.jpg" },
+            "火流星組-8cm豆干": { price: 1200, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral8.jpg" },
+            "火流星組-6cm Twista": { price: 1300, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista6.jpg" },
+            "火流星組-8cm Twista": { price: 1600, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista8.jpg" },
+            "火流星組-6cm 圓球": { price: 1400, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball6.jpg" },
+            "火流星組-8cm 圓球": { price: 1800, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball8.jpg" },
+            "火流星組-6cm 猴子球": { price: 1500, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey6.jpg" },
+            "火流星組-8cm 猴子球": { price: 2000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey8.jpg" }
         },
         specs: {
-            "繩練規格": { "鐵鍊+連接繩": { plus: 300, img: "" }, "克維拉粗繩": { plus: 500, img: "" } },
+            "繩練規格": { "鐵鍊+連接繩": { plus: 300, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-chain.jpg" }, "克維拉粗繩": { plus: 500, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-kevlar.jpg" } },
             "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} }
         }
     },
