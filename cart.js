@@ -236,7 +236,7 @@ window.db = {
         }
     },
     fire_poi_single: {
-        title: "火Poi (純火頭單賣)", cat: "fire", hideExtraSpecs: true,
+        title: "火Poi (僅火頭)", cat: "fire", hideExtraSpecs: true,
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista6.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
@@ -286,8 +286,8 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 鐵鍊組預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環 — 鐵鍊 — 快接環 — 培林握把</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>有培林</li>
-                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>鐵鍊長度35cm；除非特殊要求，否則一律不裁減</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>小型、有培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>鐵鍊長度35cm；除非特殊要求，否則一律不裁剪</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -295,7 +295,7 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 編織繩組預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環+編織繩+握把</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>無培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>大型、無培林</li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm)</li>
                 </ul>
             </div>
@@ -311,8 +311,8 @@ window.db = {
             "火Poi可拆式-8cm 猴子球": { price: 1000, ship: 'small', img: "" }
         },
         specs: {
-            "繩練規格": { "鐵鍊(有培林)": { plus: 300, img: "" }, "克維拉編織繩": { plus: 500, img: "" }, "Technora編織繩": { plus: 700, img: "" } },
-            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 200, img: "" } },
+            "繩練規格": { "鐵鍊組": { plus: 300, img: "" }, "克維拉編織繩": { plus: 300, img: "" }, "Technora編織繩": { plus: 500, img: "" } },
+            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 150, img: "" } },
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
@@ -334,7 +334,7 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>8cm 圓球 或 猴子球</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>無培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>大型、無培林</li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm)</li>
                 </ul>
             </div>
@@ -368,7 +368,7 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環 — 鐵鍊 — 快接環+連接繩+快接環 — 鐵鍊 — 火頭</li>
                     <li style="margin-bottom: 4px;">◆ <b>連接繩：</b>10mm全白登山繩</li>
-                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>連接繩80cm、鐵鍊長度35cm；除非特殊要求，否則一律不裁減</li>
+                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>連接繩80cm、鐵鍊長度35cm；除非特殊要求，否則一律不裁剪</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -434,8 +434,8 @@ window.db = {
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
                     <li>頂部完全覆蓋，無金屬外露</li>
                     <li>靈活拆裝配重環，適用多種需求</li>
-                    <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※ 為延長其壽命，建議於使用後使用清水或一般酒精清潔、以乾布擦拭乾淨，並存放於乾燥陰涼處</li>
-                    <li style="list-style: none; text-indent: -1.2em;">※ 長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
+                    <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -480,8 +480,8 @@ window.db = {
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
                     <li>頂部完全覆蓋，無金屬外露</li>
                     <li>球型端頭大幅提升離心力，適用接觸技玩家</li>
-                    <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※ 為延長其壽命，建議於使用後使用清水或一般酒精清潔、以乾布擦拭乾淨，並存放於乾燥陰涼處</li>
-                    <li style="list-style: none; text-indent: -1.2em;">※ 長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
+                    <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -525,8 +525,8 @@ window.db = {
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
                     <li>頂部完全覆蓋，無金屬外露</li>
                     <li>靈活拆裝配重環，適用多種需求</li>
-                    <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※ 為延長其壽命，建議於使用後使用清水或一般酒精清潔、以乾布擦拭乾淨，並存放於乾燥陰涼處</li>
-                    <li style="list-style: none; text-indent: -1.2em;">※ 長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
+                    <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -556,23 +556,58 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>採用 90mm 接觸專用實心球，重心極度平穩</li>
-                    <li>轉動慣性絕佳，提供飽滿的拋接手感</li>
-                    <li>特別適合身體滾動（Body Roll）與高階拋接招式</li>
+                    <li>球型端頭，適用雜耍及接觸技玩家</li>
+                    <li>繩鍊採用10mm高張力登山繩</li>
+                    <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
+                    <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>球體：</b>90mm Contact 專用配重球</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總長度：</b>依需求客製 (45cm - 60cm)</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；直徑90mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>大型、無培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>總長度60cm，可自行調整</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約120g（本體）、約150g（含繩+握把）</li>
                 </ul>
             </div>
-        `,
+        ,
         sub: { "練習Poi-接觸版 (90mm)": { price: 800, ship: 'small', img: "" } },
         specs: {
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
+            "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
+        }
+    },
+    prac_poi_flow: {
+        title: "練習Poi (標準版)", cat: "prac",
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-poi-normal.jpg"],
+        details: `
+            <div style="margin-bottom: 20px;">
+                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
+                <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
+                    <li>流線型外觀，適合新手入門</li>
+                    <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
+                    <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
+                </ul>
+            </div>
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
+            <div>
+                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
+                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；直徑70mm、高度80mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>小型、有培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>總長度60cm，可自行調整</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約120g（本體）、約150g（含繩+握把）</li>
+                </ul>
+            </div>
+        `,
+        sub: { "練習Poi(標準版)": { price: 500, ship: 'small', img: "" } },
+        specs: {
+            "繩練規格": { "5mm高張力登山繩": { plus: 0, img: "" }, "6mm彈性軟繩": { plus: 50, img: "" } },
+            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 200, img: "" } },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
     },
@@ -583,18 +618,20 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>配備經典軟質配重端，打到身體不易受傷</li>
-                    <li>連接柔軟且親膚的高強度編織繩，纏繞不刮手</li>
-                    <li>適合各類流星技法（Meteor Dart）全方位演練</li>
+                    <li>流線型外觀，適合新手入門</li>
+                    <li>繩鍊採用5mm高張力登山繩</li>
+                    <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
+                    <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>配重端：</b>高緩衝軟質防護球</li>
-                    <li style="margin-bottom: 4px;">◆ <b>繩材：</b>親膚抗拉高強度編織繩</li>
-                    <li style="margin-bottom: 4px;">◆ <b>客製總長：</b>140cm - 180cm 自由選擇</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；直徑70mm、高度80mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>總長度180cm，可自行調整</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約120g（本體）、約200g（含繩）</li>
                 </ul>
             </div>
         `,
@@ -741,28 +778,6 @@ window.db = {
             </div>
         `,
         sub: { "流星鐵鍊連接繩": { price: 100, ship: 'small', img: "" } }, specs: {}
-    },
-    set_chain_normal: {
-        title: "高強度鐵鍊組", cat: "set", hideSub: true,
-        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-chain.jpg"],
-        details: `
-            <div style="margin-bottom: 20px;">
-                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 套組介紹</strong>
-                <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>職人專用抗高溫不鏽鋼連接鐵鍊組</li>
-                    <li>提供最經典、耐用的火舞道具銜接方案</li>
-                </ul>
-            </div>
-            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
-            <div>
-                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
-                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>材質：</b>抗高溫金屬處理</li>
-                    <li style="margin-bottom: 4px;">◆ <b>內含：</b>鐵鍊本體及兩端銜接用快拆金屬件</li>
-                </ul>
-            </div>
-        `,
-        sub: { "鐵鍊組": { price: 130, ship: 'small', img: "" } }, specs: {}
     },
 
     // ⚙️ 耗材配件 (拆分獨立項目)
