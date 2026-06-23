@@ -288,7 +288,7 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 鐵鍊組預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環 — 鐵鍊 — 快接環 — 培林握把</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>小型、有培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>小型、有培林（僅白色）</li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>鐵鍊長度35cm；除非特殊要求，否則一律不裁剪</li>
                 </ul>
             </div>
@@ -297,7 +297,7 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 編織繩組預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環+編織繩+握把</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>大型、無培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>大型、無培林（顏色以現貨為主）</li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm)</li>
                 </ul>
             </div>
@@ -336,7 +336,7 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>8cm 圓球 或 猴子球</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>大型、無培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把：</b>大型、無培林（顏色以現貨為主）</li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm)</li>
                 </ul>
             </div>
@@ -646,7 +646,7 @@ window.db = {
             "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} } }
     },
 
-    // 📦 專業套組 (拆分獨立項目)
+    // 📦 套組 (拆分獨立項目)
     set_knob_small: {
         title: "培林小握把", cat: "set", hideSub: true,
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-small.jpg"],
@@ -697,9 +697,35 @@ window.db = {
         `,
         sub: { "培林大握把": { price: 300, ship: 'small', img: "" } }, specs: {}
     },
+    set_chain_small: {
+        title: "Poi 鐵鍊組", cat: "set", hideSub: true,
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-poitether-chain-small.jpg"],
+        details: `
+            <div style="margin-bottom: 20px;">
+                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 套組介紹</strong>
+                <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
+                    <li>#12 白鐵全焊鱔魚目鍊，堅固不壞、永垂不朽</li>
+                    <li>使用 M3 快接環連接，可靈活拆卸</li>
+                </ul>
+            </div>
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
+            <div>
+                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
+                    <li style="margin-bottom: 4px;">◆ <b>握把尺寸：</b>[小]橢圓形，直徑35mm、高度25mm；[大]圓形，直徑40mm；無培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把顏色：</b>[小]純白色；[大]黃、粉、橘、紅、綠、青、藍、紫、白（以現貨為主）</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總長度：</b>依據個人臂長調配 (約40cm - 70cm) ※不含火頭</li>
+                </ul>
+            </div>
+        `,
+        sub: { "Technora編織繩": { price: 700, ship: 'small', img: "" } }, 
+        specs: {
+            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 150, img: "" } },
+            "鐵鍊長度": { "25cm":{plus:0}, "30cm":{plus:0}, "35cm":{plus:0}, "40m":{plus:50}, "45m":{plus:50}, "50m":{plus:50} },
+        }
+    },
     set_chain_kevlar: {
-        title: "克維拉編織繩", cat: "set", hideSub: true,
-        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-blackkevlar.jpg"],
+        title: "Poi克維拉編織繩", cat: "set", hideSub: true,
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-poitether-blackkevlar.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 套組介紹</strong>
@@ -726,8 +752,8 @@ window.db = {
         }
     },
     set_chain_technora: {
-        title: "Technora編織繩", cat: "set", hideSub: true,
-        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-technora.jpg"],
+        title: "Poi Technora編織繩", cat: "set", hideSub: true,
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-poitether-technora.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 套組介紹</strong>
@@ -755,7 +781,7 @@ window.db = {
     },
     set_meteor_kevlar: {
         title: "流星克維拉繩", cat: "set", hideSub: true,
-        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-kevlar.jpg"],
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-meteor-kevlar.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 套組介紹</strong>
@@ -778,7 +804,7 @@ window.db = {
     },
     set_meteor_nochain: {
         title: "流星鐵鍊連接繩", cat: "set", hideSub: true,
-        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-nochain.jpg"],
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-meteor-nochain.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 套組介紹</strong>
@@ -896,7 +922,7 @@ window.db = {
         sub: { "握把球-大": { price: 200, ship: 'small', img: "" } }, specs: {}
     },
     parts_chain_35: {
-        title: "不鏽鋼鐵鍊", cat: "parts", hideSub: true,
+        title: "鐵鍊", cat: "parts", hideSub: true,
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-chain.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
