@@ -967,7 +967,7 @@ window.db = {
     // 🛠️ 管材與防火布 (拆分獨立項目)
     mats_alu_19: {
         title: "7075 鋁棍 (19*17mm)", cat: "mats", hideSub: true,
-        images: ["https://via.placeholder.com/400x300?text=7075+Aluminum+19mm"],
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/material-pipe-19mm.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 材料介紹</strong>
@@ -992,7 +992,7 @@ window.db = {
     },
     mats_alu_15: {
         title: "7075 鋁棍 (15*13mm)", cat: "mats", hideSub: true,
-        images: ["https://via.placeholder.com/400x300?text=7075+Aluminum+15mm"],
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/material-pipe-15mm.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 材料介紹</strong>
@@ -1017,7 +1017,7 @@ window.db = {
     },
     mats_alu_13: {
         title: "7075 鋁棍 (13*11mm)", cat: "mats", hideSub: true,
-        images: ["https://via.placeholder.com/400x300?text=7075+Aluminum+13mm"],
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/material-pipe-13mm.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 材料介紹</strong>
@@ -1042,7 +1042,7 @@ window.db = {
     },
     mats_cloth_13: {
         title: "扁火布 (13mm)", cat: "mats", hideSub: true,
-        images: ["https://via.placeholder.com/400x300?text=Kevlar+Wick+13mm"],
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/material-wick-13mm.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 材料介紹</strong>
@@ -1064,7 +1064,7 @@ window.db = {
     },
     mats_cloth_19: {
         title: "扁火布 (19mm)", cat: "mats", hideSub: true,
-        images: ["https://via.placeholder.com/400x300?text=Kevlar+Wick+19mm"],
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/material-wick-19mm.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 材料介紹</strong>
@@ -1086,7 +1086,7 @@ window.db = {
     },
     mats_cloth_25: {
         title: "扁火布 (25mm)", cat: "mats", hideSub: true,
-        images: ["https://via.placeholder.com/400x300?text=Kevlar+Wick+25mm"],
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/material-wick-25mm.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 材料介紹</strong>
@@ -1108,7 +1108,7 @@ window.db = {
     },
     mats_cloth_50: {
         title: "扁火布 (50mm)", cat: "mats", hideSub: true,
-        images: ["https://via.placeholder.com/400x300?text=Kevlar+Wick+50mm"],
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/material-wick-50mm.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 材料介紹</strong>
@@ -1130,7 +1130,7 @@ window.db = {
     },
     mats_rope_10: {
         title: "圓火繩 (10mm)", cat: "mats", hideSub: true,
-        images: ["https://via.placeholder.com/400x300?text=Kevlar+Rope+10mm"],
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/material-wick-10mm.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 材料介紹</strong>
