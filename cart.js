@@ -261,7 +261,7 @@ window.db = {
             "火Poi(純火頭)-6cm豆干": { price: 500, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral6.jpg" },
             "火Poi(純火頭)-8cm豆干": { price: 600, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-cathedral8.jpg" },
             "火Poi(純火頭)-6cm Twista": { price: 650, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista6.jpg" },
-            "火Poi(純火頭)-8cm Twista": { price: 800, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista8.jpgv" },
+            "火Poi(純火頭)-8cm Twista": { price: 800, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-twista8.jpg" },
             "火Poi(純火頭)-6cm 圓球": { price: 700, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball6.jpg" },
             "火Poi(純火頭)-8cm 圓球": { price: 900, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-ball8.jpg" },
             "火Poi(純火頭)-6cm 猴子球": { price: 750, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey6.jpg" },
@@ -314,7 +314,7 @@ window.db = {
         },
         specs: {
             "繩練規格": { "鐵鍊組": { plus: 250, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-chain.jpg" }, "克維拉編織繩": { plus: 400, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-blackkevlar.jpg" }, "Technora編織繩": { plus: 600, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-technora.jpg" } },
-            "握把規格": { "小握把": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-knob-small.jpg" }, "大握把": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-knob-big.jpg" } },
+            "握把規格": { "小握把": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-knob-small-s.jpg" }, "大握把": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-knob-big-s.jpg" } },
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
@@ -643,9 +643,10 @@ window.db = {
         
         specs: { 
             "繩練規格": { "9mm黑繩": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-9mm.jpg" }, "11mm白繩": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-11mm.jpg" } },
-            "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} } }
+            "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} }
+        }
     },
-
+    
     // 📦 套組 (拆分獨立項目)
     set_knob_small: {
         title: "培林小握把", cat: "set", hideSub: true,
