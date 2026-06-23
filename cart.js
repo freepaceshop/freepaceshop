@@ -313,8 +313,8 @@ window.db = {
             "火Poi可拆式-8cm 猴子球": { price: 1000, ship: 'small', img: "" }
         },
         specs: {
-            "繩練規格": { "鐵鍊組": { plus: 300, img: "" }, "克維拉編織繩": { plus: 300, img: "" }, "Technora編織繩": { plus: 500, img: "" } },
-            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 150, img: "" } },
+            "繩練規格": { "鐵鍊組": { plus: 300, img: "" }, "克維拉編織繩": { plus: 450, img: "" }, "Technora編織繩": { plus: 650, img: "" } },
+            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 50, img: "" } },
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
@@ -670,7 +670,7 @@ window.db = {
                 </ul>
             </div>
         `,
-        sub: { "培林小握把": { price: 180, ship: 'small', img: "" } }, specs: {}
+        sub: { "培林小握把": { price: 150, ship: 'small', img: "" } }, specs: {}
     },
     set_knob_big: {
         title: "培林大握把", cat: "set", hideSub: true,
@@ -695,7 +695,7 @@ window.db = {
                 </ul>
             </div>
         `,
-        sub: { "培林大握把": { price: 300, ship: 'small', img: "" } }, specs: {}
+        sub: { "培林大握把": { price: 250, ship: 'small', img: "" } }, specs: {}
     },
     set_chain_small: {
         title: "Poi 鐵鍊組", cat: "set", hideSub: true,
@@ -714,13 +714,13 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>握把尺寸：</b>[小]橢圓形，直徑35mm、高度25mm；[大]圓形，直徑40mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把顏色：</b>[小]純白色；[大]黃、粉、橘、紅、綠、青、藍、紫、白（以現貨為主）</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總長度：</b>依據個人臂長調配 (約40cm - 70cm) ※不含火頭</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總長度：</b>約40cm - 70cm ※不含火頭</li>
                 </ul>
             </div>
         `,
-        sub: { "Technora編織繩": { price: 700, ship: 'small', img: "" } }, 
+        sub: { "Poi 鐵鍊組": { price: 275, ship: 'small', img: "" } }, 
         specs: {
-            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 150, img: "" } },
+            "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 50, img: "" } },
             "鐵鍊長度": { "25cm":{plus:0}, "30cm":{plus:0}, "35cm":{plus:0}, "40m":{plus:50}, "45m":{plus:50}, "50m":{plus:50} },
         }
     },
@@ -743,14 +743,14 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>握把尺寸：</b>圓形，直徑40mm；無培林</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把顏色：</b>黃、粉、橘、紅、綠、青、藍、紫、白（以現貨為主）</li>
-                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm) ※含火頭</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總長度：</b>40cm - 60cm ※不含火頭</li>
                     <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約65g</li>
                 </ul>
             </div>
         `,
         sub: { "克維拉編織繩": { price: 500, ship: 'small', img: "" } }, 
         specs: {
-            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
+            "繩鍊長度": { "35cm":{plus:0}, "40cm":{plus:0}, "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:50}, "60cm":{plus:50} },
         }
     },
     set_chain_technora: {
@@ -772,14 +772,14 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>握把尺寸：</b>圓形，直徑40mm；無培林</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把顏色：</b>黃、粉、橘、紅、綠、青、藍、紫、白（以現貨為主）</li>
-                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm) ※含火頭</li>
+                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>40cm - 60cm ※不含火頭</li>
                     <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約67g</li>
                 </ul>
             </div>
         `,
         sub: { "Technora編織繩": { price: 700, ship: 'small', img: "" } }, 
         specs: {
-            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
+            "繩鍊長度": { "35cm":{plus:0}, "40cm":{plus:0}, "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:50}, "60cm":{plus:50} },
         }
     },
     set_meteor_kevlar: {
@@ -798,12 +798,15 @@ window.db = {
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm) ※含火頭</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總長度：</b>130cm - 170cm ※不含火頭</li>
                     <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約156g</li>
                 </ul>
             </div>
         `,
-        sub: { "流星克維拉繩": { price: 700, ship: 'small', img: "" } }, specs: {}
+        sub: { "流星克維拉繩": { price: 700, ship: 'small', img: "" } }, 
+        specs: {
+            "繩鍊長度": { "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0}, "155cm":{plus:50}, "160cm":{plus:50} },
+        }
     },
     set_meteor_nochain: {
         title: "流星鐵鍊連接繩", cat: "set", hideSub: true,
