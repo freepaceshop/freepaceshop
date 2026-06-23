@@ -610,7 +610,7 @@ window.db = {
         `,
         sub: { "練習Poi(標準版)": { price: 500, ship: 'small', img: "" } },
         specs: {
-            "繩練規格": { "5mm高張力登山繩": { plus: 0, img: "" }, "6mm彈性軟繩": { plus: 50, img: "" } },
+            "繩練規格": { "5mm高張力登山繩": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-5mm.jpg" }, "6mm彈性軟繩": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-6mm.jpg" } },
             "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 200, img: "" } },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
@@ -642,7 +642,7 @@ window.db = {
         sub: { "練習流星-標準版": { price: 1000, ship: 'small', img: "" } },
         
         specs: { 
-            "繩練規格": { "8mm黑繩": { plus: 0, img: "" }, "11mm白繩": { plus: 50, img: "" } },
+            "繩練規格": { "9mm黑繩": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-9mm.jpg" }, "11mm白繩": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-11mm.jpg" } },
             "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} } }
     },
 
@@ -725,7 +725,7 @@ window.db = {
         }
     },
     set_chain_kevlar: {
-        title: "Poi克維拉編織繩", cat: "set", hideSub: true,
+        title: "Poi 克維拉編織繩", cat: "set", hideSub: true,
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-poitether-blackkevlar.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
