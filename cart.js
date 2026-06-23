@@ -640,8 +640,7 @@ window.db = {
             </div>
         `,
         sub: { "練習流星-標準版": { price: 1000, ship: 'small', img: "" } },
-        
-        specs: { 
+        specs: {
             "繩練規格": { "9mm黑繩": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-9mm.jpg" }, "11mm白繩": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-11mm.jpg" } },
             "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} }
         }
