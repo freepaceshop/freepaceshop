@@ -242,6 +242,7 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
+                    <li>火頭為 KEVLAR 防火布製作，完整縫製</li>
                     <li>此品項僅販售單顆火頭主體</li>
                     <li>不包含任何繩鍊及握把</li>
                     <li>適用於替換可拆式 Poi 火頭</li>
@@ -274,6 +275,7 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
+                    <li>火頭為 KEVLAR 防火布製作，完整縫製</li>
                     <li>完整套裝，包含火頭、繩索與握把</li>
                     <li>使用 M3 快接環連接，可靈活拆卸</li>
                     <li>鐵鍊組：白鐵全焊鱔魚目鍊，堅固不壞、永垂不朽</li>
@@ -325,7 +327,7 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
                     <li>一體成型編織，採用無五金結構</li>
-                    <li>繩練採用10mm長纖克維拉繩</li>
+                    <li>繩練採用10mm克維拉高張力繩，手感偏硬</li>
                     <li>繩鍊與火頭交接處以寬5cm防火布縫紉強化，降低斷裂風險</li>
                 </ul>
             </div>
@@ -359,7 +361,7 @@ window.db = {
                     <li>完整套裝，包含火頭、繩索</li>
                     <li>使用 M3 快接環連接，可靈活拆卸</li>
                     <li>鐵鍊組：白鐵全焊鱔魚目鍊</li>
-                    <li>克維拉粗繩組：10mm長纖克維拉繩</li>
+                    <li>克維拉粗繩組：10mm克維拉高張力繩</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -367,7 +369,7 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 鐵鍊組預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環 — 鐵鍊 — 快接環+連接繩+快接環 — 鐵鍊 — 火頭</li>
-                    <li style="margin-bottom: 4px;">◆ <b>連接繩：</b>10mm全白登山繩</li>
+                    <li style="margin-bottom: 4px;">◆ <b>鐵鍊連接繩：</b>11mm白色登山繩 ※白繩根據進貨狀況偶有點綴配色變動</li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>連接繩80cm、鐵鍊長度35cm；除非特殊要求，否則一律不裁剪</li>
                 </ul>
             </div>
@@ -557,8 +559,9 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
                     <li>球型端頭，適用雜耍及接觸技玩家</li>
-                    <li>繩鍊採用10mm高張力登山繩</li>
+                    <li>繩鍊採用11mm高張力登山繩</li>
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
+                    <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※白繩根據進貨狀況偶有點綴配色變動</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
                     <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
                 </ul>
@@ -599,7 +602,8 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；直徑70mm、高度80mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把：</b>小型、有培林</li>
-                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>總長度60cm，可自行調整</li>
+                    <li style="margin-bottom: 4px;">◆ <b>繩練規格：</b>小型、有培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>長度：</b>總長度60cm，可自行調整</li>
                     <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約120g（本體）、約150g（含繩+握把）</li>
                 </ul>
             </div>
@@ -618,9 +622,10 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>流線型外觀，適合新手入門</li>
-                    <li>繩鍊採用5mm高張力登山繩</li>
+                    <li>流線型外觀</li>
+                    <li>繩鍊採用高張力登山繩</li>
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
+                    <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※白繩根據進貨狀況偶有點綴配色變動</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
                     <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
                 </ul>
@@ -630,59 +635,63 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；直徑70mm、高度80mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>總長度180cm，可自行調整</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約120g（本體）、約200g（含繩）</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約120g（本體）、約300g（含繩）</li>
                 </ul>
             </div>
         `,
         sub: { "練習流星-標準版": { price: 1000, ship: 'small', img: "" } },
-        specs: { "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} } }
+        
+        specs: { 
+            "繩練規格": { "8mm黑繩": { plus: 0, img: "" }, "11mm白繩": { plus: 50, img: "" } },
+            "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} } }
     },
 
     // 📦 專業套組 (拆分獨立項目)
     set_knob_small: {
-        title: "培林小握把 (僅白色)", cat: "set", hideSub: true,
+        title: "培林小握把", cat: "set", hideSub: true,
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-small.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 套組介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>內建專業培林轉速結構，徹底消滅繩索纏繞問題</li>
-                    <li>提供 Poi 玩家最滑順的極致運轉感</li>
-                    <li>體積精巧，適合指尖控制與細膩操作</li>
+                    <li>橢圓橡膠小握把，適合小手玩家</li>
+                    <li>可做orbital等繩索扭轉招式</li>
+                    <li>培林最高拉力250kg</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>款式：</b>小尺寸橢圓結構</li>
-                    <li style="margin-bottom: 4px;">◆ <b>顏色：</b>純白色</li>
-                    <li style="margin-bottom: 4px;">◆ <b>五金：</b>內含高轉速微型培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把尺寸：</b>橢圓形，直徑35mm、高度25mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把顏色：</b>僅白色</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總長度：</b>約10cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約28g</li>
                 </ul>
             </div>
         `,
         sub: { "培林小握把": { price: 180, ship: 'small', img: "" } }, specs: {}
     },
     set_knob_big: {
-        title: "培林大握把 (顏色隨機)", cat: "set", hideSub: true,
+        title: "培林大握把", cat: "set", hideSub: true,
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-big.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 套組介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>經典圓形大球握把，配重極佳</li>
-                    <li>提供拋接（Toss）時最飽滿扎實的抓取手感</li>
-                    <li>內含培林結構，高速旋轉不打結</li>
+                    <li>圓形矽膠大握把，適合拋接玩家</li>
+                    <li>可做orbital等繩索扭轉招式</li>
+                    <li>培林最高拉力250kg</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>款式：</b>大尺寸正圓結構</li>
-                    <li style="margin-bottom: 4px;">◆ <b>顏色：</b>依現場庫存隨機出貨</li>
-                    <li style="margin-bottom: 4px;">◆ <b>五金：</b>內含高轉速微型培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把尺寸：</b>圓形，直徑40mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把顏色：</b>黃、粉、橘、紅、綠、青、藍、紫、白（以現貨為主）</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總長度：</b>約10cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約44g</li>
                 </ul>
             </div>
         `,
@@ -695,21 +704,26 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 套組介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>高抗拉、耐高溫火燒的專用克維拉（Kevlar）繩索</li>
-                    <li>取代傳統鐵鍊，手感柔軟不生鏽</li>
-                    <li>減少纏繞手臂時的金屬摩擦與燙傷風險</li>
+                    <li>降低與金屬接觸風險，減少燙傷機率</li>
+                    <li>抗拉、耐高溫之長纖克維拉編織</li>
+                    <li>防火PU塗層，提高繩練壽命</li>
+                    <li>使用 M3 快接環連接，可靈活拆卸</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
-                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>材質：</b>純 Kevlar 防火編織</li>
-                    <li style="margin-bottom: 4px;">◆ <b>適用：</b>火 Poi 連接替換</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把尺寸：</b>圓形，直徑40mm；無培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把顏色：</b>黃、粉、橘、紅、綠、青、藍、紫、白（以現貨為主）</li>
+                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm) ※含火頭</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約65g</li>
                 </ul>
             </div>
         `,
-        sub: { "克維拉編織繩": { price: 500, ship: 'small', img: "" } }, specs: {}
+        sub: { "克維拉編織繩": { price: 500, ship: 'small', img: "" } }, 
+        specs: {
+            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
+        }
     },
     set_chain_technora: {
         title: "Technora編織繩", cat: "set", hideSub: true,
@@ -718,21 +732,26 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 套組介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>航太級 Technora 進階黑繩，擁有極致高拉力與抗熱性</li>
-                    <li>比傳統克維拉更耐磨耗，壽命更長</li>
-                    <li>黑色外觀在舞台上具備更好的隱形視覺效果</li>
+                    <li>降低與金屬接觸風險，減少燙傷機率</li>
+                    <li>航太級材料，比克維拉更耐磨、更耐高溫</li>
+                    <li>手感較克維拉編織繩更柔軟</li>
+                    <li>使用 M3 快接環連接，可靈活拆卸</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
-                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>材質：</b>Technora 高分子耐熱纖維</li>
-                    <li style="margin-bottom: 4px;">◆ <b>外觀：</b>進階霧黑質感</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把尺寸：</b>圓形，直徑40mm；無培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把顏色：</b>黃、粉、橘、紅、綠、青、藍、紫、白（以現貨為主）</li>
+                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm) ※含火頭</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約67g</li>
                 </ul>
             </div>
         `,
-        sub: { "Technora編織繩": { price: 700, ship: 'small', img: "" } }, specs: {}
+        sub: { "Technora編織繩": { price: 700, ship: 'small', img: "" } }, 
+        specs: {
+            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
+        }
     },
     set_meteor_kevlar: {
         title: "流星克維拉繩", cat: "set", hideSub: true,
@@ -741,17 +760,17 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 套組介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>火流星專用的加厚抗拉克維拉編織粗繩</li>
-                    <li>提供身體纏繞（Wraps）時最舒適的安全防護</li>
-                    <li>耐火高溫，取代全鐵鍊帶來的手感負擔</li>
+                    <li>降低與金屬接觸風險，減少燙傷機率</li>
+                    <li>10mm克維拉高張力繩，手感偏硬</li>
+                    <li>使用 M3 快接環連接，可靈活拆卸</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>材質：</b>Kevlar 防火編織加粗版</li>
-                    <li style="margin-bottom: 4px;">◆ <b>適用：</b>火流星專用長繩</li>
+                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm) ※含火頭</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約156g</li>
                 </ul>
             </div>
         `,
@@ -764,16 +783,17 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 套組介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>火流星基礎轉接專用之高強度連接繩索</li>
-                    <li>適合習慣將鐵鍊與軟繩拼接混用的流星玩家</li>
+                    <li>鐵鍊組專用流星連接繩</li>
+                    <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※不含鐵鍊</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>材質：</b>高強度混紡拉力繩</li>
-                    <li style="margin-bottom: 4px;">◆ <b>適用：</b>銜接五金鐵鍊用之中段繩</li>
+                    <li style="margin-bottom: 4px;">◆ <b>鐵鍊連接繩：</b>11mm白色登山繩 ※白繩根據進貨狀況偶有點綴配色變動</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總長度：</b>70cm，可自行調整</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>112g</li>
                 </ul>
             </div>
         `,
@@ -788,16 +808,17 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 配件介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>長棍與各類道具日常補給之基本款防滑把手布</li>
-                    <li>手汗或污漬磨耗後，可自行輕鬆更換保持最佳手感</li>
+                    <li style="list-style: none; text-indent: -1.2em;">⚠️配件類商品以現貨庫存為主</li>
+                    <li>運動用止滑握把布</li>
+                    <li>適用各種棍類道具</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>款式：</b>標準薄款防滑</li>
-                    <li style="margin-bottom: 4px;">◆ <b>出貨包裝：</b>單捲裝</li>
+                    <li style="margin-bottom: 4px;">◆ <b>規格：</b>厚0.7mm／寬27mm／長105mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約9g</li>
                 </ul>
             </div>
         `,
@@ -810,126 +831,133 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 配件介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>內襯發泡吸震層，大幅提升抓握舒適度</li>
-                    <li>超強吸汗防滑，Contact 身體接觸玩家極致推薦</li>
+                    <li style="list-style: none; text-indent: -1.2em;">⚠️配件類商品以現貨庫存為主</li>
+                    <li>輪胎紋路提升止滑性</li>
+                    <li>持握舒適度提升，適合接觸技玩家</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>款式：</b>加厚吸汗龍骨結構</li>
-                    <li style="margin-bottom: 4px;">◆ <b>出貨包裝：</b>單捲裝</li>
+                    <li style="margin-bottom: 4px;">◆ <b>規格：</b>厚1.6mm／寬25mm／長110mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約21g</li>
                 </ul>
             </div>
         `,
         sub: { "握把布 (厚款)": { price: 60, ship: 'small', img: "" } }, specs: {}
     },
     parts_knob_small: {
-        title: "握把球 - 小 (橢圓)", cat: "parts", hideSub: true,
+        title: "握把球 - 小", cat: "parts", hideSub: true,
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-knob-small.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 配件介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>精巧好捏的基礎橢圓握把塑料球</li>
-                    <li>可供玩家替換遺失或破損之原有握把，此版本【無內建培林】</li>
+                    <li style="list-style: none; text-indent: -1.2em;">⚠️配件類商品以現貨庫存為主</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※此項不含培林</li>
+                    <li>橢圓橡膠小握把，適合小手玩家</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>結構：</b>純塑料殼體 (無培林)</li>
-                    <li style="margin-bottom: 4px;">◆ <b>造型：</b>小巧橢圓</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把尺寸：</b>橢圓形，直徑35mm、高度25mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把顏色：</b>僅白色</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約19g</li>
                 </ul>
             </div>
         `,
         sub: { "握把球-小": { price: 100, ship: 'small', img: "" } }, specs: {}
     },
     parts_knob_big: {
-        title: "握把球 - 大 (顏色隨機)", cat: "parts", hideSub: true,
+        title: "握把球 - 大", cat: "parts", hideSub: true,
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-knob-big.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 配件介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>圓形飽滿大把手球，增加拋接穩固性</li>
-                    <li>可供玩家替換耗損品，顏色以現場實際庫存隨機出貨，此版本【無內建培林】</li>
+                    <li style="list-style: none; text-indent: -1.2em;">⚠️配件類商品以現貨庫存為主</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※此項不含培林</li>
+                    <li>圓形矽膠大握把，適合拋接玩家</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>結構：</b>純橡膠/塑料殼體 (無培林)</li>
-                    <li style="margin-bottom: 4px;">◆ <b>造型：</b>大尺寸正圓</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把尺寸：</b>圓形，直徑40mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把顏色：</b>黃、粉、橘、紅、綠、青、藍、紫、白（以現貨為主）</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約37g</li>
                 </ul>
             </div>
         `,
         sub: { "握把球-大": { price: 200, ship: 'small', img: "" } }, specs: {}
     },
     parts_chain_35: {
-        title: "不鏽鋼鐵鍊 (35cm)", cat: "parts", hideSub: true,
+        title: "不鏽鋼鐵鍊", cat: "parts", hideSub: true,
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-chain.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 配件介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>抗拉耐高溫專用不鏽鋼鐵鍊條</li>
-                    <li>適合 DIY 玩家自行裁切修改道具長度</li>
+                    <li style="list-style: none; text-indent: -1.2em;">⚠️配件類商品以現貨庫存為主</li>
+                    <li>#12 白鐵全焊鱔魚目鍊</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>材質：</b>不鏽鋼金屬</li>
-                    <li style="margin-bottom: 4px;">◆ <b>出貨長度：</b>單條固定 35cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總長度：</b>35cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約48g</li>
                 </ul>
             </div>
         `,
-        sub: { "鐵鍊 (35cm)": { price: 70, ship: 'small', img: "" } }, specs: {}
+        sub: { "鐵鍊": { price: 70, ship: 'small', img: "" } }, specs: {}
     },
     parts_quicklink: {
-        title: "抗拉快接環 (M3)", cat: "parts", hideSub: true,
+        title: "快接環", cat: "parts", hideSub: true,
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-quicklink.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 配件介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>道具銜接極度穩固的 M3 規格金屬快拆環</li>
-                    <li>帶螺帽鎖緊機制，確保高速離心力下不會鬆脫飛出</li>
+                    <li style="list-style: none; text-indent: -1.2em;">⚠️配件類商品以現貨庫存為主</li>
+                    <li> M3 金屬快拆環</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>規格：</b>M3 尺寸</li>
-                    <li style="margin-bottom: 4px;">◆ <b>出貨包裝：</b>單顆計價</li>
+                    <li style="margin-bottom: 4px;">◆ <b>尺寸：</b>線徑3mm、</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總長度：</b>36mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約5g</li>
                 </ul>
             </div>
         `,
-        sub: { "快接環 (M3)": { price: 35, ship: 'small', img: "" } }, specs: {}
+        sub: { "快接環": { price: 35, ship: 'small', img: "" } }, specs: {}
     },
     parts_bearings: {
-        title: "高拉力培林 (#7)", cat: "parts", hideSub: true,
+        title: "培林", cat: "parts", hideSub: true,
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-bearings.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 配件介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>專為高強度拋接把手設計之轉速核心</li>
-                    <li>抗拉力高達 250kg，確保 Poi 於極限迴旋時的安全與順暢</li>
+                    <li style="list-style: none; text-indent: -1.2em;">⚠️配件類商品以現貨庫存為主</li>
+                    <li>#7 雙培林不鏽鋼轉環</li>
+                    <li>最高拉力250kg</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>型號：</b>#7 工業級培林</li>
-                    <li style="margin-bottom: 4px;">◆ <b>安全係數：</b>抗拉 250kg</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總長度：</b>34mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約5g</li>
                 </ul>
             </div>
         `,
@@ -938,91 +966,96 @@ window.db = {
 
     // 🛠️ 管材與防火布 (拆分獨立項目)
     mats_alu_19: {
-        title: "7075 航太級鋁棍 (19*17mm)", cat: "mats", hideSub: true,
+        title: "7075 鋁棍 (19*17mm)", cat: "mats", hideSub: true,
         images: ["https://via.placeholder.com/400x300?text=7075+Aluminum+19mm"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 材料介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>航太級高強度鋁管，抗彎折與耐衝擊性能優異</li>
-                    <li>適合 DIY 職人自行製作火長棍、練習長棍之中軸</li>
+                    <li style="list-style: none; text-indent: -1.2em;">⚠️材料類商品以現貨庫存為主</li>
+                    <li>7075-T6 鋁合金</li>
+                    <li>外徑19mm、內徑17mm</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>材質：</b>7075-T6 鋁合金</li>
-                    <li style="margin-bottom: 4px;">◆ <b>外徑/內徑：</b>19mm / 17mm (管壁 1mm 加強)</li>
-                    <li style="margin-bottom: 4px;">◆ <b>出貨長度：</b>最高 150cm (依物流規範)</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[150cm]約236g</li>
                 </ul>
             </div>
         `,
-        sub: { "7075鋁棍 19*17mm": { price: 500, ship: 'long', img: "" } }, specs: {}
+        sub: { "7075鋁棍 19*17mm": { price: 500, ship: 'long', img: "" } }, 
+        specs: {
+            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
+        }
     },
     mats_alu_15: {
-        title: "7075 航太級鋁棍 (15*13mm)", cat: "mats", hideSub: true,
+        title: "7075 鋁棍 (15*13mm)", cat: "mats", hideSub: true,
         images: ["https://via.placeholder.com/400x300?text=7075+Aluminum+15mm"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 材料介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>15mm 輕量化規格，完美兼顧硬度與重量負擔</li>
-                    <li>College 短棍、雙短棍等多棍技巧道具之高規格首選管材</li>
+                    <li style="list-style: none; text-indent: -1.2em;">⚠️材料類商品以現貨庫存為主</li>
+                    <li>7075-T6 鋁合金</li>
+                    <li>外徑15mm、內徑13mm</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>材質：</b>7075-T6 鋁合金</li>
-                    <li style="margin-bottom: 4px;">◆ <b>外徑/內徑：</b>15mm / 13mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>出貨長度：</b>最高 100cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[100cm]約125g</li>
                 </ul>
             </div>
         `,
-        sub: { "7075鋁棍 15*13mm": { price: 250, ship: 'medium', img: "" } }, specs: {}
+        sub: { "7075鋁棍 15*13mm": { price: 250, ship: 'medium', img: "" } }, 
+        specs: {
+            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
+        }
     },
     mats_alu_13: {
-        title: "7075 航太級鋁棍 (13*11mm)", cat: "mats", hideSub: true,
+        title: "7075 鋁棍 (13*11mm)", cat: "mats", hideSub: true,
         images: ["https://via.placeholder.com/400x300?text=7075+Aluminum+13mm"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 材料介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>內徑特殊加厚的高彈性細管結構</li>
-                    <li>適用於需要極端輕巧或特殊拼接需求的道具改裝</li>
+                    <li style="list-style: none; text-indent: -1.2em;">⚠️材料類商品以現貨庫存為主</li>
+                    <li>7075-T6 鋁合金</li>
+                    <li>外徑13mm、內徑11mm</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>材質：</b>7075-T6 鋁合金</li>
-                    <li style="margin-bottom: 4px;">◆ <b>外徑/內徑：</b>13mm / 11mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>出貨長度：</b>最高 100cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[100cm]約108g</li>
                 </ul>
             </div>
         `,
-        sub: { "7075鋁棍 13*11mm": { price: 250, ship: 'medium', img: "" } }, specs: {}
+        sub: { "7075鋁棍 13*11mm": { price: 250, ship: 'medium', img: "" } }, 
+        specs: {
+            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
+        }
     },
     mats_cloth_13: {
-        title: "頂級克維拉防火布 (13mm)", cat: "mats", hideSub: true,
+        title: "扁火布 (13mm)", cat: "mats", hideSub: true,
         images: ["https://via.placeholder.com/400x300?text=Kevlar+Wick+13mm"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 材料介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>100% Kevlar 純克維拉纖維高壓編織防火織帶</li>
-                    <li>吸油率高、耐燃燒次數極大化，不輕易炭化粉碎</li>
-                    <li>13mm 細寬度適合做小型點綴、手指火把或細部編織</li>
+                    <li style="list-style: none; text-indent: -1.2em;">⚠️材料類商品以現貨庫存為主</li>
+                    <li>100% Kevlar 純克維拉纖維織帶</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>寬度：</b>13mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>規格：</b>厚3mm／寬13mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>計價單位：</b>每 1 公尺 (100cm)</li>
                 </ul>
             </div>
@@ -1030,22 +1063,21 @@ window.db = {
         sub: { "防火布 13mm (每公尺)": { price: 100, ship: 'small', img: "" } }, specs: {}
     },
     mats_cloth_19: {
-        title: "頂級克維拉防火布 (19mm)", cat: "mats", hideSub: true,
+        title: "扁火布 (19mm)", cat: "mats", hideSub: true,
         images: ["https://via.placeholder.com/400x300?text=Kevlar+Wick+19mm"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 材料介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>100% Kevlar 純克維拉纖維高壓編織防火織帶</li>
-                    <li>吸油率高、耐燃燒次數極大化，不輕易炭化粉碎</li>
-                    <li>19mm 為最常見泛用寬度，適合製作 Poi 或火短棍</li>
+                    <li style="list-style: none; text-indent: -1.2em;">⚠️材料類商品以現貨庫存為主</li>
+                    <li>100% Kevlar 純克維拉纖維織帶</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>寬度：</b>19mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>規格：</b>厚3mm／寬19mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>計價單位：</b>每 1 公尺 (100cm)</li>
                 </ul>
             </div>
@@ -1053,22 +1085,21 @@ window.db = {
         sub: { "防火布 19mm (每公尺)": { price: 120, ship: 'small', img: "" } }, specs: {}
     },
     mats_cloth_25: {
-        title: "頂級克維拉防火布 (25mm)", cat: "mats", hideSub: true,
+        title: "扁火布 (25mm)", cat: "mats", hideSub: true,
         images: ["https://via.placeholder.com/400x300?text=Kevlar+Wick+25mm"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 材料介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>100% Kevlar 純克維拉纖維高壓編織防火織帶</li>
-                    <li>吸油率高、耐燃燒次數極大化，不輕易炭化粉碎</li>
-                    <li>25mm 寬度適合編織中大型猴子球或纏繞火棍</li>
+                    <li style="list-style: none; text-indent: -1.2em;">⚠️材料類商品以現貨庫存為主</li>
+                    <li>100% Kevlar 純克維拉纖維織帶</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>寬度：</b>25mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>規格：</b>厚3mm／寬25mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>計價單位：</b>每 1 公尺 (100cm)</li>
                 </ul>
             </div>
@@ -1076,22 +1107,21 @@ window.db = {
         sub: { "防火布 25mm (每公尺)": { price: 140, ship: 'small', img: "" } }, specs: {}
     },
     mats_cloth_50: {
-        title: "頂級克維拉防火布 (50mm)", cat: "mats", hideSub: true,
+        title: "扁火布 (50mm)", cat: "mats", hideSub: true,
         images: ["https://via.placeholder.com/400x300?text=Kevlar+Wick+50mm"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 材料介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>100% Kevlar 純克維拉纖維高壓編織防火織帶</li>
-                    <li>吸油率高、耐燃燒次數極大化，不輕易炭化粉碎</li>
-                    <li>50mm 加寬版面，適合快速疊代捲繞巨型火長棍火頭</li>
+                    <li style="list-style: none; text-indent: -1.2em;">⚠️材料類商品以現貨庫存為主</li>
+                    <li>100% Kevlar 純克維拉纖維織帶</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>寬度：</b>50mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>規格：</b>厚3mm／寬50mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>計價單位：</b>每 1 公尺 (100cm)</li>
                 </ul>
             </div>
@@ -1099,21 +1129,21 @@ window.db = {
         sub: { "防火布 50mm (每公尺)": { price: 200, ship: 'small', img: "" } }, specs: {}
     },
     mats_rope_10: {
-        title: "耐火克維拉圓繩 (10mm)", cat: "mats", hideSub: true,
+        title: "圓火繩 (10mm)", cat: "mats", hideSub: true,
         images: ["https://via.placeholder.com/400x300?text=Kevlar+Rope+10mm"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 材料介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>高密度克維拉實心圓繩，吸油極度飽滿</li>
-                    <li>立體結構非常適合 DIY 玩家自行編織火猴子球 (Monkey Fist) 或其他特殊火頭</li>
+                    <li style="list-style: none; text-indent: -1.2em;">⚠️材料類商品以現貨庫存為主</li>
+                    <li>100% Kevlar 純克維拉纖維織帶</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>結構：</b>10mm 實心圓型編織</li>
+                    <li style="margin-bottom: 4px;">◆ <b>規格：</b>直徑10mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>計價單位：</b>每 1 公尺 (100cm)</li>
                 </ul>
             </div>
