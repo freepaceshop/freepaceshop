@@ -11,7 +11,7 @@ window.db = {
                     <li>棍身採用航太級 7075 高強度鋁棍</li>
                     <li>火頭為 KEVLAR 防火布製作，完整縫製</li>
                     <li>棍身以矽膠膠帶進行防燙處理</li>
-                    <li>搭配運動用止滑握把布，方便持握</li>
+                    <li>搭配運動用止滑握把布</li>
                     <li>適合新手入門、或是追求輕量速度級玩家</li>
                 </ul>
             </div>
@@ -22,7 +22,7 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>10cm 圓柱、5層</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約440g(火頭10cm)、500g(火頭15cm)</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約440g(火頭10cm)、500g(火頭15cm) ※厚握把+25g</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -32,7 +32,7 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>端頭：</b>19mm * 17mm , 45cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>中段：</b>17mm * 15mm , 46~70cm（總長度120~144cm）</li>
                     <li style="margin-bottom: 4px;">◆ <b>實際握把長度：</b>30~54cm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約440g(火頭10cm)</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約470g(火頭10cm) ※厚握把+25g</li>
                 </ul>
             </div>
         `,
@@ -58,7 +58,7 @@ window.db = {
                     <li>棍身採用航太級 7075 高強度鋁棍</li>
                     <li>火頭為 KEVLAR 防火布製作，完整縫製</li>
                     <li>棍身以矽膠膠帶進行防燙處理</li>
-                    <li>搭配運動用止滑握把布，方便持握</li>
+                    <li>搭配運動用止滑握把布</li>
                     <li>標準款具高吸油量與大火焰特色，適合經驗者；細身款中和重量與火量，約等於15公分圓柱長棍</li>
                 </ul>
             </div>
@@ -69,7 +69,7 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>12cm Twista編織（標準款：2.5cm火布／細款：2cm火布）</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約565g(標準款)、500g(細款)</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約565g(標準款)、500g(細款) ※厚握把+25g</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -79,7 +79,7 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>端頭：</b>19mm * 17mm , 45cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>中段：</b>17mm * 15mm , 46~70cm（總長度120~144cm）</li>
                     <li style="margin-bottom: 4px;">◆ <b>實際握把長度：</b>30~54cm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約600g(標準款)</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約600g(標準款) ※厚握把+25g</li>
                 </ul>
             </div>
         `,
@@ -105,7 +105,7 @@ window.db = {
                     <li>棍身採用航太級 7075 高強度鋁棍</li>
                     <li>火頭為 KEVLAR 防火布製作，完整縫製</li>
                     <li>棍身以矽膠膠帶進行防燙處理</li>
-                    <li>搭配運動用止滑握把布，方便持握</li>
+                    <li>搭配運動用止滑握把布</li>
                     <li>5cm適合新手入門及大部分使用場合；10cm光軌突出，適合進階經驗者</li>
                 </ul>
             </div>
@@ -116,7 +116,7 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>圓柱（5cm：5層／10cm：4層）</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約210g(火頭5cm)、255g(火頭10cm)</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約210g(火頭5cm)、255g(火頭10cm) ※厚握把+12g</li>
                 </ul>
             </div>
         `,
@@ -141,7 +141,7 @@ window.db = {
                     <li>棍身採用航太級 7075 高強度鋁棍</li>
                     <li>火頭為 KEVLAR 防火布製作，完整縫製</li>
                     <li>棍身以矽膠膠帶進行防燙處理</li>
-                    <li>搭配運動用止滑握把布，方便持握</li>
+                    <li>搭配運動用止滑握把布</li>
                     <li>標準款具高吸油量與大火焰特色，適合進階經驗者；細身款中和重量與火量，約等於5公分圓柱短棍</li>
                 </ul>
             </div>
@@ -152,7 +152,7 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>Twista編織（標準款：2cm火布,長6cm／細款：1.3cm火布,長7cm）</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約250g(標準款)、215g(細款)</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約250g(標準款)、215g(細款) ※厚握把+12g</li>
                 </ul>
             </div>
         `,
@@ -177,7 +177,7 @@ window.db = {
                     <li>棍身採用航太級 7075 高強度鋁棍</li>
                     <li>火頭為 KEVLAR 防火布製作，完整縫製</li>
                     <li>棍身以矽膠膠帶進行防燙處理</li>
-                    <li>搭配運動用止滑握把布，方便持握</li>
+                    <li>搭配運動用止滑握把布</li>
                     <li>操縱繩採用200磅克維拉風箏線</li>
                 </ul>
             </div>
@@ -189,7 +189,7 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>圓柱5cm：5層</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
                     <li style="margin-bottom: 4px;">◆ <b>操縱繩長度：</b>短繩：45cm（不含線圈/握把）／長繩：300cm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約210g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約210g ※厚握把+12g</li>
                 </ul>
             </div>
         `,
@@ -211,7 +211,7 @@ window.db = {
                     <li>棍身採用2mm+1.5mm加厚型6063鋁棍嵌套製作</li>
                     <li>火頭為 KEVLAR 防火布製作，完整縫製</li>
                     <li>棍身以矽膠膠帶進行防燙處理</li>
-                    <li>搭配運動用止滑握把布，方便持握</li>
+                    <li>搭配運動用止滑握把布</li>
                     <li>9號大培林穩固內嵌</li>
                     <li>操縱繩採用5mm高張力登山繩</li>
                 </ul>
@@ -224,7 +224,7 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>2cm火布 Twista編織</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
                     <li style="margin-bottom: 4px;">◆ <b>操縱繩長度：</b>135cm（不含握把）</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約450g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約450g ※厚握把+12g</li>
                 </ul>
             </div>
         `,
@@ -429,18 +429,33 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>兩端採高品質避震結構包覆，掉落不易損傷且降低噪音</li>
-                    <li>比照真火長棍的重量與平衡點設計</li>
-                    <li>肌肉記憶無縫接軌，室內外皆適宜的絕佳練習夥伴</li>
+                    <li>棍身採用航太級 7075 高強度鋁棍</li>
+                    <li>搭配運動用止滑握把布</li>
+                    <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
+                    <li>頂部完全覆蓋，無金屬外露</li>
+                    <li>靈活拆裝配重環，適用多種需求</li>
+                    <li>※為延長其壽命，建議於使用後使用清水或一般酒精清潔、以乾布擦拭乾淨，並存放於乾燥陰涼處</li>
+                    <li>※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm (航太 7075 鋁合金)</li>
-                    <li style="margin-bottom: 4px;">◆ <b>配重端：</b>耐摔緩衝材質 (可選配加大)</li>
+                    <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；標準款長10cm，配重環長5cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約440g(標準款)；單邊火頭約100g，單個配重環50g ※厚握把+25g</li>
+                </ul>
+            </div>
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
+            <div>
+                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">⛓️ 組合棍規格</strong>
+                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
+                    <li style="margin-bottom: 4px;">◆ <b>端頭：</b>19mm * 17mm , 45cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>中段：</b>17mm * 15mm , 46~70cm（總長度120~144cm）</li>
+                    <li style="margin-bottom: 4px;">◆ <b>實際握把長度：</b>30~54cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約480g(標準款) ※厚握把+25g</li>
                 </ul>
             </div>
         `,
@@ -460,18 +475,33 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>專為 Contact 玩家設計的高動態慣性版</li>
-                    <li>兩側加裝高密度 90mm 配重塊，大幅提升離心力</li>
-                    <li>在頸部、手臂滑行時極度穩定，軌跡不易偏移</li>
+                    <li>棍身採用航太級 7075 高強度鋁棍</li>
+                    <li>搭配運動用止滑握把布</li>
+                    <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
+                    <li>頂部完全覆蓋，無金屬外露</li>
+                    <li>球型端頭大幅提升離心力，適用接觸技玩家</li>
+                    <li>※為延長其壽命，建議於使用後使用清水或一般酒精清潔、以乾布擦拭乾淨，並存放於乾燥陰涼處</li>
+                    <li>※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm (航太 7075 鋁合金)</li>
-                    <li style="margin-bottom: 4px;">◆ <b>配重端：</b>90mm 高密度緩衝配重球</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 (建議選配加厚款)</li>
+                    <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；直徑90mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約600g；單邊火頭約180g ※厚握把+25g</li>
+                </ul>
+            </div>
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
+            <div>
+                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">⛓️ 組合棍規格</strong>
+                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
+                    <li style="margin-bottom: 4px;">◆ <b>端頭：</b>19mm * 17mm , 45cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>中段：</b>17mm * 15mm , 46~70cm（總長度120~144cm）</li>
+                    <li style="margin-bottom: 4px;">◆ <b>實際握把長度：</b>30~54cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約630g ※厚握把+25g</li>
                 </ul>
             </div>
         `,
@@ -490,88 +520,33 @@ window.db = {
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>專為多棍拋接（Double/Triple）頻繁掉落設計</li>
-                    <li>採用高韌性輕量管材，堅固耐用</li>
-                    <li>兩端配置耐衝擊防護結構，保護道具與地板</li>
+                    <li>棍身採用航太級 7075 高強度鋁棍</li>
+                    <li>搭配運動用止滑握把布</li>
+                    <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
+                    <li>頂部完全覆蓋，無金屬外露</li>
+                    <li>靈活拆裝配重環，適用多種需求</li>
+                    <li>※為延長其壽命，建議於使用後使用清水或一般酒精清潔、以乾布擦拭乾淨，並存放於乾燥陰涼處</li>
+                    <li>※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm (輕量高硬度鋁管)</li>
-                    <li style="margin-bottom: 4px;">◆ <b>配重端：</b>標準緩衝包覆 (可選配加大)</li>
+                    <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；長5cm，配重環長2.5cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約205g（標準款）、185g（輕量款）；單個配重環15g ※厚握把+12g、熱縮套+50g</li>
                 </ul>
             </div>
         `,
-        sub: { "練習短棍-標準版": { price: 600, ship: 'medium', img: "" } },
+        sub: { "練習短棍": { price: 500, ship: 'medium', img: "" } },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-option-staff-short-normal.jpg" } },
-            "握把規格": { "標準款": { plus: 0, img: "" }, "加厚款": { plus: 50, img: "" } },
+            "配重": { "輕量款": { plus: 0, img: "" }, "標準款": { plus: 50, img: "" } },
+            "握把規格": { "標準款": { plus: 0, img: "" }, "加厚款": { plus: 50, img: "" }, "全熱縮套": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-fullcolor.jpg" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
             "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
-        }
-    },
-    prac_staff_short_light: {
-        title: "練習短棍 (輕量版)", cat: "prac",
-        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-tpunormal.jpg"],
-        details: `
-            <div style="margin-bottom: 20px;">
-                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
-                <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>極致輕量化設計，大幅降低長時間訓練的手腕負擔</li>
-                    <li>專為高轉速指尖花式與連續拋接打造</li>
-                    <li>提供安全純白 TPU 軟管 或 多色炫彩織帶外觀可選</li>
-                </ul>
-            </div>
-            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
-            <div>
-                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
-                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>核心：</b>超輕量彈性結構</li>
-                    <li style="margin-bottom: 4px;">◆ <b>外觀選項：</b>純白 TPU 軟管 / 多色耐磨織帶</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把選項：</b>標準防滑布 / 全版面包覆熱縮套</li>
-                </ul>
-            </div>
-        `,
-        sub: { "練習短棍-輕量版": { price: 500, ship: 'medium', img: "" } },
-        specs: {
-            "火頭規格": { "TPU (僅白色)": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-option-light-tpu.jpg" }, "織帶 (多色可選)": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-option-light-color.jpg" } },
-            "握把規格": { "標準": { plus: 0, img: "" }, "全熱縮套": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-short-light-fullcolor.jpg" } },
-            "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
-            "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
-        }
-    },
-    prac_poi_std: {
-        title: "練習Poi (標準版)", cat: "prac",
-        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-poi-normal.jpg"],
-        details: `
-            <div style="margin-bottom: 20px;">
-                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
-                <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
-                    <li>採用柔軟布料包覆配重，提供最安心的練習手感</li>
-                    <li>失誤打到身體不易疼痛，極度安全</li>
-                    <li>非常適合新手入門與開發高難度新招式</li>
-                </ul>
-            </div>
-            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
-            <div>
-                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
-                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>配重端：</b>高緩衝軟質布料包覆</li>
-                    <li style="margin-bottom: 4px;">◆ <b>培林選項：</b>可加購防纏繞高速培林</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把選項：</b>小握把 或 大握把</li>
-                    <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依需求客製 (45cm - 60cm)</li>
-                </ul>
-            </div>
-        `,
-        sub: { "練習Poi-標準版": { price: 550, ship: 'small', img: "" } },
-        specs: {
-            "培林規格": { "不加裝培林": { plus: 0, img: "" }, "加裝培林": { plus: 100, img: "" } },
-            "握把規格": { "小握把": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-small.jpg" }, "大握把": { plus: 200, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-big.jpg" } },
-            "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
-            "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
     },
     prac_poi_contact: {
