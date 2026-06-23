@@ -711,7 +711,8 @@ window.db = {
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
-                    <li style="margin-bottom: 4px;">◆ <b>握把尺寸：</b>[小]橢圓形，直徑35mm、高度25mm；[大]圓形，直徑40mm；無培林</li>
+                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
+                    <li style="margin-bottom: 4px;">◆ <b>握把尺寸：</b>[小]橢圓形，直徑35mm、高度25mm；[大]圓形，直徑40mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把顏色：</b>[小]純白色；[大]黃、粉、橘、紅、綠、青、藍、紫、白（以現貨為主）</li>
                     <li style="margin-bottom: 4px;">◆ <b>總長度：</b>依據個人臂長調配 (約40cm - 70cm) ※不含火頭</li>
                 </ul>
@@ -739,6 +740,7 @@ window.db = {
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
+                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>握把尺寸：</b>圓形，直徑40mm；無培林</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把顏色：</b>黃、粉、橘、紅、綠、青、藍、紫、白（以現貨為主）</li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm) ※含火頭</li>
@@ -767,6 +769,7 @@ window.db = {
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
+                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>握把尺寸：</b>圓形，直徑40mm；無培林</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把顏色：</b>黃、粉、橘、紅、綠、青、藍、紫、白（以現貨為主）</li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm) ※含火頭</li>
