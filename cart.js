@@ -313,7 +313,7 @@ window.db = {
             "火Poi可拆式-8cm 猴子球": { price: 1000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey8.jpg" }
         },
         specs: {
-            "繩練規格": { "鐵鍊組": { plus: 250, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-chain.jpg" }, "克維拉編織繩": { plus: 400, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-blackkevlar.jpg" }, "Technora編織繩": { plus: 600, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-technora.jpg" } },
+            "繩鍊規格": { "鐵鍊組": { plus: 250, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-chain.jpg" }, "克維拉編織繩": { plus: 400, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-blackkevlar.jpg" }, "Technora編織繩": { plus: 600, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-technora.jpg" } },
             "握把規格": { "小握把": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-knob-small-s.jpg" }, "大握把": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-knob-big-s.jpg" } },
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
@@ -327,7 +327,7 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
                     <li>一體成型編織，採用無五金結構</li>
-                    <li>繩練採用10mm克維拉高張力繩，手感偏硬</li>
+                    <li>繩鍊採用10mm克維拉高張力繩，手感偏硬</li>
                     <li>繩鍊與火頭交接處以寬5cm防火布縫紉強化，降低斷裂風險</li>
                 </ul>
             </div>
@@ -393,7 +393,7 @@ window.db = {
             "火流星組-8cm 猴子球": { price: 2000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey8.jpg" }
         },
         specs: {
-            "繩練規格": { "鐵鍊+連接繩": { plus: 300, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-chain.jpg" }, "克維拉粗繩": { plus: 500, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-kevlar.jpg" } },
+            "繩鍊規格": { "鐵鍊+連接繩": { plus: 300, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-chain.jpg" }, "克維拉粗繩": { plus: 500, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-kevlar.jpg" } },
             "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} }
         }
     },
@@ -602,7 +602,7 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；直徑70mm、高度80mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把：</b>小型、有培林</li>
-                    <li style="margin-bottom: 4px;">◆ <b>繩練規格：</b>小型、有培林</li>
+                    <li style="margin-bottom: 4px;">◆ <b>繩鍊規格：</b>小型、有培林</li>
                     <li style="margin-bottom: 4px;">◆ <b>長度：</b>總長度60cm，可自行調整</li>
                     <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約120g（本體）、約150g（含繩+握把）</li>
                 </ul>
@@ -610,13 +610,13 @@ window.db = {
         `,
         sub: { "練習Poi(標準版)": { price: 500, ship: 'small', img: "" } },
         specs: {
-            "繩練規格": { "5mm高張力登山繩": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-5mm.jpg" }, "6mm彈性軟繩": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-6mm.jpg" } },
+            "繩鍊規格": { "5mm高張力登山繩": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-5mm.jpg" }, "6mm彈性軟繩": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-6mm.jpg" } },
             "握把規格": { "小握把": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-knob-small.jpg" }, "大握把": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-knob-big.jpg" }  },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
     },
     prac_meteor: {
-        title: "練習流星 (標準版)", cat: "prac", hideExtraSpecs: true,
+        title: "練習流星 (標準版)", cat: "prac",
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-meteor.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
@@ -641,7 +641,7 @@ window.db = {
         `,
         sub: { "練習流星-標準版": { price: 1000, ship: 'small', img: "" } },
         specs: {
-            "繩練規格": { "9mm黑繩": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-9mm.jpg" }, "11mm白繩": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-11mm.jpg" } },
+            "繩鍊規格": { "9mm黑繩": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-9mm.jpg" }, "11mm白繩": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-11mm.jpg" } },
             "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} }
         }
     },
@@ -733,7 +733,7 @@ window.db = {
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
                     <li>降低與金屬接觸風險，減少燙傷機率</li>
                     <li>抗拉、耐高溫之長纖克維拉編織</li>
-                    <li>防火PU塗層，提高繩練壽命</li>
+                    <li>防火PU塗層，提高繩鍊壽命</li>
                     <li>使用 M3 快接環連接，可靈活拆卸</li>
                 </ul>
             </div>
