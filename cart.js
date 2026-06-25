@@ -653,6 +653,7 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
+                    <li>可積木式自由排列，5公分為一單位</li>
                     <li>適用外徑19mm或22mm棍身</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
                     <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
@@ -702,9 +703,8 @@ window.db = {
         specs: {
             "棍身外徑": { "19mm": { plus: 0, img: "" }, "22mm": { plus: 0, img: "" } },
         }
-    },
-    
-    prac_head_long_contact: {
+    },    
+    prac_head_short: {
         title: "練習頭-ss", cat: "prac",
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-head-staff-short.jpg"],
         details: `
@@ -712,6 +712,7 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
+                    <li>可積木式自由排列，2.5公分為一單位</li>
                     <li>適用外徑13mm或15mm棍身</li>
                     <li>如需其他規格，歡迎私訊洽詢</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
