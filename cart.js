@@ -43,7 +43,7 @@ window.db = {
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 400, img: "" } },
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
-            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
+            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
             "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
         }
@@ -90,7 +90,7 @@ window.db = {
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 300, img: "" } },
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
-            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
+            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
             "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
         }
@@ -126,7 +126,7 @@ window.db = {
         },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 200, img: "" } },
-            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
+            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
             "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
         }
@@ -162,7 +162,7 @@ window.db = {
         },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 200, img: "" } },
-            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
+            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
             "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
         }
@@ -196,7 +196,7 @@ window.db = {
         sub: { "火漂浮棍-5cm圓柱火頭": { price: 1000, ship: 'medium', img: "" } },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 200, img: "" } },
-            "握把規格": { "標準款": { plus: 0, img: "" }, "加厚款": { plus: 50, img: "" } },
+            "握把規格": { "標準款": { plus: 0, img: "" }, "加厚款": { plus: 0, img: "" } },
             "控制繩規格": { "短繩-繩圈": { plus: 0, img: "" }, "短繩-握把": { plus: 200, img: "" },"長繩": { plus: 100, img: "" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
         }
@@ -231,7 +231,7 @@ window.db = {
         sub: { "火手裡劍-6cm標準Twista": { price: 1100, ship: 'medium', img: "" } },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 200, img: "" } },
-            "握把規格": { "標準款": { plus: 0, img: "" }, "加厚款": { plus: 50, img: "" } },
+            "握把規格": { "標準款": { plus: 0, img: "" }, "加厚款": { plus: 0, img: "" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
         }
     },
@@ -465,7 +465,7 @@ window.db = {
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 200, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-contact-weight.jpg" } },
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
-            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
+            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
             "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
         }
@@ -510,7 +510,7 @@ window.db = {
         sub: { "練習長棍-接觸版": { price: 1500, ship: 'long', img: "" } },
         specs: {
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
-            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
+            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
             "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
         }
@@ -546,7 +546,7 @@ window.db = {
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-short-weight.jpg" } },
             "配重": { "輕量款": { plus: 0, img: "" }, "標準款": { plus: 50, img: "" } },
-            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" }, "全熱縮套": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-short-color.jpg" } },
+            "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" }, "全熱縮套": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-short-color.jpg" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
             "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
         }
@@ -654,7 +654,7 @@ window.db = {
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
                     <li>可積木式自由排列，5公分為一單位</li>
-                    <li>適用外徑19mm或22mm棍身</li>
+                    <li>適用外徑19mm棍身</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
                     <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
                 </ul>
@@ -663,9 +663,9 @@ window.db = {
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；含本體、中心柱、螺絲+螺帽</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；含本體、中心柱(適用內徑17mm)、螺絲+螺帽</li>
                     <li style="margin-bottom: 4px;">◆ <b>長度：</b>直徑60mm、高度100mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體+中心柱 約100g／單個配重環50g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體約65g、中心柱約30g／單個配重環50g</li>
                 </ul>
             </div>
         `,
@@ -683,7 +683,7 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
-                    <li>適用外徑19mm或22mm棍身</li>
+                    <li>適用外徑19mm棍身</li>
                     <li>如需其他規格，歡迎私訊洽詢</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
                     <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
@@ -693,9 +693,9 @@ window.db = {
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；含本體、中心柱、螺絲+螺帽</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；含本體、中心柱(適用內徑17mm)、螺絲+螺帽</li>
                     <li style="margin-bottom: 4px;">◆ <b>長度：</b>直徑90mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體+中心柱 約185g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體約150g、中心柱約30g</li>
                 </ul>
             </div>
         `,
@@ -723,9 +723,9 @@ window.db = {
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；含本體、中心柱、螺絲+螺帽</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；含本體、中心柱(適用內徑11mm或13mm)、螺絲+螺帽</li>
                     <li style="margin-bottom: 4px;">◆ <b>長度：</b>直徑50mm、高度50mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體+中心柱 約40g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體約28g、中心柱約14g</li>
                 </ul>
             </div>
         `,
@@ -920,6 +920,34 @@ window.db = {
             </div>
         `,
         sub: { "流星鐵鍊連接繩": { price: 100, ship: 'small', img: "" } }, specs: {}
+    },
+    set_collapsible: {
+        title: "組合棍棍體", cat: "set", hideSub: true,
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-collapsible.jpg"],
+        details: `
+            <div style="margin-bottom: 20px;">
+                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 套組介紹</strong>
+                <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
+                    <li>棍身採用航太級 7075 高強度鋁棍</li>
+                    <li>彈扣結構固定</li>
+                </ul>
+            </div>
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
+            <div>
+                <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
+                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
+                    <li style="margin-bottom: 4px;">◆ <b>端頭：</b>19mm * 17mm , 45cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>中段：</b>17mm * 15mm , 46~70cm（總長度120~144cm）</li>
+                    <li style="margin-bottom: 4px;">◆ <b>實際握把長度：</b>30~54cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約250g</li>
+                </ul>
+            </div>
+        `,
+        sub: { "組合棍棍體": { price: 600, ship: 'small', img: "" } }, 
+        specs: {
+            "握把規格": { "無握把": { plus: 0, img: "" }, "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
+            "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "144cm":{plus:0} },
+        }
     },
 
     // ⚙️ 耗材配件 (拆分獨立項目)
