@@ -665,7 +665,7 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；含本體、中心柱(適用內徑17mm)、螺絲+螺帽</li>
                     <li style="margin-bottom: 4px;">◆ <b>長度：</b>直徑60mm、高度100mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體約65g、中心柱約30g／單個配重環50g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體+中心柱約100g／單個配重環50g</li>
                 </ul>
             </div>
         `,
@@ -695,7 +695,7 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；含本體、中心柱(適用內徑17mm)、螺絲+螺帽</li>
                     <li style="margin-bottom: 4px;">◆ <b>長度：</b>直徑90mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體約150g、中心柱約30g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體+中心柱約180g</li>
                 </ul>
             </div>
         `,
@@ -725,14 +725,14 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；含本體、中心柱(適用內徑11mm或13mm)、螺絲+螺帽</li>
                     <li style="margin-bottom: 4px;">◆ <b>長度：</b>直徑50mm、高度50mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體約28g、中心柱約14g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體+中心柱約40g</li>
                 </ul>
             </div>
         `,
         sub: { "練習頭-ss": { price: 500, ship: 'small', img: "" } },
         specs: {
             "棍身外徑": { "13mm": { plus: 0, img: "" }, "15mm": { plus: 0, img: "" } },
-            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-contact-weight.jpg" } },
+            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-short-weight.jpg" } },
         }
     },
     
