@@ -445,9 +445,9 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；標準款長10cm，配重環長5cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；直徑6cm，標準款長10cm／配重環長5cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+25g</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約440g(標準款)；單邊火頭約100g，單個配重環50g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約480g(標準款)；單邊火頭約120g，單個配重環50g</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -457,11 +457,11 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>端頭：</b>19mm * 17mm , 45cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>中段：</b>17mm * 15mm , 46~70cm（總長度120~144cm）</li>
                     <li style="margin-bottom: 4px;">◆ <b>實際握把長度：</b>30~54cm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約480g(標準款)</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約510g(標準款)</li>
                 </ul>
             </div>
         `,
-        sub: { "練習長棍-標準版": { price: 1000, ship: 'long', img: "" } },
+        sub: { "練習長棍-標準版": { price: 1100, ship: 'long', img: "" } },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 200, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-contact-weight.jpg" } },
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
@@ -481,7 +481,7 @@ window.db = {
                     <li>搭配運動用止滑握把布</li>
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
                     <li>頂部完全覆蓋，無金屬外露</li>
-                    <li>球型端頭大幅提升離心力，適用接觸技玩家</li>
+                    <li>球型端頭大幅提升離心力，擬龍棍手感</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
                     <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
                 </ul>
@@ -507,7 +507,7 @@ window.db = {
                 </ul>
             </div>
         `,
-        sub: { "練習長棍-接觸版": { price: 1500, ship: 'long', img: "" } },
+        sub: { "練習長棍-接觸版": { price: 1600, ship: 'long', img: "" } },
         specs: {
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
@@ -536,16 +536,15 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；長5cm，配重環長2.5cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；直徑5cm，本體長5cm／配重環長2.5cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+12g、熱縮套+50g</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約205g（標準款）、185g（輕量款）；單個配重環15g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約250g（標準款）；單個配重環30g</li>
                 </ul>
             </div>
         `,
-        sub: { "練習短棍": { price: 500, ship: 'medium', img: "" } },
+        sub: { "練習短棍": { price: 600, ship: 'medium', img: "" } },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-short-weight.jpg" } },
-            "配重": { "輕量款": { plus: 0, img: "" }, "標準款": { plus: 50, img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" }, "全熱縮套": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-short-color.jpg" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
             "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
@@ -573,11 +572,11 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；直徑90mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把：</b>大型、無培林</li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>總長度60cm，可自行調整</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約120g（本體）、約150g（含繩+握把）</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約180g（本體）、約210g（含繩+握把）</li>
                 </ul>
             </div>
         `,
-        sub: { "練習Poi-接觸版 (90mm)": { price: 800, ship: 'small', img: "" } },
+        sub: { "練習Poi-接觸版 (90mm)": { price: 950, ship: 'small', img: "" } },
         specs: {
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
@@ -610,7 +609,7 @@ window.db = {
         `,
         sub: { "練習Poi(標準版)": { price: 500, ship: 'small', img: "" } },
         specs: {
-            "繩鍊規格": { "5mm高張力登山繩": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-5mm.jpg" }, "6mm彈性軟繩": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-6mm.jpg" } },
+            "繩鍊規格": { "5mm高張力登山繩": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-5mm.jpg" }, "9mm高張力登山繩": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-9mm.jpg" }, "6mm彈性軟繩": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-6mm.jpg" } },
             "握把規格": { "小握把": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-knob-small.jpg" }, "大握把": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-knob-big.jpg" }  },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
         }
@@ -665,14 +664,15 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；含本體、中心柱(適用內徑17mm)、螺絲+螺帽</li>
                     <li style="margin-bottom: 4px;">◆ <b>長度：</b>直徑60mm、高度100mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體+中心柱約100g／單個配重環50g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體約90g、10cm中心柱約30g／單個配重環50g</li>
                 </ul>
             </div>
         `,
-        sub: { "練習頭-s": { price: 250, ship: 'small', img: "" } },
+        sub: { "練習頭-s": { price: 500, ship: 'small', img: "" } },
         specs: {
             "棍身外徑": { "19mm": { plus: 0, img: "" }, "22mm": { plus: 0, img: "" } },
-            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-contact-weight.jpg" } },
+            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 150, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-contact-weight.jpg" } },
+            "組合數量": { "單頭": { mult: 1, img: "" }, "雙頭": { mult: 1.8, img: "" } }
         }
     },
     prac_head_long_contact: {
@@ -683,8 +683,9 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
                 <ul style="padding-left: 18px; margin: 0; line-height: 1.7; color: #444;">
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
-                    <li>適用外徑19mm棍身</li>
+                    <li>適用外徑19mm或22mm棍身</li>
                     <li>如需其他規格，歡迎私訊洽詢</li>
+                    <li>球型端頭大幅提升離心力，擬龍棍手感</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
                     <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
                 </ul>
@@ -693,15 +694,16 @@ window.db = {
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；含本體、中心柱(適用內徑17mm)、螺絲+螺帽</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；含本體、中心柱(適用內徑17mm或19mm)、螺絲+螺帽</li>
                     <li style="margin-bottom: 4px;">◆ <b>長度：</b>直徑90mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體+中心柱約180g</li>
                 </ul>
             </div>
         `,
-        sub: { "練習頭-c": { price: 500, ship: 'small', img: "" } },
+        sub: { "練習頭-c": { price: 750, ship: 'small', img: "" } },
         specs: {
             "棍身外徑": { "19mm": { plus: 0, img: "" }, "22mm": { plus: 0, img: "" } },
+            "組合數量": { "單頭": { mult: 1, img: "" }, "雙頭": { mult: 1.8, img: "" } }
         }
     },    
     prac_head_short: {
@@ -725,14 +727,14 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；含本體、中心柱(適用內徑11mm或13mm)、螺絲+螺帽</li>
                     <li style="margin-bottom: 4px;">◆ <b>長度：</b>直徑50mm、高度50mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體+中心柱約40g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>本體約50g、7.5cm中心柱約15g／單個配重環30g</li>
                 </ul>
             </div>
         `,
-        sub: { "練習頭-ss": { price: 500, ship: 'small', img: "" } },
+        sub: { "練習頭-ss": { price: 250, ship: 'small', img: "" } },
         specs: {
             "棍身外徑": { "13mm": { plus: 0, img: "" }, "15mm": { plus: 0, img: "" } },
-            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-short-weight.jpg" } },
+            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-short-weight.jpg" } },
         }
     },
     
