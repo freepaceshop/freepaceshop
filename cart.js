@@ -342,8 +342,8 @@ window.db = {
             </div>
         `,
         sub: {
-            "火Poi一體式-8cm 圓球": { price: 1200, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-one-ball.jpg" },
-            "火Poi一體式-8cm 猴子球": { price: 1300, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-one-monkey.jpg" }
+            "火Poi一體式-8cm 圓球": { price: 1150, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-one-ball.jpg" },
+            "火Poi一體式-8cm 猴子球": { price: 1250, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-one-monkey.jpg" }
         },
         specs: {
             "握把規格": { "預設大握把": { plus: 0, img: "" } },
