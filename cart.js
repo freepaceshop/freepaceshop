@@ -313,7 +313,7 @@ window.db = {
             "火Poi可拆式-8cm 猴子球": { price: 1000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey8.jpg" }
         },
         specs: {
-            "繩鍊規格": { "鐵鍊組": { plus: 250, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-chain.jpg" }, "克維拉編織繩": { plus: 400, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-blackkevlar.jpg" }, "Technora編織繩": { plus: 600, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-technora.jpg" } },
+            "繩鍊規格": { "鐵鍊組": { plus: 300, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-chain.jpg" }, "克維拉編織繩": { plus: 400, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-blackkevlar.jpg" }, "Technora編織繩": { plus: 600, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-technora.jpg" } },
             "握把規格": { "小握把": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-knob-small-s.jpg" }, "大握把": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-knob-big-s.jpg" } },
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
             "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
@@ -810,7 +810,7 @@ window.db = {
                 </ul>
             </div>
         `,
-        sub: { "Poi 鐵鍊組": { price: 300, ship: 'small', img: "" } }, 
+        sub: { "Poi 鐵鍊組": { price: 350, ship: 'small', img: "" } }, 
         specs: {
             "握把規格": { "小握把": { plus: 0, img: "" }, "大握把": { plus: 100, img: "" } },
             "鐵鍊長度": { "25cm":{plus:0}, "30cm":{plus:0}, "35cm":{plus:0}, "40m":{plus:50}, "45m":{plus:50}, "50m":{plus:50} },
