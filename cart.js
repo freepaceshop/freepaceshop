@@ -393,7 +393,7 @@ window.db = {
             "火流星組-8cm 猴子球": { price: 2000, ship: 'small', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/fire-poi-head-monkey8.jpg" }
         },
         specs: {
-            "繩鍊規格": { "鐵鍊+連接繩": { plus: 300, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-chain.jpg" }, "克維拉粗繩": { plus: 500, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-kevlar.jpg" } },
+            "繩鍊規格": { "鐵鍊+連接繩": { plus: 300, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-chain.jpg" }, "克維拉粗繩": { plus: 1000, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-kevlar.jpg" } },
             "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} }
         }
     },
@@ -895,7 +895,7 @@ window.db = {
                 </ul>
             </div>
         `,
-        sub: { "流星克維拉繩": { price: 700, ship: 'small', img: "" } }, 
+        sub: { "流星克維拉繩": { price: 1000, ship: 'small', img: "" } }, 
         specs: {
             "繩鍊長度": { "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0}, "155cm":{plus:50}, "160cm":{plus:50} },
         }
@@ -921,7 +921,7 @@ window.db = {
                 </ul>
             </div>
         `,
-        sub: { "流星鐵鍊連接繩": { price: 100, ship: 'small', img: "" } }, specs: {}
+        sub: { "流星鐵鍊連接繩": { price: 150, ship: 'small', img: "" } }, specs: {}
     },
     set_collapsible: {
         title: "組合棍棍體", cat: "set", hideSub: true,
