@@ -228,7 +228,7 @@ window.db = {
                 </ul>
             </div>
         `,
-        sub: { "火手裡劍-6cm標準Twista": { price: 1100, ship: 'medium', img: "" } },
+        sub: { "火手裡劍-6cm標準Twista": { price: 1500, ship: 'medium', img: "" } },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 200, img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "" }, "加厚款": { plus: 0, img: "" } },
