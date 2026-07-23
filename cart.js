@@ -1137,7 +1137,7 @@ window.db = {
                 </ul>
             </div>
         `,
-        sub: { "7075鋁棍 19*17mm": { price: 500, ship: 'long', img: "" } }, 
+        sub: { "7075鋁棍 19*17mm": { price: 400, ship: 'long', img: "" } }, 
         specs: {
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
         }
@@ -1162,7 +1162,7 @@ window.db = {
                 </ul>
             </div>
         `,
-        sub: { "7075鋁棍 15*13mm": { price: 250, ship: 'medium', img: "" } }, 
+        sub: { "7075鋁棍 15*13mm": { price: 200, ship: 'medium', img: "" } }, 
         specs: {
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
         }
@@ -1187,7 +1187,7 @@ window.db = {
                 </ul>
             </div>
         `,
-        sub: { "7075鋁棍 13*11mm": { price: 250, ship: 'medium', img: "" } }, 
+        sub: { "7075鋁棍 13*11mm": { price: 200, ship: 'medium', img: "" } }, 
         specs: {
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} }
         }
