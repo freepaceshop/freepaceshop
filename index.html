@@ -17,40 +17,6 @@
 
         .item-container { padding: 100px 5% 60px 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; max-width: 1200px; margin: 0 auto; }
 
-        /* 💡 終極升級版：利用 display: contents 打散兩欄，自由重排手機版元素順序 */
-        @media (max-width: 850px) { 
-            .item-container { 
-                display: flex; 
-                flex-direction: column; 
-                gap: 15px; 
-                padding-top: 90px; 
-            } 
-    
-            /* 📌 神奇魔法：讓左右兩區塊的「外殼」失效，裡面的元素全部變成平起平坐 */
-            .item-container > div { display: contents; } 
-    
-            /* 📌 指定手機版顯示順序 (Order 1 到 7) */
-            .back-link { order: 1; margin-bottom: 0; }
-    
-            /* 順序 2：大標題移到最上方 */
-            h1 { order: 2; margin-top: 5px; margin-bottom: 10px; font-size: 1.6rem; line-height: 1.4; }
-    
-            /* 順序 3：照片展示區 */
-            .gallery-container { order: 3; margin-bottom: 5px; }
-    
-            /* 順序 4：道具介紹 */
-            .product-details-content { order: 4; margin-bottom: 10px; }
-    
-            /* 順序 5：客製化選項 (加上分隔線) */
-            #dynamicFields { order: 5; border-top: 1px dashed var(--border-color); padding-top: 25px; margin-top: 10px; width: 100%; }
-    
-            /* 順序 6：套數輸入框 */
-            .item-container > div:nth-child(2) > .field-group { order: 6; width: 100%; box-sizing: border-box; }
-    
-            /* 順序 7：加入詢價清單按鈕 */
-            .btn-add { order: 7; margin-top: 10px; width: 100%; box-sizing: border-box; }
-}
-
         /* 💡 社群與信任區塊 */
         .social-section { margin-top: 70px; background: #fff; padding: 50px 20px; border-radius: 12px; border: 1px solid #eee; text-align: center; }
         .social-section h2 { font-size: 1.6rem; color: #111; margin: 0 0 15px 0; }
