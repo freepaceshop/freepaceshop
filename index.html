@@ -70,27 +70,19 @@
         .btn-copy { width: 100%; background: #111; color: #fff; padding: 15px 0; border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background 0.2s; }
         .btn-copy:hover { background: var(--primary); }
 
-        /* 💡 彈窗樣式 (Modal) */
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(3px); }
         .modal-content { background: #fff; padding: 35px 30px; border-radius: 12px; width: 90%; max-width: 420px; text-align: center; }
-        .modal-box { background: #fff; padding: 40px; border-radius: 12px; text-align: center; max-width: 400px; width: 90%; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-        .modal-box h3 { margin-top: 0; font-size: 1.5rem; color: #111; }
-        .modal-box p { color: #555; line-height: 1.6; margin-bottom: 30px; }
-        .modal-buttons { display: flex; gap: 15px; justify-content: center; }
-        .btn-modal { padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; cursor: pointer; border: none; font-size: 1rem; }
-        .btn-fb { background: #0866FF; color: white; }
-        .btn-close { background: #eee; color: #333; }
-        .btn-close:hover { background: #ddd; }
+        .btn-social { padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; display: block; width: 100%; box-sizing: border-box; text-align: center; margin-top: 10px; color: white; border: none; cursor: pointer; font-size: 1rem; font-family: inherit; }
+        .btn-ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .btn-close { background: #e0e0e0; color: #333; }
+        .btn-close:hover { background: #d0d0d0; }
     </style>
 </head>
 <body>
 
 <div class="nav-header">
     <a href="index.html" class="nav-logo">FPS 道具部</a>
-    <!-- 🛒 導覽列詢價清單入口 (新增) -->
-    <div class="nav-cart" onclick="toggleCart(true)" style="cursor: pointer;">
-        🛒 詢價清單 (<span id="navCartCount">0</span>)
-    </div>
+    <div class="cart-trigger" onclick="toggleCart(true)">🛒 詢價清單 <span class="cart-count" id="navCartCount">0</span></div>
 </div>
 
 <div class="main-container">
