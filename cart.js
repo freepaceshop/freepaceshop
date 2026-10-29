@@ -1408,15 +1408,53 @@ function updatePrices(sub, ship, desc) {
 
 function copyOrder() {
     if(cart.length === 0) return alert("清單是空的，請先加入道具！");
-    let total = document.getElementById('grandTotal').innerText, sub = document.getElementById('subTotal').innerText;
-    let ship = document.getElementById('shipFee').innerText, shipD = document.getElementById('shipDesc').innerText;
+    
+    let total = document.getElementById('grandTotal').innerText;
+    let sub = document.getElementById('subTotal').innerText;
+    let subNum = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+    let shipInfo = calcShippingEngine(cart, subNum);
 
     let text = "【FPS 道具部 - 客製化估價清單】\n----------------------------------\n";
-    cart.forEach((i, idx) => { text += `${idx + 1}. ● ${i.name} × ${i.qty}\n   規格明細：${i.specs}\n   小計金額：NT$ ${(i.price * i.qty).toLocaleString()}\n\n`; });
-    text += `----------------------------------\n商品小計：${sub}\n物流運費：${ship} (${shipD})\n預估應付總額：${total}\n\n※ 此明細為線上估價試算，最終確認以粉專溝通為準。`;
+
+    cart.forEach((i, idx) => {
+        let specList = i.specs ? i.specs.split(' / ') : [];
+        let comboName = "";
+        let otherSpecs = [];
+
+        // 拆分出「組合數量」與其他客製化規格
+        specList.forEach(s => {
+            if(s.startsWith("組合數量:")) {
+                comboName = `（${s.replace("組合數量:", "").trim()}）`;
+            } else if(s.trim() !== "") {
+                otherSpecs.push(` ${s.trim()}`);
+            }
+        });
+
+        let itemTotal = (i.price * i.qty).toLocaleString();
+        text += `${idx + 1}. [NT$ ${itemTotal}] ${i.name}${comboName} × ${i.qty}\n`;
+        if(otherSpecs.length > 0) {
+            text += otherSpecs.join('\n') + '\n';
+        }
+        text += '\n';
+    });
+
+    text += "----------------------------------\n";
+    text += `商品小計：${sub}\n`;
     
-    navigator.clipboard.writeText(text).then(() => { document.getElementById('customModal').style.display = 'flex'; })
-    .catch(err => { alert("複製失敗，請手動全選明細複製。"); });
+    // 運費簡化輸出
+    if(shipInfo.fee === 0) {
+        text += `物流運費：NT$ 0\n`;
+    } else {
+        text += `物流運費：NT$ ${shipInfo.fee.toLocaleString()} (${shipInfo.cleanDesc})\n`;
+    }
+    
+    text += `預估應付總額：${total}`;
+
+    navigator.clipboard.writeText(text).then(() => { 
+        document.getElementById('customModal').style.display = 'flex'; 
+    }).catch(err => { 
+        alert("複製失敗，請手動全選明細複製。"); 
+    });
 }
 
 function closeModal() { document.getElementById('customModal').style.display = 'none'; }
