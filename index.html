@@ -16,6 +16,24 @@
         .cart-count { background: #ff4d4d; color: white; border-radius: 50%; padding: 2px 7px; font-size: 0.75rem; }
 
         .item-container { padding: 100px 5% 60px 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; max-width: 1200px; margin: 0 auto; }
+        
+        .main-container { max-width: 1000px; margin: 50px auto; padding: 0 5%; text-align: center; }
+        .main-container h1 { font-size: 2rem; color: #111; margin-bottom: 10px; }
+        .main-container p { color: #666; margin-bottom: 40px; }
+
+        .big-cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .big-cat-card {
+            background: #fff; border-radius: 12px; padding: 40px 20px; text-decoration: none;
+            color: #111; font-weight: 700; font-size: 1.3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s; border: 2px solid transparent;
+        }
+        .big-cat-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-color: var(--primary); }
+        .cat-icon { font-size: 3rem; display: block; margin-bottom: 15px; }
+        .cat-sub { display: block; font-size: 0.9rem; color: #666; font-weight: 400; margin-top: 10px; }
+
+        .sub-cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+        .sub-cat-card { background: #fff; border-radius: 10px; padding: 25px 15px; text-decoration: none; color: #111; font-weight: 700; font-size: 1.1rem; border: 1px solid #eee; transition: all 0.2s; }
+        .sub-cat-card:hover { border-color: #111; background: #fafafa; }
 
         /* 💡 社群與信任區塊 */
         .social-section { margin-top: 70px; background: #fff; padding: 50px 20px; border-radius: 12px; border: 1px solid #eee; text-align: center; }
