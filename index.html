@@ -41,12 +41,7 @@
         .btn-threads { background: #000000; }
 
         /* 💡 新增的 Footer */
-        footer { margin-top: 60px; padding: 40px 5%; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 0.85rem; line-height: 1.6; }
-
-        <script src="cart.js"></script>
-        <div class="nav-cart" onclick="toggleCart(true)" style="cursor: pointer;">
-    🛒 詢價清單 (<span id="navCartCount">0</span>)
-</div>
+        footer { margin-top: 60px; padding: 40px 5%; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 0.85rem; line-height: 1.6; 
         
     </style>
 </head>
@@ -106,17 +101,6 @@
         <div class="ship-desc" id="shipDesc"></div>
         <div class="grand-total-row"><span>預估總額：</span><span id="grandTotal">NT$ 0</span></div>
         <button class="btn-copy" onclick="copyOrder()">複製估價明細</button>
-    </div>
-</div>
-
-<!-- 💡 複製成功的 Modal 彈窗區塊 -->
-<div id="customModal" class="modal-overlay">
-    <div class="modal-content">
-        <h3>🎉 明細已成功複製！</h3>
-        <p style="color:#555; font-size:0.95rem;">請點擊下方按鈕前往我們的社群，私訊「貼上」傳送給我們，將盡快為您處理訂單！</p>
-        <p style="color:#555; font-size:0.95rem;">※明細僅為線上估價試算，最終確認以粉專溝通為準。</p>
-        <a href="https://ig.me/m/freepaceshop" target="_blank" class="btn-social btn-ig">📸 前往 Instagram 私訊下單</a>
-        <button onclick="closeModal()" class="btn-social btn-close">先關閉</button>
     </div>
 </div>
     
