@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FPS 道具部 - 官方線上商店</title>
+    <title>FPS 道具部 - 線上估價</title>
     <link rel="icon" id="dynamicFavicon" href="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -11,6 +11,10 @@
         body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); margin: 0; color: #333; }
         .nav-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: #ffffff; border-bottom: 1px solid #eee; }
         .nav-logo { font-size: 1.4rem; font-weight: 700; color: #111; text-decoration: none; }
+        
+        <div class="nav-cart" onclick="toggleCart(true)" style="cursor: pointer;">
+    🛒 詢價清單 (<span id="navCartCount">0</span>)
+</div>
         
         .main-container { max-width: 1000px; margin: 50px auto; padding: 0 5%; text-align: center; }
         .main-container h1 { font-size: 2rem; color: #111; margin-bottom: 10px; }
@@ -42,6 +46,9 @@
 
         /* 💡 新增的 Footer */
         footer { margin-top: 60px; padding: 40px 5%; border-top: 1px solid #ddd; text-align: center; color: #888; font-size: 0.85rem; line-height: 1.6; }
+
+        <script src="cart.js"></script>
+        
     </style>
 </head>
 <body>
@@ -87,5 +94,36 @@
     <p>專業手工火舞道具・日常練習道具・專屬客製化<br>訂單確認與出貨時間皆以粉專私訊回覆為準。</p>
 </footer>
 
+<!-- 🛒 側邊抽屜詢價清單 -->
+<div id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+        <h3>📋 我的詢價清單</h3>
+        <span class="close-drawer" onclick="toggleCart(false)">&times;</span>
+    </div>
+    <div id="cartList" class="cart-list"></div>
+    <div class="cart-footer">
+        <div class="price-row"><span>商品小計：</span><span id="subTotal">NT$ 0</span></div>
+        <div class="price-row"><span>預估運費：</span><span id="shipFee">NT$ 0</span></div>
+        <div class="ship-desc" id="shipDesc"></div>
+        <div class="grand-total-row"><span>預估總額：</span><span id="grandTotal">NT$ 0</span></div>
+        <button class="btn-copy" onclick="copyOrder()">複製估價明細</button>
+    </div>
+</div>
+
+<!-- 💡 複製成功的 Modal 彈窗區塊 -->
+<div id="customModal" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+        <h3>🎉 明細已成功複製！</h3>
+        <p>請點擊下方按鈕前往我們的社群，私訊「貼上」傳送給我們，即刻為您處理訂單！</p>
+        <p style="margin-top: 15px; color: #888; font-size: 0.85rem; border-top: 1px dashed #eee; padding-top: 10px;">
+            ※ 此明細為線上估價試算，最終確認以粉專溝通為準。
+        </p>
+        <div class="modal-buttons">
+            <a href="https://m.me/your_fb_page" target="_blank" class="btn-modal btn-fb">前往 FB 粉專</a>
+            <button onclick="closeModal()" class="btn-modal btn-close">關閉</button>
+        </div>
+    </div>
+</div>
+    
 </body>
 </html>
