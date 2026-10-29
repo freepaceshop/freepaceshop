@@ -1343,16 +1343,55 @@ function renderCart() {
 }
 
 function calcShippingEngine(items, total) {
-    if(total >= 5000) return { fee: 0, desc: "🎉 達 NT$5,000 免運門檻！" };
-    const longQty = items.filter(i => i.ship === 'long').reduce((s, i) => s + i.qty, 0);
+    if(total >= 5000) {
+        return { 
+            fee: 0, 
+            desc: "🎉 達 NT$5,000 免運門檻！", 
+            cleanDesc: "" 
+        };
+    }
+
+    // 💡 抓取長棍數量：若規格包含「雙長組」，數量自動 × 2
+    const longQty = items.filter(i => i.ship === 'long').reduce((s, i) => {
+        let mult = (i.specs && i.specs.includes('雙長組')) ? 2 : 1;
+        return s + (i.qty * mult);
+    }, 0);
+
     const medQty = items.filter(i => i.ship === 'medium').reduce((s, i) => s + i.qty, 0);
     const smallQty = items.filter(i => i.ship === 'small').reduce((s, i) => s + i.qty, 0);
-    let fee = 0, desc = [];
-    if(longQty > 0) { fee += (longQty * 100); desc.push(`長棍獨立包裹 × ${longQty}支`); }
-    if(medQty > 0) { let boxes = Math.ceil(medQty / 6); fee += (boxes * 100); desc.push(`中型道具包裹 × ${boxes}箱`); }
-    if(smallQty > 0) { fee += 60; desc.push(`小型包裹`); }
-    if(longQty >= 5 || fee >= 300) return { fee: 300, desc: "🚛 訂單大宗：優化改走大榮貨運" };
-    return { fee: fee, desc: `優化物流：${desc.join(' + ')}` };
+
+    let fee = 0, desc = [], cleanDesc = [];
+
+    if(longQty > 0) { 
+        fee += (longQty * 100); 
+        desc.push(`長棍獨立包裹 × ${longQty}支`);
+        cleanDesc.push(`長棍獨立包裹 × ${longQty}支`);
+    }
+    if(medQty > 0) { 
+        let boxes = Math.ceil(medQty / 6); 
+        fee += (boxes * 100); 
+        desc.push(`中型道具包裹 × ${boxes}箱`);
+        cleanDesc.push(`中型包裹 × ${boxes}箱`);
+    }
+    if(smallQty > 0) { 
+        fee += 60; 
+        desc.push(`小型包裹`);
+        cleanDesc.push(`小型包裹`);
+    }
+
+    if(longQty >= 5 || fee >= 300) {
+        return { 
+            fee: 300, 
+            desc: "🚛 訂單大宗：優化改走貨運", 
+            cleanDesc: "貨運公司" 
+        };
+    }
+
+    return { 
+        fee: fee, 
+        desc: `優化物流：${desc.join(' + ')}`,
+        cleanDesc: cleanDesc.join(' + ')
+    };
 }
 
 function updatePrices(sub, ship, desc) {
