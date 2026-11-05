@@ -42,10 +42,10 @@ window.db = {
         },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 400, img: "" } },
-            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
+            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 400, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
-            "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
+            "組合數量": { "1支組": { mult: 1, img: "" }, "2支組": { mult: 1.96, img: "" }, "3支組": { mult: 2.85, img: "" } }
         }
     },
     fire_staff_twi: {
@@ -89,7 +89,7 @@ window.db = {
         },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 300, img: "" } },
-            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
+            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 400, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
             "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
@@ -464,7 +464,7 @@ window.db = {
         sub: { "練習長棍-標準版": { price: 1100, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-normal.jpg" } },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 200, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-contact-weight.jpg" } },
-            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
+            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 400, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
             "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
@@ -509,7 +509,7 @@ window.db = {
         `,
         sub: { "練習長棍-接觸版": { price: 1600, ship: 'long', img: "" } },
         specs: {
-            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 500, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
+            "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 400, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
             "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
@@ -1395,67 +1395,92 @@ function calcShippingEngine(items, total) {
 }
 
 function updatePrices(sub, ship, desc) {
+    let finalSub = sub;
+    let discountAmount = 0;
+
+    // 計算折扣
+    if(currentDiscount.active && sub > 0) {
+        finalSub = Math.round(sub * currentDiscount.rate);
+        discountAmount = sub - finalSub;
+        
+        if(document.getElementById('discountRow')) {
+            document.getElementById('discountRow').style.display = "flex";
+            document.getElementById('discountName').innerText = currentDiscount.name;
+            document.getElementById('discountAmount').innerText = `- NT$ ${discountAmount.toLocaleString()}`;
+        }
+    } else {
+        if(document.getElementById('discountRow')) {
+            document.getElementById('discountRow').style.display = "none";
+        }
+    }
+
     if(document.getElementById('subTotal')) document.getElementById('subTotal').innerText = `NT$ ${sub.toLocaleString()}`;
     if(document.getElementById('shipFee')) document.getElementById('shipFee').innerText = `NT$ ${ship.toLocaleString()}`;
     if(document.getElementById('shipDesc')) document.getElementById('shipDesc').innerText = desc;
-    if(document.getElementById('grandTotal')) document.getElementById('grandTotal').innerText = `NT$ ${(sub + ship).toLocaleString()}`;
+    
+    // 總金額 = 折扣後的小計 + 運費
+    if(document.getElementById('grandTotal')) document.getElementById('grandTotal').innerText = `NT$ ${(finalSub + ship).toLocaleString()}`;
+    
+    // 免運條計算 (還是以折後金額 finalSub 來算免運門檻會比較不會虧本)
     if(document.getElementById('shipFill')) {
-        const percent = Math.min((sub / 5000) * 100, 100);
+        const percent = Math.min((finalSub / 5000) * 100, 100);
         document.getElementById('shipFill').style.width = percent + '%';
-        document.getElementById('shipMsg').innerText = sub >= 5000 ? "🎉 已享受免運費優惠！" : `還差 NT$ ${(5000 - sub).toLocaleString()} 即可享有免運`;
+        document.getElementById('shipMsg').innerText = finalSub >= 5000 ? "🎉 已享受免運費優惠！" : `還差 NT$ ${(5000 - finalSub).toLocaleString()} 即可享有免運`;
     }
 }
 
 function copyOrder() {
     if(cart.length === 0) return alert("清單是空的，請先加入道具！");
-    
-    let total = document.getElementById('grandTotal').innerText;
-    let sub = document.getElementById('subTotal').innerText;
-    let subNum = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
-    let shipInfo = calcShippingEngine(cart, subNum);
+    let total = document.getElementById('grandTotal').innerText, sub = document.getElementById('subTotal').innerText;
+    let ship = document.getElementById('shipFee').innerText, shipD = document.getElementById('shipDesc').innerText;
 
     let text = "【FPS 道具部 - 客製化估價清單】\n----------------------------------\n";
-
-    cart.forEach((i, idx) => {
-        let specList = i.specs ? i.specs.split(' / ') : [];
-        let comboName = "";
-        let otherSpecs = [];
-
-        // 拆分出「組合數量」與其他客製化規格
-        specList.forEach(s => {
-            if(s.startsWith("組合數量:")) {
-                comboName = `（${s.replace("組合數量:", "").trim()}）`;
-            } else if(s.trim() !== "") {
-                otherSpecs.push(` ${s.trim()}`);
-            }
-        });
-
-        let itemTotal = (i.price * i.qty).toLocaleString();
-        text += `${idx + 1}. [NT$ ${itemTotal}] ${i.name}${comboName} × ${i.qty}\n`;
-        if(otherSpecs.length > 0) {
-            text += otherSpecs.join('\n') + '\n';
-        }
-        text += '\n';
-    });
-
-    text += "----------------------------------\n";
-    text += `商品小計：${sub}\n`;
+    cart.forEach((i, idx) => { text += `${idx + 1}. ● ${i.name} × ${i.qty}\n   規格明細：${i.specs}\n   小計金額：NT$ ${(i.price * i.qty).toLocaleString()}\n\n`; });
     
-    // 運費簡化輸出
-    if(shipInfo.fee === 0) {
-        text += `物流運費：NT$ 0\n`;
-    } else {
-        text += `物流運費：NT$ ${shipInfo.fee.toLocaleString()} (${shipInfo.cleanDesc})\n`;
+    text += `----------------------------------\n商品小計：${sub}\n`;
+    
+    // 如果有套用折扣，將折扣資訊加入明細中
+    if(currentDiscount.active) {
+        let discountVal = document.getElementById('discountAmount').innerText;
+        text += `套用優惠：${currentDiscount.name} (${discountVal})\n`;
     }
     
-    text += `預估應付總額：${total}`;
-
-    navigator.clipboard.writeText(text).then(() => { 
-        document.getElementById('customModal').style.display = 'flex'; 
-    }).catch(err => { 
-        alert("複製失敗，請手動全選明細複製。"); 
-    });
+    text += `物流運費：${ship} (${shipD})\n預估應付總額：${total}\n\n※ 此明細為線上估價試算，最終確認以粉專溝通為準。`;
+    
+    navigator.clipboard.writeText(text).then(() => { document.getElementById('customModal').style.display = 'flex'; })
+    .catch(err => { alert("複製失敗，請手動全選明細複製。"); });
 }
+
+
 
 function closeModal() { document.getElementById('customModal').style.display = 'none'; }
 document.addEventListener("DOMContentLoaded", renderCart);
+
+
+// 💡 全域變數：記錄目前套用的折扣資訊
+let currentDiscount = { active: false, name: "", rate: 1 };
+
+// 💡 驗證並套用折扣碼
+function applyDiscount() {
+    const codeInput = document.getElementById('discountCode').value.trim().toUpperCase();
+    
+    // 你可以在這裡設定你的折扣字典 (大寫英文字母或中文)
+    const validCodes = {
+        "STUDENT": { name: "學生優惠", rate: 0.9 }, // 9折
+        "FPSPROMO": { name: "活動特惠", rate: 0.95 }, // 95折
+        "學生": { name: "學生優惠", rate: 0.9 }
+    };
+
+    if(validCodes[codeInput]) {
+        currentDiscount = { active: true, name: validCodes[codeInput].name, rate: validCodes[codeInput].rate };
+        alert(`已成功套用【${currentDiscount.name}】！`);
+    } else if (codeInput === "") {
+        currentDiscount = { active: false, name: "", rate: 1 };
+    } else {
+        alert("無效的優惠代碼！");
+        currentDiscount = { active: false, name: "", rate: 1 };
+        document.getElementById('discountCode').value = "";
+    }
+    
+    renderCart(); // 重新渲染並計算金額
+}
