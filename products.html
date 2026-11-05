@@ -76,30 +76,42 @@
 
 <!-- 🛒 側邊抽屜詢價清單 -->
 <div id="cartDrawer" class="cart-drawer">
-    <div class="cart-header">
-        <h3>📋 我的詢價清單</h3>
-        <span class="close-drawer" onclick="toggleCart(false)">&times;</span>
+    <div class="cart-drawer-header">
+        <span>詢價清單</span>
+        <span class="cart-drawer-close" onclick="toggleCart(false)">✕</span>
     </div>
+    
+    <!-- 💡 免運進度條 -->
+    <div class="free-ship-container">
+        <div class="free-ship-bar"><div id="shipFill" class="free-ship-fill"></div></div>
+        <div id="shipMsg" class="free-ship-msg"></div>
+    </div>
+    
     <div id="cartList" class="cart-list"></div>
-    <div class="cart-footer">
-        <!-- 💡 新增：折扣碼輸入區塊 -->
+    
+    <div class="cart-footer" style="padding: 15px 0 0 0; border-top: 1px solid #eee;">
+        
+        <!-- 折扣碼輸入區塊 -->
         <div style="display: flex; gap: 8px; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
             <input type="text" id="discountCode" placeholder="輸入專屬優惠代碼 (選填)" style="flex: 1; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 0.9rem;">
             <button onclick="applyDiscount()" style="background: #333; color: white; border: none; border-radius: 5px; padding: 0 15px; cursor: pointer; font-size: 0.9rem;">套用</button>
         </div>
 
-        <div class="price-row"><span>商品小計：</span><span id="subTotal">NT$ 0</span></div>
-        <!-- 💡 新增：折扣金額顯示列 (預設隱藏) -->
-        <div class="price-row" id="discountRow" style="display: none; color: #ff4757;">
-            <span>折扣優惠 (<span id="discountName"></span>)：</span>
+        <div class="summary-row"><span>商品小計</span><span id="subTotal">NT$ 0</span></div>
+        
+        <!-- 折扣金額顯示列 (預設隱藏) -->
+        <div class="summary-row" id="discountRow" style="display: none; color: #ff4757;">
+            <span>優惠折扣 (<span id="discountName"></span>)</span>
             <span id="discountAmount">- NT$ 0</span>
         </div>
-        <div class="price-row"><span>預估運費：</span><span id="shipFee">NT$ 0</span></div>
-        <div class="ship-desc" id="shipDesc"></div>
-        <div class="grand-total-row"><span>預估總額：</span><span id="grandTotal">NT$ 0</span></div>
-        <button class="btn-copy" onclick="copyOrder()">複製估價明細</button>
-    </div>    
-
+        
+        <div class="summary-row"><span>預估運費</span><span id="shipFee">NT$ 0</span></div>
+        <div id="shipDesc" class="ship-desc"></div>
+        <div class="grand-total"><span>總計</span><span id="grandTotal">NT$ 0</span></div>
+        <button class="btn-copy" onclick="copyOrder()">📋 複製清單明細 (私訊下單用)</button>
+    </div>
+</div>
+    
 <!-- 💡 複製成功的 Modal 彈窗區塊 (預設隱藏) -->
 <div id="customModal" class="modal-overlay" style="display: none;">
     <div class="modal-content">
