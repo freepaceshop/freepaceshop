@@ -1326,13 +1326,24 @@ function renderCart() {
         return;
     }
 
-    list.innerHTML = cart.map(i => {
+    list.innerHTML = cart.map((i, index) => {
         subTotal += (i.price * i.qty);
+        
+        // 💡 把規格字串（原本用 / 隔開的）拆開變成多行清單
+        let specsHtml = '';
+        if (i.specs) {
+            let specParts = i.specs.split(' / ');
+            specParts.forEach(part => {
+                specsHtml += `<span class="cart-item-spec"> ${part}</span>`;
+            });
+        }
+
         return `<div class="cart-item">
             <div class="cart-item-info">
-                <span class="cart-item-name">${i.name} × ${i.qty}</span>
-                <span class="cart-item-spec">${i.specs}</span>
-                <div class="cart-item-price">NT$ ${(i.price * i.qty).toLocaleString()}</div>
+                <div class="cart-item-name">
+                    ${index + 1}. [NT$ ${(i.price * i.qty).toLocaleString()}] ${i.name} × ${i.qty}
+                </div>
+                ${specsHtml}
             </div>
             <span class="btn-remove" onclick="removeFromCart(${i.id})">移除</span>
         </div>`;
@@ -1435,11 +1446,20 @@ function copyOrder() {
     let ship = document.getElementById('shipFee').innerText, shipD = document.getElementById('shipDesc').innerText;
 
     let text = "【FPS 道具部 - 客製化估價清單】\n----------------------------------\n";
-    cart.forEach((i, idx) => { text += `${idx + 1}. ● ${i.name} × ${i.qty}\n   規格明細：${i.specs}\n   小計金額：NT$ ${(i.price * i.qty).toLocaleString()}\n\n`; });
+    
+    cart.forEach((i, idx) => { 
+        text += `${idx + 1}. [NT$ ${(i.price * i.qty).toLocaleString()}] ${i.name} × ${i.qty}\n`;
+        if (i.specs) {
+            let specParts = i.specs.split(' / ');
+            specParts.forEach(part => {
+                text += ` ${part}\n`;
+            });
+        }
+        text += `\n`;
+    });
     
     text += `----------------------------------\n商品小計：${sub}\n`;
     
-    // 如果有套用折扣，將折扣資訊加入明細中
     if(currentDiscount.active) {
         let discountVal = document.getElementById('discountAmount').innerText;
         text += `套用優惠：${currentDiscount.name} (${discountVal})\n`;
