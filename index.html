@@ -120,24 +120,15 @@
     <p>專業手工火舞道具・日常練習道具・專屬客製化<br>訂單確認與出貨時間皆以粉專私訊回覆為準。</p>
 </footer>
 
-<!-- 🛒 側邊抽屜詢價清單 -->
 <div id="cartDrawer" class="cart-drawer">
-    <div class="cart-drawer-header">
-        <span>詢價清單</span>
-        <span class="cart-drawer-close" onclick="toggleCart(false)">✕</span>
-    </div>
-    
-    <!-- 💡 免運進度條 (補上這裡) -->
-    <div class="free-ship-container">
-        <div class="free-ship-bar"><div id="shipFill" class="free-ship-fill"></div></div>
-        <div id="shipMsg" class="free-ship-msg"></div>
-    </div>
-    
+    <div class="cart-drawer-header"><span>詢價清單</span><span class="cart-drawer-close" onclick="toggleCart(false)">✕</span></div>
+    <div class="free-ship-container"><div class="free-ship-bar"><div id="shipFill" class="free-ship-fill"></div></div><div id="shipMsg" class="free-ship-msg"></div></div>
     <div id="cartList" class="cart-list"></div>
     
+    <!-- 💡 將底部結帳資訊用 cart-footer 包起來，並加上折扣碼區塊 -->
     <div class="cart-footer" style="padding: 15px 0 0 0; border-top: 1px solid #eee;">
         
-        <!-- 折扣碼輸入區塊 -->
+        <!-- 折扣碼輸入框 -->
         <div style="display: flex; gap: 8px; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
             <input type="text" id="discountCode" placeholder="輸入專屬優惠代碼 (選填)" style="flex: 1; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 0.9rem;">
             <button onclick="applyDiscount()" style="background: #333; color: white; border: none; border-radius: 5px; padding: 0 15px; cursor: pointer; font-size: 0.9rem;">套用</button>
@@ -145,7 +136,7 @@
 
         <div class="summary-row"><span>商品小計</span><span id="subTotal">NT$ 0</span></div>
         
-        <!-- 折扣金額顯示列 (預設隱藏) -->
+        <!-- 折扣顯示列 (預設隱藏) -->
         <div class="summary-row" id="discountRow" style="display: none; color: #ff4757;">
             <span>優惠折扣 (<span id="discountName"></span>)</span>
             <span id="discountAmount">- NT$ 0</span>
