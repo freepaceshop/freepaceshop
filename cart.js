@@ -1468,7 +1468,6 @@ function applyDiscount() {
     const validCodes = {
         "STUDENT": { name: "學生優惠", rate: 0.9 }, // 9折
         "FPSPROMO": { name: "活動特惠", rate: 0.95 }, // 95折
-        "學生": { name: "學生優惠", rate: 0.9 }
     };
 
     if(validCodes[codeInput]) {
