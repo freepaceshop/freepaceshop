@@ -134,20 +134,8 @@
     
     <!-- 💡 將底部結帳資訊用 cart-footer 包起來，並加上折扣碼區塊 -->
     <div class="cart-footer" style="padding: 15px 0 0 0; border-top: 1px solid #eee;">
-        
-        <!-- 折扣碼輸入框 -->
-        <div style="display: flex; gap: 8px; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
-            <input type="text" id="discountCode" placeholder="輸入專屬優惠代碼 (選填)" style="flex: 1; padding: 8px 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 0.9rem;">
-            <button onclick="applyDiscount()" style="background: #333; color: white; border: none; border-radius: 5px; padding: 0 15px; cursor: pointer; font-size: 0.9rem;">套用</button>
-        </div>
 
         <div class="summary-row"><span>商品小計</span><span id="subTotal">NT$ 0</span></div>
-        
-        <!-- 折扣顯示列 (預設隱藏) -->
-        <div class="summary-row" id="discountRow" style="display: none; color: #ff4757;">
-            <span>優惠折扣 (<span id="discountName"></span>)</span>
-            <span id="discountAmount">- NT$ 0</span>
-        </div>
         
         <div class="summary-row"><span>預估運費</span><span id="shipFee">NT$ 0</span></div>
         <div id="shipDesc" class="ship-desc"></div>
