@@ -1477,14 +1477,53 @@ function closeModal() { document.getElementById('customModal').style.display = '
 document.addEventListener("DOMContentLoaded", renderCart);
 
 
-// 💡 全域變數：記錄目前套用的折扣資訊
-let currentDiscount = { active: false, name: "", rate: 1 };
+// 💡 全域變數：記錄目前套用的折扣資訊（加入 localStorage 記憶功能，跨頁不消失）
+let currentDiscount = JSON.parse(localStorage.getItem('fps_discount')) || { active: false, name: "", rate: 1 };
 
-// 💡 驗證並套用折扣碼
-function applyDiscount() {
-    const codeInput = document.getElementById('discountCode').value.trim().toUpperCase();
+function updatePrices(sub, ship, desc) {
+    let finalSub = sub;
+    let discountAmount = 0;
+
+    // 計算折扣
+    if(currentDiscount.active && sub > 0) {
+        finalSub = Math.round(sub * currentDiscount.rate);
+        discountAmount = sub - finalSub;
+        
+        // 使用 querySelectorAll 確保無論是側欄還是結算頁的元素都一併更新
+        document.querySelectorAll('#discountRow').forEach(el => el.style.display = "flex");
+        document.querySelectorAll('#discountName').forEach(el => el.innerText = currentDiscount.name);
+        document.querySelectorAll('#discountAmount').forEach(el => el.innerText = `- NT$ ${discountAmount.toLocaleString()}`);
+    } else {
+        document.querySelectorAll('#discountRow').forEach(el => el.style.display = "none");
+    }
+
+    document.querySelectorAll('#subTotal').forEach(el => el.innerText = `NT$ ${sub.toLocaleString()}`);
+    document.querySelectorAll('#shipFee').forEach(el => el.innerText = `NT$ ${ship.toLocaleString()}`);
+    document.querySelectorAll('#shipDesc').forEach(el => el.innerText = desc);
     
-    // 你可以在這裡設定你的折扣字典 (大寫英文字母或中文)
+    // 總金額 = 折扣後的小計 + 運費
+    document.querySelectorAll('#grandTotal').forEach(el => el.innerText = `NT$ ${(finalSub + ship).toLocaleString()}`);
+    
+    // 免運條計算 (以折後金額 finalSub 計算免運門檻)
+    document.querySelectorAll('#shipFill').forEach(el => {
+        const percent = Math.min((finalSub / 5000) * 100, 100);
+        el.style.width = percent + '%';
+    });
+    document.querySelectorAll('#shipMsg').forEach(el => {
+        el.innerText = finalSub >= 5000 ? "🎉 已享受免運費優惠！" : `還差 NT$ ${(5000 - finalSub).toLocaleString()} 即可享有免運`;
+    });
+}
+
+function applyDiscount() {
+    let codeInput = "";
+    
+    // 解決 ID 衝突：尋找畫面上「有實際輸入文字」的那個折扣碼欄位
+    document.querySelectorAll('#discountCode').forEach(el => {
+        if(el.value.trim() !== "") {
+            codeInput = el.value.trim().toUpperCase();
+        }
+    });
+
     const validCodes = {
         "STUDENT": { name: "學生優惠", rate: 0.9 }, // 9折
         "FPSPROMO": { name: "活動特惠", rate: 0.95 }, // 95折
@@ -1498,8 +1537,17 @@ function applyDiscount() {
     } else {
         alert("無效的優惠代碼！");
         currentDiscount = { active: false, name: "", rate: 1 };
-        document.getElementById('discountCode').value = "";
+        // 輸入錯誤時，清空所有折扣輸入框
+        document.querySelectorAll('#discountCode').forEach(el => el.value = "");
     }
     
-    renderCart(); // 重新渲染並計算金額
+    // 💾 把折扣狀態存進瀏覽器，這樣切換頁面或重新整理折扣都不會歸零
+    localStorage.setItem('fps_discount', JSON.stringify(currentDiscount));
+    
+    // 重新渲染並計算金額
+    if(typeof renderCheckoutPage === 'function') {
+        renderCheckoutPage();
+    } else {
+        renderCart();
+    }
 }
