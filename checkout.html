@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPS 道具部 - 結算與估價明細</title>
+    <link rel="icon" id="dynamicFavicon" href="https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #e67e22; --bg: #f9f9f9; }
+        body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); margin: 0; color: #333; }
+        
+        .nav-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: #ffffff; border-bottom: 1px solid #eee; position: fixed; top: 0; width: 90%; z-index: 900; }
+        .nav-logo { font-size: 1.4rem; font-weight: 700; color: #111; text-decoration: none; }
+        
+        .checkout-container { max-width: 800px; margin: 100px auto 60px auto; padding: 0 5%; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #666; text-decoration: none; font-weight: 500; }
+        .back-link:hover { color: var(--primary); text-decoration: underline; }
+        
+        .checkout-card { background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee; margin-bottom: 20px; }
+        .checkout-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        
+        /* 清單項目樣式 */
+        .checkout-item { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px dashed #ddd; position: relative; }
+        .checkout-item-info { width: 100%; padding-right: 40px; }
+        .checkout-item-name { font-weight: 700; font-size: 1rem; color: #111; margin-bottom: 4px; }
+        .checkout-item-spec { font-size: 0.85rem; color: #666; display: block; line-height: 1.4; }
+        .btn-remove { position: absolute; right: 0; top: 15px; color: #ff4d4d; cursor: pointer; font-size: 0.8rem; text-decoration: underline; }
+
+        /* 折扣輸入區 */
+        .discount-box { display: flex; gap: 10px; margin: 20px 0; padding: 15px; background: #fafafa; border-radius: 8px; border: 1px solid #ddd; align-items: center; }
+        .discount-box input { flex: 1; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; font-family: inherit; }
+        .discount-box button { background: #333; color: white; border: none; border-radius: 6px; padding: 10px 20px; cursor: pointer; font-weight: bold; font-size: 0.95rem; }
+        .discount-box button:hover { background: #111; }
+
+        /* 金額總結列 */
+        .summary-section { margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px; }
+        .summary-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 1rem; color: #555; }
+        .ship-desc { font-size: 0.85rem; color: #888; text-align: right; margin-bottom: 10px; }
+        .grand-total { border-top: 2px solid #ddd; padding-top: 15px; margin-top: 10px; display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: 700; color: #111; }
+
+        .btn-copy-order { background: var(--primary); color: white; border: none; width: 100%; padding: 16px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1.1rem; margin-top: 25px; transition: background 0.2s; }
+        .btn-copy-order:hover { background: #d35400; }
+
+        .notice-box { background: #fff8f0; border-left: 4px solid var(--primary); padding: 15px; border-radius: 4px; font-size: 0.9rem; color: #666; line-height: 1.6; margin-top: 20px; }
+
+        /* Modal 彈窗樣式 */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; align-items: center; justify-content: center; backdrop-filter: blur(3px); }
+        .modal-content { background: #fff; padding: 35px 30px; border-radius: 12px; width: 90%; max-width: 420px; text-align: center; }
+        .btn-social { padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; display: block; width: 100%; box-sizing: border-box; text-align: center; margin-top: 10px; color: white; border: none; cursor: pointer; font-size: 1rem; font-family: inherit; }
+        .btn-ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .btn-close { background: #e0e0e0; color: #333; }
+        .btn-close:hover { background: #d0d0d0; }
+    </style>
+</head>
+<body>
+
+<div class="nav-header">
+    <a href="index.html" class="nav-logo">FPS 道具部</a>
+</div>
+
+<div class="checkout-container">
+    <a href="index.html" class="back-link">← 繼續挑選道具</a>
+    
+    <div class="checkout-card">
+        <h1 class="checkout-title">📋 您的詢價與估價清單</h1>
+        
+        <!-- 商品清單列表 -->
+        <div id="checkoutList"></div>
+
+        <!-- 免運進度條 -->
+        <div style="background: #fafafa; padding: 15px; border-radius: 8px; border: 1px solid #ddd; margin: 20px 0;">
+            <div style="background: #e1e1e1; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 8px;">
+                <div id="shipFill" style="background: #27ae60; height: 100%; width: 0%; transition: width 0.4s;"></div>
+            </div>
+            <div id="shipMsg" style="font-size: 0.9rem; color: #444; font-weight: 500;"></div>
+        </div>
+
+        <!-- 折扣碼輸入區塊 -->
+        <div class="discount-box">
+            <input type="text" id="discountCode" placeholder="請輸入專屬優惠代碼 (例如: STUDENT)">
+            <button onclick="applyDiscount()">套用優惠</button>
+        </div>
+
+        <!-- 金額總結計算 -->
+        <div class="summary-section">
+            <div class="summary-row"><span>商品小計</span><span id="subTotal">NT$ 0</span></div>
+            
+            <div class="summary-row" id="discountRow" style="display: none; color: #ff4757;">
+                <span>優惠折扣 (<span id="discountName"></span>)</span>
+                <span id="discountAmount">- NT$ 0</span>
+            </div>
+            
+            <div class="summary-row"><span>預估運費</span><span id="shipFee">NT$ 0</span></div>
+            <div class="ship-desc" id="shipDesc"></div>
+            
+            <div class="grand-total"><span>預估總計</span><span id="grandTotal">NT$ 0</span></div>
+        </div>
+
+        <button class="btn-copy-order" onclick="copyOrderAndShowModal()">📋 複製清單明細 (私訊下單用)</button>
+        
+        <div class="notice-box">
+            <strong>⚠️ 貼心提醒：</strong><br>
+            本頁面僅為線上估價試算，點擊上方按鈕後明細將會複製到您的剪貼簿。請前往我們的 Instagram 或社群私訊「貼上」傳送給我們，確認訂單與運送細節後才算成立喔！
+        </div>
+    </div>
+</div>
+
+<!-- 複製成功的 Modal 彈窗 -->
+<div id="customModal" class="modal-overlay">
+    <div class="modal-content">
+        <h3>🎉 明細已成功複製！</h3>
+        <p style="color:#555; font-size:0.95rem;">請點擊下方按鈕前往我們的社群，私訊「貼上」傳送給我們，將盡快為您處理訂單！</p>
+        <p style="color:#555; font-size:0.95rem;">※明細僅為線上估價試算，最終確認以粉專溝通為準。</p>
+        <a href="https://ig.me/m/freepaceshop" target="_blank" class="btn-social btn-ig">📸 前往 Instagram 私訊下單</a>
+        <button onclick="closeModal()" class="btn-social btn-close">先關閉</button>
+    </div>
+</div>
+
+<!-- 共用購物車邏輯腳本 -->
+<script src="cart.js"></script>
+<script>
+    // 頁面載入時專門渲染結算頁面的清單
+    document.addEventListener("DOMContentLoaded", () => {
+        renderCheckoutPage();
+    });
+
+    function renderCheckoutPage() {
+        const listContainer = document.getElementById('checkoutList');
+        if(!listContainer) return;
+
+        if(cart.length === 0) {
+            listContainer.innerHTML = `<p style="color:#888; text-align:center; padding: 30px 0;">目前清單沒有任何道具，快去挑選吧！</p>`;
+            updatePrices(0, 0, "");
+            return;
+        }
+
+        let subTotal = 0;
+        listContainer.innerHTML = cart.map((i, index) => {
+            subTotal += (i.price * i.qty);
+            
+            let specsHtml = '';
+            if (i.specs) {
+                i.specs.split(' / ').forEach(part => {
+                    specsHtml += `<span class="checkout-item-spec"> ${part}</span>`;
+                });
+            }
+
+            return `
+                <div class="checkout-item">
+                    <div class="checkout-item-info">
+                        <div class="checkout-item-name">${index + 1}. [NT$ ${(i.price * i.qty).toLocaleString()}] ${i.name} × ${i.qty}</div>
+                        ${specsHtml}
+                    </div>
+                    <span class="btn-remove" onclick="removeItemFromCheckout(${i.id})">移除</span>
+                </div>
+            `;
+        }).join('');
+
+        const shipInfo = calcShippingEngine(cart, subTotal);
+        updatePrices(subTotal, shipInfo.fee, shipInfo.desc);
+    }
+
+    // 結算頁面專用的移除商品
+    function removeItemFromCheckout(id) {
+        cart = cart.filter(i => i.id !== id);
+        saveCart();
+        renderCheckoutPage();
+    }
+
+    // 複製明細並跳出彈窗
+    function copyOrderAndShowModal() {
+        if(cart.length === 0) return alert("清單是空的，請先加入道具！");
+        
+        let total = document.getElementById('grandTotal').innerText;
+        let sub = document.getElementById('subTotal').innerText;
+        let ship = document.getElementById('shipFee').innerText;
+        let shipD = document.getElementById('shipDesc').innerText;
+
+        let text = "【FPS 道具部 - 客製化估價清單】\n----------------------------------\n";
+        cart.forEach((i, idx) => { 
+            text += `${idx + 1}. [NT$ ${(i.price * i.qty).toLocaleString()}] ${i.name} × ${i.qty}\n`;
+            if (i.specs) {
+                i.specs.split(' / ').forEach(part => {
+                    text += ` ${part}\n`;
+                });
+            }
+            text += `\n`;
+        });
+        
+        text += `----------------------------------\n商品小計：${sub}\n`;
+        
+        if(currentDiscount.active) {
+            let discountVal = document.getElementById('discountAmount').innerText;
+            text += `套用優惠：${currentDiscount.name} (${discountVal})\n`;
+        }
+        
+        text += `物流運費：${ship} (${shipD})\n預估應付總額：${total}\n\n※ 此明細為線上估價試算，最終確認以粉專溝通為準。`;
+        
+        navigator.clipboard.writeText(text).then(() => { 
+            document.getElementById('customModal').style.display = 'flex'; 
+        }).catch(err => { 
+            alert("複製失敗，請手動全選明細複製。"); 
+        });
+    }
+
+    function closeModal() { 
+        document.getElementById('customModal').style.display = 'none'; 
+    }
+</script>
+
+</body>
+</html>
