@@ -92,7 +92,7 @@ window.db = {
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 400, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
-            "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
+            "組合數量": { "1支組": { mult: 1, img: "" }, "2支組": { mult: 1.96, img: "" }, "3支組": { mult: 2.85, img: "" } }
         }
     },
     fire_short_cyl: {
@@ -128,7 +128,7 @@ window.db = {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 200, img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
-            "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
+            "組合數量": { "1支組": { mult: 1, img: "" }, "2支組": { mult: 1.96, img: "" }, "3支組": { mult: 2.85, img: "" } }
         }
     },
     fire_short_twi: {
@@ -164,7 +164,7 @@ window.db = {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加長2cm": { plus: 200, img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
-            "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
+            "組合數量": { "1支組": { mult: 1, img: "" }, "2支組": { mult: 1.96, img: "" }, "3支組": { mult: 2.85, img: "" } }
         }
     },
     fire_staff_levi: {
@@ -348,7 +348,7 @@ window.db = {
         specs: {
             "握把規格": { "預設大握把": { plus: 0, img: "" } },
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
-            "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
+            "組合數量": { "1顆組": { mult: 1, img: "" }, "2顆組": { mult: 1.96, img: "" }, "3顆組": { mult: 2.85, img: "" } }
         }
     },
     fire_meteor_det: {
@@ -467,7 +467,7 @@ window.db = {
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 400, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
-            "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
+            "組合數量": { "1支組": { mult: 1, img: "" }, "2支組": { mult: 1.96, img: "" }, "3支組": { mult: 2.85, img: "" } }
         }
     },
     prac_staff_contact: {
@@ -512,7 +512,7 @@ window.db = {
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 400, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
-            "組合數量": { "單長組": { mult: 1, img: "" }, "雙長組": { mult: 1.96, img: "" } }
+            "組合數量": { "1支組": { mult: 1, img: "" }, "2支組": { mult: 1.96, img: "" }, "3支組": { mult: 2.85, img: "" } }
         }
     },
     prac_staff_short_std: {
@@ -547,7 +547,7 @@ window.db = {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-short-weight.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" }, "全熱縮套": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-short-color.jpg" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
-            "組合數量": { "單短組": { mult: 1, img: "" }, "雙短組": { mult: 1.96, img: "" }, "三短組": { mult: 2.85, img: "" } }
+            "組合數量": { "1支組": { mult: 1, img: "" }, "2支組": { mult: 1.96, img: "" }, "3支組": { mult: 2.85, img: "" } }
         }
     },
     prac_poi_contact: {
@@ -579,7 +579,7 @@ window.db = {
         sub: { "練習Poi-接觸版 (90mm)": { price: 950, ship: 'small', img: "" } },
         specs: {
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
-            "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
+            "組合數量": { "1顆組": { mult: 1, img: "" }, "2顆組": { mult: 1.96, img: "" }, "3顆組": { mult: 2.85, img: "" } }
         }
     },
         prac_poi_flow: {
@@ -611,7 +611,7 @@ window.db = {
         specs: {
             "繩鍊規格": { "5mm高張力登山繩": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-5mm.jpg" }, "9mm高張力登山繩": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-9mm.jpg" }, "6mm彈性軟繩": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-tether-6mm.jpg" } },
             "握把規格": { "小握把": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-knob-small.jpg" }, "大握把": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-knob-big.jpg" }  },
-            "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
+            "組合數量": { "1顆組": { mult: 1, img: "" }, "2顆組": { mult: 1.96, img: "" }, "3顆組": { mult: 2.85, img: "" } }
         }
     },
     prac_meteor: {
@@ -672,7 +672,6 @@ window.db = {
         specs: {
             "棍身外徑": { "19mm": { plus: 0, img: "" }, "22mm": { plus: 0, img: "" } },
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 150, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-contact-weight.jpg" } },
-            "組合數量": { "單頭": { mult: 1, img: "" }, "雙頭": { mult: 1.8, img: "" } }
         }
     },
     prac_head_long_contact: {
@@ -703,7 +702,6 @@ window.db = {
         sub: { "練習頭-c": { price: 750, ship: 'small', img: "" } },
         specs: {
             "棍身外徑": { "19mm": { plus: 0, img: "" }, "22mm": { plus: 0, img: "" } },
-            "組合數量": { "單頭": { mult: 1, img: "" }, "雙頭": { mult: 1.8, img: "" } }
         }
     },    
     prac_head_short: {
