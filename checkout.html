@@ -53,6 +53,24 @@
         .btn-close:hover { background: #d0d0d0; }
         .btn-ruten { background: #F39C4E; }
         .btn-ruten:hover { background: #E2893B; } 
+
+        /* 📱 手機版排版優化 */
+        @media (max-width: 600px) {
+            .discount-box {
+                flex-direction: column; /* 讓輸入框和按鈕上下排列 */
+                align-items: stretch; /* 讓它們撐滿整個容器寬度 */
+            }
+            
+            .discount-box button {
+                width: 100%; /* 按鈕寬度 100% */
+                margin-top: 10px; /* 與上方輸入框保持一點距離 */
+            }
+
+            .checkout-card {
+                padding: 20px 15px; /* 在小螢幕上稍微減少卡片內距 */
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -175,17 +193,20 @@
     function copyOrderAndShowModal() {
         if(cart.length === 0) return alert("清單是空的，請先加入道具！");
         
-        let total = document.getElementById('grandTotal').innerText;
-        let sub = document.getElementById('subTotal').innerText;
-        let ship = document.getElementById('shipFee').innerText;
-        let shipD = document.getElementById('shipDesc').innerText;
+        // 修正讀取金額：使用 querySelectorAll 確保無論 ID 是否重複，都能抓到顯示出來的數值
+        let total = "", sub = "", ship = "", shipD = "";
+        
+        document.querySelectorAll('#grandTotal').forEach(el => { if(el.innerText.trim() !== "") total = el.innerText; });
+        document.querySelectorAll('#subTotal').forEach(el => { if(el.innerText.trim() !== "") sub = el.innerText; });
+        document.querySelectorAll('#shipFee').forEach(el => { if(el.innerText.trim() !== "") ship = el.innerText; });
+        document.querySelectorAll('#shipDesc').forEach(el => { if(el.innerText.trim() !== "") shipD = el.innerText; });
 
         let text = "【FPS 道具部 - 客製化估價清單】\n----------------------------------\n";
         cart.forEach((i, idx) => { 
             text += `${idx + 1}. [NT$ ${(i.price * i.qty).toLocaleString()}] ${i.name} × ${i.qty}\n`;
             if (i.specs) {
                 i.specs.split(' / ').forEach(part => {
-                    text += ` ${part}\n`;
+                    text += ` ${part}\n`; // 補上全形空白縮排讓文字對齊
                 });
             }
             text += `\n`;
@@ -193,8 +214,10 @@
         
         text += `----------------------------------\n商品小計：${sub}\n`;
         
-        if(currentDiscount.active) {
-            let discountVal = document.getElementById('discountAmount').innerText;
+        // 修正讀取折扣資訊
+        if(currentDiscount && currentDiscount.active) {
+            let discountVal = "";
+            document.querySelectorAll('#discountAmount').forEach(el => { if(el.innerText.trim() !== "") discountVal = el.innerText; });
             text += `套用優惠：${currentDiscount.name} (${discountVal})\n`;
         }
         
