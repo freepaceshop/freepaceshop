@@ -188,12 +188,15 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>圓柱5cm：5層</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+12g/li>
-                    <li style="margin-bottom: 4px;">◆ <b>操縱繩長度：</b>短繩：45cm（不含線圈/握把）／長繩：300cm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約210g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>操縱繩長度：</b>短繩：45cm（不含線圈/握把）／長繩：210cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約210g(5cm圓柱)、250g(6cm標準Twista)</li>
                 </ul>
             </div>
         `,
-        sub: { "火漂浮棍-5cm圓柱火頭": { price: 1000, ship: 'medium', img: "" } },
+        sub: {
+            "火漂浮棍-5cm圓柱": { price: 1000, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-roll5.jpg" },
+            "火漂浮棍-6cm標準Twista": { price: 1150, ship: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-staff-short-twistanormal6.jpg" }
+        },
         specs: {
             "火頭加大": { "不需加大": { plus: 0, img: "" }, "加厚一層": { plus: 200, img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "" }, "加厚款": { plus: 0, img: "" } },
@@ -316,7 +319,7 @@ window.db = {
             "繩鍊規格": { "鐵鍊組": { plus: 300, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-chain.jpg" }, "克維拉編織繩": { plus: 400, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-blackkevlar.jpg" }, "Technora編織繩": { plus: 600, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-poi-technora.jpg" } },
             "握把規格": { "小握把": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-knob-small-s.jpg" }, "大握把": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-knob-big-s.jpg" } },
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
-            "組合數量": { "單球組": { mult: 1, img: "" }, "雙球組": { mult: 1.96, img: "" }, "三球組": { mult: 2.85, img: "" } }
+            "組合數量": { "1顆組": { mult: 1, img: "" }, "2顆組": { mult: 1.96, img: "" }, "3顆組": { mult: 2.88, img: "" } }
         }
     },
     fire_poi_one: {
@@ -348,7 +351,7 @@ window.db = {
         specs: {
             "握把規格": { "預設大握把": { plus: 0, img: "" } },
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
-            "組合數量": { "1顆組": { mult: 1, img: "" }, "2顆組": { mult: 1.96, img: "" }, "3顆組": { mult: 2.85, img: "" } }
+            "組合數量": { "1顆組": { mult: 1, img: "" }, "2顆組": { mult: 1.96, img: "" }, "3顆組": { mult: 2.88, img: "" } }
         }
     },
     fire_meteor_det: {
@@ -394,7 +397,7 @@ window.db = {
         },
         specs: {
             "繩鍊規格": { "鐵鍊+連接繩": { plus: 300, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-chain.jpg" }, "克維拉粗繩": { plus: 1000, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-fire-meteor-kevlar.jpg" } },
-            "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} }
+            "總長度（鐵鍊組不適用）": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} }
         }
     },
     fire_mini: {
@@ -425,8 +428,8 @@ window.db = {
 
     // ✨ 練習道具
     prac_staff_std: {
-        title: "練習長棍 (標準版)", cat: "prac",
-        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-normal.jpg"],
+        title: "練習長棍 (輕量版)", cat: "prac",
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-10C.jpg"],["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-15C.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
@@ -435,9 +438,9 @@ window.db = {
                     <li>搭配運動用止滑握把布</li>
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
                     <li>頂部完全覆蓋，無金屬外露</li>
-                    <li>靈活拆裝配重環，適用多種需求</li>
+                    <li>配重接近圓柱火頭版本之火棍泡油後重量</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
-                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -445,9 +448,10 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；直徑6cm，標準款長10cm／配重環長5cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>棍頭：</b>3D列印 TPU印製；直徑5cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+25g</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約480g(標準款)；單邊火頭約120g，單個配重環50g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>棍頭重量：</b>[10cm]約130g／[15cm]約170g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約490g(火頭10cm)、540g(火頭15cm)</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -457,13 +461,17 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>端頭：</b>19mm * 17mm , 45cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>中段：</b>17mm * 15mm , 46~70cm（總長度120~144cm）</li>
                     <li style="margin-bottom: 4px;">◆ <b>實際握把長度：</b>30~54cm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約510g(標準款)</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約520g(10cm)</li>
                 </ul>
             </div>
         `,
-        sub: { "練習長棍-標準版": { price: 1100, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-normal.jpg" } },
+        sub: {
+            "練習長棍 (輕量版)-10cm": { price: 1000, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-10C.jpg" },
+            "練習長棍 (輕量版)-15cm": { price: 1200, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-15C.jpg" }
+        },
         specs: {
-            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 200, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-contact-weight.jpg" } },
+            "上半部配色": { "黑":{plus:0}, "白":{plus:0}, "灰":{plus:0}, "紅":{plus:0}, "藍":{plus:0}, "黃":{plus:0} },
+            "下半部配色": { "跟上半部一樣":{plus:0}, "黑":{plus:50}, "白":{plus:50}, "灰":{plus:50}, "紅":{plus:50}, "藍":{plus:50}, "黃":{plus:50} },
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 400, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
@@ -472,7 +480,7 @@ window.db = {
     },
     prac_staff_contact: {
         title: "練習長棍 (接觸版)", cat: "prac",
-        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-90.jpg"],
+        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-15T.jpg"],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
@@ -481,9 +489,10 @@ window.db = {
                     <li>搭配運動用止滑握把布</li>
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
                     <li>頂部完全覆蓋，無金屬外露</li>
-                    <li>球型端頭大幅提升離心力，擬龍棍手感</li>
+                    <li>配重接近Twista火頭版本之火棍泡油後重量</li>
+                    <li>特殊球型端頭大幅提升離心力，擬龍棍手感</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
-                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -491,9 +500,10 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>19mm * 17mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；直徑90mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+25g</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約600g；單邊火頭約180g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>棍頭：</b>3D列印 TPU印製</li>
+                    <li style="margin-bottom: 4px;">◆ <b>棍頭重量：</b>[9cm圓球]約180g／[10cm]約210g／[15cm]約260g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約600g(9cm圓球)、約650g(10cm)、750g(15cm)</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -503,12 +513,15 @@ window.db = {
                     <li style="margin-bottom: 4px;">◆ <b>端頭：</b>19mm * 17mm , 45cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>中段：</b>17mm * 15mm , 46~70cm（總長度120~144cm）</li>
                     <li style="margin-bottom: 4px;">◆ <b>實際握把長度：</b>30~54cm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約630g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長140cm]約680g(10cm)</li>
                 </ul>
             </div>
         `,
-        sub: { "練習長棍-接觸版": { price: 1600, ship: 'long', img: "" } },
-        specs: {
+        sub: {
+            "練習長棍 (接觸版)-9cm圓球": { price: 1200, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-10C.jpg" },
+            "練習長棍 (接觸版)-10cm": { price: 1300, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-15C.jpg" },
+            "練習長棍 (接觸版)-15cm": { price: 1500, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-15C.jpg" }
+        },        specs: {
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 400, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
@@ -526,9 +539,9 @@ window.db = {
                     <li>搭配運動用止滑握把布</li>
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
                     <li>頂部完全覆蓋，無金屬外露</li>
-                    <li>靈活拆裝配重環，適用多種需求</li>
+                    <li>配重接近圓柱火頭版本之火棍泡油後重量</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
-                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -536,15 +549,16 @@ window.db = {
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm</li>
-                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；直徑5cm，本體長5cm／配重環長2.5cm</li>
+                    <li style="margin-bottom: 4px;">◆ <b>火頭：</b>3D列印 TPU印製；直徑5cm，長5cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+12g、熱縮套+50g</li>
-                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約250g（標準款）；單個配重環30g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>棍頭重量：</b>約70g</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約260g</li>
                 </ul>
             </div>
         `,
-        sub: { "練習短棍": { price: 600, ship: 'medium', img: "" } },
+        sub: { "練習短棍": { price: 500, ship: 'medium', img: "" } },
         specs: {
-            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-short-weight.jpg" } },
+            "火頭加重": { "不需加重": { plus: 0, img: "" }, "加重（單邊最多+20g）": { plus: 100, img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" }, "全熱縮套": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-short-color.jpg" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
             "組合數量": { "1支組": { mult: 1, img: "" }, "2支組": { mult: 1.96, img: "" }, "3支組": { mult: 2.88, img: "" } }
@@ -562,7 +576,7 @@ window.db = {
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※白繩根據進貨狀況偶有點綴配色變動</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
-                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -592,7 +606,7 @@ window.db = {
                     <li>流線型外觀，適合新手入門</li>
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
-                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -626,7 +640,7 @@ window.db = {
                     <li>頭端以3D列印打造，採用高韌性耐磨TPU材質</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※白繩根據進貨狀況偶有點綴配色變動</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
-                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -655,7 +669,7 @@ window.db = {
                     <li>可積木式自由排列，5公分為一單位</li>
                     <li>適用外徑19mm棍身</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
-                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -686,7 +700,7 @@ window.db = {
                     <li>如需其他規格，歡迎私訊洽詢</li>
                     <li>球型端頭大幅提升離心力，擬龍棍手感</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
-                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -716,7 +730,7 @@ window.db = {
                     <li>適用外徑13mm或15mm棍身</li>
                     <li>如需其他規格，歡迎私訊洽詢</li>
                     <li style="list-style: none; text-indent: -1.2em; margin-top: 8px;">※為延長其壽命，建議保持乾燥，表面可使用清水或一般酒精清潔，並存放於乾燥陰涼處</li>
-                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象，不影響實際強度</li>
+                    <li style="list-style: none; text-indent: -1.2em;">※長期使用後表面微幅泛黃、粗糙與毛邊，係屬正常現象</li>
                 </ul>
             </div>
             <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 15px 0;">
@@ -1348,61 +1362,7 @@ function renderCart() {
     }).join('');
 
     const shipInfo = calcShippingEngine(cart, subTotal);
-    updatePrices(subTotal, shipInfo.fee, shipInfo.desc);
-}
-
-function calcShippingEngine(items, total) {
-    if(total >= 5000) {
-        return { 
-            fee: 0, 
-            desc: "🎉 達 NT$5,000 免運門檻！", 
-            cleanDesc: "" 
-        };
-    }
-
-    // 💡 抓取長棍數量：若規格包含「雙長組」，數量自動 × 2
-    const longQty = items.filter(i => i.ship === 'long').reduce((s, i) => {
-        let mult = (i.specs && i.specs.includes('雙長組')) ? 2 : 1;
-        return s + (i.qty * mult);
-    }, 0);
-
-    const medQty = items.filter(i => i.ship === 'medium').reduce((s, i) => s + i.qty, 0);
-    const smallQty = items.filter(i => i.ship === 'small').reduce((s, i) => s + i.qty, 0);
-
-    let fee = 0, desc = [], cleanDesc = [];
-
-    if(longQty > 0) { 
-        fee += (longQty * 100); 
-        desc.push(`長棍獨立包裹 × ${longQty}支`);
-        cleanDesc.push(`長棍獨立包裹 × ${longQty}支`);
-    }
-    if(medQty > 0) { 
-        let boxes = Math.ceil(medQty / 6); 
-        fee += (boxes * 100); 
-        desc.push(`中型道具包裹 × ${boxes}箱`);
-        cleanDesc.push(`中型包裹 × ${boxes}箱`);
-    }
-    if(smallQty > 0) { 
-        fee += 60; 
-        desc.push(`小型包裹`);
-        cleanDesc.push(`小型包裹`);
-    }
-
-    if(longQty >= 5 || fee >= 300) {
-        return { 
-            fee: 300, 
-            desc: "🚛 訂單大宗：優化改走貨運", 
-            cleanDesc: "貨運公司" 
-        };
-    }
-
-    return { 
-        fee: fee, 
-        desc: `優化物流：${desc.join(' + ')}`,
-        cleanDesc: cleanDesc.join(' + ')
-    };
-}
-
+    
 function updatePrices(sub, ship, desc) {
     let finalSub = sub;
     let discountAmount = 0;
@@ -1440,8 +1400,12 @@ function updatePrices(sub, ship, desc) {
 
 function copyOrder() {
     if(cart.length === 0) return alert("清單是空的，請先加入道具！");
-    let total = document.getElementById('grandTotal').innerText, sub = document.getElementById('subTotal').innerText;
-    let ship = document.getElementById('shipFee').innerText, shipD = document.getElementById('shipDesc').innerText;
+    let total = "", sub = "", ship = "", shipD = "";
+
+    document.querySelectorAll('#grandTotal').forEach(el => { if(el.innerText.trim() !== "") total = el.innerText; });
+    document.querySelectorAll('#subTotal').forEach(el => { if(el.innerText.trim() !== "") sub = el.innerText; });
+    document.querySelectorAll('#shipFee').forEach(el => { if(el.innerText.trim() !== "") ship = el.innerText; });
+    document.querySelectorAll('#shipDesc').forEach(el => { if(el.innerText.trim() !== "") shipD = el.innerText; });
 
     let text = "【FPS 道具部 - 客製化估價清單】\n----------------------------------\n";
     
@@ -1450,7 +1414,7 @@ function copyOrder() {
         if (i.specs) {
             let specParts = i.specs.split(' / ');
             specParts.forEach(part => {
-                text += ` ${part}\n`;
+                text += `  ${part}\n`;
             });
         }
         text += `\n`;
@@ -1458,8 +1422,9 @@ function copyOrder() {
     
     text += `----------------------------------\n商品小計：${sub}\n`;
     
-    if(currentDiscount.active) {
-        let discountVal = document.getElementById('discountAmount').innerText;
+    if(currentDiscount && currentDiscount.active) {
+        let discountVal = "";
+        document.querySelectorAll('#discountAmount').forEach(el => { if(el.innerText.trim() !== "") discountVal = el.innerText; });
         text += `套用優惠：${currentDiscount.name} (${discountVal})\n`;
     }
     
@@ -1469,11 +1434,8 @@ function copyOrder() {
     .catch(err => { alert("複製失敗，請手動全選明細複製。"); });
 }
 
-
-
 function closeModal() { document.getElementById('customModal').style.display = 'none'; }
 document.addEventListener("DOMContentLoaded", renderCart);
-
 
 // 💡 全域變數：記錄目前套用的折扣資訊（加入 localStorage 記憶功能，跨頁不消失）
 let currentDiscount = JSON.parse(localStorage.getItem('fps_discount')) || { active: false, name: "", rate: 1 };
@@ -1482,12 +1444,10 @@ function updatePrices(sub, ship, desc) {
     let finalSub = sub;
     let discountAmount = 0;
 
-    // 計算折扣
     if(currentDiscount.active && sub > 0) {
         finalSub = Math.round(sub * currentDiscount.rate);
         discountAmount = sub - finalSub;
         
-        // 使用 querySelectorAll 確保無論是側欄還是結算頁的元素都一併更新
         document.querySelectorAll('#discountRow').forEach(el => el.style.display = "flex");
         document.querySelectorAll('#discountName').forEach(el => el.innerText = currentDiscount.name);
         document.querySelectorAll('#discountAmount').forEach(el => el.innerText = `- NT$ ${discountAmount.toLocaleString()}`);
@@ -1499,10 +1459,8 @@ function updatePrices(sub, ship, desc) {
     document.querySelectorAll('#shipFee').forEach(el => el.innerText = `NT$ ${ship.toLocaleString()}`);
     document.querySelectorAll('#shipDesc').forEach(el => el.innerText = desc);
     
-    // 總金額 = 折扣後的小計 + 運費
     document.querySelectorAll('#grandTotal').forEach(el => el.innerText = `NT$ ${(finalSub + ship).toLocaleString()}`);
     
-    // 免運條計算 (以折後金額 finalSub 計算免運門檻)
     document.querySelectorAll('#shipFill').forEach(el => {
         const percent = Math.min((finalSub / 5000) * 100, 100);
         el.style.width = percent + '%';
@@ -1515,7 +1473,6 @@ function updatePrices(sub, ship, desc) {
 function applyDiscount() {
     let codeInput = "";
     
-    // 解決 ID 衝突：尋找畫面上「有實際輸入文字」的那個折扣碼欄位
     document.querySelectorAll('#discountCode').forEach(el => {
         if(el.value.trim() !== "") {
             codeInput = el.value.trim().toUpperCase();
@@ -1523,8 +1480,8 @@ function applyDiscount() {
     });
 
     const validCodes = {
-        "STUDENT": { name: "學生優惠", rate: 0.9 }, // 9折
-        "FPSPROMO": { name: "活動特惠", rate: 0.95 }, // 95折
+        "STUDENT": { name: "學生優惠", rate: 0.9 },
+        "FPSPROMO": { name: "活動特惠", rate: 0.95 },
     };
 
     if(validCodes[codeInput]) {
@@ -1535,14 +1492,11 @@ function applyDiscount() {
     } else {
         alert("無效的優惠代碼！");
         currentDiscount = { active: false, name: "", rate: 1 };
-        // 輸入錯誤時，清空所有折扣輸入框
         document.querySelectorAll('#discountCode').forEach(el => el.value = "");
     }
     
-    // 💾 把折扣狀態存進瀏覽器，這樣切換頁面或重新整理折扣都不會歸零
     localStorage.setItem('fps_discount', JSON.stringify(currentDiscount));
     
-    // 重新渲染並計算金額
     if(typeof renderCheckoutPage === 'function') {
         renderCheckoutPage();
     } else {
