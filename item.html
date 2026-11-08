@@ -254,6 +254,38 @@ function addToCartItemPage() {
     cart.push({ id: Date.now(), name: actSub.getAttribute('data-name'), specs: specs.join(' / ') || "標準出貨", price: Math.round((parseInt(actSub.getAttribute('data-value')) + extra) * mult), qty: parseInt(document.getElementById('qty').value)||1, ship: itemShip });
     saveCart(); renderCart(); toggleCart(true);
 }
+
+function updateColorDependencies() {
+    // 1. 取得目前上半部選中的顏色
+    const topActive = document.querySelector('[data-spec-group="上半部配色"] .active');
+    if (!topActive) return;
+    const selectedTopColor = topActive.innerText.trim();
+
+    // 2. 遍歷下半部配色的選項按鈕
+    const bottomButtons = document.querySelectorAll('[data-spec-group="下半部配色"] .spec-btn');
+    bottomButtons.forEach(btn => {
+        const colorVal = btn.innerText.trim();
+        
+        // 當該顏色與上半部相同，且不是「跟上半部一樣」時禁用
+        if (colorVal === selectedTopColor && colorVal !== "跟上半部一樣") {
+            btn.classList.add('disabled');
+            btn.style.pointerEvents = 'none';
+            btn.style.opacity = '0.3';
+            
+            // 防呆：如果原本剛好選到這個被禁用的顏色，自動重置選回「跟上半部一樣」
+            if (btn.classList.contains('active')) {
+                btn.classList.remove('active');
+                const defaultBtn = document.querySelector('[data-spec-group="下半部配色"] [data-val="跟上半部一樣"]');
+                if (defaultBtn) defaultBtn.click();
+            }
+        } else {
+            btn.classList.remove('disabled');
+            btn.style.pointerEvents = 'auto';
+            btn.style.opacity = '1';
+        }
+    });
+}
+
 </script>
 
 </body>
