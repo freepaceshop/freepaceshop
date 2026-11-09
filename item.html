@@ -199,9 +199,11 @@ if(data) {
         let imgHtml = data.sub[k].img ? `<img src="${data.sub[k].img}">` : "";
         btn.innerHTML = `${imgHtml}<span>${k}<br>($${data.sub[k].price})</span>`;
         btn.setAttribute('data-value', data.sub[k].price); btn.setAttribute('data-ship', data.sub[k].ship); btn.setAttribute('data-name', k);
-        btn.onclick = function() { subGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active')); this.classList.add('active'); updateLivePrice(); };
-        subGrid.appendChild(btn); isFirst = false;
-    }
+        btn.onclick = function() { 
+                    specGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active')); 
+                    this.classList.add('active');
+                specGrid.appendChild(btn); isOptFirst = false;
+            }
     subGroup.appendChild(subGrid); container.appendChild(subGroup);
 
     // 渲染：其他選項
