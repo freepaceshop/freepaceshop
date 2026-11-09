@@ -157,6 +157,7 @@
 </div>
 
 <script src="cart.js"></script>
+    
 <script>
 const urlParams = new URLSearchParams(window.location.search);
 let productID = urlParams.get('id'); 
@@ -199,11 +200,9 @@ if(data) {
         let imgHtml = data.sub[k].img ? `<img src="${data.sub[k].img}">` : "";
         btn.innerHTML = `${imgHtml}<span>${k}<br>($${data.sub[k].price})</span>`;
         btn.setAttribute('data-value', data.sub[k].price); btn.setAttribute('data-ship', data.sub[k].ship); btn.setAttribute('data-name', k);
-        btn.onclick = function() { 
-                    specGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active')); 
-                    this.classList.add('active');
-                specGrid.appendChild(btn); isOptFirst = false;
-            }
+        btn.onclick = function() { subGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active')); this.classList.add('active'); updateLivePrice(); };
+        subGrid.appendChild(btn); isFirst = false;
+    }
     subGroup.appendChild(subGrid); container.appendChild(subGroup);
 
     // 渲染：其他選項
@@ -222,10 +221,20 @@ if(data) {
                 btn.innerHTML = `${im}<span>${opt}${pt}</span>`;
                 btn.setAttribute('data-plus', val.plus||0); btn.setAttribute('data-mult', val.mult||1); btn.setAttribute('data-specname', specName); btn.setAttribute('data-optname', opt);
                 if(val.ship_override) btn.setAttribute('data-shipoverride', val.ship_override);
+                
+                // 🔥 修復此處的 btn.onclick 邏輯與閉合
                 btn.onclick = function() { 
                     specGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active')); 
                     this.classList.add('active');
-                specGrid.appendChild(btn); isOptFirst = false;
+                    
+                    // 觸發防呆檢查
+                    updateColorDependencies();
+                    // 更新價格
+                    updateLivePrice();
+                };
+                // 這兩行必須在 onclick 外面
+                specGrid.appendChild(btn); 
+                isOptFirst = false;
             }
             specGroup.appendChild(specGrid); container.appendChild(specGroup); specIndex++;
         }
@@ -289,7 +298,6 @@ function addToCartItemPage() {
     cart.push({ id: Date.now(), name: actSub.getAttribute('data-name'), specs: specs.join(' / ') || "標準出貨", price: Math.round((parseInt(actSub.getAttribute('data-value')) + extra) * mult), qty: parseInt(document.getElementById('qty').value)||1, ship: itemShip });
     saveCart(); renderCart(); toggleCart(true);
 }
-
 </script>
 
 </body>
