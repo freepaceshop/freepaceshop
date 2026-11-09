@@ -429,7 +429,10 @@ window.db = {
     // ✨ 練習道具
     prac_staff_std: {
         title: "練習長棍 (輕量版)", cat: "prac",
-        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-10C.jpg"],["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-15C.jpg"],
+        images: [
+            "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-10C.jpg",
+            "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-15C.jpg"
+        ],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
