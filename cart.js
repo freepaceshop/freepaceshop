@@ -187,7 +187,7 @@ window.db = {
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
                     <li style="margin-bottom: 4px;">◆ <b>棍身：</b>15mm * 13mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>火頭：</b>圓柱5cm：5層</li>
-                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+12g/li>
+                    <li style="margin-bottom: 4px;">◆ <b>握把布：</b>一般標準防滑款 ※加厚+12g</li>
                     <li style="margin-bottom: 4px;">◆ <b>操縱繩長度：</b>短繩：45cm（不含線圈/握把）／長繩：210cm</li>
                     <li style="margin-bottom: 4px;">◆ <b>總重量：</b>[總長90cm]約210g(5cm圓柱)、250g(6cm標準Twista)</li>
                 </ul>
@@ -290,7 +290,7 @@ window.db = {
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 鐵鍊組預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環 — 鐵鍊 — 快接環 — 培林握把</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環 — 鐵鍊 — 快接環 — 培林握把</b></li>
                     <li style="margin-bottom: 4px;">◆ <b>握把：</b>有培林（小握把僅白色、大握把顏色以現貨為主）</li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>鐵鍊長度35cm；除非特殊要求，否則一律不裁剪</li>
                 </ul>
@@ -299,7 +299,7 @@ window.db = {
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 編織繩組預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環+編織繩+握把</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環+編織繩+握把</b></li>
                     <li style="margin-bottom: 4px;">◆ <b>握把：</b>有培林（小握把僅白色、大握把顏色以現貨為主）</li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人臂長調配 (45cm - 60cm)</li>
                 </ul>
@@ -371,7 +371,7 @@ window.db = {
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 鐵鍊組預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環 — 鐵鍊 — 快接環+連接繩+快接環 — 鐵鍊 — 火頭</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環 — 鐵鍊 — 快接環+連接繩+快接環 — 鐵鍊 — 火頭</b></li>
                     <li style="margin-bottom: 4px;">◆ <b>鐵鍊連接繩：</b>11mm白色登山繩 ※白繩根據進貨狀況偶有點綴配色變動</li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>連接繩80cm、鐵鍊長度35cm；除非特殊要求，否則一律不裁剪</li>
                 </ul>
@@ -380,7 +380,7 @@ window.db = {
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 編織繩組預設規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環+粗繩+快接環 — 火頭</li>
+                    <li style="margin-bottom: 4px;">◆ <b>總配置：火頭 — 快接環+粗繩+快接環 — 火頭</b></li>
                     <li style="margin-bottom: 4px;">◆ <b>客製長度：</b>依據個人需求調配 (140 - 180cm)</li>
                 </ul>
             </div>
@@ -524,7 +524,8 @@ window.db = {
             "練習長棍 (接觸版)-9cm圓球": { price: 1200, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-10C.jpg" },
             "練習長棍 (接觸版)-10cm": { price: 1300, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-15C.jpg" },
             "練習長棍 (接觸版)-15cm": { price: 1500, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-15C.jpg" }
-        },        specs: {
+        },
+        specs: {
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 400, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
@@ -599,7 +600,7 @@ window.db = {
             "組合數量": { "1顆組": { mult: 1, img: "" }, "2顆組": { mult: 1.96, img: "" }, "3顆組": { mult: 2.85, img: "" } }
         }
     },
-        prac_poi_flow: {
+    prac_poi_flow: {
         title: "練習Poi (標準版)", cat: "prac",
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-poi-normal.jpg"],
         details: `
@@ -661,7 +662,7 @@ window.db = {
             "總長度": { "140cm":{plus:0}, "150cm":{plus:0}, "160cm":{plus:0}, "170cm":{plus:0}, "180cm":{plus:0} }
         }
     },
-        prac_head_long_standard: {
+    prac_head_long_standard: {
         title: "練習頭-s", cat: "prac",
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-head-staff-standard.jpg"],
         details: `
@@ -749,11 +750,11 @@ window.db = {
         sub: { "練習頭-ss": { price: 250, ship: 'small', img: "" } },
         specs: {
             "棍身外徑": { "13mm": { plus: 0, img: "" }, "15mm": { plus: 0, img: "" } },
-            "火頭加大": { "不需加大": { plus: 0, img: "" }, "加大": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-short-weight.jpg" } },
+            "火頭加大": { "不需加大": { plus: 100, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-short-weight.jpg" } },
         }
     },
     
-    // 📦 套組 (拆分獨立項目)
+    // 📦 套組
     set_knob_small: {
         title: "培林小握把", cat: "set", hideSub: true,
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/set-knob-small.jpg"],
@@ -967,7 +968,7 @@ window.db = {
         }
     },
 
-    // ⚙️ 耗材配件 (拆分獨立項目)
+    // ⚙️ 耗材配件
     parts_grip_normal: {
         title: "握把布 (普通款)", cat: "parts", hideSub: true,
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/parts-grip-normal.jpg"],
@@ -1099,7 +1100,7 @@ window.db = {
             <div>
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">📐 產品規格</strong>
                 <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.7; color: #444;">
-                    <li style="margin-bottom: 4px;">◆ <b>尺寸：</b>線徑3mm、</li>
+                    <li style="margin-bottom: 4px;">◆ <b>尺寸：</b>線徑3mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>總長度：</b>36mm</li>
                     <li style="margin-bottom: 4px;">◆ <b>總重量：</b>約5g</li>
                 </ul>
@@ -1131,7 +1132,7 @@ window.db = {
         sub: { "培林 (#7)": { price: 20, ship: 'small', img: "" } }, specs: {}
     },
 
-    // 🛠️ 管材與防火布 (拆分獨立項目)
+    // 🛠️ 管材與防火布
     mats_alu_19: {
         title: "7075 鋁棍 (19*17mm)", cat: "mats", hideSub: true,
         images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/material-pipe-19mm.jpg"],
@@ -1319,14 +1320,39 @@ window.db = {
     }
 };
 
-// 💡 購物車底層邏輯
+// 💡 購物車與折扣核心邏輯
 let cart = JSON.parse(localStorage.getItem('fps_cart')) || [];
-function saveCart() { localStorage.setItem('fps_cart', JSON.stringify(cart)); }
+let currentDiscount = JSON.parse(localStorage.getItem('fps_discount')) || { active: false, name: "", rate: 1 };
+
+function saveCart() { 
+    localStorage.setItem('fps_cart', JSON.stringify(cart)); 
+}
+
 function toggleCart(show) {
     const drawer = document.getElementById('cartDrawer');
-    if(drawer) { if(show) drawer.classList.add('open'); else drawer.classList.remove('open'); }
+    if(drawer) { 
+        if(show) drawer.classList.add('open'); 
+        else drawer.classList.remove('open'); 
+    }
 }
-function removeFromCart(id) { cart = cart.filter(i => i.id !== id); saveCart(); renderCart(); }
+
+function removeFromCart(id) { 
+    cart = cart.filter(i => i.id !== id); 
+    saveCart(); 
+    renderCart(); 
+}
+
+// 💡 簡單運費計算邏輯 (若已有自訂 calcShippingEngine 可替換)
+function calcShippingEngine(cartItems, subTotal) {
+    if (subTotal === 0 || subTotal >= 5000) return { fee: 0, desc: "滿 NT$ 5,000 免運" };
+    
+    let hasLong = cartItems.some(i => i.ship === 'long');
+    let hasMedium = cartItems.some(i => i.ship === 'medium');
+
+    if (hasLong) return { fee: 200, desc: "含大型長棍物件 (大型物流)" };
+    if (hasMedium) return { fee: 100, desc: "含中型物件" };
+    return { fee: 60, desc: "一般包裹/超商取貨" };
+}
 
 function renderCart() {
     const list = document.getElementById('cartList');
@@ -1344,7 +1370,6 @@ function renderCart() {
     list.innerHTML = cart.map((i, index) => {
         subTotal += (i.price * i.qty);
         
-        // 💡 把規格字串（原本用 / 隔開的）拆開變成多行清單
         let specsHtml = '';
         if (i.specs) {
             let specParts = i.specs.split(' / ');
@@ -1365,40 +1390,37 @@ function renderCart() {
     }).join('');
 
     const shipInfo = calcShippingEngine(cart, subTotal);
-    
+    updatePrices(subTotal, shipInfo.fee, shipInfo.desc);
+}
+
 function updatePrices(sub, ship, desc) {
     let finalSub = sub;
     let discountAmount = 0;
 
-    // 計算折扣
     if(currentDiscount.active && sub > 0) {
         finalSub = Math.round(sub * currentDiscount.rate);
         discountAmount = sub - finalSub;
         
-        if(document.getElementById('discountRow')) {
-            document.getElementById('discountRow').style.display = "flex";
-            document.getElementById('discountName').innerText = currentDiscount.name;
-            document.getElementById('discountAmount').innerText = `- NT$ ${discountAmount.toLocaleString()}`;
-        }
+        document.querySelectorAll('#discountRow').forEach(el => el.style.display = "flex");
+        document.querySelectorAll('#discountName').forEach(el => el.innerText = currentDiscount.name);
+        document.querySelectorAll('#discountAmount').forEach(el => el.innerText = `- NT$ ${discountAmount.toLocaleString()}`);
     } else {
-        if(document.getElementById('discountRow')) {
-            document.getElementById('discountRow').style.display = "none";
-        }
+        document.querySelectorAll('#discountRow').forEach(el => el.style.display = "none");
     }
 
-    if(document.getElementById('subTotal')) document.getElementById('subTotal').innerText = `NT$ ${sub.toLocaleString()}`;
-    if(document.getElementById('shipFee')) document.getElementById('shipFee').innerText = `NT$ ${ship.toLocaleString()}`;
-    if(document.getElementById('shipDesc')) document.getElementById('shipDesc').innerText = desc;
+    document.querySelectorAll('#subTotal').forEach(el => el.innerText = `NT$ ${sub.toLocaleString()}`);
+    document.querySelectorAll('#shipFee').forEach(el => el.innerText = `NT$ ${ship.toLocaleString()}`);
+    document.querySelectorAll('#shipDesc').forEach(el => el.innerText = desc);
     
-    // 總金額 = 折扣後的小計 + 運費
-    if(document.getElementById('grandTotal')) document.getElementById('grandTotal').innerText = `NT$ ${(finalSub + ship).toLocaleString()}`;
+    document.querySelectorAll('#grandTotal').forEach(el => el.innerText = `NT$ ${(finalSub + ship).toLocaleString()}`);
     
-    // 免運條計算 (還是以折後金額 finalSub 來算免運門檻會比較不會虧本)
-    if(document.getElementById('shipFill')) {
+    document.querySelectorAll('#shipFill').forEach(el => {
         const percent = Math.min((finalSub / 5000) * 100, 100);
-        document.getElementById('shipFill').style.width = percent + '%';
-        document.getElementById('shipMsg').innerText = finalSub >= 5000 ? "🎉 已享受免運費優惠！" : `還差 NT$ ${(5000 - finalSub).toLocaleString()} 即可享有免運`;
-    }
+        el.style.width = percent + '%';
+    });
+    document.querySelectorAll('#shipMsg').forEach(el => {
+        el.innerText = finalSub >= 5000 ? "🎉 已享受免運費優惠！" : `還差 NT$ ${(5000 - finalSub).toLocaleString()} 即可享有免運`;
+    });
 }
 
 function copyOrder() {
@@ -1433,44 +1455,18 @@ function copyOrder() {
     
     text += `物流運費：${ship} (${shipD})\n預估應付總額：${total}\n\n※ 此明細為線上估價試算，最終確認以粉專溝通為準。`;
     
-    navigator.clipboard.writeText(text).then(() => { document.getElementById('customModal').style.display = 'flex'; })
-    .catch(err => { alert("複製失敗，請手動全選明細複製。"); });
+    navigator.clipboard.writeText(text).then(() => { 
+        const modal = document.getElementById('customModal');
+        if(modal) modal.style.display = 'flex';
+        else alert("估價單已成功複製到剪貼簿！");
+    }).catch(err => { 
+        alert("複製失敗，請手動全選明細複製。"); 
+    });
 }
 
-function closeModal() { document.getElementById('customModal').style.display = 'none'; }
-document.addEventListener("DOMContentLoaded", renderCart);
-
-// 💡 全域變數：記錄目前套用的折扣資訊（加入 localStorage 記憶功能，跨頁不消失）
-let currentDiscount = JSON.parse(localStorage.getItem('fps_discount')) || { active: false, name: "", rate: 1 };
-
-function updatePrices(sub, ship, desc) {
-    let finalSub = sub;
-    let discountAmount = 0;
-
-    if(currentDiscount.active && sub > 0) {
-        finalSub = Math.round(sub * currentDiscount.rate);
-        discountAmount = sub - finalSub;
-        
-        document.querySelectorAll('#discountRow').forEach(el => el.style.display = "flex");
-        document.querySelectorAll('#discountName').forEach(el => el.innerText = currentDiscount.name);
-        document.querySelectorAll('#discountAmount').forEach(el => el.innerText = `- NT$ ${discountAmount.toLocaleString()}`);
-    } else {
-        document.querySelectorAll('#discountRow').forEach(el => el.style.display = "none");
-    }
-
-    document.querySelectorAll('#subTotal').forEach(el => el.innerText = `NT$ ${sub.toLocaleString()}`);
-    document.querySelectorAll('#shipFee').forEach(el => el.innerText = `NT$ ${ship.toLocaleString()}`);
-    document.querySelectorAll('#shipDesc').forEach(el => el.innerText = desc);
-    
-    document.querySelectorAll('#grandTotal').forEach(el => el.innerText = `NT$ ${(finalSub + ship).toLocaleString()}`);
-    
-    document.querySelectorAll('#shipFill').forEach(el => {
-        const percent = Math.min((finalSub / 5000) * 100, 100);
-        el.style.width = percent + '%';
-    });
-    document.querySelectorAll('#shipMsg').forEach(el => {
-        el.innerText = finalSub >= 5000 ? "🎉 已享受免運費優惠！" : `還差 NT$ ${(5000 - finalSub).toLocaleString()} 即可享有免運`;
-    });
+function closeModal() { 
+    const modal = document.getElementById('customModal');
+    if(modal) modal.style.display = 'none'; 
 }
 
 function applyDiscount() {
@@ -1506,3 +1502,5 @@ function applyDiscount() {
         renderCart();
     }
 }
+
+document.addEventListener("DOMContentLoaded", renderCart);
