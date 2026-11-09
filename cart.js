@@ -473,8 +473,23 @@ window.db = {
             "練習長棍 (輕量版)-15cm": { price: 1200, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-15C.jpg" }
         },
         specs: {
-            "上半部配色": { "黑":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" }, "白":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-white.jpg" }, "灰":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-grey.jpg" }, "紅":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-red.jpg" }, "藍":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-blue.jpg" }, "黃":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-yellow.jpg" } },
-            "下半部配色": { "跟上半部一樣":{plus:0}, "黑":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" }, "白":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-white.jpg" }, "灰":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-grey.jpg" }, "紅":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-red.jpg" }, "藍":{plus:, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-blue.jpg" }, "黃":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-yellow.jpg" } },
+            "上半部配色": { 
+                "黑":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" },
+                "白":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-white.jpg" }, 
+                "灰":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-grey.jpg" }, 
+                "紅":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-red.jpg" }, 
+                "藍":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-blue.jpg" }, 
+                "黃":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-yellow.jpg" }
+            },
+            "下半部配色": {
+                "跟上半部一樣":{plus:0},
+                "黑":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" },
+                "白":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-white.jpg" },
+                "灰":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-grey.jpg" },
+                "紅":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-red.jpg" },
+                "藍":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-blue.jpg" },
+                "黃":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-yellow.jpg" }
+            },
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 400, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
@@ -526,8 +541,23 @@ window.db = {
             "練習長棍 (接觸版)-15cm": { price: 1500, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-15C.jpg" }
         },
         specs: {
-            "上半部配色": { "黑":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" }, "白":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-white.jpg" }, "灰":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-grey.jpg" }, "紅":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-red.jpg" }, "藍":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-blue.jpg" }, "黃":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-yellow.jpg" } },
-            "下半部配色": { "跟上半部一樣":{plus:0}, "黑":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" }, "白":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-white.jpg" }, "灰":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-grey.jpg" }, "紅":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-red.jpg" }, "藍":{plus:, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-blue.jpg" }, "黃":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-yellow.jpg" } },
+            "上半部配色": { 
+                "黑":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" },
+                "白":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-white.jpg" }, 
+                "灰":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-grey.jpg" }, 
+                "紅":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-red.jpg" }, 
+                "藍":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-blue.jpg" }, 
+                "黃":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-yellow.jpg" }
+            },
+            "下半部配色": {
+                "跟上半部一樣":{plus:0},
+                "黑":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" },
+                "白":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-white.jpg" },
+                "灰":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-grey.jpg" },
+                "紅":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-red.jpg" },
+                "藍":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-blue.jpg" },
+                "黃":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-yellow.jpg" }
+            },
             "棍身種類": { "一體式": { plus: 0, ship_override: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-onepiece.jpg" }, "組合式": { plus: 400, ship_override: 'medium', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-contact-collapsible.jpg" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" } },
             "總長度": { "120cm":{plus:0}, "125cm":{plus:0}, "130cm":{plus:0}, "135cm":{plus:0}, "140cm":{plus:0}, "145cm":{plus:0}, "150cm":{plus:0} },
@@ -564,8 +594,23 @@ window.db = {
         `,
         sub: { "練習短棍": { price: 500, ship: 'medium', img: "" } },
         specs: {
-            "上半部配色": { "黑":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" }, "白":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-white.jpg" }, "灰":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-grey.jpg" }, "紅":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-red.jpg" }, "藍":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-blue.jpg" }, "黃":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-yellow.jpg" } },
-            "下半部配色": { "跟上半部一樣":{plus:0}, "黑":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" }, "白":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-white.jpg" }, "灰":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-grey.jpg" }, "紅":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-red.jpg" }, "藍":{plus:, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-blue.jpg" }, "黃":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-yellow.jpg" } },
+            "上半部配色": { 
+                "黑":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" },
+                "白":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-white.jpg" }, 
+                "灰":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-grey.jpg" }, 
+                "紅":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-red.jpg" }, 
+                "藍":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-blue.jpg" }, 
+                "黃":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-yellow.jpg" }
+            },
+            "下半部配色": {
+                "跟上半部一樣":{plus:0},
+                "黑":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" },
+                "白":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-white.jpg" },
+                "灰":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-grey.jpg" },
+                "紅":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-red.jpg" },
+                "藍":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-blue.jpg" },
+                "黃":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-yellow.jpg" }
+            },
             "火頭加重": { "不需加重": { plus: 0, img: "" }, "加重（單邊最多+20g）": { plus: 100, img: "" } },
             "握把規格": { "標準款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-normal.jpg" }, "加厚款": { plus: 0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-grip-thick.jpg" }, "全熱縮套": { plus: 50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-staff-short-color.jpg" } },
             "總長度": { "80cm":{plus:0}, "85cm":{plus:0}, "90cm":{plus:0}, "95cm":{plus:0}, "100cm":{plus:0} },
@@ -600,8 +645,23 @@ window.db = {
         `,
         sub: { "練習Poi-接觸版 (90mm)": { price: 950, ship: 'small', img: "" } },
         specs: {
-            "上半部配色": { "黑":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" }, "白":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-white.jpg" }, "灰":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-grey.jpg" }, "紅":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-red.jpg" }, "藍":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-blue.jpg" }, "黃":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-yellow.jpg" } },
-            "下半部配色": { "跟上半部一樣":{plus:0}, "黑":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" }, "白":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-white.jpg" }, "灰":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-grey.jpg" }, "紅":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-red.jpg" }, "藍":{plus:, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-blue.jpg" }, "黃":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-yellow.jpg" } },
+            "上半部配色": { 
+                "黑":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" },
+                "白":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-white.jpg" }, 
+                "灰":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-grey.jpg" }, 
+                "紅":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-red.jpg" }, 
+                "藍":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-blue.jpg" }, 
+                "黃":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-yellow.jpg" }
+            },
+            "下半部配色": {
+                "跟上半部一樣":{plus:0},
+                "黑":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" },
+                "白":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-white.jpg" },
+                "灰":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-grey.jpg" },
+                "紅":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-red.jpg" },
+                "藍":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-blue.jpg" },
+                "黃":{plus:50, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-yellow.jpg" }
+            },
             "總長度": { "45cm":{plus:0}, "50cm":{plus:0}, "55cm":{plus:0}, "60cm":{plus:0} },
             "組合數量": { "1顆組": { mult: 1, img: "" }, "2顆組": { mult: 1.96, img: "" }, "3顆組": { mult: 2.85, img: "" } }
         }
