@@ -498,7 +498,10 @@ window.db = {
     },
     prac_staff_contact: {
         title: "練習長棍 (接觸版)", cat: "prac",
-        images: ["https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-15T.jpg"],
+        images: [
+            "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-15T.jpg",
+            "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/dayprop-staff-contact-10T.jpg"
+        ],
         details: `
             <div style="margin-bottom: 20px;">
                 <strong style="color: #111; display: block; margin-bottom: 10px; font-size: 0.95rem;">✨ 道具介紹</strong>
@@ -537,8 +540,8 @@ window.db = {
         `,
         sub: {
             "練習長棍 (接觸版)-9cm圓球": { price: 1200, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-9T%20ball.jpg" },
-            "練習長棍 (接觸版)-10cm": { price: 1300, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-10C.jpg" },
-            "練習長棍 (接觸版)-15cm": { price: 1500, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-15C.jpg" }
+            "練習長棍 (接觸版)-10cm": { price: 1300, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-10T.jpg" },
+            "練習長棍 (接觸版)-15cm": { price: 1500, ship: 'long', img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-staff-15T.jpg" }
         },
         specs: {
             "上半部配色": { 
