@@ -220,7 +220,9 @@ if(data) {
                 btn.innerHTML = `${im}<span>${opt}${pt}</span>`;
                 btn.setAttribute('data-plus', val.plus||0); btn.setAttribute('data-mult', val.mult||1); btn.setAttribute('data-specname', specName); btn.setAttribute('data-optname', opt);
                 if(val.ship_override) btn.setAttribute('data-shipoverride', val.ship_override);
-                btn.onclick = function() { specGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active')); this.classList.add('active'); updateLivePrice(); };
+                btn.onclick = function() { 
+                    specGrid.querySelectorAll('.spec-btn').forEach(b => b.classList.remove('active')); 
+                    this.classList.add('active');
                 specGrid.appendChild(btn); isOptFirst = false;
             }
             specGroup.appendChild(specGrid); container.appendChild(specGroup); specIndex++;
@@ -241,6 +243,37 @@ function updateLivePrice() {
     document.getElementById('targetPrice').innerText = `NT$ ${Math.round((base + extra) * mult * qty).toLocaleString()}`;
 }
 
+function updateColorDependencies() {
+    // 1. 取得目前選中的「上半部配色」按鈕
+    const topActive = document.querySelector('.field-group .spec-btn.active[data-specname="上半部配色"]');
+    if (!topActive) return;
+    const selectedTopColor = topActive.getAttribute('data-optname');
+
+    // 2. 遍歷「下半部配色」的所有按鈕
+    const bottomButtons = document.querySelectorAll('.field-group .spec-btn[data-specname="下半部配色"]');
+    bottomButtons.forEach(btn => {
+        const colorVal = btn.getAttribute('data-optname');
+        
+        // 當該顏色與上半部相同，且不是「跟上半部一樣」時禁用
+        if (colorVal === selectedTopColor && colorVal !== "跟上半部一樣") {
+            btn.classList.add('disabled');
+            btn.style.pointerEvents = 'none';
+            btn.style.opacity = '0.3';
+            
+            // 防呆：如果原本剛好選到這個被禁用的顏色，自動重置選回「跟上半部一樣」
+            if (btn.classList.contains('active')) {
+                btn.classList.remove('active');
+                const defaultBtn = document.querySelector('.field-group .spec-btn[data-specname="下半部配色"][data-optname="跟上半部一樣"]');
+                if (defaultBtn) defaultBtn.click();
+            }
+        } else {
+            btn.classList.remove('disabled');
+            btn.style.pointerEvents = 'auto';
+            btn.style.opacity = '1';
+        }
+    });
+}
+    
 function addToCartItemPage() {
     const actSub = document.querySelector('#dynamicFields .field-group:first-child .spec-btn.active');
     if(!actSub) return alert("請先選擇品項！");
