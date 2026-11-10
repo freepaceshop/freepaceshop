@@ -595,7 +595,7 @@ window.db = {
                 </ul>
             </div>
         `,
-        sub: { "練習短棍": { price: 500, ship: 'medium', img: "" } },
+        sub: { "練習短棍": { price: 600, ship: 'medium', img: "" } },
         specs: {
             "上半部配色": { 
                 "黑":{plus:0, img: "https://raw.githubusercontent.com/freepaceshop/freepaceshop/refs/heads/main/images/option-dayprop-color-black.jpg" },
