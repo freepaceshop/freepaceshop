@@ -1578,13 +1578,13 @@ function applyDiscount() {
     const validCodes = {
         "STUDENT": { 
             name: "學生優惠", 
-            rate: 0.9, 
+            rate: 0.95, 
             allowedCats: ['fire', 'prac', 'set'] // 僅限 火舞道具、練習道具、套組
         },
-        "FPSPROMO": { 
-            name: "活動特惠", 
-            rate: 0.95 
-            // 未設定 allowedCats 代表全館通用
+        "FJULF115": { 
+            name: "輔大光火社特別優惠", 
+            rate: 0.9, 
+            allowedCats: ['fire', 'prac', 'set'] // 僅限 火舞道具、練習道具、套組
         },
     };
 
