@@ -147,40 +147,51 @@
     });
 
     function renderCheckoutPage() {
-        const listContainer = document.getElementById('checkoutList');
-        if(!listContainer) return;
+    const listContainer = document.getElementById('checkoutList');
+    if(!listContainer) return;
 
-        if(cart.length === 0) {
-            listContainer.innerHTML = `<p style="color:#888; text-align:center; padding: 30px 0;">目前清單沒有任何道具，快去挑選吧！</p>`;
-            updatePrices(0, 0, "");
-            return;
+    if(cart.length === 0) {
+        listContainer.innerHTML = `<p style="color:#888; text-align:center; padding: 30px 0;">目前清單沒有任何道具，快去挑選吧！</p>`;
+        updatePrices(0, 0, "");
+        return;
+    }
+
+    let subTotal = 0;
+    listContainer.innerHTML = cart.map((i, index) => {
+        subTotal += (i.price * i.qty);
+        
+        let specsHtml = '';
+        if (i.specs) {
+            i.specs.split(' / ').forEach(part => {
+                specsHtml += `<span class="checkout-item-spec"> ${part}</span>`;
+            });
         }
 
-        let subTotal = 0;
-        listContainer.innerHTML = cart.map((i, index) => {
-            subTotal += (i.price * i.qty);
-            
-            let specsHtml = '';
-            if (i.specs) {
-                i.specs.split(' / ').forEach(part => {
-                    specsHtml += `<span class="checkout-item-spec"> ${part}</span>`;
-                });
-            }
-
-            return `
-                <div class="checkout-item">
-                    <div class="checkout-item-info">
-                        <div class="checkout-item-name">${index + 1}. [NT$ ${(i.price * i.qty).toLocaleString()}] ${i.name} × ${i.qty}</div>
-                        ${specsHtml}
-                    </div>
-                    <span class="btn-remove" onclick="removeItemFromCheckout(${i.id})">移除</span>
+        return `
+            <div class="checkout-item">
+                <div class="checkout-item-info">
+                    <div class="checkout-item-name">${index + 1}. [NT$ ${(i.price * i.qty).toLocaleString()}] ${i.name} × ${i.qty}</div>
+                    ${specsHtml}
                 </div>
-            `;
-        }).join('');
+                <span class="btn-remove" onclick="removeItemFromCheckout(${i.id})">移除</span>
+            </div>
+        `;
+    }).join('');
 
-        const shipInfo = calcShippingEngine(cart, subTotal);
-        updatePrices(subTotal, shipInfo.fee, shipInfo.desc);
+    // 計算預設運費
+    let shipInfo = calcShippingEngine(cart, subTotal);
+
+    // 🤝 檢查是否勾選「面交」
+    const pickupCheckbox = document.getElementById('pickupCheckbox');
+    if (pickupCheckbox && pickupCheckbox.checked) {
+        shipInfo = {
+            fee: 0,
+            desc: "面交（限雙北地區）"
+        };
     }
+
+    updatePrices(subTotal, shipInfo.fee, shipInfo.desc);
+}
 
     // 結算頁面專用的移除商品
     function removeItemFromCheckout(id) {
