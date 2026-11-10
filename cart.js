@@ -1469,8 +1469,34 @@ function updatePrices(sub, ship, desc) {
     let discountAmount = 0;
 
     if(currentDiscount.active && sub > 0) {
-        finalSub = Math.round(sub * currentDiscount.rate);
-        discountAmount = sub - finalSub;
+        let eligibleSub = 0; // 可享有優惠的商品小計
+
+        cart.forEach(item => {
+            // 取得商品分類 (優先取 item.cat，若無則自動自 window.db 反查)
+            let itemCat = item.cat;
+            if (!itemCat && window.db) {
+                for (let key in window.db) {
+                    if (window.db[key].sub && window.db[key].sub[item.name]) {
+                        itemCat = window.db[key].cat;
+                        break;
+                    }
+                }
+            }
+
+            // 判斷該商品類別是否在允許折抵的白名單內
+            if (currentDiscount.allowedCats) {
+                if (currentDiscount.allowedCats.includes(itemCat)) {
+                    eligibleSub += (item.price * item.qty);
+                }
+            } else {
+                // 無類別限制的全館折扣
+                eligibleSub += (item.price * item.qty);
+            }
+        });
+
+        // 僅對可折扣的金額算折扣
+        discountAmount = Math.round(eligibleSub * (1 - currentDiscount.rate));
+        finalSub = sub - discountAmount;
         
         document.querySelectorAll('#discountRow').forEach(el => el.style.display = "flex");
         document.querySelectorAll('#discountName').forEach(el => el.innerText = currentDiscount.name);
@@ -1490,7 +1516,7 @@ function updatePrices(sub, ship, desc) {
         el.style.width = percent + '%';
     });
     document.querySelectorAll('#shipMsg').forEach(el => {
-        el.innerText = finalSub >= 5000 ? "🎉 已享受免運費優惠！" : `還差 NT$ ${(5000 - finalSub).toLocaleString()} 即可享有免運`;
+        el.innerText = finalSub >= 5000 ? "🎉 已享免運費優惠！" : `還差 NT$ ${(5000 - finalSub).toLocaleString()} 即可享有免運`;
     });
 }
 
@@ -1550,18 +1576,33 @@ function applyDiscount() {
     });
 
     const validCodes = {
-        "STUDENT": { name: "學生優惠", rate: 0.9 },
-        "FPSPROMO": { name: "活動特惠", rate: 0.95 },
+        "STUDENT": { 
+            name: "學生優惠", 
+            rate: 0.9, 
+            allowedCats: ['fire', 'prac', 'set'] // 僅限 火舞道具、練習道具、套組
+        },
+        "FPSPROMO": { 
+            name: "活動特惠", 
+            rate: 0.95 
+            // 未設定 allowedCats 代表全館通用
+        },
     };
 
     if(validCodes[codeInput]) {
-        currentDiscount = { active: true, name: validCodes[codeInput].name, rate: validCodes[codeInput].rate };
+        const codeInfo = validCodes[codeInput];
+        currentDiscount = { 
+            active: true, 
+            code: codeInput,
+            name: codeInfo.name, 
+            rate: codeInfo.rate,
+            allowedCats: codeInfo.allowedCats || null
+        };
         alert(`已成功套用【${currentDiscount.name}】！`);
     } else if (codeInput === "") {
-        currentDiscount = { active: false, name: "", rate: 1 };
+        currentDiscount = { active: false, name: "", rate: 1, allowedCats: null };
     } else {
         alert("無效的優惠代碼！");
-        currentDiscount = { active: false, name: "", rate: 1 };
+        currentDiscount = { active: false, name: "", rate: 1, allowedCats: null };
         document.querySelectorAll('#discountCode').forEach(el => el.value = "");
     }
     
